@@ -1,0 +1,58 @@
+[gd_scene load_steps=12 format=3 uid="uid://jljnojosimbk"]
+
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Player.cs" id="1_sqds7"]
+[ext_resource type="Texture2D" uid="uid://dn74tc05ud0ff" path="res://Data/Scenes/Player/DwarfGuardIdle-Sheet.png" id="2_ntam3"]
+[ext_resource type="Script" path="res://Data/Scripts/TileScripts/PlayerTileManager.cs" id="3_4q0qh"]
+[ext_resource type="Script" path="res://Data/Scripts/TurnScripts/PlayerTurn.cs" id="5_mnl3b"]
+[ext_resource type="PackedScene" uid="uid://d0ngo0ake25d" path="res://Data/Scenes/CommonScenes/TakeDamage.tscn" id="5_xcdal"]
+[ext_resource type="PackedScene" uid="uid://d3ro32w1akkk5" path="res://Data/Scenes/CommonScenes/TileMarker.tscn" id="6_88in0"]
+[ext_resource type="Script" path="res://Data/Scripts/TileScripts/PlayerSelectTile.cs" id="7_ou2f5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyqx2"]
+atlas = ExtResource("2_ntam3")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ki53x"]
+atlas = ExtResource("2_ntam3")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxgf1"]
+atlas = ExtResource("2_ntam3")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kf4aq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyqx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ki53x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxgf1")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 4.0
+}]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_sqds7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kf4aq")
+animation = &"Idle"
+
+[node name="PlayerTileManager" type="Node2D" parent="."]
+script = ExtResource("3_4q0qh")
+
+[node name="PlayerTurn" type="Node2D" parent="."]
+script = ExtResource("5_mnl3b")
+
+[node name="TakeDamage" parent="." instance=ExtResource("5_xcdal")]
+
+[node name="TileMarker" parent="." instance=ExtResource("6_88in0")]
+
+[node name="PlayerSelectTile" type="Node2D" parent="."]
+script = ExtResource("7_ou2f5")

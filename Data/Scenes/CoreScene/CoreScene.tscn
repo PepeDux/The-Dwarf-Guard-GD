@@ -1,0 +1,197 @@
+[gd_scene load_steps=17 format=3 uid="uid://ubithf5ubebc"]
+
+[ext_resource type="Texture2D" uid="uid://7fit1uamlql4" path="res://Data/Sprites/Tilemaps/MainTileMap.png" id="1_sg0qk"]
+[ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/Markers/Markers.png" id="2_outi2"]
+[ext_resource type="Script" path="res://Data/Scripts/TileScripts/TileManager.cs" id="3_hhf1e"]
+[ext_resource type="Script" path="res://Data/Scripts/Spawners/PlayerSpawner.cs" id="4_57adt"]
+[ext_resource type="PackedScene" uid="uid://jljnojosimbk" path="res://Data/Scenes/Player/Player.tscn" id="5_oh22s"]
+[ext_resource type="Script" path="res://Data/Scripts/Spawners/EnemySpawner.cs" id="6_141ve"]
+[ext_resource type="PackedScene" uid="uid://cekprly7rk5a6" path="res://Data/Scenes/Units/Captain/Captain.tscn" id="7_sbymh"]
+[ext_resource type="Script" path="res://Data/Scripts/Spawners/FunctionalObjectSpawner.cs" id="7_xrei0"]
+[ext_resource type="Script" path="res://Data/Scripts/Spawners/StaticObjectSpawner.cs" id="8_n74tb"]
+[ext_resource type="Script" path="res://Data/Scripts/LevelScript/LevelInfo.cs" id="9_qoo18"]
+[ext_resource type="Script" path="res://Data/Scripts/LevelScript/LevelManager.cs" id="10_xmusa"]
+[ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnManager.cs" id="11_ud06s"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5c43"]
+texture = ExtResource("1_sg0qk")
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+25:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+15:2/0 = 0
+19:2/0 = 0
+25:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+15:3/0 = 0
+19:3/0 = 0
+21:3/0 = 0
+23:3/0 = 0
+25:3/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+15:4/0 = 0
+19:4/0 = 0
+25:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+21:5/0 = 0
+23:5/0 = 0
+25:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+1:11/0 = 0
+3:11/0 = 0
+5:11/0 = 0
+7:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+17:11/0 = 0
+18:11/0 = 0
+19:11/0 = 0
+21:11/0 = 0
+1:12/0 = 0
+3:12/0 = 0
+5:12/0 = 0
+7:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+17:12/0 = 0
+18:12/0 = 0
+19:12/0 = 0
+21:12/0 = 0
+1:13/0 = 0
+3:13/0 = 0
+5:13/0 = 0
+7:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+17:13/0 = 0
+18:13/0 = 0
+19:13/0 = 0
+21:13/0 = 0
+21:14/0 = 0
+1:15/0 = 0
+3:15/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ivx7g"]
+sources/0 = SubResource("TileSetAtlasSource_a5c43")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mcski"]
+texture = ExtResource("2_outi2")
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_b4cq1"]
+sources/0 = SubResource("TileSetAtlasSource_mcski")
+
+[node name="GameScene" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_ivx7g")
+format = 2
+layer_0/tile_data = PackedInt32Array(1310740, 589824, 1, 1310741, 720896, 1, 1310742, 720896, 1, 1310743, 720896, 1, 1310744, 720896, 1, 1310745, 720896, 1, 1310746, 720896, 1, 1310747, 720896, 1, 1310748, 851968, 1, 1835036, 851968, 3, 1835035, 720896, 3, 1835034, 720896, 3, 1835033, 720896, 3, 1835032, 720896, 3, 1835031, 720896, 3, 1835030, 720896, 3, 1835029, 720896, 3, 1835028, 589824, 3, 1769492, 1245184, 2, 1703956, 1245184, 2, 1638420, 1245184, 2, 1572884, 1245184, 2, 1507348, 1245184, 2, 1441812, 1245184, 2, 1376276, 1245184, 2, 1376284, 1638400, 3, 1441820, 1638400, 3, 1507356, 1638400, 3, 1572892, 1638400, 3, 1638428, 1638400, 3, 1703964, 1638400, 3, 1769500, 1638400, 3, 1900564, 720896, 4, 1900565, 720896, 4, 1900566, 720896, 4, 1900567, 720896, 4, 1900568, 720896, 4, 1900569, 720896, 4, 1900570, 720896, 4, 1900571, 720896, 4, 1900572, 720896, 4, 1376277, 65536, 1, 1441813, 131072, 1, 1507349, 65536, 1, 1572885, 131072, 1, 1638421, 65536, 1, 1703957, 65536, 1, 1769493, 65536, 1, 1769494, 65536, 1, 1703958, 65536, 3, 1638422, 65536, 1, 1572886, 131072, 3, 1507350, 65536, 1, 1441814, 65536, 3, 1376278, 65536, 1, 1376279, 65536, 1, 1376280, 65536, 1, 1376281, 65536, 1, 1376282, 65536, 1, 1376283, 131072, 1, 1441818, 65536, 3, 1441817, 65536, 1, 1441816, 262144, 2, 1441815, 65536, 1, 1507351, 65536, 1, 1572887, 65536, 1, 1572888, 65536, 3, 1572889, 131072, 1, 1572890, 131072, 1, 1507354, 65536, 1, 1441819, 65536, 1, 1507355, 131072, 1, 1572891, 131072, 1, 1507353, 65536, 1, 1507352, 65536, 1, 1638423, 65536, 1, 1703960, 131072, 1, 1703959, 65536, 1, 1769495, 131072, 1, 1638424, 65536, 1, 1638425, 131072, 1, 1703961, 65536, 1, 1769497, 65536, 1, 1769496, 65536, 1, 1769498, 131072, 3, 1703962, 65536, 3, 1638426, 65536, 1, 1638427, 262144, 2, 1703963, 65536, 1, 1769499, 65536, 1, 1114135, 589824, 11, 1179671, 589824, 12, 1245207, 589824, 13, 1114136, 655360, 11, 1179672, 655360, 12, 1245208, 655360, 13, 1114137, 720896, 11, 1179673, 720896, 12, 1245209, 720896, 13, 1114132, 65536, 11, 1179668, 65536, 12, 1245204, 65536, 13, 1114140, 196608, 11, 1179676, 196608, 12, 1245212, 196608, 13, 1114133, 458752, 11, 1179669, 458752, 12, 1245205, 458752, 13, 1114134, 327680, 11, 1179670, 327680, 12, 1245206, 65536, 15, 1114138, 327680, 11, 1179674, 327680, 12, 1245210, 65536, 15, 1114139, 458752, 11, 1179675, 458752, 12, 1245211, 458752, 13)
+
+[node name="MarkerTileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_b4cq1")
+format = 2
+layer_0/z_index = 10
+
+[node name="TileManager" type="Node2D" parent="." node_paths=PackedStringArray("tileMap")]
+script = ExtResource("3_hhf1e")
+tileMap = NodePath("../TileMap")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(392, 376)
+
+[node name="PlayerHolder" type="Node2D" parent="." node_paths=PackedStringArray("tileManager")]
+script = ExtResource("4_57adt")
+player = Array[PackedScene]([ExtResource("5_oh22s")])
+tileManager = NodePath("../TileManager")
+
+[node name="Enemies" type="Node2D" parent="." node_paths=PackedStringArray("tileManager")]
+script = ExtResource("6_141ve")
+captain = Array[PackedScene]([ExtResource("7_sbymh")])
+tileManager = NodePath("../TileManager")
+
+[node name="FunctionalObjects" type="Node2D" parent="." node_paths=PackedStringArray("tileManager")]
+script = ExtResource("7_xrei0")
+tileManager = NodePath("../TileManager")
+
+[node name="StaticObjects" type="Node2D" parent="." node_paths=PackedStringArray("tileManager")]
+script = ExtResource("8_n74tb")
+tileManager = NodePath("../TileManager")
+
+[node name="LevelInfo" type="Node2D" parent="."]
+script = ExtResource("9_qoo18")
+captain = 1
+crystal = 10
+
+[node name="LevelManager" type="Node2D" parent="."]
+script = ExtResource("10_xmusa")
+
+[node name="TurnManager" type="Node2D" parent="."]
+script = ExtResource("11_ud06s")
