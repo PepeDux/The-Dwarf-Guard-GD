@@ -8,11 +8,14 @@ public partial class EnemySpawner : Spawner
 	[Export] public PackedScene[] captain;
 	[Export] public PackedScene[] wizard;
 
+
+
 	public override void _Ready()
 	{
+		Events.levelStarted += SpawnEnemy;
+
 		generateLevelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
 		SpawnEnemy();
-
 	}
 
 	public void SpawnEnemy()

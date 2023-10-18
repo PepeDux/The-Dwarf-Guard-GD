@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ubithf5ubebc"]
+[gd_scene load_steps=15 format=3 uid="uid://ubithf5ubebc"]
 
 [ext_resource type="Texture2D" uid="uid://7fit1uamlql4" path="res://Data/Sprites/Tilemaps/MainTileMap.png" id="1_sg0qk"]
 [ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/Markers/Markers.png" id="2_outi2"]
@@ -10,8 +10,6 @@
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/FunctionalObjectSpawner.cs" id="7_xrei0"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/StaticObjectSpawner.cs" id="8_n74tb"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScript/LevelInfo.cs" id="9_qoo18"]
-[ext_resource type="Script" path="res://Data/Scripts/LevelScript/LevelManager.cs" id="10_xmusa"]
-[ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnManager.cs" id="11_ud06s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5c43"]
 texture = ExtResource("1_sg0qk")
@@ -187,11 +185,5 @@ tileManager = NodePath("../TileManager")
 
 [node name="LevelInfo" type="Node2D" parent="."]
 script = ExtResource("9_qoo18")
-captain = 1
+captain = 2
 crystal = 10
-
-[node name="LevelManager" type="Node2D" parent="."]
-script = ExtResource("10_xmusa")
-
-[node name="TurnManager" type="Node2D" parent="."]
-script = ExtResource("11_ud06s")

@@ -22,23 +22,25 @@ public partial class Enemy : Character
 	public override void _Process(double delta)
 	{
 		Updater();
-		MoveOrientation();
+		Orientation();
 	}
 
 	public override void _Ready()
 	{
+		Starter();
+
 		//Подписываемся на события
 		Events.levelEnded += Destroy;
 		Events.playerTurnFinished += Turn;
+		Events.playerTurnFinished += Show;
 
-		Starter();
 		player = GetTree().Root.GetNode("GameScene").GetNode<PlayerSpawner>("PlayerHolder").GetNode<Player>("Player");
 		//tileManager = GameObject.Find("TileManager");
 	}
 
 
 
-	void MoveOrientation()
+	void Orientation()
 	{
 		if (player != null)
 		{
@@ -117,5 +119,10 @@ public partial class Enemy : Character
 				break;
 			}
 		}
+	}
+
+	private void Show()
+	{
+		GD.Print(this + " ," + movePoints + "/" + maxMovePoints);
 	}
 }

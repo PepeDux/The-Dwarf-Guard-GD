@@ -6,17 +6,17 @@ public partial class Character : BaseObject
     //[Header("Очки перемещения")]
     //Очки перемещения
     public int movePoints = 6;
-    public int maxMovePoint = 6;
+    public int maxMovePoints = 6;
 
     //[Header("Очки действия")]
     //Очки действий
     public int actionPoints;
-    public int maxActionPoint;
+    public int maxActionPoints;
 
     //[Header("Очки пива")]
     //Очки пива
-    public int beerPoint;
-    public int maxBeerPoint;
+    public int beerPoints;
+    public int maxBeerPoints;
 
 
 
@@ -478,6 +478,13 @@ public partial class Character : BaseObject
     #endregion
 
 
+    private void UpdatePoints()
+    {
+        movePoints = maxMovePoints;
+        actionPoints = maxActionPoints;
+        beerPoints = maxBeerPoints;
+    }
+
     public override void Updater()
     {
         UpdateCharac();
@@ -487,14 +494,15 @@ public partial class Character : BaseObject
 
     public void Starter()
     {
+        Events.playerTurnFinished += UpdatePoints;
+
         FindTileMap();
         IdleAnimation();
+        UpdatePoints();
 
         TileStorage.AddCharacter(this);
 
-        movePoints = maxMovePoint;
-        actionPoints = maxActionPoint;
-        beerPoint = maxBeerPoint;
+
 
         HP = maxHP;
         armor = maxArmor;

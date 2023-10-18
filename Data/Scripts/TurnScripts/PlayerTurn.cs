@@ -10,9 +10,9 @@ public partial class PlayerTurn : Node
 		{
 			Events.playerTurnFinished?.Invoke();
 
-			GD.Print("End Turn: " + TurnManager.turnCount);
+			//GD.Print("End Turn: " + TurnManager.turnCount);
 
-			TurnManager.turnCount += 1;
+			//TurnManager.turnCount += 1;
 		}
 	}
 }
