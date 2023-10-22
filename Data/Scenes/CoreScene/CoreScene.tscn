@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://7fit1uamlql4" path="res://Data/Sprites/Tilemaps/MainTileMap.png" id="1_sg0qk"]
 [ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/Markers/Markers.png" id="2_outi2"]
-[ext_resource type="Script" path="res://Data/Scripts/TileScripts/TileManager.cs" id="3_hhf1e"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/PlayerSpawner.cs" id="4_57adt"]
 [ext_resource type="PackedScene" uid="uid://jljnojosimbk" path="res://Data/Scenes/Player/Player.tscn" id="5_oh22s"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/EnemySpawner.cs" id="6_141ve"]
@@ -10,6 +9,7 @@
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/FunctionalObjectSpawner.cs" id="7_xrei0"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/StaticObjectSpawner.cs" id="8_n74tb"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScript/LevelInfo.cs" id="9_qoo18"]
+[ext_resource type="Script" path="res://Data/Scripts/TileScripts/Edge.cs" id="10_gnjfd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5c43"]
 texture = ExtResource("1_sg0qk")
@@ -158,32 +158,29 @@ tile_set = SubResource("TileSet_b4cq1")
 format = 2
 layer_0/z_index = 10
 
-[node name="TileManager" type="Node2D" parent="." node_paths=PackedStringArray("tileMap")]
-script = ExtResource("3_hhf1e")
-tileMap = NodePath("../TileMap")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(392, 376)
 
-[node name="PlayerHolder" type="Node2D" parent="." node_paths=PackedStringArray("tileManager")]
+[node name="PlayerHolder" type="Node2D" parent="."]
 script = ExtResource("4_57adt")
 player = Array[PackedScene]([ExtResource("5_oh22s")])
-tileManager = NodePath("../TileManager")
 
-[node name="Enemies" type="Node2D" parent="." node_paths=PackedStringArray("tileManager")]
+[node name="Enemies" type="Node2D" parent="."]
 script = ExtResource("6_141ve")
 captain = Array[PackedScene]([ExtResource("7_sbymh")])
-tileManager = NodePath("../TileManager")
 
-[node name="FunctionalObjects" type="Node2D" parent="." node_paths=PackedStringArray("tileManager")]
+[node name="FunctionalObjects" type="Node2D" parent="."]
 script = ExtResource("7_xrei0")
-tileManager = NodePath("../TileManager")
 
-[node name="StaticObjects" type="Node2D" parent="." node_paths=PackedStringArray("tileManager")]
+[node name="StaticObjects" type="Node2D" parent="."]
 script = ExtResource("8_n74tb")
-tileManager = NodePath("../TileManager")
 
 [node name="LevelInfo" type="Node2D" parent="."]
 script = ExtResource("9_qoo18")
 captain = 2
 crystal = 10
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="Edge" type="Node2D" parent="."]
+script = ExtResource("10_gnjfd")

@@ -19,7 +19,7 @@ public partial class PlayerTileManager : Node2D
 
 	public override void _Process(double delta)
 	{
-		if (Input.IsActionJustPressed("LeftMouseClick") && GetParent<Player>().movePoints > 0)
+		if (Input.IsActionJustPressed("LeftMouseClick") && GetParent<Player>().MovePoints > 0)
 		{
 			cellPosition = GetParent().GetNode<PlayerSelectTile>("PlayerSelectTile").cellPosition;
 			playerPosition = player.coordinate;
@@ -50,7 +50,7 @@ public partial class PlayerTileManager : Node2D
 		{
 			GetParent<Player>().coordinate = cellPosition; //Перемещаем игрока на место кликнутого тайла           
 
-			GetParent<Player>().movePoints -= 1; //Отнимаем у игрока очки движения
+			GetParent<Player>().MovePoints -= 1; //Отнимаем у игрока очки движения
 		}
 	}
 

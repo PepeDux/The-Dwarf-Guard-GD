@@ -15,8 +15,6 @@ public partial class Enemy : Character
 	//[Header("Игрок")]
 	public Player player;
 
-	public TileManager tileManager;
-
 
 
 	public override void _Process(double delta)
@@ -72,7 +70,7 @@ public partial class Enemy : Character
 	{
 		List<Vector2I> pathToTarget = GetNode<EnemyTileManager>("EnemyTileManager").pathToTarget;
 
-		if (movePoints >= moveCost && player != null)
+		if (MovePoints >= moveCost && player != null)
 		{
 			pathToTarget.Clear();
 			pathToTarget = GetNode<EnemyTileManager>("EnemyTileManager").GetPath(player.coordinate);
@@ -84,7 +82,7 @@ public partial class Enemy : Character
 				pathToTarget.RemoveAt(0);
 				coordinate = pathToTarget[pathToTarget.Count - 1];
 				UpdateCoordinate();
-				movePoints -= moveCost;
+				MovePoints -= moveCost;
 
 				TileStorage.AddCharacter(this);
 			}
@@ -93,36 +91,31 @@ public partial class Enemy : Character
 
 	public async void Turn()
 	{
-		while (movePoints >= moveCost)
+		while (MovePoints >= moveCost)
 		{
 			await Task.Delay(1000);
 			//tileManager.TileGameObjectUpdatePosition();
 
-			int startPoints = movePoints;
+			int startPoints = MovePoints;
 
 			EnemyMove();
 
-			if (startPoints == movePoints)
+			if (startPoints == MovePoints)
 			{
 				break;
 			}
 		}
 
-		while (actionPoints >= meleeAttackCost || actionPoints >= rangeAttackCost && player != null)
+		while (ActionPoints >= meleeAttackCost || ActionPoints >= rangeAttackCost && player != null)
 		{
-			int startPoints = actionPoints;
+			int startPoints = ActionPoints;
 
 			//GetComponent<AttackScript>().CalculationAttack(player.GetComponent<MainObject>());
 
-			if (startPoints == actionPoints)
+			if (startPoints == ActionPoints)
 			{
 				break;
 			}
 		}
-	}
-
-	private void Show()
-	{
-		GD.Print(this + " ," + movePoints + "/" + maxMovePoints);
 	}
 }
