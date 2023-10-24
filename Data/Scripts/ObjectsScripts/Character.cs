@@ -85,7 +85,7 @@ public partial class Character : BaseObject
 
     [ExportGroup("Дальность атаки")]
     public int rangeAttackDistance; //Дальность дальней атаки
-    public const int meleeAttackDistance = 1;
+    public int meleeAttackDistance = 1;
 
 
 
@@ -171,14 +171,11 @@ public partial class Character : BaseObject
     [ExportGroup("Уровень и опыт")]
     //Опыт
     public int XP = 0;
-    /*[HideInInspector]*/
     public int maxXP;
 
     //Уровень
     public int level = 0;
-    /*[HideInInspector]*/
     public int maxLevel = 10;
-
     public int Level
     {
         get 

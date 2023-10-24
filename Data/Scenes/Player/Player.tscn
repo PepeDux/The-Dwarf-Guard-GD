@@ -1,12 +1,61 @@
-[gd_scene load_steps=12 format=3 uid="uid://jljnojosimbk"]
+[gd_scene load_steps=31 format=3 uid="uid://jljnojosimbk"]
 
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Player.cs" id="1_sqds7"]
+[ext_resource type="Texture2D" uid="uid://b1deiagr2tspf" path="res://Data/Scenes/Player/DwarfGuardAttack-Sheet.png" id="2_bl6pr"]
 [ext_resource type="Texture2D" uid="uid://dn74tc05ud0ff" path="res://Data/Scenes/Player/DwarfGuardIdle-Sheet.png" id="2_ntam3"]
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/PlayerTileManager.cs" id="3_4q0qh"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/PlayerTurn.cs" id="5_mnl3b"]
-[ext_resource type="PackedScene" uid="uid://d0ngo0ake25d" path="res://Data/Scenes/CommonScenes/TakeDamage.tscn" id="5_xcdal"]
 [ext_resource type="PackedScene" uid="uid://d3ro32w1akkk5" path="res://Data/Scenes/CommonScenes/TileMarker.tscn" id="6_88in0"]
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/PlayerSelectTile.cs" id="7_ou2f5"]
+[ext_resource type="Script" path="res://Data/Scripts/AttackScripts/PlayerAttack.cs" id="9_hve76"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jl8hh"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(0, 80, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m533f"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(80, 80, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpd72"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(160, 80, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhrod"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(240, 80, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8e5uo"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(320, 80, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eoul0"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(400, 80, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbca8"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(0, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ui0se"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(80, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wf6t8"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(160, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eh807"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(240, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1es4a"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(320, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbucp"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(400, 160, 80, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qyqx2"]
 atlas = ExtResource("2_ntam3")
@@ -20,8 +69,78 @@ region = Rect2(80, 0, 80, 80)
 atlas = ExtResource("2_ntam3")
 region = Rect2(160, 0, 80, 80)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fs7p"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xgko"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1elcd"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpwfx"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5c1k"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(320, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxleo"]
+atlas = ExtResource("2_bl6pr")
+region = Rect2(400, 0, 80, 80)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_kf4aq"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jl8hh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m533f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpd72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhrod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8e5uo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eoul0")
+}],
+"loop": true,
+"name": &"DownAttack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbca8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ui0se")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wf6t8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eh807")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1es4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbucp")
+}],
+"loop": true,
+"name": &"HorizontalAttack",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qyqx2")
@@ -35,14 +154,38 @@ animations = [{
 "loop": true,
 "name": &"Idle",
 "speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fs7p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xgko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1elcd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bpwfx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5c1k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxleo")
+}],
+"loop": true,
+"name": &"UpAttack",
+"speed": 5.0
 }]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_sqds7")
+melee = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kf4aq")
-animation = &"Idle"
+animation = &"UpAttack"
 
 [node name="PlayerTileManager" type="Node2D" parent="."]
 script = ExtResource("3_4q0qh")
@@ -50,9 +193,10 @@ script = ExtResource("3_4q0qh")
 [node name="PlayerTurn" type="Node2D" parent="."]
 script = ExtResource("5_mnl3b")
 
-[node name="TakeDamage" parent="." instance=ExtResource("5_xcdal")]
-
 [node name="TileMarker" parent="." instance=ExtResource("6_88in0")]
 
 [node name="PlayerSelectTile" type="Node2D" parent="."]
 script = ExtResource("7_ou2f5")
+
+[node name="PlayerAttack" type="Node2D" parent="."]
+script = ExtResource("9_hve76")

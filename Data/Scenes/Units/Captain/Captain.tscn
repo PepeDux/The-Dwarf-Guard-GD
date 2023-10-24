@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cekprly7rk5a6"]
+[gd_scene load_steps=8 format=3 uid="uid://cekprly7rk5a6"]
 
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Enemy.cs" id="1_v0che"]
 [ext_resource type="Texture2D" uid="uid://prtip701wp8r" path="res://Data/Scenes/Units/Captain/CaptainIdle-Sheet.png" id="2_iq55e"]
-[ext_resource type="PackedScene" uid="uid://d0ngo0ake25d" path="res://Data/Scenes/CommonScenes/TakeDamage.tscn" id="3_oiiso"]
 [ext_resource type="PackedScene" uid="uid://echwr1sqgpyt" path="res://Data/Scenes/CommonScenes/EnemyTileManager.tscn" id="4_7li0j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jta2l"]
@@ -41,7 +40,5 @@ script = ExtResource("1_v0che")
 sprite_frames = SubResource("SpriteFrames_w2skw")
 animation = &"Idle"
 frame_progress = 0.0594881
-
-[node name="TakeDamage" parent="." instance=ExtResource("3_oiiso")]
 
 [node name="EnemyTileManager" parent="." instance=ExtResource("4_7li0j")]

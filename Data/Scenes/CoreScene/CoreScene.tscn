@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cekprly7rk5a6" path="res://Data/Scenes/Units/Captain/Captain.tscn" id="7_sbymh"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/FunctionalObjectSpawner.cs" id="7_xrei0"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/StaticObjectSpawner.cs" id="8_n74tb"]
-[ext_resource type="Script" path="res://Data/Scripts/LevelScript/LevelInfo.cs" id="9_qoo18"]
+[ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelInfo.cs" id="9_lclkq"]
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/Edge.cs" id="10_gnjfd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5c43"]
@@ -176,7 +176,7 @@ script = ExtResource("7_xrei0")
 script = ExtResource("8_n74tb")
 
 [node name="LevelInfo" type="Node2D" parent="."]
-script = ExtResource("9_qoo18")
+script = ExtResource("9_lclkq")
 captain = 2
 crystal = 10
 

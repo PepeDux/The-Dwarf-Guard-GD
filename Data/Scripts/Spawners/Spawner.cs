@@ -36,8 +36,8 @@ public partial class Spawner : Node2D
 					AddChild(node);
 
 					node.coordinate = new Vector2I(
-						random.Next(FieldCoordinate.xStartPoint, FieldCoordinate.xStartPoint + FieldCoordinate.xField), //Рандомная координта Х
-						random.Next(FieldCoordinate.yStartPoint, FieldCoordinate.yStartPoint + FieldCoordinate.yField)); //Рандомная кооридната Y
+						random.Next(FieldCoordinate.xStartPoint, FieldCoordinate.xStartPoint + FieldCoordinate.xFieldSize), //Рандомная координта Х
+						random.Next(FieldCoordinate.yStartPoint, FieldCoordinate.yStartPoint + FieldCoordinate.yFieldSize)); //Рандомная кооридната Y
 
 					break;
 				}
@@ -49,8 +49,8 @@ public partial class Spawner : Node2D
 	{
 		//Случайная координата в пределах игрового поля
 		coordinate = new Vector2I(
-			random.Next(FieldCoordinate.xStartPoint, FieldCoordinate.xStartPoint + FieldCoordinate.xField), //Рандомная координта Х
-			random.Next(FieldCoordinate.yStartPoint, FieldCoordinate.yStartPoint + FieldCoordinate.yField)); //Рандомная кооридната Y
+			random.Next(FieldCoordinate.xStartPoint, FieldCoordinate.xStartPoint + FieldCoordinate.xFieldSize), //Рандомная координта Х
+			random.Next(FieldCoordinate.yStartPoint, FieldCoordinate.yStartPoint + FieldCoordinate.yFieldSize)); //Рандомная кооридната Y
 
 		foreach (var cell in TileStorage.occupiedCells)
 		{
