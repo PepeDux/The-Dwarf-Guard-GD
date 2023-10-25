@@ -1,7 +1,7 @@
 ﻿using Godot;
 using System;
 
-public partial class TakeDamageScript : Node
+public partial class TakeDamage : Node
 {
     public static Action playerDead;
 
@@ -9,6 +9,8 @@ public partial class TakeDamageScript : Node
 
     //public GameObject corpse; //Труп или объект после смерти(не путать с лутом)
     //public GameObject[] lootAfterDeath; //Вещи выпадающие из обхекта после смерти
+
+
 
     //Скрипт TakeDamage обрабатывает типы урона поступаемые объектам
     //Он учитывает сопроивления к урону в объекте и выдает  итоге дамаг после вычислений
@@ -23,7 +25,7 @@ public partial class TakeDamageScript : Node
         target = GetParent<Character>();
     }
 
-    public void TakeDamage
+    public void Take
         (
         int physicalDamage = 0,
         int poisonDamage = 0,
@@ -32,37 +34,56 @@ public partial class TakeDamageScript : Node
         int drunkennessDamage = 0
         )
     {
-        //target.HP -= poisonDamage * (1 - target.poisonResist / 100);
-        //target.HP -= fireDamage * (1 - target.fireResist / 100);
-        //target.HP -= frostDamage * (1 - target.frostResist / 100);
-        //target.HP -= drunkennessDamage * (1 - target.drunkennessResist / 100);
+        Random random = new Random();
 
-
-        physicalDamage -= target.physicalResist;
-
-        if (physicalDamage > 0)
+        if (GetParent<Character>().dodge <= random.Next(0, 100))
         {
-            if (target.armor <= 0)
+            int totalDamage = 0;
+
+            //target.HP -= poisonDamage * (1 - target.poisonResist / 100);
+            //target.HP -= fireDamage * (1 - target.fireResist / 100);
+            //target.HP -= frostDamage * (1 - target.frostResist / 100);
+            //target.HP -= drunkennessDamage * (1 - target.drunkennessResist / 100);
+
+            totalDamage += physicalDamage - target.physicalResist;
+
+            if (totalDamage > 0)
             {
-                target.HP -= physicalDamage;
+                if (target.armor <= 0)
+                {
+                    target.HP -= totalDamage;
+                }
+
+                if(target.armor > 0) 
+                {
+                    target.armor -= 1;
+                }
             }
 
-            target.armor -= 1;
+            //Дрожание экрана при получении урона
+            GetTree().Root.GetNode("GameScene").GetNode<CameraShake>("CameraShake").ShakeAsync(1, 1, 15, 10); 
+
+            if (target.HP <= 0)
+            {
+                Die();
+            }
+            else
+            {
+                //Вызов анимации получения урона
+                GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("Hurt");
+            }
         }
-
-        //CameraShaker.Instance.ShakeOnce(0.7f, 12f, 0.3f, 0.3f); //Дрожание экрана при получении урона
-        //GetComponent<MainObject>().anim.SetTrigger("TakeDamage");
-
-        if (target.HP <= 0)
+        else
         {
-            Die();
+            GD.Print($"Объект '{GetParent().Name}' уклонился");
         }
+       
     }
 
 
     public void Die()
     {
-        GD.Print($"Я {this.Name} умер");
+        GD.Print($"Я {GetParent().Name} умер");
 
         //Спавнит случайны лут из списка с вероятностью 50%
         //if (Random.Range(0, 100) > 50 && lootAfterDeath != null)
@@ -97,7 +118,7 @@ public partial class TakeDamageScript : Node
         //	}
         //}
 
-        //Destroy(this.gameObject);
+        GetParent().QueueFree();
     }
 
     public void Kill()

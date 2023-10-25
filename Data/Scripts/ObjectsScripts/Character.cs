@@ -98,8 +98,8 @@ public partial class Character : BaseObject
 
     [ExportGroup("Здоровье")]
     //Здоровье
-    private int hP;
-    private int maxHP;
+    [Export] private int hP;
+    [Export] private int maxHP = 20;
     public int HP
     {
         get
@@ -152,19 +152,19 @@ public partial class Character : BaseObject
     //3 переменная - бонусный урон, отрицательный или положительный
 
     //Физический урон
-    public int physicalDamage = 0;
+    [Export] public int physicalDamage = 0;
 
     //Ядовитый урон
-    public int poisonDamage = 0;
+    [Export] public int poisonDamage = 0;
 
     //Огненный урон
-    public int fireDamage = 0;
+    [Export] public int fireDamage = 0;
 
     //Морозный урон
-    public int frostDamage = 0;
+    [Export] public int frostDamage = 0;
 
     //Алкогольный урон
-    public int drunkennessDamage = 0;
+    [Export] public int drunkennessDamage = 0;
 
 
 
@@ -445,6 +445,9 @@ public partial class Character : BaseObject
     public void Starter()
     {
         Events.playerTurnFinished += UpdatePoints;
+
+        TileStorage.impassableCells.Add(coordinate);
+        TileStorage.occupiedCells.Add(coordinate);
 
         FindTileMap();
         IdleAnimation();

@@ -69,6 +69,6 @@ public partial class BaseObject : Node2D
 
 	public void IdleAnimation()
 	{
-		GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("Idle");
+		//GetNode<Sprite2D>("Sprite2D").Play("Idle");
 	}
 }

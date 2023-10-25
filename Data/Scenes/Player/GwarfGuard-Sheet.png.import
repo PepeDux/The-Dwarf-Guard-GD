@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://prtip701wp8r"
-path="res://.godot/imported/CaptainIdle-Sheet.png-5cc89dbe2a0d1a2995df0000c6b61445.ctex"
+uid="uid://c44x38wkbgt8x"
+path="res://.godot/imported/GwarfGuard-Sheet.png-5319d70b14a7efdb590b2ff47e7f827f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Data/Scenes/Units/Captain/CaptainIdle-Sheet.png"
-dest_files=["res://.godot/imported/CaptainIdle-Sheet.png-5cc89dbe2a0d1a2995df0000c6b61445.ctex"]
+source_file="res://Data/Scenes/Player/GwarfGuard-Sheet.png"
+dest_files=["res://.godot/imported/GwarfGuard-Sheet.png-5319d70b14a7efdb590b2ff47e7f827f.ctex"]
 
 [params]
 

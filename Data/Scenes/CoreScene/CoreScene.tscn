@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ubithf5ubebc"]
+[gd_scene load_steps=17 format=3 uid="uid://ubithf5ubebc"]
 
 [ext_resource type="Texture2D" uid="uid://7fit1uamlql4" path="res://Data/Sprites/Tilemaps/MainTileMap.png" id="1_sg0qk"]
 [ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/Markers/Markers.png" id="2_outi2"]
@@ -10,6 +10,8 @@
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/StaticObjectSpawner.cs" id="8_n74tb"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelInfo.cs" id="9_lclkq"]
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/Edge.cs" id="10_gnjfd"]
+[ext_resource type="Script" path="res://Data/Scripts/CameraShake.cs" id="11_qh8oq"]
+[ext_resource type="Script" path="res://Data/Scripts/test.cs" id="12_sen1q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5c43"]
 texture = ExtResource("1_sg0qk")
@@ -184,3 +186,10 @@ crystal = 10
 
 [node name="Edge" type="Node2D" parent="."]
 script = ExtResource("10_gnjfd")
+
+[node name="CameraShake" type="Node2D" parent="." node_paths=PackedStringArray("camera")]
+script = ExtResource("11_qh8oq")
+camera = NodePath("../Camera2D")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("12_sen1q")

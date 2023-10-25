@@ -119,39 +119,34 @@ public partial class AttackScript : Node
 		{
 			if (sideAttack == "HorizontalAttack")
 			{
-				attacker.GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("HorizontalAttack");
+				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("HorizontalAttack");
 			}
 			else if (sideAttack == "UpAttack")
 			{
-				attacker.GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("UpAttack");
+				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("UpAttack");
 			}
 			else if (sideAttack == "DownAttack")
 			{
-				attacker.GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("DownAttack");
+				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("DownAttack");
 			}
+
+			GiveDamage();
 		}
 	}
 
 
 
-	private void GiveAttack()
+	private void GiveDamage()
 	{
-		Random random = new Random();
 
-		if (random.Next(0, 100) <= target.dodge)
-		{
-			GD.Print($"Я {target.Name} уклонился");
-		}
-		else
-		{
-			target.GetNode<TakeDamageScript>("TakeDamageScript").TakeDamage(
-			physicalDamage: attacker.physicalDamage,
-			poisonDamage: attacker.poisonDamage,
-			fireDamage: attacker.fireDamage,
-			frostDamage: attacker.frostDamage,
-			drunkennessDamage: attacker.drunkennessDamage
-			);
-		}
+		target.GetNode<TakeDamage>("TakeDamage").Take(
+		physicalDamage: attacker.physicalDamage,
+		poisonDamage: attacker.poisonDamage,
+		fireDamage: attacker.fireDamage,
+		frostDamage: attacker.frostDamage,
+		drunkennessDamage: attacker.drunkennessDamage
+		);
+
 
 		attacker.ActionPoints -= attackCost;
 	}

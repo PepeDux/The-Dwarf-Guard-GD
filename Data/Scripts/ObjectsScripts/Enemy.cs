@@ -57,11 +57,11 @@ public partial class Enemy : Character
 	{
 		isFacingRight = !isFacingRight;
 		//получаем размеры персонажа
-		Vector2 theScale = GetNode<AnimatedSprite2D>("AnimatedSprite2D").Scale;
+		Vector2 theScale = GetNode<Sprite2D>("Sprite2D").Scale;
 		//зеркально отражаем персонажа по оси Х
 		theScale.X *= -1;
 		//задаем новый размер персонажа, равный старому, но зеркально отраженный
-		GetNode<AnimatedSprite2D>("AnimatedSprite2D").Scale = theScale;
+		GetNode<Sprite2D>("Sprite2D").Scale = theScale;
 	}
 
 

@@ -11,7 +11,7 @@ public partial class PlayerAttack : AttackScript
 			{
 				if (GetParent().GetNode<PlayerSelectTile>("PlayerSelectTile").cellPosition == target.coordinate && target is Enemy)
 				{
-					CalculationAttack(target);
+					CalculationAttack(target);					
 				}
 			}
 		}
