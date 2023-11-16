@@ -1,5 +1,7 @@
 using Godot;
 using System;
+using System.Linq;
+
 public partial class Spawner : Node2D
 {
 	Random random = new Random(); //Великий рандом
@@ -24,20 +26,19 @@ public partial class Spawner : Node2D
 			//Проверка всех клеток на их статус
 			//tileManager.TileGameObjectUpdatePosition();
 
-			//n-ое попыток на спавн объекта
-			for (int i = 0; i < 10; i++)
-			{
-				if (СheckCoordinate() == true)
-				{
-					//Спавним объект на сцену исходя из случайного выбраного объекта
-					//int random = Random.Range(0, objects.Length);
 
+			//Спавним объект на сцену исходя из случайного выбраного объекта
+			//int random = Random.Range(0, scene.Length);
+
+			for (int i = 0; i < 20; i++)
+			{
+				if (CheckCoordinate())
+				{
 					BaseObject node = (BaseObject)scene[random.Next(0, scene.Length)].Instantiate();
 					AddChild(node);
 
-					node.coordinate = new Vector2I(
-						random.Next(FieldCoordinate.xStartPoint, FieldCoordinate.xStartPoint + FieldCoordinate.xFieldSize), //Рандомная координта Х
-						random.Next(FieldCoordinate.yStartPoint, FieldCoordinate.yStartPoint + FieldCoordinate.yFieldSize)); //Рандомная кооридната Y
+					node.coordinate = coordinate;
+
 
 					break;
 				}
@@ -45,22 +46,18 @@ public partial class Spawner : Node2D
 		}
 	}
 
-	public bool СheckCoordinate()
+	public bool CheckCoordinate()
 	{
-		//Случайная координата в пределах игрового поля
-		coordinate = new Vector2I(
-			random.Next(FieldCoordinate.xStartPoint, FieldCoordinate.xStartPoint + FieldCoordinate.xFieldSize), //Рандомная координта Х
-			random.Next(FieldCoordinate.yStartPoint, FieldCoordinate.yStartPoint + FieldCoordinate.yFieldSize)); //Рандомная кооридната Y
+		Vector2I coordinate = TileStorage.freeCells.ElementAt(random.Next(0, TileStorage.freeCells.Count));
 
-		foreach (var cell in TileStorage.occupiedCells)
+		if (TileStorage.freeCells.Contains(coordinate) == true && TileStorage.occupiedCells.Contains(coordinate) == false)
 		{
-			//Если объект присутствует в листе, то его спавн запрещается
-			if (coordinate == cell)
-			{
-				return false;
-			}
+			this.coordinate = coordinate;
+			return true;
 		}
-
-		return true;
+		else
+		{
+			return false;
+		}
 	}
 }

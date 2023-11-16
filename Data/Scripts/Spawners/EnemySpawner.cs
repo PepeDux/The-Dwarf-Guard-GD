@@ -12,7 +12,7 @@ public partial class EnemySpawner : Spawner
 
 	public override void _Ready()
 	{
-		Events.levelStarted += SpawnEnemy;
+        Events.levelGenerated += SpawnEnemy;
 
 		generateLevelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
 		SpawnEnemy();

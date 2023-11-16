@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ubithf5ubebc"]
+[gd_scene load_steps=18 format=3 uid="uid://ubithf5ubebc"]
 
 [ext_resource type="Texture2D" uid="uid://7fit1uamlql4" path="res://Data/Sprites/Tilemaps/MainTileMap.png" id="1_sg0qk"]
 [ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/Markers/Markers.png" id="2_outi2"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelInfo.cs" id="9_lclkq"]
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/Edge.cs" id="10_gnjfd"]
 [ext_resource type="Script" path="res://Data/Scripts/CameraShake.cs" id="11_qh8oq"]
+[ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelGenerator.cs" id="12_13kvq"]
 [ext_resource type="Script" path="res://Data/Scripts/test.cs" id="12_sen1q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5c43"]
@@ -153,7 +154,6 @@ sources/0 = SubResource("TileSetAtlasSource_mcski")
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ivx7g")
 format = 2
-layer_0/tile_data = PackedInt32Array(1310740, 589824, 1, 1310741, 720896, 1, 1310742, 720896, 1, 1310743, 720896, 1, 1310744, 720896, 1, 1310745, 720896, 1, 1310746, 720896, 1, 1310747, 720896, 1, 1310748, 851968, 1, 1835036, 851968, 3, 1835035, 720896, 3, 1835034, 720896, 3, 1835033, 720896, 3, 1835032, 720896, 3, 1835031, 720896, 3, 1835030, 720896, 3, 1835029, 720896, 3, 1835028, 589824, 3, 1769492, 1245184, 2, 1703956, 1245184, 2, 1638420, 1245184, 2, 1572884, 1245184, 2, 1507348, 1245184, 2, 1441812, 1245184, 2, 1376276, 1245184, 2, 1376284, 1638400, 3, 1441820, 1638400, 3, 1507356, 1638400, 3, 1572892, 1638400, 3, 1638428, 1638400, 3, 1703964, 1638400, 3, 1769500, 1638400, 3, 1900564, 720896, 4, 1900565, 720896, 4, 1900566, 720896, 4, 1900567, 720896, 4, 1900568, 720896, 4, 1900569, 720896, 4, 1900570, 720896, 4, 1900571, 720896, 4, 1900572, 720896, 4, 1376277, 65536, 1, 1441813, 131072, 1, 1507349, 65536, 1, 1572885, 131072, 1, 1638421, 65536, 1, 1703957, 65536, 1, 1769493, 65536, 1, 1769494, 65536, 1, 1703958, 65536, 3, 1638422, 65536, 1, 1572886, 131072, 3, 1507350, 65536, 1, 1441814, 65536, 3, 1376278, 65536, 1, 1376279, 65536, 1, 1376280, 65536, 1, 1376281, 65536, 1, 1376282, 65536, 1, 1376283, 131072, 1, 1441818, 65536, 3, 1441817, 65536, 1, 1441816, 262144, 2, 1441815, 65536, 1, 1507351, 65536, 1, 1572887, 65536, 1, 1572888, 65536, 3, 1572889, 131072, 1, 1572890, 131072, 1, 1507354, 65536, 1, 1441819, 65536, 1, 1507355, 131072, 1, 1572891, 131072, 1, 1507353, 65536, 1, 1507352, 65536, 1, 1638423, 65536, 1, 1703960, 131072, 1, 1703959, 65536, 1, 1769495, 131072, 1, 1638424, 65536, 1, 1638425, 131072, 1, 1703961, 65536, 1, 1769497, 65536, 1, 1769496, 65536, 1, 1769498, 131072, 3, 1703962, 65536, 3, 1638426, 65536, 1, 1638427, 262144, 2, 1703963, 65536, 1, 1769499, 65536, 1, 1114135, 589824, 11, 1179671, 589824, 12, 1245207, 589824, 13, 1114136, 655360, 11, 1179672, 655360, 12, 1245208, 655360, 13, 1114137, 720896, 11, 1179673, 720896, 12, 1245209, 720896, 13, 1114132, 65536, 11, 1179668, 65536, 12, 1245204, 65536, 13, 1114140, 196608, 11, 1179676, 196608, 12, 1245212, 196608, 13, 1114133, 458752, 11, 1179669, 458752, 12, 1245205, 458752, 13, 1114134, 327680, 11, 1179670, 327680, 12, 1245206, 65536, 15, 1114138, 327680, 11, 1179674, 327680, 12, 1245210, 65536, 15, 1114139, 458752, 11, 1179675, 458752, 12, 1245211, 458752, 13)
 
 [node name="MarkerTileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_b4cq1")
@@ -191,5 +191,9 @@ script = ExtResource("10_gnjfd")
 script = ExtResource("11_qh8oq")
 camera = NodePath("../Camera2D")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="LevelGenerator" type="Node2D" parent="." node_paths=PackedStringArray("tileMap")]
+script = ExtResource("12_13kvq")
+tileMap = NodePath("../TileMap")
+
+[node name="TEST" type="Node2D" parent="."]
 script = ExtResource("12_sen1q")

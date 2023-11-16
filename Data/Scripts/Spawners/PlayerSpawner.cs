@@ -9,7 +9,7 @@ public partial class PlayerSpawner : Spawner
 
 	public override void _Ready()
 	{
-		Events.levelStarted += SpawnPlayer;
+		Events.levelGenerated += SpawnPlayer;
 
 		generateLevelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
 		SpawnPlayer();

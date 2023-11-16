@@ -23,7 +23,10 @@ public partial class Events : Node
     /// </summary>
     public static Action levelStarted;
 
-
+    /// <summary>
+    /// Событие на окончание генерации тайлов
+    /// </summary>
+    public static Action levelGenerated;
 
 
 }
