@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ubithf5ubebc"]
+[gd_scene load_steps=16 format=3 uid="uid://ubithf5ubebc"]
 
 [ext_resource type="Texture2D" uid="uid://7fit1uamlql4" path="res://Data/Sprites/Tilemaps/MainTileMap.png" id="1_sg0qk"]
 [ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/Markers/Markers.png" id="2_outi2"]
@@ -9,10 +9,8 @@
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/FunctionalObjectSpawner.cs" id="7_xrei0"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/StaticObjectSpawner.cs" id="8_n74tb"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelInfo.cs" id="9_lclkq"]
-[ext_resource type="Script" path="res://Data/Scripts/TileScripts/Edge.cs" id="10_gnjfd"]
 [ext_resource type="Script" path="res://Data/Scripts/CameraShake.cs" id="11_qh8oq"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelGenerator.cs" id="12_13kvq"]
-[ext_resource type="Script" path="res://Data/Scripts/test.cs" id="12_sen1q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5c43"]
 texture = ExtResource("1_sg0qk")
@@ -161,6 +159,8 @@ format = 2
 layer_0/z_index = 10
 
 [node name="Camera2D" type="Camera2D" parent="."]
+light_mask = 512
+visibility_layer = 512
 position = Vector2(392, 376)
 
 [node name="PlayerHolder" type="Node2D" parent="."]
@@ -184,9 +184,6 @@ crystal = 10
 
 [node name="UI" type="Node2D" parent="."]
 
-[node name="Edge" type="Node2D" parent="."]
-script = ExtResource("10_gnjfd")
-
 [node name="CameraShake" type="Node2D" parent="." node_paths=PackedStringArray("camera")]
 script = ExtResource("11_qh8oq")
 camera = NodePath("../Camera2D")
@@ -195,5 +192,9 @@ camera = NodePath("../Camera2D")
 script = ExtResource("12_13kvq")
 tileMap = NodePath("../TileMap")
 
-[node name="TEST" type="Node2D" parent="."]
-script = ExtResource("12_sen1q")
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = 1.0
+offset_right = 784.0
+offset_bottom = 760.0
+color = Color(0.141176, 0.133333, 0.129412, 1)

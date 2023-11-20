@@ -6,12 +6,9 @@ public partial class Spawner : Node2D
 {
 	Random random = new Random(); //Великий рандом
 
-	private LevelInfo levelInfo;
+	private Vector2I coordinate; //Переменная для дальнейшего присваивания координаты
 
-	private Vector2I coordinate;
-	private bool canPut;
-
-	public LevelInfo generateLevelInfo;
+	public LevelInfo generateLevelInfo; //Вся информация о том, сколько кого спавнить
 
 
 	public override void _Ready()
@@ -30,6 +27,7 @@ public partial class Spawner : Node2D
 			//Спавним объект на сцену исходя из случайного выбраного объекта
 			//int random = Random.Range(0, scene.Length);
 
+			//n-ое колличество попыток на спавн объекта
 			for (int i = 0; i < 20; i++)
 			{
 				if (CheckCoordinate())
@@ -39,7 +37,6 @@ public partial class Spawner : Node2D
 
 					node.coordinate = coordinate;
 
-
 					break;
 				}
 			}
@@ -48,6 +45,7 @@ public partial class Spawner : Node2D
 
 	public bool CheckCoordinate()
 	{
+		//Рандомная координата из свободных клеток
 		Vector2I coordinate = TileStorage.freeCells.ElementAt(random.Next(0, TileStorage.freeCells.Count));
 
 		if (TileStorage.freeCells.Contains(coordinate) == true && TileStorage.occupiedCells.Contains(coordinate) == false)

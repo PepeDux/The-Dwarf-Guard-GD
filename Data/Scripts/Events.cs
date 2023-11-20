@@ -28,5 +28,8 @@ public partial class Events : Node
     /// </summary>
     public static Action levelGenerated;
 
-
+    /// <summary>
+    /// Событие на окончание выбора карты игроком
+    /// </summary>
+    public static Action endSelectCard;
 }
