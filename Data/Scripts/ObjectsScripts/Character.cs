@@ -9,7 +9,7 @@ public partial class Character : BaseObject
 
     [ExportGroup ("Очки перемещения")]
     //Очки перемещения
-    [Export] private int movePoints;
+    [Export] private int movePoints = 0;
     [Export] private int maxMovePoints = 6;
     public int MovePoints
     { 
@@ -25,7 +25,7 @@ public partial class Character : BaseObject
 
     [ExportGroup("Очки действия")]
     //Очки действий
-    [Export] private int actionPoints;
+    [Export] private int actionPoints = 0;
     [Export] private int maxActionPoints = 2;
     public int ActionPoints
     {

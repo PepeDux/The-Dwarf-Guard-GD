@@ -3,8 +3,6 @@ using System;
 
 public partial class Player : Character
 {
-	public static Action<Player> playerSpawned;
-
 	private bool isFacingRight = true;
 
 
@@ -13,6 +11,7 @@ public partial class Player : Character
 	{
 		//playerSpawned?.Invoke(this);
 		Starter();
+		Events.playerSpawned?.Invoke();
 	}
 
 	public override void _Process(double delta)

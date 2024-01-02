@@ -20,6 +20,7 @@ public partial class PlayerSpawner : Spawner
 		for (int i = 0; i < 1; i++)
 		{
 			Spawn(player);
+
 		}
 	}
 }
