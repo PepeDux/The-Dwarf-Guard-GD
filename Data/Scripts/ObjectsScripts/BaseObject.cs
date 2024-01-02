@@ -52,6 +52,7 @@ public partial class BaseObject : Node2D
 
 	public void Destroy()
 	{
+		//Удаляет объект со сцены
 		QueueFree();
 	}
 

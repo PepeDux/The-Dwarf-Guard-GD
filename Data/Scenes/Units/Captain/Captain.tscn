@@ -112,15 +112,17 @@ script = ExtResource("3_0rr8i")
 [node name="EnemyTileManager" parent="." instance=ExtResource("4_7li0j")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "Idle"
 libraries = {
 "": SubResource("AnimationLibrary_fjt4k")
 }
+autoplay = "Idle"
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fjt4k")
+}
 tree_root = SubResource("AnimationNodeStateMachine_u1cke")
 anim_player = NodePath("../AnimationPlayer")
-active = true
 
 [node name="TakeDamage" type="Node2D" parent="."]
 script = ExtResource("4_kqp4l")

@@ -118,6 +118,8 @@ public partial class TakeDamage : Node
 		//	}
 		//}
 
+
+		TileStorage.RemoveCharacter(GetParent<Character>());
 		GetParent().QueueFree();
 	}
 
