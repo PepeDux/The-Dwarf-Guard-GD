@@ -9,8 +9,8 @@
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/FunctionalObjectSpawner.cs" id="7_xrei0"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/StaticObjectSpawner.cs" id="8_n74tb"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelInfo.cs" id="9_lclkq"]
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/UIManager.cs" id="10_8lsp7"]
-[ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="10_l0ooy"]
+[ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="10_3v6ox"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/UIManager.cs" id="10_bwtok"]
 [ext_resource type="Script" path="res://Data/Scripts/CameraShake.cs" id="11_qh8oq"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelGenerator.cs" id="12_13kvq"]
 
@@ -185,38 +185,38 @@ captain = 2
 crystal = 10
 
 [node name="UI" type="Node2D" parent="." node_paths=PackedStringArray("HPLabel", "MovePointsLabel", "ActionPointsLabel")]
-script = ExtResource("10_8lsp7")
-HPLabel = NodePath("HP")
-MovePointsLabel = NodePath("MovePoints")
-ActionPointsLabel = NodePath("ActionPoints")
+script = ExtResource("10_bwtok")
+HPLabel = NodePath("HPLabel")
+MovePointsLabel = NodePath("MovePointsLabel")
+ActionPointsLabel = NodePath("ActionPointsLabel")
 
-[node name="HP" type="Label" parent="UI"]
+[node name="HPLabel" type="Label" parent="UI"]
 offset_left = 192.0
-offset_top = 360.0
-offset_right = 1792.0
-offset_bottom = 680.0
+offset_top = 320.0
+offset_right = 1472.0
+offset_bottom = 640.0
 scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("10_l0ooy")
+theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 256
 text = "HP:"
 
-[node name="MovePoints" type="Label" parent="UI"]
+[node name="MovePointsLabel" type="Label" parent="UI"]
 offset_left = 192.0
-offset_top = 384.0
-offset_right = 1792.0
-offset_bottom = 704.0
+offset_top = 344.0
+offset_right = 1472.0
+offset_bottom = 664.0
 scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("10_l0ooy")
+theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 256
 text = "Move:"
 
-[node name="ActionPoints" type="Label" parent="UI"]
+[node name="ActionPointsLabel" type="Label" parent="UI"]
 offset_left = 192.0
-offset_top = 408.0
-offset_right = 1792.0
-offset_bottom = 728.0
+offset_top = 368.0
+offset_right = 1472.0
+offset_bottom = 688.0
 scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("10_l0ooy")
+theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 256
 text = "Action:"
 
@@ -230,7 +230,7 @@ tileMap = NodePath("../TileMap")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
-offset_left = 4.0
-offset_right = 787.0
-offset_bottom = 760.0
+offset_top = 40.0
+offset_right = 783.0
+offset_bottom = 800.0
 color = Color(0.141176, 0.133333, 0.129412, 1)

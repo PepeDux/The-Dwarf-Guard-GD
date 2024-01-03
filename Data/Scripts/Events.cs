@@ -4,10 +4,9 @@ using System;
 public partial class Events : Node
 {
     /// <summary>
-    /// Событие на спавн игрока/
+    /// Событие на окончание хода игрока/
     /// </summary>
     public static Action playerSpawned;
-
     /// <summary>
     /// Событие на окончание хода игрока/
     /// </summary>

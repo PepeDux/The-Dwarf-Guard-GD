@@ -9,7 +9,7 @@ public partial class AttackScript : Node
 
 	private Vector2I attackCell;
 	private Character target;
-	private int attackCost = 1;
+	private int attackCost;
 
 	private Character attacker;
 

@@ -9,7 +9,6 @@ public partial class Player : Character
 
 	public override void _Ready()
 	{
-		//playerSpawned?.Invoke(this);
 		Starter();
 		Events.playerSpawned?.Invoke();
 	}
