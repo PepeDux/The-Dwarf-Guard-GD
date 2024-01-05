@@ -83,7 +83,7 @@ public partial class TakeDamage : Node
 
 	public void Die()
 	{
-		GD.Print($"Я {GetParent().Name} умер");
+		//GD.Print($"Я {GetParent().Name} умер");
 
 		//Спавнит случайны лут из списка с вероятностью 50%
 		//if (Random.Range(0, 100) > 50 && lootAfterDeath != null)

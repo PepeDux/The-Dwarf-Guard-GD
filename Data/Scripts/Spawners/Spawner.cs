@@ -33,9 +33,10 @@ public partial class Spawner : Node2D
 				if (CheckCoordinate())
 				{
 					BaseObject node = (BaseObject)scene[random.Next(0, scene.Length)].Instantiate();
-					AddChild(node);
+                    node.coordinate = coordinate;
+                    AddChild(node);
 
-					node.coordinate = coordinate;
+					
 
 					break;
 				}

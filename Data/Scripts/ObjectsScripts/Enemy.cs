@@ -33,9 +33,6 @@ public partial class Enemy : Character
 		Events.playerTurnFinished += Show;
 
 		player = GetTree().Root.GetNode("GameScene").GetNode<PlayerSpawner>("PlayerHolder").GetNode<Player>("Player");
-		//tileManager = GameObject.Find("TileManager");
-
-		GD.Print(coordinate);
 	}
 
 

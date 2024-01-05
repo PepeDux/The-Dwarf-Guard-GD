@@ -27,7 +27,7 @@ public partial class UIManager : Node
 		}
 
 		HPLabel.Text = "HP: " + target.HP.ToString() + "/" + target.maxHP;
-		MovePointsLabel.Text = "Move: " + target.MovePoints.ToString() + "/" + target.MovePoints;
+		MovePointsLabel.Text = "Move: " + target.MovePoints.ToString() + "/" + target.maxMovePoints;
 		ActionPointsLabel.Text = "Action: " + target.ActionPoints.ToString() + "/" + target.maxActionPoints;
 	}
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ubithf5ubebc"]
+[gd_scene load_steps=19 format=3 uid="uid://ubithf5ubebc"]
 
 [ext_resource type="Texture2D" uid="uid://7fit1uamlql4" path="res://Data/Sprites/Tilemaps/MainTileMap.png" id="1_sg0qk"]
 [ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/Markers/Markers.png" id="2_outi2"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/UIManager.cs" id="10_bwtok"]
 [ext_resource type="Script" path="res://Data/Scripts/CameraShake.cs" id="11_qh8oq"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelGenerator.cs" id="12_13kvq"]
+[ext_resource type="Script" path="res://Data/Scripts/test.cs" id="14_o5hxs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5c43"]
 texture = ExtResource("1_sg0qk")
@@ -181,7 +182,7 @@ script = ExtResource("8_n74tb")
 
 [node name="LevelInfo" type="Node2D" parent="."]
 script = ExtResource("9_lclkq")
-captain = 2
+captain = 3
 crystal = 10
 
 [node name="UI" type="Node2D" parent="." node_paths=PackedStringArray("HPLabel", "MovePointsLabel", "ActionPointsLabel")]
@@ -234,3 +235,6 @@ offset_top = 40.0
 offset_right = 783.0
 offset_bottom = 800.0
 color = Color(0.141176, 0.133333, 0.129412, 1)
+
+[node name="test" type="Node2D" parent="."]
+script = ExtResource("14_o5hxs")
