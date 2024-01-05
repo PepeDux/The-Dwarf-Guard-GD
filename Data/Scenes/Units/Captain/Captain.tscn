@@ -99,6 +99,9 @@ _data = {
 
 [node name="Captain" type="Node2D"]
 script = ExtResource("1_v0che")
+maxMovePoints = 3
+maxActionPoints = 1
+maxHP = 40
 physicalDamage = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

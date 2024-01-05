@@ -9,6 +9,7 @@ public partial class UIManager : Node
 	[Export] Label ActionPointsLabel;
 
 	Player player;
+	Character target;
 
 	public override void _Ready()
 	{
@@ -16,10 +17,18 @@ public partial class UIManager : Node
 	}
 	public override void _Process(double delta)
 	{
-		HPLabel.Text = "HP: " + player.HP.ToString();
-		MovePointsLabel.Text = "Move: " + player.MovePoints.ToString();
-		ActionPointsLabel.Text = "Action: " + player.ActionPoints.ToString();
-		//GD.Print(player.HP.ToString());
+		if (DataBank.currentMouseTarget == null) 
+		{
+			target = player;         
+		}
+		else
+		{
+			target = DataBank.currentMouseTarget;
+		}
+
+		HPLabel.Text = "HP: " + target.HP.ToString() + "/" + target.maxHP;
+		MovePointsLabel.Text = "Move: " + target.MovePoints.ToString() + "/" + target.MovePoints;
+		ActionPointsLabel.Text = "Action: " + target.ActionPoints.ToString() + "/" + target.maxActionPoints;
 	}
 
 	private void AddPlayer()

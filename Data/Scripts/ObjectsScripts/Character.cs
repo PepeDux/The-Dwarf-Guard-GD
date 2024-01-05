@@ -10,7 +10,7 @@ public partial class Character : BaseObject
     [ExportGroup ("Очки перемещения")]
     //Очки перемещения
     [Export] private int movePoints;
-    [Export] private int maxMovePoints = 6;
+    [Export] public int maxMovePoints = 6;
     public int MovePoints
     { 
         get 
@@ -26,7 +26,7 @@ public partial class Character : BaseObject
     [ExportGroup("Очки действия")]
     //Очки действий
     [Export] private int actionPoints;
-    [Export] private int maxActionPoints = 2;
+    [Export] public int maxActionPoints = 2;
     public int ActionPoints
     {
         get
@@ -43,7 +43,7 @@ public partial class Character : BaseObject
     [ExportGroup("Очки пива")]
     //Очки пива
     [Export] private int beerPoints = 0;
-    [Export] private int maxBeerPoints = 6;
+    [Export] public int maxBeerPoints = 6;
     public int BeerPoints
     {
         get
@@ -99,7 +99,7 @@ public partial class Character : BaseObject
     [ExportGroup("Здоровье")]
     //Здоровье
     [Export] private int hP;
-    [Export] private int maxHP = 20;
+    [Export] public int maxHP = 20;
     public int HP
     {
         get
