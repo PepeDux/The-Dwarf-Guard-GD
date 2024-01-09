@@ -418,20 +418,20 @@ public partial class Character : BaseObject
 			drunkennessResist = Math.Clamp(value, -100, 100);
 		}
 	}
-	   
+
 
 
 	#endregion
 
 
-	private void UpdatePoints()
+	public void UpdatePoints()
 	{
 		movePoints = maxMovePoints;
 		actionPoints = maxActionPoints;
 		beerPoints = maxBeerPoints;
 	}
 
-	private void UpdateCharac()
+	public void UpdateCharac()
 	{
 		HP = maxHP;
 		armor = maxArmor;
@@ -446,8 +446,6 @@ public partial class Character : BaseObject
 	{
 		GD.Print(GetType());
 
-		Events.playerTurnFinished += UpdatePoints;
-
 		TileStorage.impassableCells.Add(coordinate);
 		TileStorage.occupiedCells.Add(coordinate);
 
@@ -455,6 +453,7 @@ public partial class Character : BaseObject
 		IdleAnimation();
 		UpdateCharac();
 		UpdateCoordinate();
+		UpdatePoints();
 
 		TileStorage.AddCharacter(this);
 	}

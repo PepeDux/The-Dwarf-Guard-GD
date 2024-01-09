@@ -6,6 +6,9 @@ public partial class test : Node
 {
 	public override void _Process(double delta)
 	{
-		//GD.Print(DataBank.currentMouseTarget);
+		foreach(var i in TileStorage.characters)
+		{
+			GD.Print(i.Name);
+		}
 	}
 }

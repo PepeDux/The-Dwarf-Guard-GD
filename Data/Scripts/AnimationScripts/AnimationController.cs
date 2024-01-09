@@ -7,15 +7,10 @@ public partial class AnimationController : Node
     AnimationTree animationTree;
     AnimationNodeStateMachinePlayback stateMachine;
 
-    private void Set()
+    public void SetAnimation(string animation)
     {
         animationTree = GetParent().GetNode<AnimationTree>("AnimationTree");
         stateMachine = (AnimationNodeStateMachinePlayback)animationTree.Get("parameters/playback");
-    }
-
-    public void SetAnimation(string animation)
-    {
-        Set();
 
         try
         {
@@ -26,6 +21,4 @@ public partial class AnimationController : Node
             GD.PrintErr($"Анимация '{animation}' не доступна или несуществует для объекта: '{GetParent().Name}'!");
         }
     }
-
-   
 }

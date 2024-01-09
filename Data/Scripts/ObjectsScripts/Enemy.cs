@@ -29,8 +29,9 @@ public partial class Enemy : Character
 
 		//Подписываемся на события
 		Events.levelEnded += Destroy;
-		Events.playerTurnFinished += Turn;
+		//Events.playerTurnFinished += Turn;
 		Events.playerTurnFinished += Show;
+		Events.playerTurnFinished += UpdatePoints;
 
 		player = GetTree().Root.GetNode("GameScene").GetNode<PlayerSpawner>("PlayerHolder").GetNode<Player>("Player");
 	}
@@ -93,7 +94,6 @@ public partial class Enemy : Character
 		while (MovePoints >= moveCost)
 		{
 			await Task.Delay(1000);
-			//tileManager.TileGameObjectUpdatePosition();
 
 			int startPoints = MovePoints;
 
@@ -107,14 +107,18 @@ public partial class Enemy : Character
 
 		while (ActionPoints >= meleeAttackCost || ActionPoints >= rangeAttackCost && player != null)
 		{
+			await Task.Delay(1000);
+
 			int startPoints = ActionPoints;
 
-			//GetComponent<AttackScript>().CalculationAttack(player.GetComponent<MainObject>());
+			GetNode<AttackScript>("AttackScript").CalculationAttack(player);
 
 			if (startPoints == ActionPoints)
 			{
 				break;
 			}
 		}
+
+		Events.finishedHisTurn?.Invoke();
 	}
 }

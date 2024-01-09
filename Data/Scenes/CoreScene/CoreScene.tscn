@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/UIManager.cs" id="10_bwtok"]
 [ext_resource type="Script" path="res://Data/Scripts/CameraShake.cs" id="11_qh8oq"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelGenerator.cs" id="12_13kvq"]
-[ext_resource type="Script" path="res://Data/Scripts/test.cs" id="14_o5hxs"]
+[ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnController.cs" id="14_07t1w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5c43"]
 texture = ExtResource("1_sg0qk")
@@ -164,7 +164,7 @@ layer_0/z_index = 10
 [node name="Camera2D" type="Camera2D" parent="."]
 light_mask = 512
 visibility_layer = 512
-position = Vector2(392, 376)
+position = Vector2(384, 384)
 
 [node name="PlayerHolder" type="Node2D" parent="."]
 script = ExtResource("4_57adt")
@@ -182,7 +182,7 @@ script = ExtResource("8_n74tb")
 
 [node name="LevelInfo" type="Node2D" parent="."]
 script = ExtResource("9_lclkq")
-captain = 3
+captain = 4
 crystal = 10
 
 [node name="UI" type="Node2D" parent="." node_paths=PackedStringArray("HPLabel", "MovePointsLabel", "ActionPointsLabel")]
@@ -231,10 +231,9 @@ tileMap = NodePath("../TileMap")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
-offset_top = 40.0
 offset_right = 783.0
-offset_bottom = 800.0
+offset_bottom = 760.0
 color = Color(0.141176, 0.133333, 0.129412, 1)
 
 [node name="test" type="Node2D" parent="."]
-script = ExtResource("14_o5hxs")
+script = ExtResource("14_07t1w")

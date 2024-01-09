@@ -3,17 +3,23 @@ using System;
 
 public partial class Events : Node
 {
-    /// <summary>
-    /// Событие на окончание хода игрока/
+    /// <summary/
+    /// Событие на спавн игрока
     /// </summary>
     public static Action playerSpawned;
+
     /// <summary>
-    /// Событие на окончание хода игрока/
+    /// Событие на окончание хода игрока
     /// </summary>
     public static Action playerTurnFinished;
 
     /// <summary>
-    /// Событие на окончание хода других объектов на поле/
+    /// Событие на конец хода объекта
+    /// </summary>
+    public static Action finishedHisTurn;
+
+    /// <summary>
+    /// Событие на окончание хода других объектов на поле
     /// </summary>
     public static Action otherTurnFinished;
 

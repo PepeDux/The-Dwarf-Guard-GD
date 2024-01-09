@@ -11,6 +11,8 @@ public partial class Player : Character
 	{
 		Starter();
 		Events.playerSpawned?.Invoke();
+
+		Events.playerTurnFinished += UpdatePoints;
 	}
 
 	public override void _Process(double delta)

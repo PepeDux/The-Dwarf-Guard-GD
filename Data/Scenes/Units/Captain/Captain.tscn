@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://cekprly7rk5a6"]
+[gd_scene load_steps=25 format=3 uid="uid://cekprly7rk5a6"]
 
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Enemy.cs" id="1_v0che"]
 [ext_resource type="Texture2D" uid="uid://cdg7usmy0yp3x" path="res://Data/Scenes/Units/Captain/Captain-Sheet.png" id="2_rydsd"]
 [ext_resource type="Script" path="res://Data/Scripts/AnimationScripts/AnimationController.cs" id="3_0rr8i"]
 [ext_resource type="PackedScene" uid="uid://echwr1sqgpyt" path="res://Data/Scenes/CommonScenes/EnemyTileManager.tscn" id="4_7li0j"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/TakeDamage.cs" id="4_kqp4l"]
+[ext_resource type="Script" path="res://Data/Scripts/AttackScripts/AttackScript.cs" id="6_l4b7r"]
 
 [sub_resource type="Animation" id="Animation_rt33q"]
 resource_name = "DownAttack"
@@ -23,7 +24,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_pby21"]
-resource_name = "HorizontalAnimation"
+resource_name = "HorizontalAttack"
 length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -89,18 +90,70 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fjt4k"]
 _data = {
 "DownAttack": SubResource("Animation_rt33q"),
-"HorizontalAnimation": SubResource("Animation_pby21"),
+"HorizontalAttack": SubResource("Animation_pby21"),
 "Idle": SubResource("Animation_ahfrc"),
 "RESET": SubResource("Animation_ucj6o"),
 "UpAttack": SubResource("Animation_5ujdn")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uk4so"]
+animation = &"DownAttack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ik0c0"]
+animation = &"HorizontalAttack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oiac1"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hxwpw"]
+animation = &"UpAttack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bok62"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bdtge"]
+advance_mode = 2
+advance_condition = &"UpAttack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bxh2d"]
+advance_mode = 2
+advance_condition = &"HorizontalAttack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ylkmo"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8rkel"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3b4i0"]
+advance_mode = 2
+advance_condition = &"DownAttack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ecjig"]
+switch_mode = 2
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_u1cke"]
+states/DownAttack/node = SubResource("AnimationNodeAnimation_uk4so")
+states/DownAttack/position = Vector2(578, 260)
+states/End/position = Vector2(255, 260)
+states/HorizontalAttack/node = SubResource("AnimationNodeAnimation_ik0c0")
+states/HorizontalAttack/position = Vector2(884, 100)
+states/Idle/node = SubResource("AnimationNodeAnimation_oiac1")
+states/Idle/position = Vector2(578, 100)
+states/Start/position = Vector2(255, 100)
+states/UpAttack/node = SubResource("AnimationNodeAnimation_hxwpw")
+states/UpAttack/position = Vector2(578, -87)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_bok62"), "Idle", "UpAttack", SubResource("AnimationNodeStateMachineTransition_bdtge"), "Idle", "HorizontalAttack", SubResource("AnimationNodeStateMachineTransition_bxh2d"), "UpAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_ylkmo"), "HorizontalAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_8rkel"), "Idle", "DownAttack", SubResource("AnimationNodeStateMachineTransition_3b4i0"), "DownAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_ecjig")]
+graph_offset = Vector2(-247.097, -132.553)
 
 [node name="Captain" type="Node2D"]
 script = ExtResource("1_v0che")
 maxMovePoints = 3
 maxActionPoints = 1
+melee = true
 maxHP = 40
 physicalDamage = 5
 
@@ -126,6 +179,12 @@ libraries = {
 }
 tree_root = SubResource("AnimationNodeStateMachine_u1cke")
 anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/DownAttack = false
+parameters/conditions/HorizontalAttack = false
+parameters/conditions/UpAttack = false
 
 [node name="TakeDamage" type="Node2D" parent="."]
 script = ExtResource("4_kqp4l")
+
+[node name="AttackScript" type="Node2D" parent="."]
+script = ExtResource("6_l4b7r")
