@@ -16,11 +16,11 @@ public partial class CardData : Resource
 
 	[ExportGroup("Тип карты")]
 	//Тип карты
-	public Type type;
+	[Export] public Type type;
 	public enum Type { positive, negative };
 
 	[ExportGroup("Предзначен для")]
 	//Тип карты
-	public Accessory accessory;
+	[Export] public Accessory accessory;
 	public enum Accessory { player, enemy, spawn };
 }

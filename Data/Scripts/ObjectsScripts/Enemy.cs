@@ -91,9 +91,11 @@ public partial class Enemy : Character
 
 	public async void Turn()
 	{
+		GD.Print("turn");
+
 		while (MovePoints >= moveCost)
 		{
-			await Task.Delay(1000);
+			await Task.Delay(500);
 
 			int startPoints = MovePoints;
 
@@ -107,7 +109,7 @@ public partial class Enemy : Character
 
 		while (ActionPoints >= meleeAttackCost || ActionPoints >= rangeAttackCost && player != null)
 		{
-			await Task.Delay(1000);
+			await Task.Delay(500);
 
 			int startPoints = ActionPoints;
 

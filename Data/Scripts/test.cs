@@ -1,14 +1,13 @@
-﻿using Godot;
+using Godot;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 public partial class test : Node
 {
-	public override void _Process(double delta)
+	public override void _Ready()
 	{
-		foreach(var i in TileStorage.characters)
-		{
-			GD.Print(i.Name);
-		}
+		Events.levelEnded?.Invoke();
 	}
+
 }

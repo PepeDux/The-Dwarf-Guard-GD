@@ -1,8 +1,5 @@
-using Godot;
+﻿using Godot;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 public partial class TurnController : Node
 {
@@ -10,19 +7,9 @@ public partial class TurnController : Node
     private int currentWalker = 0;
 
     public override void _Ready()
-	{
-        Events.playerTurnFinished += AddTurn;
-        Events.playerTurnFinished += AddCurrentWalker;
-
-        Events.finishedHisTurn += AddCurrentWalker;
-    }
-
-    private void AddTurn()
     {
-        GD.Print("b");
-
-        currentTurn++;
-        currentWalker = 0;
+        Events.playerTurnFinished += AddCurrentWalker;
+        Events.finishedHisTurn += AddCurrentWalker;
     }
 
     private void AddCurrentWalker()
@@ -31,24 +18,37 @@ public partial class TurnController : Node
 
         currentWalker++;
 
+        if (currentWalker <= TileStorage.characters.Count)
+        {
+            Turn();
+        }
+        else
+        {
+            AddTurn();
+        }
+    }
+
+    private void AddTurn()
+    {
+        GD.Print("b");
+
+        currentTurn++;
+        currentWalker = 0;
         Turn();
     }
 
     private void Turn()
     {
-
-        Character charac = TileStorage.characters[currentWalker];
-
-        if (charac is Enemy)
+        if (currentWalker < TileStorage.characters.Count)
         {
+            Character charac = TileStorage.characters[currentWalker];
+
             GD.Print(currentWalker);
 
-            ((Enemy)charac).Turn();
-        }
-
-        if (TileStorage.characters.Count() == currentWalker) 
-        {
-            AddTurn();
+            if (charac is Enemy)
+            {
+                ((Enemy)charac).Turn();
+            }
         }
     }
 }

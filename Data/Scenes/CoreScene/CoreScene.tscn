@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ubithf5ubebc"]
+[gd_scene load_steps=22 format=3 uid="uid://ubithf5ubebc"]
 
 [ext_resource type="Texture2D" uid="uid://7fit1uamlql4" path="res://Data/Sprites/Tilemaps/MainTileMap.png" id="1_sg0qk"]
 [ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/Markers/Markers.png" id="2_outi2"]
@@ -14,6 +14,9 @@
 [ext_resource type="Script" path="res://Data/Scripts/CameraShake.cs" id="11_qh8oq"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelGenerator.cs" id="12_13kvq"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnController.cs" id="14_07t1w"]
+[ext_resource type="Script" path="res://Data/Scripts/test.cs" id="15_6latv"]
+[ext_resource type="Script" path="res://Data/Scripts/CardsScripts/CardHolder.cs" id="15_xnraa"]
+[ext_resource type="Script" path="res://Data/Scripts/CardsScripts/CardMaker.cs" id="16_sljcl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5c43"]
 texture = ExtResource("1_sg0qk")
@@ -166,6 +169,43 @@ light_mask = 512
 visibility_layer = 512
 position = Vector2(384, 384)
 
+[node name="UI" type="Node2D" parent="Camera2D" node_paths=PackedStringArray("HPLabel", "MovePointsLabel", "ActionPointsLabel")]
+position = Vector2(-384, -384)
+script = ExtResource("10_bwtok")
+HPLabel = NodePath("HPLabel")
+MovePointsLabel = NodePath("MovePointsLabel")
+ActionPointsLabel = NodePath("ActionPointsLabel")
+
+[node name="HPLabel" type="Label" parent="Camera2D/UI"]
+offset_left = 192.0
+offset_top = 320.0
+offset_right = 1472.0
+offset_bottom = 640.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("10_3v6ox")
+theme_override_font_sizes/font_size = 128
+text = "HP:"
+
+[node name="MovePointsLabel" type="Label" parent="Camera2D/UI"]
+offset_left = 192.0
+offset_top = 344.0
+offset_right = 1472.0
+offset_bottom = 664.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("10_3v6ox")
+theme_override_font_sizes/font_size = 128
+text = "Move:"
+
+[node name="ActionPointsLabel" type="Label" parent="Camera2D/UI"]
+offset_left = 192.0
+offset_top = 368.0
+offset_right = 1472.0
+offset_bottom = 688.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("10_3v6ox")
+theme_override_font_sizes/font_size = 128
+text = "Action:"
+
 [node name="PlayerHolder" type="Node2D" parent="."]
 script = ExtResource("4_57adt")
 player = Array[PackedScene]([ExtResource("5_oh22s")])
@@ -182,44 +222,8 @@ script = ExtResource("8_n74tb")
 
 [node name="LevelInfo" type="Node2D" parent="."]
 script = ExtResource("9_lclkq")
-captain = 4
+captain = 2
 crystal = 10
-
-[node name="UI" type="Node2D" parent="." node_paths=PackedStringArray("HPLabel", "MovePointsLabel", "ActionPointsLabel")]
-script = ExtResource("10_bwtok")
-HPLabel = NodePath("HPLabel")
-MovePointsLabel = NodePath("MovePointsLabel")
-ActionPointsLabel = NodePath("ActionPointsLabel")
-
-[node name="HPLabel" type="Label" parent="UI"]
-offset_left = 192.0
-offset_top = 320.0
-offset_right = 1472.0
-offset_bottom = 640.0
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("10_3v6ox")
-theme_override_font_sizes/font_size = 256
-text = "HP:"
-
-[node name="MovePointsLabel" type="Label" parent="UI"]
-offset_left = 192.0
-offset_top = 344.0
-offset_right = 1472.0
-offset_bottom = 664.0
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("10_3v6ox")
-theme_override_font_sizes/font_size = 256
-text = "Move:"
-
-[node name="ActionPointsLabel" type="Label" parent="UI"]
-offset_left = 192.0
-offset_top = 368.0
-offset_right = 1472.0
-offset_bottom = 688.0
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("10_3v6ox")
-theme_override_font_sizes/font_size = 256
-text = "Action:"
 
 [node name="CameraShake" type="Node2D" parent="." node_paths=PackedStringArray("camera")]
 script = ExtResource("11_qh8oq")
@@ -231,9 +235,77 @@ tileMap = NodePath("../TileMap")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
+offset_top = -32.0
 offset_right = 783.0
-offset_bottom = 760.0
+offset_bottom = 728.0
 color = Color(0.141176, 0.133333, 0.129412, 1)
 
-[node name="test" type="Node2D" parent="."]
+[node name="TurnController" type="Node2D" parent="."]
 script = ExtResource("14_07t1w")
+
+[node name="CardHolder" type="Node2D" parent="."]
+script = ExtResource("15_xnraa")
+
+[node name="Card1" type="Button" parent="CardHolder"]
+visible = false
+offset_left = 256.0
+offset_top = 320.0
+offset_right = 352.0
+offset_bottom = 448.0
+script = ExtResource("16_sljcl")
+
+[node name="CardNamePositive" type="Label" parent="CardHolder/Card1"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 1608.0
+offset_bottom = 168.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0.247059, 0.247059, 0.247059, 1)
+theme_override_fonts/font = ExtResource("10_3v6ox")
+theme_override_font_sizes/font_size = 128
+text = "Name"
+
+[node name="CardDescriptionPositive" type="Label" parent="CardHolder/Card1"]
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 1608.0
+offset_bottom = 664.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0.247059, 0.247059, 0.247059, 1)
+theme_override_fonts/font = ExtResource("10_3v6ox")
+theme_override_font_sizes/font_size = 128
+text = "Text"
+
+[node name="Separator" type="ColorRect" parent="CardHolder/Card1"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 62.0
+offset_right = 88.0
+offset_bottom = 66.0
+color = Color(0.247059, 0.247059, 0.247059, 1)
+
+[node name="CardNameNegative" type="Label" parent="CardHolder/Card1"]
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 1608.0
+offset_bottom = 232.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0.247059, 0.247059, 0.247059, 1)
+theme_override_fonts/font = ExtResource("10_3v6ox")
+theme_override_font_sizes/font_size = 128
+text = "Name"
+
+[node name="CardDescriptionNegative" type="Label" parent="CardHolder/Card1"]
+offset_left = 8.0
+offset_top = 88.0
+offset_right = 1608.0
+offset_bottom = 728.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0.247059, 0.247059, 0.247059, 1)
+theme_override_fonts/font = ExtResource("10_3v6ox")
+theme_override_font_sizes/font_size = 128
+text = "Text"
+
+[node name="test" type="Node2D" parent="."]
+script = ExtResource("15_6latv")
