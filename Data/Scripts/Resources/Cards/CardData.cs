@@ -3,6 +3,10 @@ using System;
 
 public partial class CardData : Resource
 {
+	[ExportGroup("Название")]
+	//Название карты
+	[Export] public string name { get; set; }
+
 	[ExportGroup("Описание")]
 	//Описание карты
 	[Export] public string cardDescription { get; set; }

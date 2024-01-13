@@ -1,7 +1,7 @@
 using Godot;
 using System;
-using linq;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 public partial class CardMaker : Button
@@ -13,7 +13,7 @@ public partial class CardMaker : Button
 	public CardData cardNegative;
 
 	//Массив карт
-	private List<CardData> cards = new list<CardData>();
+	public List<CardData> cards = new List<CardData>();
 
 	public LevelModifier levelModifier;
 
@@ -33,8 +33,12 @@ public partial class CardMaker : Button
 
 	public override void _Ready()
 	{
+		cards = LoadResourceFromDirectory.Load<CardData>("res://Data/Scripts/Resources/Cards/");
+
 		Events.endSelectCard += EndSelectCard;
-		Pressed += ButtonPressed();
+
+		var button = new Button();
+		Pressed += ButtonPressed;
 
 		cardNamePositive = GetNode<Label>("CardNamePositive");
 		cardDescriptionPositive = GetNode<Label>("CardDescriptionPositive");
@@ -42,10 +46,10 @@ public partial class CardMaker : Button
 		cardNameNegative = GetNode<Label>("CardNameNegative");
 		cardDescriptionNegative = GetNode<Label>("CardDescriptionNegative");
 
-
-		//cards = Resources.LoadAll<CardData>("Cards");
 		MakeCard();
 	}
+
+
 
 
 	private void MakeCard()
@@ -57,11 +61,11 @@ public partial class CardMaker : Button
 
 
 
-		cardNamePositive.text = cardPositive.name;
-		cardDescriptionPositive.text = cardPositive.CardDescription;
+		cardNamePositive.Text = cardPositive.name;
+		cardDescriptionPositive.Text = cardPositive.cardDescription;
 
-		cardNameNegative.text = cardNegative.name;
-		cardDescriptionNegative.text = cardNegative.CardDescription;
+		cardNameNegative.Text = cardNegative.name;
+		cardDescriptionNegative.Text = cardNegative.cardDescription;
 	}
 
 	private void ButtonPressed()

@@ -267,6 +267,7 @@ theme_override_font_sizes/font_size = 128
 text = "Name"
 
 [node name="CardDescriptionPositive" type="Label" parent="CardHolder/Card1"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 24.0
 offset_right = 1608.0
@@ -286,6 +287,7 @@ offset_bottom = 66.0
 color = Color(0.247059, 0.247059, 0.247059, 1)
 
 [node name="CardNameNegative" type="Label" parent="CardHolder/Card1"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 72.0
 offset_right = 1608.0
@@ -297,6 +299,7 @@ theme_override_font_sizes/font_size = 128
 text = "Name"
 
 [node name="CardDescriptionNegative" type="Label" parent="CardHolder/Card1"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 88.0
 offset_right = 1608.0
