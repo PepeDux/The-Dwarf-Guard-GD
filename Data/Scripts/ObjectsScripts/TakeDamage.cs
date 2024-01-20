@@ -54,7 +54,7 @@ public partial class TakeDamage : Node
 					target.HP -= totalDamage;
 				}
 
-				if(target.armor > 0) 
+				if (target.armor > 0) 
 				{
 					target.armor -= 1;
 				}
@@ -83,40 +83,40 @@ public partial class TakeDamage : Node
 
 	public void Die()
 	{
-		//GD.Print($"Я {GetParent().Name} умер");
+		GD.Print($"Я {GetParent().Name} умер");
 
-		//Спавнит случайны лут из списка с вероятностью 50%
-		//if (Random.Range(0, 100) > 50 && lootAfterDeath != null)
-		//{
-		//	try
-		//	{
-		//		GameObject loot = Instantiate(lootAfterDeath[Random.Range(0, lootAfterDeath.Length)]);
-		//		loot.GetComponent<BaseObject>().coordinate = GetComponent<BaseObject>().tileMap.WorldToCell(transform.position);
-		//	}
-		//	catch
-		//	{
+        //Спавнит случайны лут из списка с вероятностью 50%
+        //if (Random.Range(0, 100) > 50 && lootAfterDeath != null)
+        //{
+        //	try
+        //	{
+        //		GameObject loot = Instantiate(lootAfterDeath[Random.Range(0, lootAfterDeath.Length)]);
+        //		loot.GetComponent<BaseObject>().coordinate = GetComponent<BaseObject>().tileMap.WorldToCell(transform.position);
+        //	}
+        //	catch
+        //	{
 
-		//	}
-		//}
+        //	}
+        //}
 
 
 
-		//Instantiate(corpse, transform.position, transform.rotation);
+        //Instantiate(corpse, transform.position, transform.rotation);
 
-		//GetComponent<MainObject>().anim.SetTrigger("Die");
+        //GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("Die");
 
-		//if (GetComponent<MainObject>() as Player)
-		//{
-		//	playerDead?.Invoke();
-		//}
+        if (GetParent() is Player)
+		{
+			Events.playerDied?.Invoke();
+		}
 
-		//if (GetComponent<MainObject>() as Enemy)
-		//{
-		//	if (GetComponent<Enemy>().typeEnemy == Enemy.TypeEnemy.captain)
-		//	{
-		//		LevelManager.levelEnded?.Invoke();
-		//	}
-		//}
+		if (GetParent() is Enemy)
+		{
+			if (GetParent<Enemy>().typeEnemy == Enemy.TypeEnemy.captain)
+			{
+				Events.levelEnded?.Invoke();
+			}
+		}
 
 
 		TileStorage.RemoveCharacter(GetParent<Character>());

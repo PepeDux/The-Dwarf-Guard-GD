@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ubithf5ubebc"]
+[gd_scene load_steps=21 format=3 uid="uid://ubithf5ubebc"]
 
 [ext_resource type="Texture2D" uid="uid://7fit1uamlql4" path="res://Data/Sprites/Tilemaps/MainTileMap.png" id="1_sg0qk"]
 [ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/Markers/Markers.png" id="2_outi2"]
@@ -14,7 +14,6 @@
 [ext_resource type="Script" path="res://Data/Scripts/CameraShake.cs" id="11_qh8oq"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelGenerator.cs" id="12_13kvq"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnController.cs" id="14_07t1w"]
-[ext_resource type="Script" path="res://Data/Scripts/test.cs" id="15_6latv"]
 [ext_resource type="Script" path="res://Data/Scripts/CardsScripts/CardHolder.cs" id="15_xnraa"]
 [ext_resource type="Script" path="res://Data/Scripts/CardsScripts/CardMaker.cs" id="16_sljcl"]
 
@@ -247,10 +246,9 @@ script = ExtResource("14_07t1w")
 script = ExtResource("15_xnraa")
 
 [node name="Card1" type="Button" parent="CardHolder"]
-visible = false
-offset_left = 256.0
+offset_left = 336.0
 offset_top = 320.0
-offset_right = 352.0
+offset_right = 432.0
 offset_bottom = 448.0
 script = ExtResource("16_sljcl")
 
@@ -311,4 +309,3 @@ theme_override_font_sizes/font_size = 128
 text = "Text"
 
 [node name="test" type="Node2D" parent="."]
-script = ExtResource("15_6latv")

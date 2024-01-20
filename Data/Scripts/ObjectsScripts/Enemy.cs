@@ -25,20 +25,23 @@ public partial class Enemy : Character
 
 	public override void _Ready()
 	{
-		Starter();
-
 		//Подписываемся на события
+		Events.playerSpawned += GetPlayer;
 		Events.levelEnded += Destroy;
-		//Events.playerTurnFinished += Turn;
-		Events.playerTurnFinished += Show;
+		Events.endSelectCard += Destroy;
 		Events.playerTurnFinished += UpdatePoints;
 
+		Starter();
+
+		
+	}
+
+	private void GetPlayer()
+	{
 		player = GetTree().Root.GetNode("GameScene").GetNode<PlayerSpawner>("PlayerHolder").GetNode<Player>("Player");
 	}
 
-
-
-	void Orientation()
+	private void Orientation()
 	{
 		if (player != null)
 		{
@@ -63,8 +66,6 @@ public partial class Enemy : Character
 		//задаем новый размер персонажа, равный старому, но зеркально отраженный
 		GetNode<Sprite2D>("Sprite2D").Scale = theScale;
 	}
-
-
 
 	public void EnemyMove()
 	{

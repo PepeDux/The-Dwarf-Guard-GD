@@ -9,10 +9,14 @@ public partial class Player : Character
 
 	public override void _Ready()
 	{
-		Starter();
-		Events.playerSpawned?.Invoke();
-
+		//Подписываемся на события
+		Events.levelEnded += Destroy;
+		Events.endSelectCard += Destroy;
 		Events.playerTurnFinished += UpdatePoints;
+
+		Starter();
+
+		Events.playerSpawned?.Invoke();
 	}
 
 	public override void _Process(double delta)

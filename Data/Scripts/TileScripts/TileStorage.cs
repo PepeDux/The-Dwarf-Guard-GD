@@ -14,18 +14,13 @@ public partial class TileStorage : Node2D
 
 
 
-
-    public override void _Ready()
-	{
-
-	}
-
-	public override void _Process(double delta)
-	{
-       
-	}
-
-    
+    public static void ClearAllCells()
+    {
+        freeCells.Clear();
+        impassableCells.Clear();
+        functionalCells.Clear();
+        functionalCells.Clear();
+    }
     public static void AddCharacter(Character character)
     {
         characters.Add(character);

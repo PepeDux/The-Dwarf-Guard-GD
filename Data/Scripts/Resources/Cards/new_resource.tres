@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_2is4e")
-cardDescription = ""
+name = "64"
+cardDescription = "2152356"
 type = 0
 accessory = 0

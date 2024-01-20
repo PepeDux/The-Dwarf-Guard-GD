@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bxv74aoxvnt84"]
+
+[ext_resource type="Script" path="res://Data/Scripts/Resources/Cards/CardData.cs" id="1_v2a2e"]
+
+[resource]
+script = ExtResource("1_v2a2e")
+name = "12"
+cardDescription = "123123"
+type = 1
+accessory = 0

@@ -18,13 +18,19 @@ public partial class LevelGenerator : Node2D
 
 	public override void _Ready()
 	{
-		Generate();
+		Events.endSelectCard += Generate;
+		Generate();		
 	}
 
 
 
 	private void Generate()
 	{
+		tileMap.Clear();
+        TileStorage.ClearAllCells();
+
+
+		//Старотовый тайл
 		Tile tile = new Tile(startTile, tileMap);
 
 		for (int i = 0; TileStorage.freeCells.Count < countTile; i++)
