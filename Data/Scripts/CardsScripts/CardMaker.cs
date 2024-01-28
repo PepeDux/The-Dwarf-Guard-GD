@@ -1,10 +1,11 @@
 using Godot;
+using Godot.Collections;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-public partial class CardMaker : Button
+public partial class CardMaker : TextureButton
 {
 	Random random = new Random();
 
@@ -37,8 +38,9 @@ public partial class CardMaker : Button
 
 		Events.endSelectCard += EndSelectCard;
 
-		var button = new Button();
 		Pressed += ButtonPressed;
+		MouseEntered += Entered;
+		MouseExited += Exited;
 
 		cardNamePositive = GetNode<Label>("CardNamePositive");
 		cardDescriptionPositive = GetNode<Label>("CardDescriptionPositive");
@@ -104,6 +106,24 @@ public partial class CardMaker : Button
 
 		Events.endSelectCard?.Invoke();
 	}
+
+	private void Entered()
+	{
+		var beam = ResourceLoader.Load("res://Data/UI/Cursors/Sprite-0002.png");
+		Input.SetCustomMouseCursor(beam);
+
+		Position = new Vector2(Position.X, Position.Y - 2);
+		
+	}
+
+	private void Exited()
+	{
+		var arrow = ResourceLoader.Load("res://Data/UI/Cursors/Sprite-0001.png");
+		Input.SetCustomMouseCursor(arrow);
+
+		Position = new Vector2(Position.X, Position.Y + 2);
+	}
+
 
 	private void EndSelectCard()
 	{
