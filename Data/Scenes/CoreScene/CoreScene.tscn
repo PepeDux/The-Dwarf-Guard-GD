@@ -1,13 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://ubithf5ubebc"]
+[gd_scene load_steps=18 format=3 uid="uid://ubithf5ubebc"]
 
+[ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/CoreScene/Holders.tscn" id="1_78hkp"]
 [ext_resource type="Texture2D" uid="uid://7fit1uamlql4" path="res://Data/Sprites/Tilemaps/MainTileMap.png" id="1_sg0qk"]
 [ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/Markers/Markers.png" id="2_outi2"]
-[ext_resource type="Script" path="res://Data/Scripts/Spawners/PlayerSpawner.cs" id="4_57adt"]
-[ext_resource type="PackedScene" uid="uid://jljnojosimbk" path="res://Data/Scenes/Player/Player.tscn" id="5_oh22s"]
-[ext_resource type="Script" path="res://Data/Scripts/Spawners/EnemySpawner.cs" id="6_141ve"]
-[ext_resource type="PackedScene" uid="uid://cekprly7rk5a6" path="res://Data/Scenes/Units/Captain/Captain.tscn" id="7_sbymh"]
-[ext_resource type="Script" path="res://Data/Scripts/Spawners/FunctionalObjectSpawner.cs" id="7_xrei0"]
-[ext_resource type="Script" path="res://Data/Scripts/Spawners/StaticObjectSpawner.cs" id="8_n74tb"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelInfo.cs" id="9_lclkq"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="10_3v6ox"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/UIManager.cs" id="10_bwtok"]
@@ -17,6 +12,7 @@
 [ext_resource type="Script" path="res://Data/Scripts/CardsScripts/CardHolder.cs" id="15_xnraa"]
 [ext_resource type="Texture2D" uid="uid://cjubqb7dam4ib" path="res://Data/Sprites/CardMaket.png" id="16_gmsda"]
 [ext_resource type="Script" path="res://Data/Scripts/CardsScripts/CardMaker.cs" id="17_125si"]
+[ext_resource type="Script" path="res://Data/Scripts/LevelScripts/ClearHolder.cs" id="18_m7nb1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5c43"]
 texture = ExtResource("1_sg0qk")
@@ -164,6 +160,8 @@ tile_set = SubResource("TileSet_b4cq1")
 format = 2
 layer_0/z_index = 10
 
+[node name="Holders" parent="." instance=ExtResource("1_78hkp")]
+
 [node name="Camera2D" type="Camera2D" parent="."]
 light_mask = 512
 visibility_layer = 512
@@ -185,6 +183,7 @@ scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 128
 text = "HP:"
+metadata/_edit_use_anchors_ = true
 
 [node name="MovePointsLabel" type="Label" parent="Camera2D/UI"]
 offset_left = 192.0
@@ -195,6 +194,7 @@ scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 128
 text = "Move:"
+metadata/_edit_use_anchors_ = true
 
 [node name="ActionPointsLabel" type="Label" parent="Camera2D/UI"]
 offset_left = 192.0
@@ -205,20 +205,7 @@ scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 128
 text = "Action:"
-
-[node name="PlayerHolder" type="Node2D" parent="."]
-script = ExtResource("4_57adt")
-player = Array[PackedScene]([ExtResource("5_oh22s")])
-
-[node name="Enemies" type="Node2D" parent="."]
-script = ExtResource("6_141ve")
-captain = Array[PackedScene]([ExtResource("7_sbymh")])
-
-[node name="FunctionalObjects" type="Node2D" parent="."]
-script = ExtResource("7_xrei0")
-
-[node name="StaticObjects" type="Node2D" parent="."]
-script = ExtResource("8_n74tb")
+metadata/_edit_use_anchors_ = true
 
 [node name="LevelInfo" type="Node2D" parent="."]
 script = ExtResource("9_lclkq")
@@ -233,11 +220,15 @@ camera = NodePath("../Camera2D")
 script = ExtResource("12_13kvq")
 tileMap = NodePath("../TileMap")
 
+[node name="HolderCleaner" type="Node2D" parent="LevelGenerator"]
+script = ExtResource("18_m7nb1")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
 offset_right = 783.0
 offset_bottom = 728.0
 color = Color(0.141176, 0.133333, 0.129412, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="TurnController" type="Node2D" parent="."]
 script = ExtResource("14_07t1w")
@@ -245,7 +236,8 @@ script = ExtResource("14_07t1w")
 [node name="CardHolder" type="Node2D" parent="."]
 script = ExtResource("15_xnraa")
 
-[node name="TextureButton" type="TextureButton" parent="CardHolder"]
+[node name="Card1" type="TextureButton" parent="CardHolder"]
+visible = false
 offset_left = 192.0
 offset_top = 352.0
 offset_right = 384.0
@@ -255,7 +247,7 @@ texture_normal = ExtResource("16_gmsda")
 stretch_mode = 0
 script = ExtResource("17_125si")
 
-[node name="CardNamePositive" type="Label" parent="CardHolder/TextureButton"]
+[node name="CardNamePositive" type="Label" parent="CardHolder/Card1"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 2.0
@@ -267,7 +259,7 @@ theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 256
 text = "Славянское пи"
 
-[node name="CardDescriptionPositive" type="Label" parent="CardHolder/TextureButton"]
+[node name="CardDescriptionPositive" type="Label" parent="CardHolder/Card1"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 22.0
@@ -281,7 +273,7 @@ text = "Увеличивает
 максимальный 
 урона на 2 ед"
 
-[node name="CardNameNegative" type="Label" parent="CardHolder/TextureButton"]
+[node name="CardNameNegative" type="Label" parent="CardHolder/Card1"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 86.0
@@ -293,7 +285,7 @@ theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 256
 text = "Name"
 
-[node name="CardDescriptionNegative" type="Label" parent="CardHolder/TextureButton"]
+[node name="CardDescriptionNegative" type="Label" parent="CardHolder/Card1"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 106.0
@@ -305,7 +297,8 @@ theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 256
 text = "Text"
 
-[node name="TextureButton2" type="TextureButton" parent="CardHolder"]
+[node name="Card2" type="TextureButton" parent="CardHolder"]
+visible = false
 offset_left = 336.0
 offset_top = 352.0
 offset_right = 528.0
@@ -315,7 +308,7 @@ texture_normal = ExtResource("16_gmsda")
 stretch_mode = 0
 script = ExtResource("17_125si")
 
-[node name="CardNamePositive" type="Label" parent="CardHolder/TextureButton2"]
+[node name="CardNamePositive" type="Label" parent="CardHolder/Card2"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 2.0
@@ -327,7 +320,7 @@ theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 256
 text = "Славянское пи"
 
-[node name="CardDescriptionPositive" type="Label" parent="CardHolder/TextureButton2"]
+[node name="CardDescriptionPositive" type="Label" parent="CardHolder/Card2"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 22.0
@@ -341,7 +334,7 @@ text = "Увеличивает
 максимальный 
 урона на 2 ед"
 
-[node name="CardNameNegative" type="Label" parent="CardHolder/TextureButton2"]
+[node name="CardNameNegative" type="Label" parent="CardHolder/Card2"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 86.0
@@ -353,7 +346,7 @@ theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 256
 text = "Name"
 
-[node name="CardDescriptionNegative" type="Label" parent="CardHolder/TextureButton2"]
+[node name="CardDescriptionNegative" type="Label" parent="CardHolder/Card2"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 106.0
@@ -365,7 +358,8 @@ theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 256
 text = "Text"
 
-[node name="TextureButton3" type="TextureButton" parent="CardHolder"]
+[node name="Card3" type="TextureButton" parent="CardHolder"]
+visible = false
 offset_left = 480.0
 offset_top = 352.0
 offset_right = 672.0
@@ -375,7 +369,7 @@ texture_normal = ExtResource("16_gmsda")
 stretch_mode = 0
 script = ExtResource("17_125si")
 
-[node name="CardNamePositive" type="Label" parent="CardHolder/TextureButton3"]
+[node name="CardNamePositive" type="Label" parent="CardHolder/Card3"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 2.0
@@ -387,7 +381,7 @@ theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 256
 text = "Славянское пи"
 
-[node name="CardDescriptionPositive" type="Label" parent="CardHolder/TextureButton3"]
+[node name="CardDescriptionPositive" type="Label" parent="CardHolder/Card3"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 22.0
@@ -401,7 +395,7 @@ text = "Увеличивает
 максимальный 
 урона на 2 ед"
 
-[node name="CardNameNegative" type="Label" parent="CardHolder/TextureButton3"]
+[node name="CardNameNegative" type="Label" parent="CardHolder/Card3"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 86.0
@@ -413,7 +407,7 @@ theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 256
 text = "Name"
 
-[node name="CardDescriptionNegative" type="Label" parent="CardHolder/TextureButton3"]
+[node name="CardDescriptionNegative" type="Label" parent="CardHolder/Card3"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 106.0

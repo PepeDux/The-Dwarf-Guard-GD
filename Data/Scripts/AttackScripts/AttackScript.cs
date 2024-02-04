@@ -3,10 +3,6 @@ using System;
 
 public partial class AttackScript : Node
 {
-	//public Animator anim;
-
-	
-
 	private Vector2I attackCell;
 	private Character target;
 	private int attackCost;
@@ -18,7 +14,6 @@ public partial class AttackScript : Node
 		attacker = GetParent<Character>();
 	}
 
-	
 
 
 	public void CalculationAttack(Character target)

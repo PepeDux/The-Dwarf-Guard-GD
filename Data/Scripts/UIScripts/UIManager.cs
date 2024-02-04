@@ -1,4 +1,4 @@
-﻿using Godot;
+using Godot;
 using System;
 using System.Diagnostics;
 
@@ -17,9 +17,9 @@ public partial class UIManager : Node
 	}
 	public override void _Process(double delta)
 	{
-		if (DataBank.currentMouseTarget == null) 
+		if (DataBank.currentMouseTarget == null)
 		{
-			target = player;         
+			target = player;
 		}
 		else
 		{
@@ -33,6 +33,7 @@ public partial class UIManager : Node
 
 	private void AddPlayer()
 	{
-		player = GetTree().Root.GetNode("GameScene").GetNode<PlayerSpawner>("PlayerHolder").GetNode<Player>("Player");
+		player = GetTree().Root.GetNode("GameScene").GetNode("Holders").GetNode<PlayerSpawner>("PlayerHolder").GetChild<Player>(0);
 	}
 }
+

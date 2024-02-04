@@ -25,30 +25,30 @@ public partial class BaseObject : Node2D
 	{
 		Position = tileMap.MapToLocal(coordinate); //Привязываем координаты объекта к мировым координатам
 
-        //Если координата объекта оказываектся за пределами границ поля,
-        //то его телепортирует на максимально возможное в пределах поля значение координаты по одной из осей
-        //-----------------------------------------
-        //if (coordinate.Y > TileManager.maxTop)
-        //{
-        //	coordinate.Y = TileManager.maxTop;
-        //}
+		//Если координата объекта оказываектся за пределами границ поля,
+		//то его телепортирует на максимально возможное в пределах поля значение координаты по одной из осей
+		//-----------------------------------------
+		//if (coordinate.Y > TileManager.maxTop)
+		//{
+		//	coordinate.Y = TileManager.maxTop;
+		//}
 
-        //if (coordinate.Y < TileManager.maxDown)
-        //{
-        //	coordinate.Y = TileManager.maxDown;
-        //}
+		//if (coordinate.Y < TileManager.maxDown)
+		//{
+		//	coordinate.Y = TileManager.maxDown;
+		//}
 
-        //if (coordinate.X > TileManager.maxRight)
-        //{
-        //	coordinate.X = TileManager.maxRight;
-        //}
+		//if (coordinate.X > TileManager.maxRight)
+		//{
+		//	coordinate.X = TileManager.maxRight;
+		//}
 
-        //if (coordinate.X < TileManager.maxLeft)
-        //{
-        //	coordinate.X = TileManager.maxLeft;
-        //}
-        //-----------------------------------------
-    }
+		//if (coordinate.X < TileManager.maxLeft)
+		//{
+		//	coordinate.X = TileManager.maxLeft;
+		//}
+		//-----------------------------------------
+	}
 
 	public void Destroy()
 	{

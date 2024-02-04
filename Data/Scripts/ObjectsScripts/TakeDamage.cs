@@ -85,27 +85,27 @@ public partial class TakeDamage : Node
 	{
 		GD.Print($"Я {GetParent().Name} умер");
 
-        //Спавнит случайны лут из списка с вероятностью 50%
-        //if (Random.Range(0, 100) > 50 && lootAfterDeath != null)
-        //{
-        //	try
-        //	{
-        //		GameObject loot = Instantiate(lootAfterDeath[Random.Range(0, lootAfterDeath.Length)]);
-        //		loot.GetComponent<BaseObject>().coordinate = GetComponent<BaseObject>().tileMap.WorldToCell(transform.position);
-        //	}
-        //	catch
-        //	{
+		//Спавнит случайны лут из списка с вероятностью 50%
+		//if (Random.Range(0, 100) > 50 && lootAfterDeath != null)
+		//{
+		//	try
+		//	{
+		//		GameObject loot = Instantiate(lootAfterDeath[Random.Range(0, lootAfterDeath.Length)]);
+		//		loot.GetComponent<BaseObject>().coordinate = GetComponent<BaseObject>().tileMap.WorldToCell(transform.position);
+		//	}
+		//	catch
+		//	{
 
-        //	}
-        //}
+		//	}
+		//}
 
 
 
-        //Instantiate(corpse, transform.position, transform.rotation);
+		//Instantiate(corpse, transform.position, transform.rotation);
 
-        //GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("Die");
+		//GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("Die");
 
-        if (GetParent() is Player)
+		if (GetParent() is Player)
 		{
 			Events.playerDied?.Invoke();
 		}
@@ -118,13 +118,8 @@ public partial class TakeDamage : Node
 			}
 		}
 
-
+		//Очищаем координаты персонажа из хранилища координат 
 		TileStorage.RemoveCharacter(GetParent<Character>());
 		GetParent().QueueFree();
 	}
-
-	public void Kill()
-	{
-		target.HP = -1000;
-	}//Метод для отладки
 }

@@ -1,4 +1,4 @@
-﻿using Godot;
+using Godot;
 using System;
 
 public partial class EnemySpawner : Spawner
@@ -12,7 +12,7 @@ public partial class EnemySpawner : Spawner
 
 	public override void _Ready()
 	{
-        Events.levelGenerated += SpawnEnemy;
+		Events.levelGenerated += SpawnEnemy;
 
 		generateLevelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
 	}

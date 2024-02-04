@@ -9,9 +9,7 @@ public partial class Player : Character
 
 	public override void _Ready()
 	{
-		//Подписываемся на события
-		Events.levelEnded += Destroy;
-		Events.endSelectCard += Destroy;
+		//Подписываемся на события	
 		Events.playerTurnFinished += UpdatePoints;
 
 		Starter();
@@ -22,7 +20,7 @@ public partial class Player : Character
 	public override void _Process(double delta)
 	{
 		Updater();
-		MoveOrientation(); //Отвечает за передвижение персонажа и его направление
+		MoveOrientation(); //Отвечает за направление
 	}
 
 	void MoveOrientation()

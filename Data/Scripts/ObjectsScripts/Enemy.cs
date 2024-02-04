@@ -12,7 +12,6 @@ public partial class Enemy : Character
 
 	private bool isFacingRight = true;
 
-	//[Header("Игрок")]
 	public Player player;
 
 
@@ -21,24 +20,27 @@ public partial class Enemy : Character
 	{
 		Updater();
 		Orientation();
+
+		GetPlayer();
 	}
 
 	public override void _Ready()
 	{
 		//Подписываемся на события
 		Events.playerSpawned += GetPlayer;
-		Events.levelEnded += Destroy;
-		Events.endSelectCard += Destroy;
 		Events.playerTurnFinished += UpdatePoints;
 
 		Starter();
 
-		
+		GD.Print(coordinate);
 	}
 
 	private void GetPlayer()
 	{
-		player = GetTree().Root.GetNode("GameScene").GetNode<PlayerSpawner>("PlayerHolder").GetNode<Player>("Player");
+		if (player == null) 
+		{
+			player = GetTree().Root.GetNode("GameScene").GetNode("Holders").GetNode<PlayerSpawner>("PlayerHolder").GetChildren().OfType<Player>().FirstOrDefault();
+		}
 	}
 
 	private void Orientation()
@@ -122,6 +124,6 @@ public partial class Enemy : Character
 			}
 		}
 
-		Events.finishedHisTurn?.Invoke();
+		Events.endedHisTurn?.Invoke();
 	}
 }

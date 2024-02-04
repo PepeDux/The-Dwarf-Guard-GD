@@ -39,12 +39,17 @@ public partial class CardMaker : TextureButton
 		Events.endSelectCard += EndSelectCard;
 
 		Pressed += ButtonPressed;
-		MouseEntered += Entered;
-		MouseExited += Exited;
 
+		// Событие на вход курсора на карту
+		MouseEntered += Entered;
+        // Событие на выход курсора на карту
+        MouseExited += Exited;
+
+		// Позитивная карта
 		cardNamePositive = GetNode<Label>("CardNamePositive");
 		cardDescriptionPositive = GetNode<Label>("CardDescriptionPositive");
 
+		// Негативная карта
 		cardNameNegative = GetNode<Label>("CardNameNegative");
 		cardDescriptionNegative = GetNode<Label>("CardDescriptionNegative");
 
@@ -63,16 +68,18 @@ public partial class CardMaker : TextureButton
 
 
 
+		// Задаем название и поисание позитивной карты
 		cardNamePositive.Text = cardPositive.name;
 		cardDescriptionPositive.Text = cardPositive.cardDescription;
 
-		cardNameNegative.Text = cardNegative.name;
+        // Задаем название и поисание негативной карты
+        cardNameNegative.Text = cardNegative.name;
 		cardDescriptionNegative.Text = cardNegative.cardDescription;
 	}
 
 	private void ButtonPressed()
 	{
-		//Враги
+		// Враги
 		if (cardPositive.modifier is StatusData && cardPositive.accessory == CardData.Accessory.enemy)
 		{
 			levelModifier.GetParent().GetNode<LevelModifier>("LevelModifier").enemyStatuses.Add(cardPositive.modifier as StatusData);
@@ -82,7 +89,7 @@ public partial class CardMaker : TextureButton
 			levelModifier.GetParent().GetNode<LevelModifier>("LevelModifier").enemyStatuses.Add(cardNegative.modifier as StatusData);
 		}
 
-		//Игрок
+		// Игрок
 		if (cardPositive.modifier is StatusData && cardPositive.accessory == CardData.Accessory.player)
 		{
 			levelModifier.GetParent().GetNode<LevelModifier>("LevelModifier").playerStatuses.Add(cardPositive.modifier as StatusData);
@@ -92,7 +99,7 @@ public partial class CardMaker : TextureButton
 			levelModifier.GetParent().GetNode<LevelModifier>("LevelModifier").playerStatuses.Add(cardNegative.modifier as StatusData);
 		}
 
-		//Спавн
+		// Спавн
 		if (cardPositive.modifier is SpawnData && cardPositive.accessory == CardData.Accessory.spawn)
 		{
 			spawner.GetParent().GetNode<SpawnCalculation>("SpawnCalculation").AddSpawn(cardPositive.modifier as SpawnData);
@@ -103,23 +110,22 @@ public partial class CardMaker : TextureButton
 		}
 
 
-
+		// Вызов события при окончании выбора карты
 		Events.endSelectCard?.Invoke();
 	}
 
 	private void Entered()
 	{
-		var beam = ResourceLoader.Load("res://Data/UI/Cursors/Sprite-0002.png");
-		Input.SetCustomMouseCursor(beam);
+		// Задаем курсору вид "лапки"
+		CursorStyleController.SetBeam();
 
-		Position = new Vector2(Position.X, Position.Y - 2);
-		
+		Position = new Vector2(Position.X, Position.Y - 2);	
 	}
 
 	private void Exited()
 	{
-		var arrow = ResourceLoader.Load("res://Data/UI/Cursors/Sprite-0001.png");
-		Input.SetCustomMouseCursor(arrow);
+        // Задаем курсору вид "стрелки"
+        CursorStyleController.SetArrow();
 
 		Position = new Vector2(Position.X, Position.Y + 2);
 	}
@@ -127,6 +133,7 @@ public partial class CardMaker : TextureButton
 
 	private void EndSelectCard()
 	{
+		// После выбора карты создается следующие карты на следующий уровень
 		MakeCard();
 		Visible = false;
 	}

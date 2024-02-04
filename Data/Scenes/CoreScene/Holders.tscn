@@ -1,0 +1,24 @@
+[gd_scene load_steps=7 format=3 uid="uid://vcns8byu0kqa"]
+
+[ext_resource type="Script" path="res://Data/Scripts/Spawners/PlayerSpawner.cs" id="1_4w0t7"]
+[ext_resource type="PackedScene" uid="uid://jljnojosimbk" path="res://Data/Scenes/Player/Player.tscn" id="2_6mq0g"]
+[ext_resource type="Script" path="res://Data/Scripts/Spawners/EnemySpawner.cs" id="3_2t50k"]
+[ext_resource type="PackedScene" uid="uid://cekprly7rk5a6" path="res://Data/Scenes/Units/Captain/Captain.tscn" id="4_kb44o"]
+[ext_resource type="Script" path="res://Data/Scripts/Spawners/FunctionalObjectSpawner.cs" id="5_fqsji"]
+[ext_resource type="Script" path="res://Data/Scripts/Spawners/StaticObjectSpawner.cs" id="6_titob"]
+
+[node name="Holders" type="Node2D"]
+
+[node name="PlayerHolder" type="Node2D" parent="."]
+script = ExtResource("1_4w0t7")
+player = Array[PackedScene]([ExtResource("2_6mq0g")])
+
+[node name="EnemiesHolder" type="Node2D" parent="."]
+script = ExtResource("3_2t50k")
+captain = Array[PackedScene]([ExtResource("4_kb44o")])
+
+[node name="FunctioanalObjectsHolder" type="Node2D" parent="."]
+script = ExtResource("5_fqsji")
+
+[node name="StaticObjectsHolder" type="Node2D" parent="."]
+script = ExtResource("6_titob")

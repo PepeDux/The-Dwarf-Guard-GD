@@ -1,4 +1,4 @@
-﻿using Godot;
+using Godot;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,26 +8,33 @@ public partial class LevelGenerator : Node2D
 {
 	[Export] private TileMap tileMap;
 
-    Random random = new Random();
+	Random random = new Random();
 
-    //Стартовый тайл от которого будут строиться последующие
-    Vector2I startTile = new Vector2I(24, 24);
+	//Стартовый тайл от которого будут строиться последующие
+	Vector2I startTile = new Vector2I(24, 24);
 	int countTile = 40;
 
 
 
 	public override void _Ready()
 	{
+		// Подписка на событие на окончание выбора карт
 		Events.endSelectCard += Generate;
-		Generate();		
+		// Генерация карты при старте
+		Generate();
 	}
 
 
 
 	private void Generate()
 	{
+		// Очищаем тайлмап от тайлов
 		tileMap.Clear();
-        TileStorage.ClearAllCells();
+		// Очищаем холдеры
+		GetNode<ClearHolder>("HolderCleaner").ClearAll();
+		// Очищаем хранилище координат тайлов
+		TileStorage.ClearAllCells();
+
 
 
 		//Старотовый тайл

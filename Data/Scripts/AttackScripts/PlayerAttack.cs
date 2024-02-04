@@ -14,6 +14,6 @@ public partial class PlayerAttack : AttackScript
 					CalculationAttack(target);					
 				}
 			}
-		}
+		}	
 	}
 }
