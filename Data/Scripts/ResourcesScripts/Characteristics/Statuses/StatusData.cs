@@ -1,8 +1,14 @@
 using Godot;
 using System;
 
-public partial class CharacteristicData : Resource
+public partial class StatusData : Resource
 {
+	[ExportGroup("Префаб еффекта")]
+	//Сцена еффекта(необязательно)
+	[Export] public PackedScene scene { get; set; }
+
+
+
 	[ExportGroup("Здоровье")]
 	//Здоровье
 	[Export(PropertyHint.Range, "-50, 50, 1")] public int HP { get; set; }

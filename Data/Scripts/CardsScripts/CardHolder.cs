@@ -12,14 +12,14 @@ public partial class CardHolder : Node
 	{
 		Events.levelEnded += ShowCard;
 
-		cards.Add(GetNode<TextureButton>("Card1"));
-		cards.Add(GetNode<TextureButton>("Card2"));
-		cards.Add(GetNode<TextureButton>("Card3"));
+		// Добавляем все карты в лист
+		cards.AddRange(GetChildren().OfType<TextureButton>());
 	}
 
 
 	private void ShowCard()
 	{
+		// Делаем карты видимыми
 		if (cards.Count() > 0)
 		{
 			foreach (var card in cards)

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://df7hktjncns7"]
+
+[ext_resource type="Resource" uid="uid://cerir2wunvixj" path="res://Data/Resources/SpawnerStatuses/new_resource.tres" id="1_6av3v"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_ggqwv"]
+
+[resource]
+script = ExtResource("2_ggqwv")
+name = "Neg"
+cardDescription = "Add more captain"
+modifier = ExtResource("1_6av3v")
+type = 1
+accessory = 2

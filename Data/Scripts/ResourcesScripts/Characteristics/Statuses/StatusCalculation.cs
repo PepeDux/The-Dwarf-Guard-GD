@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public partial class StatusCalculation : Node
 {
@@ -9,6 +10,16 @@ public partial class StatusCalculation : Node
 
 	public override void _Ready()
 	{
+		// Добавляем статусы в соответствии с родительским классом
+		if (GetParent() is Enemy)
+		{
+			activeStatuses = GetTree().Root.GetNode("GameScene").GetNode<LevelModifier>("LevelModifier").enemyStatuses;
+		}
+		else if (GetParent() is Player) 
+		{
+			activeStatuses = GetTree().Root.GetNode("GameScene").GetNode<LevelModifier>("LevelModifier").playerStatuses;
+		}
+
 		foreach (StatusData status in activeStatuses)
 		{
 			Сalculation(status, 1);
@@ -26,7 +37,6 @@ public partial class StatusCalculation : Node
 				activeStatuses.Add(status);
 			}
 		}
-
 	}
 
 	public void RemoveStatus(StatusData status)
@@ -45,6 +55,9 @@ public partial class StatusCalculation : Node
 
 	public void Сalculation(StatusData status, int mod)
 	{
+		GetParent<Character>().maxHP += mod * status.HP;
+		
+
 		GetParent<Character>().strength += mod * status.strength;
 		GetParent<Character>().dexterity += mod * status.agility;
 		GetParent<Character>().inteligence += mod * status.intel;

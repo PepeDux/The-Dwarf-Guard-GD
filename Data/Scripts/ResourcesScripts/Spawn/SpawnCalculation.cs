@@ -4,12 +4,14 @@ using System.Collections.Generic;
 
 public partial class SpawnCalculation : Node
 {
+	// Все статусы спавна 
 	public List<SpawnData> activeSpawners = new List<SpawnData>();
 
 
 
-	private void Start()
+	public override void _Ready()
 	{
+		// Перебираем все параметры спавнера и добавляем их в генерацию
 		foreach (SpawnData spawn in activeSpawners)
 		{
 			Сalculation(spawn, 1);
@@ -17,6 +19,7 @@ public partial class SpawnCalculation : Node
 	}
 
 
+	// Добавляет статус спавна, добавляет параметры которые он превносит
 	public void AddSpawn(SpawnData spawn)
 	{
 		if (spawn != null)
@@ -24,9 +27,9 @@ public partial class SpawnCalculation : Node
 			Сalculation(spawn, 1);
 			activeSpawners.Add(spawn);
 		}
-
 	}
 
+	// Удаляет статус спавна, удаляет параметры которые он превносил
 	public void RemoveSpawn(SpawnData spawn)
 	{
 		if (spawn != null)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cekprly7rk5a6"]
+[gd_scene load_steps=26 format=3 uid="uid://cekprly7rk5a6"]
 
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Enemy.cs" id="1_v0che"]
 [ext_resource type="Texture2D" uid="uid://cdg7usmy0yp3x" path="res://Data/Scenes/Units/Captain/Captain-Sheet.png" id="2_rydsd"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://echwr1sqgpyt" path="res://Data/Scenes/CommonScenes/EnemyTileManager.tscn" id="4_7li0j"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/TakeDamage.cs" id="4_kqp4l"]
 [ext_resource type="Script" path="res://Data/Scripts/AttackScripts/AttackScript.cs" id="6_l4b7r"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Characteristics/Statuses/StatusCalculation.cs" id="7_w5tte"]
 
 [sub_resource type="Animation" id="Animation_rt33q"]
 resource_name = "DownAttack"
@@ -188,3 +189,6 @@ script = ExtResource("4_kqp4l")
 
 [node name="AttackScript" type="Node2D" parent="."]
 script = ExtResource("6_l4b7r")
+
+[node name="StatusCalculation" type="Node2D" parent="."]
+script = ExtResource("7_w5tte")

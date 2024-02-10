@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://jljnojosimbk"]
+[gd_scene load_steps=29 format=3 uid="uid://jljnojosimbk"]
 
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Player.cs" id="1_sqds7"]
 [ext_resource type="Texture2D" uid="uid://c44x38wkbgt8x" path="res://Data/Scenes/Player/GwarfGuard-Sheet.png" id="2_8bspv"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://d3ro32w1akkk5" path="res://Data/Scenes/CommonScenes/TileMarker.tscn" id="6_88in0"]
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/PlayerSelectTile.cs" id="7_ou2f5"]
 [ext_resource type="Script" path="res://Data/Scripts/AttackScripts/PlayerAttack.cs" id="9_hve76"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Characteristics/Statuses/StatusCalculation.cs" id="10_6xsyw"]
 
 [sub_resource type="Animation" id="Animation_lyy0y"]
 resource_name = "DownAttack"
@@ -197,3 +198,6 @@ parameters/conditions/UpAttack = false
 libraries = {
 "": SubResource("AnimationLibrary_3ui0f")
 }
+
+[node name="StatusCalculation" type="Node2D" parent="."]
+script = ExtResource("10_6xsyw")

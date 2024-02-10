@@ -16,9 +16,8 @@ public partial class CardMaker : TextureButton
 	//Массив карт
 	public List<CardData> cards = new List<CardData>();
 
+	// Нода/класс содержащая все статусы
 	public LevelModifier levelModifier;
-
-	[Export] private Node2D spawner;
 
 
 
@@ -34,7 +33,9 @@ public partial class CardMaker : TextureButton
 
 	public override void _Ready()
 	{
-		cards = LoadResourceFromDirectory.Load<CardData>("res://Data/Scripts/Resources/Cards/");
+		cards = LoadResourceFromDirectory.Load<CardData>("res://Data/Resources/Cards/");
+
+		levelModifier = GetTree().Root.GetNode("GameScene").GetNode<LevelModifier>("LevelModifier");
 
 		Events.endSelectCard += EndSelectCard;
 
@@ -42,8 +43,8 @@ public partial class CardMaker : TextureButton
 
 		// Событие на вход курсора на карту
 		MouseEntered += Entered;
-        // Событие на выход курсора на карту
-        MouseExited += Exited;
+		// Событие на выход курсора на карту
+		MouseExited += Exited;
 
 		// Позитивная карта
 		cardNamePositive = GetNode<Label>("CardNamePositive");
@@ -72,8 +73,8 @@ public partial class CardMaker : TextureButton
 		cardNamePositive.Text = cardPositive.name;
 		cardDescriptionPositive.Text = cardPositive.cardDescription;
 
-        // Задаем название и поисание негативной карты
-        cardNameNegative.Text = cardNegative.name;
+		// Задаем название и поисание негативной карты
+		cardNameNegative.Text = cardNegative.name;
 		cardDescriptionNegative.Text = cardNegative.cardDescription;
 	}
 
@@ -82,32 +83,35 @@ public partial class CardMaker : TextureButton
 		// Враги
 		if (cardPositive.modifier is StatusData && cardPositive.accessory == CardData.Accessory.enemy)
 		{
-			levelModifier.GetParent().GetNode<LevelModifier>("LevelModifier").enemyStatuses.Add(cardPositive.modifier as StatusData);
+			levelModifier.enemyStatuses.Add(cardPositive.modifier as StatusData);
 		}
 		if (cardNegative.modifier is StatusData && cardNegative.accessory == CardData.Accessory.enemy)
 		{
-			levelModifier.GetParent().GetNode<LevelModifier>("LevelModifier").enemyStatuses.Add(cardNegative.modifier as StatusData);
+			levelModifier.enemyStatuses.Add(cardNegative.modifier as StatusData);
 		}
-
+		//
 		// Игрок
 		if (cardPositive.modifier is StatusData && cardPositive.accessory == CardData.Accessory.player)
 		{
-			levelModifier.GetParent().GetNode<LevelModifier>("LevelModifier").playerStatuses.Add(cardPositive.modifier as StatusData);
+			levelModifier.playerStatuses.Add(cardPositive.modifier as StatusData);
 		}
 		if (cardNegative.modifier is StatusData && cardNegative.accessory == CardData.Accessory.player)
 		{
-			levelModifier.GetParent().GetNode<LevelModifier>("LevelModifier").playerStatuses.Add(cardNegative.modifier as StatusData);
+			levelModifier.playerStatuses.Add(cardNegative.modifier as StatusData);
 		}
 
 		// Спавн
 		if (cardPositive.modifier is SpawnData && cardPositive.accessory == CardData.Accessory.spawn)
 		{
-			spawner.GetParent().GetNode<SpawnCalculation>("SpawnCalculation").AddSpawn(cardPositive.modifier as SpawnData);
+			GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").GetNode<SpawnCalculation>("SpawnCalculation").AddSpawn(cardPositive.modifier as SpawnData);
+
 		}
 		if (cardNegative.modifier is SpawnData && cardNegative.accessory == CardData.Accessory.spawn)
 		{
-			spawner.GetParent().GetNode<SpawnCalculation>("SpawnCalculation").AddSpawn(cardNegative.modifier as SpawnData);
+			GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").GetNode<SpawnCalculation>("SpawnCalculation").AddSpawn(cardNegative.modifier as SpawnData);
+			GD.Print("Модификатор карты: " + cardNegative.modifier.GetType() + " Для кого: " + cardNegative.accessory);
 		}
+
 
 
 		// Вызов события при окончании выбора карты
@@ -124,8 +128,8 @@ public partial class CardMaker : TextureButton
 
 	private void Exited()
 	{
-        // Задаем курсору вид "стрелки"
-        CursorStyleController.SetArrow();
+		// Задаем курсору вид "стрелки"
+		CursorStyleController.SetArrow();
 
 		Position = new Vector2(Position.X, Position.Y + 2);
 	}

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bxv74aoxvnt84"]
+
+[ext_resource type="Resource" uid="uid://wud7kfrdbr0c" path="res://Data/Scripts/ResourcesScripts/Characteristics/new_resource.tres" id="1_odsvu"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="1_v2a2e"]
+
+[resource]
+script = ExtResource("1_v2a2e")
+name = "Pos"
+cardDescription = "Add 10 HP player"
+modifier = ExtResource("1_odsvu")
+type = 0
+accessory = 0
