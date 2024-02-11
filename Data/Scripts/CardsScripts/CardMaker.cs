@@ -9,11 +9,11 @@ public partial class CardMaker : TextureButton
 {
 	Random random = new Random();
 
-	//Позитивная и негативная карта
+	// Позитивная и негативная карта
 	public CardData cardPositive;
 	public CardData cardNegative;
 
-	//Массив карт
+	// Массив карт
 	public List<CardData> cards = new List<CardData>();
 
 	// Нода/класс содержащая все статусы
@@ -21,14 +21,17 @@ public partial class CardMaker : TextureButton
 
 
 
-	//Имя карты
+	// Имя карты
 	private Label cardNamePositive;
 	private Label cardDescriptionPositive;
 
-	//Описаник карты
+	// Описаник карты
 	private Label cardNameNegative;
 	private Label cardDescriptionNegative;
 
+	// Изображение карты 
+	private TextureRect cardImagePositive;
+	private TextureRect cardImageNegative;
 
 
 	public override void _Ready()
@@ -49,10 +52,12 @@ public partial class CardMaker : TextureButton
 		// Позитивная карта
 		cardNamePositive = GetNode<Label>("CardNamePositive");
 		cardDescriptionPositive = GetNode<Label>("CardDescriptionPositive");
+		cardImagePositive = GetNode<TextureRect>("CardImagePositive");
 
 		// Негативная карта
 		cardNameNegative = GetNode<Label>("CardNameNegative");
 		cardDescriptionNegative = GetNode<Label>("CardDescriptionNegative");
+		cardImageNegative = GetNode<TextureRect>("CardImageNegative");
 
 		MakeCard();
 	}
@@ -62,20 +67,25 @@ public partial class CardMaker : TextureButton
 
 	private void MakeCard()
 	{
-		//Выбор позитивной карты
+		// Выбор позитивной карты
 		cardPositive = cards.Where(c => c.type == CardData.Type.positive).OrderBy(с => Guid.NewGuid()).FirstOrDefault();
-		//Выбор негативной карты
+		// Выбор негативной карты
 		cardNegative = cards.Where(c => c.type == CardData.Type.negative).OrderBy(с => Guid.NewGuid()).FirstOrDefault();
 
 
 
-		// Задаем название и поисание позитивной карты
+		// Задаем название позитивной карты
 		cardNamePositive.Text = cardPositive.name;
 		cardDescriptionPositive.Text = cardPositive.cardDescription;
 
-		// Задаем название и поисание негативной карты
+		// Задаем поисание негативной карты
 		cardNameNegative.Text = cardNegative.name;
 		cardDescriptionNegative.Text = cardNegative.cardDescription;
+
+		// Задаем изображение карты
+		cardImagePositive.Texture = cardPositive.texture;
+		cardImageNegative.Texture = cardNegative.texture;
+
 	}
 
 	private void ButtonPressed()
@@ -89,7 +99,7 @@ public partial class CardMaker : TextureButton
 		{
 			levelModifier.enemyStatuses.Add(cardNegative.modifier as StatusData);
 		}
-		//
+		
 		// Игрок
 		if (cardPositive.modifier is StatusData && cardPositive.accessory == CardData.Accessory.player)
 		{
