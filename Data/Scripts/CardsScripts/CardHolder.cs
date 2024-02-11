@@ -1,4 +1,4 @@
-using Godot;
+п»їusing Godot;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,14 +12,14 @@ public partial class CardHolder : Node
 	{
 		Events.levelEnded += ShowCard;
 
-		// Добавляем все карты в лист
+		// Р”РѕР±Р°РІР»СЏРµРј РІСЃРµ РєР°СЂС‚С‹ РІ Р»РёСЃС‚
 		cards.AddRange(GetChildren().OfType<TextureButton>());
 	}
 
 
 	private void ShowCard()
 	{
-		// Делаем карты видимыми
+		// Р”РµР»Р°РµРј РєР°СЂС‚С‹ РІРёРґРёРјС‹РјРё
 		if (cards.Count() > 0)
 		{
 			foreach (var card in cards)
