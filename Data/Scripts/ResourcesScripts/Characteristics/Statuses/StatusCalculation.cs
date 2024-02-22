@@ -55,8 +55,7 @@ public partial class StatusCalculation : Node
 
 	public void Сalculation(StatusData status, int mod)
 	{
-		GetParent<Character>().maxHP += mod * status.HP;
-		
+		GetParent<Character>().maxHP += mod * status.HP;		
 
 		GetParent<Character>().strength += mod * status.strength;
 		GetParent<Character>().dexterity += mod * status.agility;
@@ -64,9 +63,6 @@ public partial class StatusCalculation : Node
 		GetParent<Character>().constitution += mod * status.constitution;
 		GetParent<Character>().wisdom += mod * status.wisdom;
 
-		GetParent<Character>().criticalDamage += mod * status.criticalDamage;
-		GetParent<Character>().criticalDamageChance += mod * status.criticalDamageChance;
-		GetParent<Character>().precision += mod * status.precision;
 		GetParent<Character>().drunkenness += mod * status.drunkenness;
 
 		GetParent<Character>().poisonResist += mod * status.poisonResist;

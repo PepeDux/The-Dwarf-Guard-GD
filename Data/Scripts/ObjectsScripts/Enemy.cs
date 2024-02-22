@@ -94,8 +94,6 @@ public partial class Enemy : Character
 
 	public async void Turn()
 	{
-		GD.Print("turn");
-
 		while (MovePoints >= moveCost)
 		{
 			await Task.Delay(500);
@@ -124,6 +122,6 @@ public partial class Enemy : Character
 			}
 		}
 
-		Events.endedHisTurn?.Invoke();
+		//Events.endedHisTurn?.Invoke();
 	}
 }

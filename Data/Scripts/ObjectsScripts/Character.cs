@@ -99,7 +99,7 @@ public partial class Character : BaseObject
 	[ExportGroup("Здоровье")]
 	//Здоровье
 	[Export] private int hP;
-	[Export] public int maxHP = 20;
+	[Export] public int maxHP = 100;
 	public int HP
 	{
 		get
@@ -114,8 +114,8 @@ public partial class Character : BaseObject
 
 	[ExportGroup("Броня")]
 	//Броня
-	[Export] public int armor;
-	[Export] public int maxArmor;
+	[Export] public int armor = 10;
+	[Export] public int maxArmor = 100;
 	public int Armor
 	{
 		get
@@ -274,64 +274,6 @@ public partial class Character : BaseObject
 	//2 переменная - бонус к значению характеристики
 	//3 переменная - максимальное допустимое значение характеристики
 
-	//Уклонение
-	public int dodge = 0;
-	public int Dodge
-	{
-		get
-		{
-			return dodge;
-		}
-		set
-		{
-			dodge = Math.Clamp(value, 0, 100);
-		}
-	}
-
-	//Критический урон
-	public int criticalDamage = 0;
-	public int CriticalDamage
-	{
-		get
-		{
-			return criticalDamage;
-		}
-		set
-		{
-			criticalDamage = Math.Clamp(value, 0, 200);
-		}
-	}
-
-	//Шанс критануть
-	public int criticalDamageChance = 0;
-	public int CriticalDamageChance
-	{
-		get
-		{
-			return criticalDamageChance;
-		}
-		set
-		{
-			criticalDamageChance = Math.Clamp(value, 0, 100);
-		}
-	}
-
-	//Точность
-	public int precision = 0;
-	public int Precision
-	{
-		get
-		{
-			return precision;
-		}
-		set
-		{
-			precision = Math.Clamp(value, 0, 100);
-		}
-	}
-
-
-
 	//Опьянение
 	public int drunkenness = 0;
 	public int Drunkenness
@@ -434,7 +376,6 @@ public partial class Character : BaseObject
 	public void UpdateCharac()
 	{
 		HP = maxHP;
-		armor = maxArmor;
 	}
 
 	public override void Updater()

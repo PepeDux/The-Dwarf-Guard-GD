@@ -54,26 +54,12 @@ public partial class StatusData : Resource
 
 
 	[ExportGroup("Вторичные характеристики")]
-	//Уклонение
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int dodge { get; set; }
 
 	//Переносимый вес
 	[Export(PropertyHint.Range, "-50, 50, 1")] public int carryingCapacity { get; set; }
 
 	//Скорость
 	[Export(PropertyHint.Range, "-50, 50, 1")] public int speed { get; set; }
-
-	//Скорость атаки
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int attackSpeed { get; set; }
-
-	//Критический урон
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int criticalDamage { get; set; }
-
-	//Шанс критануть
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int criticalDamageChance { get; set; }
-
-	//Точность
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int precision { get; set; }
 
 	//Опьянение
 	[Export(PropertyHint.Range, "-50, 50, 1")] public int drunkenness { get; set; }
@@ -84,29 +70,29 @@ public partial class StatusData : Resource
 
 	[ExportGroup("Сопротивления к урону")]
 	//Сопротивление колющему📌
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int prickResist { get; set; }
+	[Export(PropertyHint.Range, "-100, 100, 1")] public int prickResist { get; set; }
 
 	//Сопротивление режущему🔪
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int slashResist { get; set; }
+	[Export(PropertyHint.Range, "-100, 100, 1")] public int slashResist { get; set; }
 
 	//Сопротивление дробящему🔨
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int crushResist { get; set; }
+	[Export(PropertyHint.Range, "-100, 100, 1")] public int crushResist { get; set; }
 
 	//Сопротивление ядам🍄
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int poisonResist { get; set; }
+	[Export(PropertyHint.Range, "-100, 100, 1")] public int poisonResist { get; set; }
 
 	//Сопротивление огню🔥
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int fireResist { get; set; }
+	[Export(PropertyHint.Range, "-100, 100, 1")] public int fireResist { get; set; }
 
 	//Сопростивление морозу❄ 
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int frostResist { get; set; }
+	[Export(PropertyHint.Range, "-100, 100, 1")] public int frostResist { get; set; }
 
 	//Сопротивление проклятию☠
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int curseResist { get; set; }
+	[Export(PropertyHint.Range, "-100, 100, 1")] public int curseResist { get; set; }
 
 	//Сопротивление электричеству⛈
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int electricalResist { get; set; }
+	[Export(PropertyHint.Range, "-100, 100, 1")] public int electricalResist { get; set; }
 
 	//Сопротивление АлКоГоЛю🍺
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int drunkennessResist { get; set; }
+	[Export(PropertyHint.Range, "-100, 100, 1")] public int drunkennessResist { get; set; }
 }

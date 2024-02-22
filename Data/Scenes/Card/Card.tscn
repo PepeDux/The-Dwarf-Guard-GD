@@ -13,6 +13,7 @@ stretch_mode = 0
 script = ExtResource("2_qg8jn")
 
 [node name="CardNamePositive" type="Label" parent="."]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 2.0
 offset_right = 2424.0
@@ -24,6 +25,7 @@ theme_override_font_sizes/font_size = 256
 text = "Имя позитивное"
 
 [node name="CardDescriptionPositive" type="Label" parent="."]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 22.0
 offset_right = 2424.0
@@ -36,6 +38,7 @@ text = "Описание
 позитивное :)"
 
 [node name="CardNameNegative" type="Label" parent="."]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 86.0
 offset_right = 1664.0
@@ -47,6 +50,7 @@ theme_override_font_sizes/font_size = 256
 text = "Имя негативное"
 
 [node name="CardDescriptionNegative" type="Label" parent="."]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 106.0
 offset_right = 2424.0
@@ -66,6 +70,7 @@ offset_right = 54.0
 offset_bottom = 70.0
 
 [node name="CardImageNegative" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 6.0
 offset_top = 90.0
 offset_right = 54.0

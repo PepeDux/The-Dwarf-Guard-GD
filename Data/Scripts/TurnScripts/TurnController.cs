@@ -1,5 +1,6 @@
 ﻿using Godot;
 using System;
+using System.Threading.Tasks;
 
 public partial class TurnController : Node
 {
@@ -8,46 +9,28 @@ public partial class TurnController : Node
 
 	public override void _Ready()
 	{
-		Events.playerTurnFinished += AddCurrentWalker;
-		Events.endedHisTurn += AddCurrentWalker;
+		Events.playerTurnFinished += OtherTurn;
 	}
 
-	private void AddCurrentWalker()
+
+
+	private async void OtherTurn()
 	{
 		GD.Print("a");
 
 		currentWalker++;
 
-		if (currentWalker <= TileStorage.characters.Count)
+		foreach (var charac in TileStorage.characters)
 		{
-			Turn();
-		}
-		else
-		{
-			AddTurn();
-		}
-	}
-
-	private void AddTurn()
-	{
-		GD.Print("b");
-
-		currentTurn++;
-		currentWalker = 0;
-		Turn();
-	}
-
-	private void Turn()
-	{
-		if (currentWalker < TileStorage.characters.Count)
-		{
-			Character charac = TileStorage.characters[currentWalker];
-
-			GD.Print(currentWalker);
-
-			if (charac is Enemy)
+			if (charac is Player)
+			{
+				continue;
+			}
+			else if (charac is Enemy)
 			{
 				((Enemy)charac).Turn();
+
+				//Task.Delay(1000).Wait();
 			}
 		}
 	}

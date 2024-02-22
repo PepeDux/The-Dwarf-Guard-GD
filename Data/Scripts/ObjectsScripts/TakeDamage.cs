@@ -36,48 +36,32 @@ public partial class TakeDamage : Node
 	{
 		Random random = new Random();
 
-		if (GetParent<Character>().dodge <= random.Next(0, 100))
+		int totalDamage = 0;
+
+		//target.HP -= poisonDamage * (1 - target.poisonResist / 100);
+		//target.HP -= fireDamage * (1 - target.fireResist / 100);
+		//target.HP -= frostDamage * (1 - target.frostResist / 100);
+		//target.HP -= drunkennessDamage * (1 - target.drunkennessResist / 100);
+
+		totalDamage += physicalDamage - target.physicalResist;
+
+		if (totalDamage > 0)
 		{
-			int totalDamage = 0;
+			target.HP -= totalDamage;
+		}
 
-			//target.HP -= poisonDamage * (1 - target.poisonResist / 100);
-			//target.HP -= fireDamage * (1 - target.fireResist / 100);
-			//target.HP -= frostDamage * (1 - target.frostResist / 100);
-			//target.HP -= drunkennessDamage * (1 - target.drunkennessResist / 100);
+		//Дрожание экрана при получении урона
+		GetTree().Root.GetNode("GameScene").GetNode<CameraShake>("CameraShake").ShakeAsync(1, 1, 15, 10);
 
-			totalDamage += physicalDamage - target.physicalResist;
-
-			if (totalDamage > 0)
-			{
-				if (target.armor <= 0)
-				{
-					target.HP -= totalDamage;
-				}
-
-				if (target.armor > 0) 
-				{
-					target.armor -= 1;
-				}
-			}
-
-			//Дрожание экрана при получении урона
-			GetTree().Root.GetNode("GameScene").GetNode<CameraShake>("CameraShake").ShakeAsync(1, 1, 15, 10); 
-
-			if (target.HP <= 0)
-			{
-				Die();
-			}
-			else
-			{
-				//Вызов анимации получения урона
-				//GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("Hurt");
-			}
+		if (target.HP <= 0)
+		{
+			Die();
 		}
 		else
 		{
-			GD.Print($"Объект '{GetParent().Name}' уклонился");
+			//Вызов анимации получения урона
+			//GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("Hurt");
 		}
-	   
 	}
 
 

@@ -18,19 +18,22 @@ public partial class AttackScript : Node
 
 	public void CalculationAttack(Character target)
 	{
-		this.target = target;
-
-		//GD.Print(target);
-
-		if (attacker.melee == true)
+		if (DiceRoll.RollD20() + attacker.strength >= target.armor) 
 		{
-			FindTarget(attacker.meleeAttackDistance, target);
-		}
+            this.target = target;
 
-		if (attacker.range == true)
-		{
-			FindTarget(FieldCoordinate.xFieldSize, target);
-		}
+            //GD.Print(target);
+
+            if (attacker.melee == true)
+            {
+                FindTarget(attacker.meleeAttackDistance, target);
+            }
+
+            if (attacker.range == true)
+            {
+                FindTarget(FieldCoordinate.xFieldSize, target);
+            }
+        }		
 	}
 
 	public void FindTarget(int distanceAttack, Character target)
