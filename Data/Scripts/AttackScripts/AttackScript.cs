@@ -18,22 +18,21 @@ public partial class AttackScript : Node
 
 	public void CalculationAttack(Character target)
 	{
-		if (DiceRoll.RollD20() + attacker.strength >= target.armor) 
+
+		this.target = target;
+
+		//GD.Print(target);
+
+		if (attacker.melee == true)
 		{
-            this.target = target;
+			FindTarget(attacker.meleeAttackDistance, target);
+		}
 
-            //GD.Print(target);
+		if (attacker.range == true)
+		{
+			FindTarget(FieldCoordinate.xFieldSize, target);
+		}
 
-            if (attacker.melee == true)
-            {
-                FindTarget(attacker.meleeAttackDistance, target);
-            }
-
-            if (attacker.range == true)
-            {
-                FindTarget(FieldCoordinate.xFieldSize, target);
-            }
-        }		
 	}
 
 	public void FindTarget(int distanceAttack, Character target)
@@ -128,7 +127,10 @@ public partial class AttackScript : Node
 				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("DownAttack");
 			}
 
-			GiveDamage();
+			if (DiceRoll.RollD20() + attacker.strength >= target.armor)
+			{
+				GiveDamage();
+			}
 		}
 	}
 

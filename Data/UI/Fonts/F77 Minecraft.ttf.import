@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://drnt271pef8sl"
-path="res://.godot/imported/Pixelfraktur.ttf-0787edb32ea3eea6d8413c7b473b6391.fontdata"
+uid="uid://df6wmciqnkfa2"
+path="res://.godot/imported/F77 Minecraft.ttf-e2284c18f8996f9382df44f37d7b9e62.fontdata"
 
 [deps]
 
-source_file="res://Data/UI/Fonts/Pixelfraktur.ttf"
-dest_files=["res://.godot/imported/Pixelfraktur.ttf-0787edb32ea3eea6d8413c7b473b6391.fontdata"]
+source_file="res://Data/UI/Fonts/F77 Minecraft.ttf"
+dest_files=["res://.godot/imported/F77 Minecraft.ttf-e2284c18f8996f9382df44f37d7b9e62.fontdata"]
 
 [params]
 

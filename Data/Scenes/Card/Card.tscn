@@ -5,73 +5,74 @@
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="3_ggr5r"]
 
 [node name="Card1" type="TextureButton"]
-offset_right = 192.0
-offset_bottom = 160.0
-scale = Vector2(0.5, 0.5)
+offset_right = 160.0
+offset_bottom = 128.0
 texture_normal = ExtResource("1_ytoex")
 stretch_mode = 0
 script = ExtResource("2_qg8jn")
 
 [node name="CardNamePositive" type="Label" parent="."]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 2.0
-offset_right = 2424.0
-offset_bottom = 362.0
+offset_left = 53.0
+offset_top = 16.0
+offset_right = 1833.0
+offset_bottom = 176.0
 scale = Vector2(0.05, 0.05)
-theme_override_colors/font_color = Color(0.384314, 0.364706, 0.329412, 1)
+theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
 theme_override_fonts/font = ExtResource("3_ggr5r")
-theme_override_font_sizes/font_size = 256
+theme_override_font_sizes/font_size = 100
 text = "Имя позитивное"
 
 [node name="CardDescriptionPositive" type="Label" parent="."]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 22.0
-offset_right = 2424.0
-offset_bottom = 982.0
+offset_left = 53.0
+offset_top = 26.0
+offset_right = 1833.0
+offset_bottom = 626.0
 scale = Vector2(0.05, 0.05)
-theme_override_colors/font_color = Color(0.384314, 0.364706, 0.329412, 1)
+theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
 theme_override_fonts/font = ExtResource("3_ggr5r")
-theme_override_font_sizes/font_size = 256
+theme_override_font_sizes/font_size = 100
 text = "Описание 
 позитивное :)"
+autowrap_mode = 2
 
 [node name="CardNameNegative" type="Label" parent="."]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 86.0
-offset_right = 1664.0
-offset_bottom = 446.0
+offset_left = 53.0
+offset_top = 80.0
+offset_right = 1833.0
+offset_bottom = 240.0
 scale = Vector2(0.05, 0.05)
-theme_override_colors/font_color = Color(0.384314, 0.364706, 0.329412, 1)
+theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
 theme_override_fonts/font = ExtResource("3_ggr5r")
-theme_override_font_sizes/font_size = 256
+theme_override_font_sizes/font_size = 100
 text = "Имя негативное"
 
 [node name="CardDescriptionNegative" type="Label" parent="."]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 106.0
-offset_right = 2424.0
-offset_bottom = 1066.0
+offset_left = 53.0
+offset_top = 90.0
+offset_right = 1833.0
+offset_bottom = 690.0
 scale = Vector2(0.05, 0.05)
-theme_override_colors/font_color = Color(0.384314, 0.364706, 0.329412, 1)
+theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
 theme_override_fonts/font = ExtResource("3_ggr5r")
-theme_override_font_sizes/font_size = 256
+theme_override_font_sizes/font_size = 100
 text = "Описание 
 негативное :("
+autowrap_mode = 2
 
 [node name="CardImagePositive" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 6.0
-offset_right = 54.0
-offset_bottom = 70.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 49.0
+offset_bottom = 49.0
 
 [node name="CardImageNegative" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 90.0
-offset_right = 54.0
-offset_bottom = 154.0
+offset_left = 15.0
+offset_top = 79.0
+offset_right = 49.0
+offset_bottom = 113.0

@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("2_ggqwv")
-name = "Neg"
-cardDescription = "Add more captain"
+name = "Мобилизация"
+cardDescription = "Добавляет 3 офицера высшего состава вам стол. Перемоги нэ будэ"
 modifier = ExtResource("1_6av3v")
 type = 1
 accessory = 2

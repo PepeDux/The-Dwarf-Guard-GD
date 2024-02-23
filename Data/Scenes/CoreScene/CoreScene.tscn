@@ -229,8 +229,10 @@ script = ExtResource("18_m7nb1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
-offset_right = 783.0
-offset_bottom = 728.0
+offset_left = -3200.0
+offset_top = -3200.0
+offset_right = 3200.0
+offset_bottom = 3200.0
 color = Color(0.141176, 0.133333, 0.129412, 1)
 metadata/_edit_use_anchors_ = true
 
@@ -242,24 +244,17 @@ script = ExtResource("15_xnraa")
 
 [node name="Card1" parent="CardHolder" instance=ExtResource("13_l7glq")]
 visible = false
-offset_left = 488.0
-offset_top = 344.0
-offset_right = 680.0
-offset_bottom = 504.0
+offset_left = 416.0
+offset_top = 320.0
+offset_right = 576.0
+offset_bottom = 448.0
 
 [node name="Card2" parent="CardHolder" instance=ExtResource("13_l7glq")]
 visible = false
-offset_left = 184.0
-offset_top = 344.0
-offset_right = 376.0
-offset_bottom = 504.0
-
-[node name="Card3" parent="CardHolder" instance=ExtResource("13_l7glq")]
-visible = false
-offset_left = 336.0
-offset_top = 344.0
-offset_right = 528.0
-offset_bottom = 504.0
+offset_left = 192.0
+offset_top = 320.0
+offset_right = 352.0
+offset_bottom = 448.0
 
 [node name="test" type="Node2D" parent="."]
 

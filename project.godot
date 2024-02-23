@@ -18,7 +18,8 @@ config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 
 window/size/viewport_width=490
 window/size/viewport_height=270
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 mouse_cursor/custom_image="res://Data/UI/Cursors/Arrow.png"
 
 [dotnet]

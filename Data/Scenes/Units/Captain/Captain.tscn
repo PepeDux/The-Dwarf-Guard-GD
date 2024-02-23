@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cekprly7rk5a6"]
+[gd_scene load_steps=29 format=3 uid="uid://cekprly7rk5a6"]
 
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Enemy.cs" id="1_v0che"]
 [ext_resource type="Texture2D" uid="uid://cdg7usmy0yp3x" path="res://Data/Scenes/Units/Captain/Captain-Sheet.png" id="2_rydsd"]
@@ -150,6 +150,22 @@ states/UpAttack/position = Vector2(578, -87)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_bok62"), "Idle", "UpAttack", SubResource("AnimationNodeStateMachineTransition_bdtge"), "Idle", "HorizontalAttack", SubResource("AnimationNodeStateMachineTransition_bxh2d"), "UpAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_ylkmo"), "HorizontalAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_8rkel"), "Idle", "DownAttack", SubResource("AnimationNodeStateMachineTransition_3b4i0"), "DownAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_ecjig")]
 graph_offset = Vector2(-247.097, -132.553)
 
+[sub_resource type="Curve" id="Curve_7dg23"]
+min_value = -500.0
+max_value = 500.0
+_data = [Vector2(0, -500), 0.0, 1400.0, 0, 0, Vector2(1, 500), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_f3xh3"]
+min_value = -200.0
+max_value = 200.0
+_data = [Vector2(0, -200), 0.0, 0.0, 0, 0, Vector2(0.9683, 200), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_137hf"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.501691), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="Captain" type="Node2D"]
 script = ExtResource("1_v0che")
 maxMovePoints = 3
@@ -192,3 +208,23 @@ script = ExtResource("6_l4b7r")
 
 [node name="StatusCalculation" type="Node2D" parent="."]
 script = ExtResource("7_w5tte")
+
+[node name="BloodParticles" type="CPUParticles2D" parent="."]
+position = Vector2(0, -4)
+emitting = false
+amount = 20
+lifetime = 0.15
+one_shot = true
+speed_scale = 0.5
+lifetime_randomness = 1.0
+spread = 180.0
+initial_velocity_min = 50.0
+initial_velocity_max = 80.0
+orbit_velocity_curve = SubResource("Curve_7dg23")
+radial_accel_curve = SubResource("Curve_f3xh3")
+angle_min = -360.0
+angle_max = 360.0
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_137hf")
+color = Color(0.509804, 0.129412, 0.113725, 1)

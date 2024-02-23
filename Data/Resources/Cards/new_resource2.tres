@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("1_v2a2e")
-name = "Pos"
-cardDescription = "Add 10 HP player"
+name = "ХПшку надо ПОДНЯТЬ"
+cardDescription = "Добавляет аж 10 ХП. Не веришь? Ну и правильно"
 modifier = ExtResource("1_odsvu")
 type = 0
 accessory = 0

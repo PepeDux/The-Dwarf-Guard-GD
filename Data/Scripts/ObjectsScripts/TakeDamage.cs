@@ -52,6 +52,9 @@ public partial class TakeDamage : Node
 
 		//Дрожание экрана при получении урона
 		GetTree().Root.GetNode("GameScene").GetNode<CameraShake>("CameraShake").ShakeAsync(1, 1, 15, 10);
+		//
+		GetParent().GetNode<CpuParticles2D>("BloodParticles").Emitting = true;
+
 
 		if (target.HP <= 0)
 		{
