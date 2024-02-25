@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ubithf5ubebc"]
+[gd_scene load_steps=20 format=3 uid="uid://ubithf5ubebc"]
 
 [ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/CoreScene/Holders.tscn" id="1_78hkp"]
 [ext_resource type="Texture2D" uid="uid://7fit1uamlql4" path="res://Data/Sprites/Tilemaps/MainTileMap.png" id="1_sg0qk"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelInfo.cs" id="9_lclkq"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="10_3v6ox"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/UIManager.cs" id="10_bwtok"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/Fader.cs" id="11_lk4uu"]
 [ext_resource type="Script" path="res://Data/Scripts/CameraShake.cs" id="11_qh8oq"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelGenerator.cs" id="12_13kvq"]
 [ext_resource type="PackedScene" uid="uid://dt43ky47ci4jg" path="res://Data/Scenes/Card/Card.tscn" id="13_l7glq"]
@@ -168,18 +169,19 @@ light_mask = 512
 visibility_layer = 512
 position = Vector2(384, 384)
 
-[node name="UI" type="Node2D" parent="Camera2D" node_paths=PackedStringArray("HPLabel", "MovePointsLabel", "ActionPointsLabel")]
-position = Vector2(-384, -384)
+[node name="UI" type="Node2D" parent="Camera2D" node_paths=PackedStringArray("HPLabel", "MovePointsLabel", "ActionPointsLabel", "ACLabel")]
+position = Vector2(-344, -408)
 script = ExtResource("10_bwtok")
 HPLabel = NodePath("HPLabel")
 MovePointsLabel = NodePath("MovePointsLabel")
 ActionPointsLabel = NodePath("ActionPointsLabel")
+ACLabel = NodePath("ACLabel")
 
 [node name="HPLabel" type="Label" parent="Camera2D/UI"]
-offset_left = 192.0
-offset_top = 320.0
-offset_right = 1472.0
-offset_bottom = 640.0
+offset_left = 152.0
+offset_top = 376.0
+offset_right = 1432.0
+offset_bottom = 696.0
 scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 128
@@ -187,10 +189,10 @@ text = "HP:"
 metadata/_edit_use_anchors_ = true
 
 [node name="MovePointsLabel" type="Label" parent="Camera2D/UI"]
-offset_left = 192.0
-offset_top = 344.0
-offset_right = 1472.0
-offset_bottom = 664.0
+offset_left = 152.0
+offset_top = 424.0
+offset_right = 1432.0
+offset_bottom = 744.0
 scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 128
@@ -198,14 +200,25 @@ text = "Move:"
 metadata/_edit_use_anchors_ = true
 
 [node name="ActionPointsLabel" type="Label" parent="Camera2D/UI"]
-offset_left = 192.0
-offset_top = 368.0
-offset_right = 1472.0
-offset_bottom = 688.0
+offset_left = 152.0
+offset_top = 408.0
+offset_right = 1432.0
+offset_bottom = 728.0
 scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 128
 text = "Action:"
+metadata/_edit_use_anchors_ = true
+
+[node name="ACLabel" type="Label" parent="Camera2D/UI"]
+offset_left = 152.0
+offset_top = 392.0
+offset_right = 1432.0
+offset_bottom = 712.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("10_3v6ox")
+theme_override_font_sizes/font_size = 128
+text = "AC:"
 metadata/_edit_use_anchors_ = true
 
 [node name="LevelInfo" type="Node2D" parent="."]
@@ -233,7 +246,8 @@ offset_left = -3200.0
 offset_top = -3200.0
 offset_right = 3200.0
 offset_bottom = 3200.0
-color = Color(0.141176, 0.133333, 0.129412, 1)
+color = Color(0.109804, 0.101961, 0.101961, 1)
+script = ExtResource("11_lk4uu")
 metadata/_edit_use_anchors_ = true
 
 [node name="TurnController" type="Node2D" parent="."]

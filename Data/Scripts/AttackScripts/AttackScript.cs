@@ -127,7 +127,7 @@ public partial class AttackScript : Node
 				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("DownAttack");
 			}
 
-			if (DiceRoll.RollD20() + attacker.strength >= target.armor)
+			if (DiceRoll.Roll(20, 1) + attacker.strength >= target.armor)
 			{
 				GiveDamage();
 			}

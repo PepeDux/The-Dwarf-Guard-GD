@@ -158,6 +158,11 @@ script = ExtResource("1_sqds7")
 melee = true
 maxHP = 20
 physicalDamage = 5
+strength = 16
+dexterity = 16
+inteligence = 16
+constitution = 16
+wisdom = 16
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_8bspv")

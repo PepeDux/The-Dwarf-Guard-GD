@@ -2,36 +2,22 @@
 using System;
 using System.Runtime.CompilerServices;
 
-public partial class DiceRoll : Node
+public partial class DiceRoll
 {
     static Random random = new Random();
 
-    public static int RollD100()
-    {
-        return random.Next(1, 101);
-    }
-    public static int RollD20()
-    {
-        return random.Next(1, 21);
-    }
-    public static int RollD12()
-    {
-        return random.Next(1, 13);
-    }
-    public static int RollD10()
-    {
-        return random.Next(1, 11);
-    }
-    public static int RollD8()
-    {
-        return random.Next(1, 9);
-    }
-    public static int RollD6()
-    {
-        return random.Next(1, 7);
-    }
-    public static int RollD4()
-    {
-        return random.Next(1, 5);
+    public static int Roll(int diceEdge, int roll = 1)
+    {     
+        // Сумма всех выпавших значений
+        int total = 0;
+
+        // Кидаем кубы (минимум 1 раз)
+        for (int i = 0; i < roll; i++)
+        {
+            // Сумируем результаты
+            total += random.Next(0, diceEdge + 1);
+        }
+
+        return total;
     }
 }

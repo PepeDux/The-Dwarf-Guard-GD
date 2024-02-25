@@ -1,4 +1,4 @@
-﻿using Godot;
+using Godot;
 using System;
 using System.Diagnostics;
 
@@ -7,6 +7,7 @@ public partial class UIManager : Node
 	[Export] Label HPLabel;
 	[Export] Label MovePointsLabel;
 	[Export] Label ActionPointsLabel;
+	[Export] Label ACLabel;
 
 	Player player;
 	Character target;
@@ -29,6 +30,7 @@ public partial class UIManager : Node
 		HPLabel.Text = "HP: " + target.HP.ToString() + "/" + target.maxHP;
 		MovePointsLabel.Text = "Move: " + target.MovePoints.ToString() + "/" + target.maxMovePoints;
 		ActionPointsLabel.Text = "Action: " + target.ActionPoints.ToString() + "/" + target.maxActionPoints;
+		ACLabel.Text = "AC: " + target.armor;
 	}
 
 	private void AddPlayer()

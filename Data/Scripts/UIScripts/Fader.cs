@@ -6,13 +6,18 @@ public partial class Fader : ColorRect
 {
 	public override void _Ready()
 	{
-		Events.playerDied += Fade;
-		Fade();
+		//Events.playerDied += Fade;
+		Events.levelEnded += Fade;
+		Events.endSelectCard += UnFaid;
 	}
 
 	private void Fade()
 	{
-		Color color = new Color(27f, 27f, 27f, 255f);
-		this.Color = color;
+		this.ZIndex = 0;
+	}
+
+	private void UnFaid()
+	{
+		this.ZIndex = -1;
 	}
 }

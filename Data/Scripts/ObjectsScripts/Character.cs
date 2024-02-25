@@ -8,7 +8,7 @@ public partial class Character : BaseObject
 	public AnimationPlayer anim;
 
 	[ExportGroup ("Очки перемещения")]
-	//Очки перемещения
+	// Очки перемещения
 	[Export] private int movePoints;
 	[Export] public int maxMovePoints = 6;
 	public int MovePoints
@@ -24,7 +24,7 @@ public partial class Character : BaseObject
 	}
 
 	[ExportGroup("Очки действия")]
-	//Очки действий
+	// Очки действий
 	[Export] private int actionPoints;
 	[Export] public int maxActionPoints = 2;
 	public int ActionPoints
@@ -41,7 +41,7 @@ public partial class Character : BaseObject
 
 
 	[ExportGroup("Очки пива")]
-	//Очки пива
+	// Очки пива
 	[Export] private int beerPoints = 0;
 	[Export] public int maxBeerPoints = 6;
 	public int BeerPoints
@@ -92,12 +92,12 @@ public partial class Character : BaseObject
 
 	#region Characteristic
 
-	//private int freeCharacteristicLevel = 0;
-	//private int CharacteristicLevel = 0;
-	//private int maxCharacteristicLevel = 10;
+	// private int freeCharacteristicLevel = 0;
+	// private int CharacteristicLevel = 0;
+	// private int maxCharacteristicLevel = 10;
 
 	[ExportGroup("Здоровье")]
-	//Здоровье
+	// Здоровье
 	[Export] private int hP;
 	[Export] public int maxHP = 100;
 	public int HP
@@ -113,23 +113,11 @@ public partial class Character : BaseObject
 	}
 
 	[ExportGroup("Броня")]
-	//Броня
+	// Броня
 	[Export] public int armor = 10;
-	[Export] public int maxArmor = 100;
-	public int Armor
-	{
-		get
-		{
-			return armor;
-		}
-		set
-		{
-			armor = Math.Clamp(value, 0, maxArmor);
-		}
-	}
 
 	[ExportGroup("Монетки")]
-	//Монетки
+	// Монетки
 	[Export] public int money = 0;
 	public int Money
 	{
@@ -146,34 +134,34 @@ public partial class Character : BaseObject
 
 
 	[ExportGroup("Уроны")]
-	//Урон наносимый объектом
-	//1 переменная - итоговый урон
-	//2 переменная - урон от оружия
-	//3 переменная - бонусный урон, отрицательный или положительный
+	// Урон наносимый объектом
+	// 1 переменная - итоговый урон
+	// 2 переменная - урон от оружия
+	// 3 переменная - бонусный урон, отрицательный или положительный
 
-	//Физический урон
+	// Физический урон
 	[Export] public int physicalDamage = 0;
 
-	//Ядовитый урон
+	// Ядовитый урон
 	[Export] public int poisonDamage = 0;
 
-	//Огненный урон
+	// Огненный урон
 	[Export] public int fireDamage = 0;
 
-	//Морозный урон
+	// Морозный урон
 	[Export] public int frostDamage = 0;
 
-	//Алкогольный урон
+	// Алкогольный урон
 	[Export] public int drunkennessDamage = 0;
 
 
 
 	[ExportGroup("Уровень и опыт")]
-	//Опыт
+	// Опыт
 	public int XP = 0;
 	public int maxXP;
 
-	//Уровень
+	// Уровень
 	public int level = 0;
 	public int maxLevel = 10;
 	public int Level
@@ -191,27 +179,29 @@ public partial class Character : BaseObject
 
 
 	[ExportGroup("Первичные характеристики")]
-	//1 переменная - итоговове значение характеристики
-	//2 переменная - текущее значение характеристики(в прокачке, независимо от бонусов)
-	//3 переменная - максимальное допустимое значение характеристики(в прокачке, независимо от бонусов)
-	//4 переменная - бонус к значению характеристики
+    // 1 переменная - итоговове значение характеристики
+    // 2 переменная - текущее значение характеристики(в прокачке, независимо от бонусов)
+    // 3 переменная - максимальное допустимое значение характеристики(в прокачке, независимо от бонусов)
+    // 4 переменная - бонус к значению характеристики
 
-	//Сила
-	public int strength = 0;
+    // Сила
+    [Export] public int strength = 0;
 	public int Strength
 	{
 		get
 		{
 			return strength;
-		}
+        }
 		set
 		{
 			strength = Math.Clamp(value, 0, 20);
 		}
 	}
+    // Модификатор силы
+    public int strengthModifier = 0;
 
-	//Ловкость
-	public int dexterity = 0;
+    // Ловкость
+    [Export] public int dexterity = 0;
 	public int Dexterity
 	{
 		get
@@ -223,9 +213,11 @@ public partial class Character : BaseObject
 			dexterity = Math.Clamp(value, 0, 20);
 		}
 	}
+    // Модификатор ловкости
+    public int dexterityModifier = 0;
 
-	//Интеллект
-	public int inteligence = 0;
+    // Интеллект
+    [Export] public int inteligence = 0;
 	public int Inteligence
 	{
 		get
@@ -237,9 +229,11 @@ public partial class Character : BaseObject
 			inteligence = Math.Clamp(value, 0, 20);
 		}
 	}
+    // Модификатор интеллект
+    public int inteligenceModifier = 0;
 
-	//Телосложение
-	public int constitution = 0;
+    // Телосложение
+    [Export] public int constitution = 0;
 	public int Constitution
 	{
 		get
@@ -251,9 +245,11 @@ public partial class Character : BaseObject
 			constitution = Math.Clamp(value, 0, 20);
 		}
 	}
+    // Модификатор телосложения
+    public int constitutionModifier = 0;
 
-	//Мудрость
-	public int wisdom = 0;
+    // Мудрость
+    [Export] public int wisdom = 0;
 	public int Wisdom
 	{
 		get
@@ -265,14 +261,16 @@ public partial class Character : BaseObject
 			wisdom = Math.Clamp(value, 0, 20);
 		}
 	}
+    // Модификатор мудрости
+    public int wisdomModifier = 0;
 
 
 
 
-	[ExportGroup("Вторичные характеристики")]
-	//1 переменная - итоговове значение характеристики
-	//2 переменная - бонус к значению характеристики
-	//3 переменная - максимальное допустимое значение характеристики
+    [ExportGroup("Вторичные характеристики")]
+	// 1 переменная - итоговове значение характеристики
+	// 2 переменная - бонус к значению характеристики
+	// 3 переменная - максимальное допустимое значение характеристики
 
 	//Опьянение
 	public int drunkenness = 0;
@@ -291,7 +289,7 @@ public partial class Character : BaseObject
 
 
 	[ExportGroup("Сопротивления к урону")]
-	//Сопротивление физическому
+	// Сопротивление физическому
 	public int physicalResist = 0;
 	public int PhysicalResist
 	{
@@ -305,7 +303,7 @@ public partial class Character : BaseObject
 		}
 	}
 
-	//Сопротивление ядам
+	// Сопротивление ядам
 	public int poisonResist = 0;
 	public int PoisonResist
 	{
@@ -319,7 +317,7 @@ public partial class Character : BaseObject
 		}
 	}
 
-	//Сопротивление огню
+	// Сопротивление огню
 	public int fireResist = 0;
 	public int FireResist
 	{
@@ -333,7 +331,7 @@ public partial class Character : BaseObject
 		}
 	}
 
-	//Сопростивление морозу
+	// Сопростивление морозу
 	public int frostResist = 0;
 	public int FrostResist
 	{
@@ -347,7 +345,7 @@ public partial class Character : BaseObject
 		}
 	}
 
-	//Сопротивление АлКоГоЛю
+	// Сопротивление АлКоГоЛю
 	public int drunkennessResist = 0;
 	public int DrunkennessResist
 	{
@@ -381,9 +379,19 @@ public partial class Character : BaseObject
 	public override void Updater()
 	{
 		UpdateCoordinate();
-	}
+		CharacteristicUpdate();
+    }
 
-	public void Starter()
+	private void CharacteristicUpdate()
+	{
+		strengthModifier = (strength - 10) / 2;
+        dexterityModifier = (dexterity - 10) / 2;
+        inteligenceModifier = (inteligence - 10) / 2;
+        constitutionModifier = (constitution - 10) / 2;
+        wisdomModifier= (wisdom - 10) / 2;
+    }
+
+    public void Starter()
 	{
 		GD.Print(GetType());
 
@@ -395,7 +403,9 @@ public partial class Character : BaseObject
 		UpdateCharac();
 		UpdateCoordinate();
 		UpdatePoints();
+		CharacteristicUpdate();
 
-		TileStorage.AddCharacter(this);
+
+        TileStorage.AddCharacter(this);
 	}
 }
