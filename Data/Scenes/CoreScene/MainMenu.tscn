@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://dykyslnpj3rk"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_7khdk"]
+script/source = "using Godot;
+using System;
+
+public partial class StartGame : Button
+{
+    // Called when the node enters the scene tree for the first time.
+    public override void _Ready()
+    {
+
+        Pressed += ButtonPressed;
+    }
+
+    
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Process(double delta)
+    {
+    }
+
+    private void ButtonPressed()
+    {
+        GD.Print();
+        Node simultaneousScene = ResourceLoader.Load<PackedScene>(\"res://Data/Scenes/CoreScene/CoreScene.tscn\").Instantiate();
+        GetTree().Root.AddChild(simultaneousScene);
+    }
+}
+
+
+
+"
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 256.0
+offset_bottom = 192.0
+script = SubResource("CSharpScript_7khdk")

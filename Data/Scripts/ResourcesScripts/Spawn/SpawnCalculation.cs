@@ -5,14 +5,14 @@ using System.Collections.Generic;
 public partial class SpawnCalculation : Node
 {
 	// Все статусы спавна 
-	public List<SpawnData> activeSpawners = new List<SpawnData>();
+	public List<SpawnModifierData> activeSpawners = new List<SpawnModifierData>();
 
 
 
 	public override void _Ready()
 	{
 		// Перебираем все параметры спавнера и добавляем их в генерацию
-		foreach (SpawnData spawn in activeSpawners)
+		foreach (SpawnModifierData spawn in activeSpawners)
 		{
 			Сalculation(spawn, 1);
 		}
@@ -20,7 +20,7 @@ public partial class SpawnCalculation : Node
 
 
 	// Добавляет статус спавна, добавляет параметры которые он превносит
-	public void AddSpawn(SpawnData spawn)
+	public void AddSpawn(SpawnModifierData spawn)
 	{
 		if (spawn != null)
 		{
@@ -30,7 +30,7 @@ public partial class SpawnCalculation : Node
 	}
 
 	// Удаляет статус спавна, удаляет параметры которые он превносил
-	public void RemoveSpawn(SpawnData spawn)
+	public void RemoveSpawn(SpawnModifierData spawn)
 	{
 		if (spawn != null)
 		{
@@ -44,7 +44,7 @@ public partial class SpawnCalculation : Node
 
 
 
-	public void Сalculation(SpawnData spawn, int mod)
+	public void Сalculation(SpawnModifierData spawn, int mod)
 	{
 		GetParent<LevelInfo>().melee += mod * spawn.melee;
 		GetParent<LevelInfo>().range += mod * spawn.range;

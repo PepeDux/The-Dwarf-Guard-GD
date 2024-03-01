@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class StatusData : Resource
+public partial class StatusModifierData : ModifierData
 {
 	[ExportGroup("Префаб еффекта")]
 	//Сцена еффекта(необязательно)
@@ -38,7 +38,7 @@ public partial class StatusData : Resource
 	[Export(PropertyHint.Range, "-50, 50, 1")] public int strength { get; set; }
 
 	//Ловкость
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int agility { get; set; }
+	[Export(PropertyHint.Range, "-50, 50, 1")] public int dexterity { get; set; }
 
 	//Интеллект
 	[Export(PropertyHint.Range, "-50, 50, 1")] public int intel { get; set; }
@@ -51,32 +51,19 @@ public partial class StatusData : Resource
 
 
 
-
-
 	[ExportGroup("Вторичные характеристики")]
 
 	//Переносимый вес
 	[Export(PropertyHint.Range, "-50, 50, 1")] public int carryingCapacity { get; set; }
-
-	//Скорость
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int speed { get; set; }
 
 	//Опьянение
 	[Export(PropertyHint.Range, "-50, 50, 1")] public int drunkenness { get; set; }
 
 
 
-
-
 	[ExportGroup("Сопротивления к урону")]
 	//Сопротивление колющему📌
 	[Export(PropertyHint.Range, "-100, 100, 1")] public int prickResist { get; set; }
-
-	//Сопротивление режущему🔪
-	[Export(PropertyHint.Range, "-100, 100, 1")] public int slashResist { get; set; }
-
-	//Сопротивление дробящему🔨
-	[Export(PropertyHint.Range, "-100, 100, 1")] public int crushResist { get; set; }
 
 	//Сопротивление ядам🍄
 	[Export(PropertyHint.Range, "-100, 100, 1")] public int poisonResist { get; set; }
@@ -86,12 +73,6 @@ public partial class StatusData : Resource
 
 	//Сопростивление морозу❄ 
 	[Export(PropertyHint.Range, "-100, 100, 1")] public int frostResist { get; set; }
-
-	//Сопротивление проклятию☠
-	[Export(PropertyHint.Range, "-100, 100, 1")] public int curseResist { get; set; }
-
-	//Сопротивление электричеству⛈
-	[Export(PropertyHint.Range, "-100, 100, 1")] public int electricalResist { get; set; }
 
 	//Сопротивление АлКоГоЛю🍺
 	[Export(PropertyHint.Range, "-100, 100, 1")] public int drunkennessResist { get; set; }

@@ -2,20 +2,19 @@ using Godot;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 public partial class LoadResourceFromDirectory : Node
 {
 	// Обобщенный метод для загрузки ресурсов типа T из указанной директории
-	public static List<T> Load<T>(string dirPath)
+	public static List<ModifierData> Load(string dirPath)
 	{
 		// Список для хранения загруженных ресурсов.
-		List<Resource> loadedResources = new List<Resource>();
+		List<ModifierData> loadedResources = new List<ModifierData>();
 
 		// Если путь к директории null или пуст, возвращаем пустой список
 		if (string.IsNullOrEmpty(dirPath))
 		{
-			return loadedResources.Cast<T>().ToList();
+			return loadedResources;
 		}
 
 		// Открываем директорию
@@ -37,13 +36,22 @@ public partial class LoadResourceFromDirectory : Node
 					if (fileName.Contains(".tres"))
 					{
 						// Строим полный путь к файлу ресурса
-						string resourcePath = Path.Join(dir.GetCurrentDir(), fileName);
+						string resourcePath = Path.Combine(dir.GetCurrentDir(), fileName);
 
-						// Загружаем ресурс с использованием ResourceLoadert
-						Resource resource = ResourceLoader.Load<Resource>(resourcePath);
+						// Загружаем ресурс с использованием ResourceLoader
+						Resource loadedResource = ResourceLoader.Load(resourcePath);
 
-						// Добавляем загруженный ресурс в список
-						loadedResources.Add(resource);
+						// Check if the loaded resource is of type ModifierData
+						if (loadedResource is ModifierData modifierData)
+						{
+							// Now you can use modifierData as an instance of ModifierData
+							// Additional processing specific to ModifierData can be done here
+							loadedResources.Add(modifierData);
+						}
+						else
+						{
+							GD.Print($"Ошибка: Невозможно привести ресурс {resourcePath} к типу ModifierData.");
+						}
 					}
 
 					// Получаем имя следующего файла в директории
@@ -59,8 +67,8 @@ public partial class LoadResourceFromDirectory : Node
 				GD.Print($"Ошибка в получении пути к папке: {dirPath}");
 			}
 
-			// Преобразуем список загруженных ресурсов к указанному типу T и возвращаем его
-			return loadedResources.Cast<T>().ToList();
+			// Возвращаем список загруженных ресурсов
+			return loadedResources;
 		}
 	}
 }

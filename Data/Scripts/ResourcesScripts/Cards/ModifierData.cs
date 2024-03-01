@@ -1,7 +1,8 @@
 using Godot;
 using System;
+using System.ComponentModel;
 
-public partial class CardData : Resource
+public partial class ModifierData : Resource
 {
     [ExportGroup("Изображение")]
     // Изображение карты
@@ -12,16 +13,12 @@ public partial class CardData : Resource
 	[Export] public string name { get; set; }
 
 	[ExportGroup("Описание")]
-	// Описание карты
-	[Export] public string cardDescription { get; set; }
+    // Описание карты
+    [Export] public string cardDescription { get; set; }
 
-
-
-	[ExportGroup("Модификатор")]
-	// Модификатор
-	[Export] public Resource modifier { get; set; }
-
-
+    [ExportGroup("Cила карты (1-5)")]
+    // Сила карты
+    [Export] public int cardStrength;
 
 	[ExportGroup("Тип карты")]
 	// Тип карты

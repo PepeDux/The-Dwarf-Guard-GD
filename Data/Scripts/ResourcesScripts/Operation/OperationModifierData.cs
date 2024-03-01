@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Operation : Resource
+public partial class OperationModifierData : ModifierData
 {
 	[Export] public Script script { get; set; }
 	//public void Do()

@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class SpawnData : Resource
+public partial class SpawnModifierData : ModifierData
 {
 	[ExportGroup("Юниты на уровне")]
 

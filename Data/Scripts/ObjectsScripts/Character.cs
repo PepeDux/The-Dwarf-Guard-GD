@@ -9,7 +9,7 @@ public partial class Character : BaseObject
 
 	[ExportGroup ("Очки перемещения")]
 	// Очки перемещения
-	[Export] private int movePoints;
+	[Export] private int movePoints = 0;
 	[Export] public int maxMovePoints = 6;
 	public int MovePoints
 	{ 
@@ -25,7 +25,7 @@ public partial class Character : BaseObject
 
 	[ExportGroup("Очки действия")]
 	// Очки действий
-	[Export] private int actionPoints;
+	[Export] private int actionPoints = 0;
 	[Export] public int maxActionPoints = 2;
 	public int ActionPoints
 	{
@@ -114,7 +114,7 @@ public partial class Character : BaseObject
 
 	[ExportGroup("Броня")]
 	// Броня
-	[Export] public int armor = 10;
+	[Export] public int AC = 10;
 
 	[ExportGroup("Монетки")]
 	// Монетки
@@ -371,18 +371,23 @@ public partial class Character : BaseObject
 		beerPoints = maxBeerPoints;
 	}
 
-	public void UpdateCharac()
+	private void UpdateHP()
 	{
 		HP = maxHP;
+	}
+
+	private void UpdateAC()
+	{
+		AC = 10 + dexterityModifier;
 	}
 
 	public override void Updater()
 	{
 		UpdateCoordinate();
-		CharacteristicUpdate();
+		UpdateCharacteristicModifier();
     }
 
-	private void CharacteristicUpdate()
+	private void UpdateCharacteristicModifier()
 	{
 		strengthModifier = (strength - 10) / 2;
         dexterityModifier = (dexterity - 10) / 2;
@@ -393,19 +398,18 @@ public partial class Character : BaseObject
 
     public void Starter()
 	{
-		GD.Print(GetType());
-
 		TileStorage.impassableCells.Add(coordinate);
 		TileStorage.occupiedCells.Add(coordinate);
 
 		FindTileMap();
 		IdleAnimation();
-		UpdateCharac();
+		UpdateHP();
 		UpdateCoordinate();
 		UpdatePoints();
-		CharacteristicUpdate();
+		UpdateCharacteristicModifier();
+		UpdateAC();
 
-
+        //Добавляем персонажа в хранилище тайлов
         TileStorage.AddCharacter(this);
 	}
 }

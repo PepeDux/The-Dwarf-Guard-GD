@@ -155,6 +155,7 @@ graph_offset = Vector2(-278.071, -211.945)
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_sqds7")
+maxActionPoints = 100
 melee = true
 maxHP = 20
 physicalDamage = 5

@@ -18,10 +18,7 @@ public partial class AttackScript : Node
 
 	public void CalculationAttack(Character target)
 	{
-
 		this.target = target;
-
-		//GD.Print(target);
 
 		if (attacker.melee == true)
 		{
@@ -32,7 +29,6 @@ public partial class AttackScript : Node
 		{
 			FindTarget(FieldCoordinate.xFieldSize, target);
 		}
-
 	}
 
 	public void FindTarget(int distanceAttack, Character target)
@@ -127,10 +123,12 @@ public partial class AttackScript : Node
 				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("DownAttack");
 			}
 
-			if (DiceRoll.Roll(20, 1) + attacker.strength >= target.armor)
+			if (DiceRoll.Roll(20, 1) + attacker.strengthModifier >= target.AC)
 			{
 				GiveDamage();
 			}
+
+			attacker.ActionPoints -= 1;
 		}
 	}
 

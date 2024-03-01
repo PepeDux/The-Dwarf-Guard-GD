@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b76hvac6see04"]
+
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Characteristics/Statuses/StatusModifierData.cs" id="1_1le4v"]
+
+[resource]
+script = ExtResource("1_1le4v")
+HP = 0
+physicalDamage = 0
+movePoint = 0
+actionPoint = 0
+beerPoint = 0
+strength = 0
+dexterity = 0
+intel = 0
+constitution = 0
+wisdom = 0
+carryingCapacity = 0
+drunkenness = 0
+prickResist = 0
+poisonResist = 0
+fireResist = 0
+frostResist = 0
+drunkennessResist = 0
+name = "1"
+cardDescription = ""
+cardStrength = 0
+type = 1
+accessory = 0

@@ -5,7 +5,7 @@ using System.Linq;
 
 public partial class StatusCalculation : Node
 {
-	public List<StatusData> activeStatuses = new List<StatusData>();
+	public List<StatusModifierData> activeStatuses = new List<StatusModifierData>();
 
 
 	public override void _Ready()
@@ -20,14 +20,14 @@ public partial class StatusCalculation : Node
 			activeStatuses = GetTree().Root.GetNode("GameScene").GetNode<LevelModifier>("LevelModifier").playerStatuses;
 		}
 
-		foreach (StatusData status in activeStatuses)
+		foreach (StatusModifierData status in activeStatuses)
 		{
 			Сalculation(status, 1);
 		}
 	}
 
 
-	public void AddStatus(StatusData status)
+	public void AddStatus(StatusModifierData status)
 	{
 		if (status != null)
 		{
@@ -39,7 +39,7 @@ public partial class StatusCalculation : Node
 		}
 	}
 
-	public void RemoveStatus(StatusData status)
+	public void RemoveStatus(StatusModifierData status)
 	{
 		if (status != null)
 		{
@@ -53,12 +53,16 @@ public partial class StatusCalculation : Node
 
 
 
-	public void Сalculation(StatusData status, int mod)
+	public void Сalculation(StatusModifierData status, int mod)
 	{
-		GetParent<Character>().maxHP += mod * status.HP;		
+		GetParent<Character>().maxHP += mod * status.HP;
+
+		GetParent<Character>().MovePoints += mod * status.movePoint;
+		GetParent<Character>().ActionPoints += mod * status.actionPoint;
+		GetParent<Character>().BeerPoints += mod * status.beerPoint;
 
 		GetParent<Character>().strength += mod * status.strength;
-		GetParent<Character>().dexterity += mod * status.agility;
+		GetParent<Character>().dexterity += mod * status.dexterity;
 		GetParent<Character>().inteligence += mod * status.intel;
 		GetParent<Character>().constitution += mod * status.constitution;
 		GetParent<Character>().wisdom += mod * status.wisdom;

@@ -8,9 +8,9 @@ public partial class LevelModifier : Node
 	//[Export] private Player player;
 	//[Export] private Spawner spawner;
 
-	public List<StatusData> enemyStatuses = new List<StatusData>();
-	public List<StatusData> playerStatuses = new List<StatusData>();
-	public List<SpawnData> spawnStatuses = new List<SpawnData>();
+	public List<StatusModifierData> enemyStatuses = new List<StatusModifierData>();
+	public List<StatusModifierData> playerStatuses = new List<StatusModifierData>();
+	public List<SpawnModifierData> spawnStatuses = new List<SpawnModifierData>();
 
 
 
