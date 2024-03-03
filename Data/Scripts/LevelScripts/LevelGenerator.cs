@@ -12,7 +12,7 @@ public partial class LevelGenerator : Node2D
 
 	//Стартовый тайл от которого будут строиться последующие
 	Vector2I startTile = new Vector2I(24, 24);
-	int countTile = 40;
+	int countTile = 10;
 
 
 
@@ -20,8 +20,8 @@ public partial class LevelGenerator : Node2D
 	{
 		// Подписка на событие на окончание выбора карт
 		Events.endSelectCard += Generate;
-		// Генерация карты при старте
-		Generate();
+        // Генерация карты при старте
+        Generate();
 	}
 
 
@@ -35,10 +35,11 @@ public partial class LevelGenerator : Node2D
 		// Очищаем хранилище координат тайлов
 		TileStorage.ClearAllCells();
 
+        // Лимит тайлов
+        countTile = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").tile;
 
-
-		//Старотовый тайл
-		Tile tile = new Tile(startTile, tileMap);
+        //Старотовый тайл
+        Tile tile = new Tile(startTile, tileMap);
 
 		for (int i = 0; TileStorage.freeCells.Count < countTile; i++)
 		{
@@ -99,14 +100,19 @@ public partial class LevelGenerator : Node2D
 			{
 				Random random = new Random();
 
+				// Координаты массива тайловой палитры
 				int xPalette = 5;
 				int yPalette = 3;
 
+				// Присваиваем координату тайлу
 				this.coordinate = coordinate;
+				// Выбираем случайны тайлов из палитры тайлов
 				this.paletteCoordinate = new Vector2I(random.Next(1, xPalette + 1), random.Next(1, yPalette + 1));
 
+				// Спавним тайл
 				tileMap.SetCell(0, this.coordinate, 0, this.paletteCoordinate);
 
+				// Записываем тайл в список свободных тайлов
 				TileStorage.freeCells.Add(this.coordinate);
 			}
 		}

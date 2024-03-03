@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://echwr1sqgpyt" path="res://Data/Scenes/CommonScenes/EnemyTileManager.tscn" id="4_7li0j"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/TakeDamage.cs" id="4_kqp4l"]
 [ext_resource type="Script" path="res://Data/Scripts/AttackScripts/AttackScript.cs" id="6_l4b7r"]
-[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Characteristics/Statuses/StatusCalculation.cs" id="7_w5tte"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Characteristics/Statuses/СharacteristicModifierCalculation.cs" id="7_6igpo"]
 
 [sub_resource type="Animation" id="Animation_rt33q"]
 resource_name = "DownAttack"
@@ -206,8 +206,8 @@ script = ExtResource("4_kqp4l")
 [node name="AttackScript" type="Node2D" parent="."]
 script = ExtResource("6_l4b7r")
 
-[node name="StatusCalculation" type="Node2D" parent="."]
-script = ExtResource("7_w5tte")
+[node name="СharacteristicModifierCalculation" type="Node2D" parent="."]
+script = ExtResource("7_6igpo")
 
 [node name="BloodParticles" type="CPUParticles2D" parent="."]
 position = Vector2(0, -4)

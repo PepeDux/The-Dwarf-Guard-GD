@@ -102,34 +102,34 @@ public partial class CardMaker : TextureButton
 	private void ButtonPressed()
 	{
 		// Враги
-		if (cardPositive is StatusModifierData && cardPositive.accessory == ModifierData.Accessory.enemy)
+		if (cardPositive is CharacteristicModifierData && cardPositive.accessory == ModifierData.Accessory.enemy)
 		{
-			levelModifier.enemyStatuses.Add(cardPositive as StatusModifierData);
+			levelModifier.enemyModifiers.Add(cardPositive as CharacteristicModifierData);
 		}
-		if (cardNegative is StatusModifierData && cardNegative.accessory == ModifierData.Accessory.enemy)
+		if (cardNegative is CharacteristicModifierData && cardNegative.accessory == ModifierData.Accessory.enemy)
 		{
-			levelModifier.enemyStatuses.Add(cardNegative as StatusModifierData);
+			levelModifier.enemyModifiers.Add(cardNegative as CharacteristicModifierData);
 		}
 		
 		// Игрок
-		if (cardPositive is StatusModifierData && cardPositive.accessory == ModifierData.Accessory.player)
+		if (cardPositive is CharacteristicModifierData && cardPositive.accessory == ModifierData.Accessory.player)
 		{
-			levelModifier.playerStatuses.Add(cardPositive as StatusModifierData);
+			levelModifier.playerModifiers.Add(cardPositive as CharacteristicModifierData);
 		}
-		if (cardNegative is StatusModifierData && cardNegative.accessory == ModifierData.Accessory.player)
+		if (cardNegative is CharacteristicModifierData && cardNegative.accessory == ModifierData.Accessory.player)
 		{
-			levelModifier.playerStatuses.Add(cardNegative as StatusModifierData);
+			levelModifier.playerModifiers.Add(cardNegative as CharacteristicModifierData);
 		}
 
 		// Спавн
 		if (cardPositive is SpawnModifierData && cardPositive.accessory == ModifierData.Accessory.spawn)
 		{
-			GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").GetNode<SpawnCalculation>("SpawnCalculation").AddSpawn(cardPositive as SpawnModifierData);
+			GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").GetNode<SpawnModifierCalculation>("SpawnCalculation").AddSpawn(cardPositive as SpawnModifierData);
 
 		}
 		if (cardNegative is SpawnModifierData && cardNegative.accessory == ModifierData.Accessory.spawn)
 		{
-			GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").GetNode<SpawnCalculation>("SpawnCalculation").AddSpawn(cardNegative as SpawnModifierData);
+			GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").GetNode<SpawnModifierCalculation>("SpawnCalculation").AddSpawn(cardNegative as SpawnModifierData);
 			GD.Print("Модификатор карты: " + cardNegative.GetType() + " Для кого: " + cardNegative.accessory);
 		}
 

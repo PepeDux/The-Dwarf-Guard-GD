@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public partial class StatusCalculation : Node
+public partial class СharacteristicModifierCalculation : Node
 {
-	public List<StatusModifierData> activeStatuses = new List<StatusModifierData>();
+	public List<CharacteristicModifierData> activeCharacteristicModifiers = new List<CharacteristicModifierData>();
 
 
 	public override void _Ready()
@@ -13,47 +13,47 @@ public partial class StatusCalculation : Node
 		// Добавляем статусы в соответствии с родительским классом
 		if (GetParent() is Enemy)
 		{
-			activeStatuses = GetTree().Root.GetNode("GameScene").GetNode<LevelModifier>("LevelModifier").enemyStatuses;
+			activeCharacteristicModifiers = GetTree().Root.GetNode("GameScene").GetNode<LevelModifier>("LevelModifier").enemyModifiers;
 		}
 		else if (GetParent() is Player) 
 		{
-			activeStatuses = GetTree().Root.GetNode("GameScene").GetNode<LevelModifier>("LevelModifier").playerStatuses;
+			activeCharacteristicModifiers = GetTree().Root.GetNode("GameScene").GetNode<LevelModifier>("LevelModifier").playerModifiers;
 		}
 
-		foreach (StatusModifierData status in activeStatuses)
+		foreach (CharacteristicModifierData status in activeCharacteristicModifiers)
 		{
 			Сalculation(status, 1);
 		}
 	}
 
 
-	public void AddStatus(StatusModifierData status)
+	public void AddStatus(CharacteristicModifierData status)
 	{
 		if (status != null)
 		{
-			if (!activeStatuses.Contains(status))
+			if (!activeCharacteristicModifiers.Contains(status))
 			{
 				Сalculation(status, 1);
-				activeStatuses.Add(status);
+				activeCharacteristicModifiers.Add(status);
 			}
 		}
 	}
 
-	public void RemoveStatus(StatusModifierData status)
+	public void RemoveStatus(CharacteristicModifierData status)
 	{
 		if (status != null)
 		{
-			if (activeStatuses.Contains(status))
+			if (activeCharacteristicModifiers.Contains(status))
 			{
 				Сalculation(status, -1);
-				activeStatuses.Remove(status);
+				activeCharacteristicModifiers.Remove(status);
 			}
 		}
 	}
 
 
 
-	public void Сalculation(StatusModifierData status, int mod)
+	public void Сalculation(CharacteristicModifierData status, int mod)
 	{
 		GetParent<Character>().maxHP += mod * status.HP;
 

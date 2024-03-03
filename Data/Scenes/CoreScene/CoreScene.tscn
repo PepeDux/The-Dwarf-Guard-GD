@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/CoreScene/Holders.tscn" id="1_78hkp"]
 [ext_resource type="Texture2D" uid="uid://7fit1uamlql4" path="res://Data/Sprites/Tilemaps/MainTileMap.png" id="1_sg0qk"]
 [ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/Markers/Markers.png" id="2_outi2"]
-[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Spawn/SpawnCalculation.cs" id="7_6hw0t"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Spawn/SpawnModifierCalculation.cs" id="7_2krpp"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelInfo.cs" id="9_lclkq"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="10_3v6ox"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/UIManager.cs" id="10_bwtok"]
@@ -225,9 +225,10 @@ metadata/_edit_use_anchors_ = true
 script = ExtResource("9_lclkq")
 captain = 2
 crystal = 10
+tile = 10
 
-[node name="SpawnCalculation" type="Node2D" parent="LevelInfo"]
-script = ExtResource("7_6hw0t")
+[node name="SpawnModifierCalculation" type="Node2D" parent="LevelInfo"]
+script = ExtResource("7_2krpp")
 
 [node name="CameraShake" type="Node2D" parent="." node_paths=PackedStringArray("camera")]
 script = ExtResource("11_qh8oq")

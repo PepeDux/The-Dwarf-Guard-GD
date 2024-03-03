@@ -1,9 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b76hvac6see04"]
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ra0jctd7enof"]
 
-[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Characteristics/Statuses/StatusModifierData.cs" id="1_1le4v"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Characteristics/Statuses/CharacteristicModifierData.cs" id="1_jy5ew"]
 
 [resource]
-script = ExtResource("1_1le4v")
+script = ExtResource("1_jy5ew")
 HP = 0
 physicalDamage = 0
 movePoint = 0
@@ -21,7 +21,7 @@ poisonResist = 0
 fireResist = 0
 frostResist = 0
 drunkennessResist = 0
-name = "1"
+name = "2"
 cardDescription = ""
 cardStrength = 0
 type = 1

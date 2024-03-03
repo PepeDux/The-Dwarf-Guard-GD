@@ -2,17 +2,17 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
-public partial class SpawnCalculation : Node
+public partial class SpawnModifierCalculation : Node
 {
 	// Все статусы спавна 
-	public List<SpawnModifierData> activeSpawners = new List<SpawnModifierData>();
+	public List<SpawnModifierData> activeSpawnerModifier = new List<SpawnModifierData>();
 
 
 
 	public override void _Ready()
 	{
 		// Перебираем все параметры спавнера и добавляем их в генерацию
-		foreach (SpawnModifierData spawn in activeSpawners)
+		foreach (SpawnModifierData spawn in activeSpawnerModifier)
 		{
 			Сalculation(spawn, 1);
 		}
@@ -25,7 +25,7 @@ public partial class SpawnCalculation : Node
 		if (spawn != null)
 		{
 			Сalculation(spawn, 1);
-			activeSpawners.Add(spawn);
+			activeSpawnerModifier.Add(spawn);
 		}
 	}
 
@@ -34,10 +34,10 @@ public partial class SpawnCalculation : Node
 	{
 		if (spawn != null)
 		{
-			if (activeSpawners.Contains(spawn))
+			if (activeSpawnerModifier.Contains(spawn))
 			{
 				Сalculation(spawn, -1);
-				activeSpawners.Remove(spawn);
+				activeSpawnerModifier.Remove(spawn);
 			}
 		}
 	}

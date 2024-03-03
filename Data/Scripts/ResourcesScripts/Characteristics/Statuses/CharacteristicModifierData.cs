@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class StatusModifierData : ModifierData
+public partial class CharacteristicModifierData : ModifierData
 {
 	[ExportGroup("Префаб еффекта")]
 	//Сцена еффекта(необязательно)

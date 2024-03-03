@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://d3ro32w1akkk5" path="res://Data/Scenes/CommonScenes/TileMarker.tscn" id="6_88in0"]
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/PlayerSelectTile.cs" id="7_ou2f5"]
 [ext_resource type="Script" path="res://Data/Scripts/AttackScripts/PlayerAttack.cs" id="9_hve76"]
-[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Characteristics/Statuses/StatusCalculation.cs" id="10_6xsyw"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Characteristics/Statuses/СharacteristicModifierCalculation.cs" id="10_xowb0"]
 
 [sub_resource type="Animation" id="Animation_lyy0y"]
 resource_name = "DownAttack"
@@ -206,5 +206,5 @@ libraries = {
 "": SubResource("AnimationLibrary_3ui0f")
 }
 
-[node name="StatusCalculation" type="Node2D" parent="."]
-script = ExtResource("10_6xsyw")
+[node name="СharacteristicModifierCalculation" type="Node2D" parent="."]
+script = ExtResource("10_xowb0")
