@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx6sxyfguth4d"]
+
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/BaseObject.cs" id="1_sulsi"]
+[ext_resource type="Script" path="res://Data/Scripts/AnimationScripts/AnimationController.cs" id="2_epauy"]
+
+[node name="BaseObject" type="Node2D"]
+script = ExtResource("1_sulsi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationContoller" type="Node2D" parent="."]
+script = ExtResource("2_epauy")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -17,6 +17,7 @@ public partial class CameraShake : Node
 				random.Next(-shakeIntensity, shakeIntensity) * shakeModifier);
 		}
 
+		// Возвращаем камеру на исходную позицию
 		camera.Offset = new Vector2(0, 0);
 	}
 }

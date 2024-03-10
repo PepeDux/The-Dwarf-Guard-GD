@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://b2xh8cto5uvph"]
+
+[ext_resource type="PackedScene" uid="uid://dx6sxyfguth4d" path="res://Data/Scenes/BaseObjects/BaseObject.tscn" id="1_leavt"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Character.cs" id="2_omgqv"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Characteristics/Statuses/СharacteristicModifierCalculation.cs" id="3_442ou"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/TakeDamage.cs" id="4_akvk5"]
+
+[sub_resource type="Curve" id="Curve_oni1p"]
+min_value = -500.0
+max_value = 500.0
+_data = [Vector2(0, -500), 0.0, 1400.0, 0, 0, Vector2(1, 500), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_moc41"]
+min_value = -200.0
+max_value = 200.0
+_data = [Vector2(0, -200), 0.0, 0.0, 0, 0, Vector2(0.9683, 200), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_rl7n5"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.501691), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Character" instance=ExtResource("1_leavt")]
+script = ExtResource("2_omgqv")
+movePoints = 0
+maxMovePoints = 6
+actionPoints = 0
+maxActionPoints = 2
+beerPoints = 0
+maxBeerPoints = 6
+moveCost = 1
+meleeAttackCost = 1
+rangeAttackCost = 2
+lineMove = true
+diagonalMove = false
+lineAttack = true
+diagonalAttack = false
+melee = false
+range = false
+hP = 0
+maxHP = 100
+AC = 10
+money = 0
+physicalDamage = 0
+poisonDamage = 0
+fireDamage = 0
+frostDamage = 0
+drunkennessDamage = 0
+strength = 0
+dexterity = 0
+inteligence = 0
+constitution = 0
+wisdom = 0
+
+[node name="СharacteristicModifierCalculation" type="Node2D" parent="." index="4"]
+script = ExtResource("3_442ou")
+
+[node name="BloodParticles" type="CPUParticles2D" parent="." index="5"]
+position = Vector2(0, -4)
+emitting = false
+amount = 20
+lifetime = 0.1
+one_shot = true
+speed_scale = 0.5
+lifetime_randomness = 1.0
+spread = 180.0
+initial_velocity_min = 50.0
+initial_velocity_max = 80.0
+orbit_velocity_curve = SubResource("Curve_oni1p")
+radial_accel_curve = SubResource("Curve_moc41")
+angle_min = -360.0
+angle_max = 360.0
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_rl7n5")
+color = Color(0.509804, 0.129412, 0.113725, 1)
+
+[node name="TakeDamage" type="Node2D" parent="." index="6"]
+script = ExtResource("4_akvk5")

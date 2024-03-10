@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://btukw3yl3ouwt"]
+
+[ext_resource type="PackedScene" uid="uid://b2xh8cto5uvph" path="res://Data/Scenes/BaseObjects/Characters/Character.tscn" id="1_tacpj"]
+[ext_resource type="PackedScene" uid="uid://echwr1sqgpyt" path="res://Data/Scenes/CommonScenes/EnemyTileManager.tscn" id="2_m0vok"]
+
+[node name="Character" instance=ExtResource("1_tacpj")]
+
+[node name="EnemyTileManager" parent="." index="7" instance=ExtResource("2_m0vok")]

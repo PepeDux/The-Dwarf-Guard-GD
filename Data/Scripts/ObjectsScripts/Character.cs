@@ -179,29 +179,29 @@ public partial class Character : BaseObject
 
 
 	[ExportGroup("Первичные характеристики")]
-    // 1 переменная - итоговове значение характеристики
-    // 2 переменная - текущее значение характеристики(в прокачке, независимо от бонусов)
-    // 3 переменная - максимальное допустимое значение характеристики(в прокачке, независимо от бонусов)
-    // 4 переменная - бонус к значению характеристики
+	// 1 переменная - итоговове значение характеристики
+	// 2 переменная - текущее значение характеристики(в прокачке, независимо от бонусов)
+	// 3 переменная - максимальное допустимое значение характеристики(в прокачке, независимо от бонусов)
+	// 4 переменная - бонус к значению характеристики
 
-    // Сила
-    [Export] public int strength = 0;
+	// Сила
+	[Export] public int strength = 0;
 	public int Strength
 	{
 		get
 		{
 			return strength;
-        }
+		}
 		set
 		{
 			strength = Math.Clamp(value, 0, 20);
 		}
 	}
-    // Модификатор силы
-    public int strengthModifier = 0;
+	// Модификатор силы
+	public int strengthModifier = 0;
 
-    // Ловкость
-    [Export] public int dexterity = 0;
+	// Ловкость
+	[Export] public int dexterity = 0;
 	public int Dexterity
 	{
 		get
@@ -213,11 +213,11 @@ public partial class Character : BaseObject
 			dexterity = Math.Clamp(value, 0, 20);
 		}
 	}
-    // Модификатор ловкости
-    public int dexterityModifier = 0;
+	// Модификатор ловкости
+	public int dexterityModifier = 0;
 
-    // Интеллект
-    [Export] public int inteligence = 0;
+	// Интеллект
+	[Export] public int inteligence = 0;
 	public int Inteligence
 	{
 		get
@@ -229,11 +229,11 @@ public partial class Character : BaseObject
 			inteligence = Math.Clamp(value, 0, 20);
 		}
 	}
-    // Модификатор интеллект
-    public int inteligenceModifier = 0;
+	// Модификатор интеллект
+	public int inteligenceModifier = 0;
 
-    // Телосложение
-    [Export] public int constitution = 0;
+	// Телосложение
+	[Export] public int constitution = 0;
 	public int Constitution
 	{
 		get
@@ -245,11 +245,11 @@ public partial class Character : BaseObject
 			constitution = Math.Clamp(value, 0, 20);
 		}
 	}
-    // Модификатор телосложения
-    public int constitutionModifier = 0;
+	// Модификатор телосложения
+	public int constitutionModifier = 0;
 
-    // Мудрость
-    [Export] public int wisdom = 0;
+	// Мудрость
+	[Export] public int wisdom = 0;
 	public int Wisdom
 	{
 		get
@@ -261,13 +261,13 @@ public partial class Character : BaseObject
 			wisdom = Math.Clamp(value, 0, 20);
 		}
 	}
-    // Модификатор мудрости
-    public int wisdomModifier = 0;
+	// Модификатор мудрости
+	public int wisdomModifier = 0;
 
 
 
 
-    [ExportGroup("Вторичные характеристики")]
+	[ExportGroup("Вторичные характеристики")]
 	// 1 переменная - итоговове значение характеристики
 	// 2 переменная - бонус к значению характеристики
 	// 3 переменная - максимальное допустимое значение характеристики
@@ -385,18 +385,18 @@ public partial class Character : BaseObject
 	{
 		UpdateCoordinate();
 		UpdateCharacteristicModifier();
-    }
+	}
 
 	private void UpdateCharacteristicModifier()
 	{
 		strengthModifier = (strength - 10) / 2;
-        dexterityModifier = (dexterity - 10) / 2;
-        inteligenceModifier = (inteligence - 10) / 2;
-        constitutionModifier = (constitution - 10) / 2;
-        wisdomModifier= (wisdom - 10) / 2;
-    }
+		dexterityModifier = (dexterity - 10) / 2;
+		inteligenceModifier = (inteligence - 10) / 2;
+		constitutionModifier = (constitution - 10) / 2;
+		wisdomModifier= (wisdom - 10) / 2;
+	}
 
-    public void Starter()
+	public void Starter()
 	{
 		TileStorage.impassableCells.Add(coordinate);
 		TileStorage.occupiedCells.Add(coordinate);
@@ -409,7 +409,7 @@ public partial class Character : BaseObject
 		UpdateCharacteristicModifier();
 		UpdateAC();
 
-        //Добавляем персонажа в хранилище тайлов
-        TileStorage.AddCharacter(this);
+		//Добавляем персонажа в хранилище тайлов
+		TileStorage.AddCharacter(this);
 	}
 }

@@ -1,0 +1,32 @@
+[gd_scene load_steps=9 format=3 uid="uid://bsmae37apy2nw"]
+
+[ext_resource type="PackedScene" uid="uid://b2xh8cto5uvph" path="res://Data/Scenes/BaseObjects/Characters/Character.tscn" id="1_lghd7"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Player.cs" id="2_rapmf"]
+[ext_resource type="Script" path="res://Data/Scripts/TurnScripts/PlayerTurn.cs" id="3_1lsjb"]
+[ext_resource type="PackedScene" uid="uid://d3ro32w1akkk5" path="res://Data/Scenes/CommonScenes/TileMarker.tscn" id="4_114d2"]
+[ext_resource type="Script" path="res://Data/Scripts/TileScripts/PlayerSelectTile.cs" id="5_r4enq"]
+[ext_resource type="Script" path="res://Data/Scripts/AttackScripts/PlayerAttack.cs" id="6_4opki"]
+[ext_resource type="Script" path="res://Data/Scripts/TileScripts/PlayerTileManager.cs" id="7_j8mox"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4xicb"]
+load_path = "res://.godot/imported/GwarfGuard-Sheet.png-5319d70b14a7efdb590b2ff47e7f827f.ctex"
+
+[node name="Player" instance=ExtResource("1_lghd7")]
+script = ExtResource("2_rapmf")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = SubResource("CompressedTexture2D_4xicb")
+
+[node name="PlayerTurn" type="Node2D" parent="." index="7"]
+script = ExtResource("3_1lsjb")
+
+[node name="TileMarker" parent="." index="8" instance=ExtResource("4_114d2")]
+
+[node name="PlayerSelectTile" type="Node2D" parent="." index="9"]
+script = ExtResource("5_r4enq")
+
+[node name="PlayerAttack" type="Node2D" parent="." index="10"]
+script = ExtResource("6_4opki")
+
+[node name="PlayerTileManager" type="Node2D" parent="." index="11"]
+script = ExtResource("7_j8mox")
