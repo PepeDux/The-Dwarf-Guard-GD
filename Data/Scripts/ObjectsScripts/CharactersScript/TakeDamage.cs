@@ -12,12 +12,12 @@ public partial class TakeDamage : Node
 
 
 
-	//Скрипт TakeDamage обрабатывает типы урона поступаемые объектам
-	//Он учитывает сопроивления к урону в объекте и выдает  итоге дамаг после вычислений
+	// Скрипт TakeDamage обрабатывает типы урона поступаемые объектам
+	// Он учитывает сопроивления к урону в объекте и выдает  итоге дамаг после вычислений
 	//
 	//
 	//
-	//К скрипту можно обратиться так - TakeDamage(Damage:15, Damage:43); минуя не нужные типы урона
+	// К скрипту можно обратиться так - TakeDamage(Damage:15, Damage:43); минуя не нужные типы урона
 
 
 	public override void _Ready()
@@ -50,9 +50,9 @@ public partial class TakeDamage : Node
 			target.HP -= totalDamage;
 		}
 
-		//Дрожание экрана при получении урона
+		// Дрожание экрана при получении урона
 		GetTree().Root.GetNode("GameScene").GetNode<CameraShake>("CameraShake").ShakeAsync(1, 1, 15, 10);
-		//
+		// Вызываем партиклы крови при получении урона
 		GetParent().GetNode<CpuParticles2D>("BloodParticles").Emitting = true;
 
 
@@ -62,7 +62,7 @@ public partial class TakeDamage : Node
 		}
 		else
 		{
-			//Вызов анимации получения урона
+			// Вызов анимации получения урона
 			//GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("Hurt");
 		}
 	}
@@ -72,7 +72,7 @@ public partial class TakeDamage : Node
 	{
 		GD.Print($"Я {GetParent().Name} умер");
 
-		//Спавнит случайны лут из списка с вероятностью 50%
+		// Спавнит случайны лут из списка с вероятностью 50%
 		//if (Random.Range(0, 100) > 50 && lootAfterDeath != null)
 		//{
 		//	try
@@ -97,15 +97,12 @@ public partial class TakeDamage : Node
 			Events.playerDied?.Invoke();
 		}
 
-		if (GetParent() is Enemy)
+		if (GetParent() is Captain)
 		{
-			if (GetParent<Enemy>().typeEnemy == Enemy.TypeEnemy.captain)
-			{
-				Events.levelEnded?.Invoke();
-			}
+			Events.levelEnded?.Invoke();
 		}
 
-		//Очищаем координаты персонажа из хранилища координат 
+		// Очищаем координаты персонажа из хранилища координат 
 		TileStorage.RemoveCharacter(GetParent<Character>());
 		GetParent().QueueFree();
 	}

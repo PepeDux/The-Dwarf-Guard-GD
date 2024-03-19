@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://vcns8byu0kqa"]
 
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/PlayerSpawner.cs" id="1_4w0t7"]
-[ext_resource type="PackedScene" uid="uid://jljnojosimbk" path="res://Data/Scenes/Player/Player.tscn" id="2_6mq0g"]
+[ext_resource type="PackedScene" uid="uid://bsmae37apy2nw" path="res://Data/Scenes/BaseObjects/Characters/Player/Player.tscn" id="2_262sn"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/EnemySpawner.cs" id="3_2t50k"]
 [ext_resource type="PackedScene" uid="uid://cekprly7rk5a6" path="res://Data/Scenes/Units/Captain/Captain.tscn" id="4_kb44o"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/FunctionalObjectSpawner.cs" id="5_fqsji"]
@@ -11,7 +11,7 @@
 
 [node name="PlayerHolder" type="Node2D" parent="."]
 script = ExtResource("1_4w0t7")
-player = Array[PackedScene]([ExtResource("2_6mq0g")])
+player = Array[PackedScene]([ExtResource("2_262sn")])
 
 [node name="EnemiesHolder" type="Node2D" parent="."]
 script = ExtResource("3_2t50k")

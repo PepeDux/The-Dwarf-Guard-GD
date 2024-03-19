@@ -398,9 +398,6 @@ public partial class Character : BaseObject
 
 	public void Starter()
 	{
-		TileStorage.impassableCells.Add(coordinate);
-		TileStorage.occupiedCells.Add(coordinate);
-
 		FindTileMap();
 		IdleAnimation();
 		UpdateHP();

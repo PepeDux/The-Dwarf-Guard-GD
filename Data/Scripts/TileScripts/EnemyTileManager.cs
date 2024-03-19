@@ -158,7 +158,7 @@ public partial class EnemyTileManager : Node2D
 		if (GetParent<Enemy>().diagonalMove == true)
 		{
 			Neighbours.Add(new Cell(node.G + 1.4f, new Vector2I(
-				  node.Position.X + 1, node.Position.Y + 1),
+				 node.Position.X + 1, node.Position.Y + 1),
 				 node.TargetPosition,
 				 node));
 

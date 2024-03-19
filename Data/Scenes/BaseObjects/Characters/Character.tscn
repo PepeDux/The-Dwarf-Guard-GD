@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://b2xh8cto5uvph"]
 
 [ext_resource type="PackedScene" uid="uid://dx6sxyfguth4d" path="res://Data/Scenes/BaseObjects/BaseObject.tscn" id="1_leavt"]
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Character.cs" id="2_omgqv"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/CharactersScript/Character.cs" id="2_8vwku"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Characteristics/Statuses/СharacteristicModifierCalculation.cs" id="3_442ou"]
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/TakeDamage.cs" id="4_akvk5"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/CharactersScript/TakeDamage.cs" id="4_akvk5"]
 
 [sub_resource type="Curve" id="Curve_oni1p"]
 min_value = -500.0
@@ -22,7 +22,7 @@ _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.501691), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [node name="Character" instance=ExtResource("1_leavt")]
-script = ExtResource("2_omgqv")
+script = ExtResource("2_8vwku")
 movePoints = 0
 maxMovePoints = 6
 actionPoints = 0

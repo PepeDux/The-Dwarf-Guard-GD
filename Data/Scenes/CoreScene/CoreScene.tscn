@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://ubithf5ubebc"]
+[gd_scene load_steps=21 format=3 uid="uid://ubithf5ubebc"]
 
 [ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/CoreScene/Holders.tscn" id="1_78hkp"]
 [ext_resource type="Texture2D" uid="uid://7fit1uamlql4" path="res://Data/Sprites/Tilemaps/MainTileMap.png" id="1_sg0qk"]
@@ -8,12 +8,13 @@
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="10_3v6ox"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/UIManager.cs" id="10_bwtok"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/Fader.cs" id="11_lk4uu"]
-[ext_resource type="Script" path="res://Data/Scripts/CameraShake.cs" id="11_qh8oq"]
+[ext_resource type="Script" path="res://Data/Scripts/CameraScripts/CameraShake.cs" id="11_qh8oq"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelGenerator.cs" id="12_13kvq"]
 [ext_resource type="PackedScene" uid="uid://dt43ky47ci4jg" path="res://Data/Scenes/Card/Card.tscn" id="13_l7glq"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnController.cs" id="14_07t1w"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelModifier.cs" id="14_xe5ua"]
 [ext_resource type="Script" path="res://Data/Scripts/CardsScripts/CardHolder.cs" id="15_xnraa"]
+[ext_resource type="Script" path="res://Data/Scripts/TileScripts/TileStorage.cs" id="16_si61r"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/ClearHolder.cs" id="18_m7nb1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5c43"]
@@ -275,3 +276,6 @@ offset_bottom = 448.0
 
 [node name="LevelModifier" type="Node2D" parent="."]
 script = ExtResource("14_xe5ua")
+
+[node name="TileStorage" type="Node2D" parent="."]
+script = ExtResource("16_si61r")

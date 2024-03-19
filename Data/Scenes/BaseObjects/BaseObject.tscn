@@ -8,7 +8,7 @@ script = ExtResource("1_sulsi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
-[node name="AnimationContoller" type="Node2D" parent="."]
+[node name="AnimationController" type="Node2D" parent="."]
 script = ExtResource("2_epauy")
 
 [node name="AnimationTree" type="AnimationTree" parent="."]

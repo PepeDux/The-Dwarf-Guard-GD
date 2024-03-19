@@ -1,10 +1,10 @@
 [gd_scene load_steps=29 format=3 uid="uid://jljnojosimbk"]
 
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Player.cs" id="1_sqds7"]
-[ext_resource type="Texture2D" uid="uid://c44x38wkbgt8x" path="res://Data/Scenes/Player/GwarfGuard-Sheet.png" id="2_8bspv"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/CharactersScript/PlayerScripts/Player.cs" id="1_a1q7x"]
+[ext_resource type="Texture2D" uid="uid://b2rw7ldcqv2qt" path="res://Data/Scenes/Player/GwarfGuard-Sheet.png" id="2_e2deq"]
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/PlayerTileManager.cs" id="3_4q0qh"]
 [ext_resource type="Script" path="res://Data/Scripts/AnimationScripts/AnimationController.cs" id="3_vfvsw"]
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/TakeDamage.cs" id="4_810vi"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/CharactersScript/TakeDamage.cs" id="4_2c1mo"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/PlayerTurn.cs" id="5_mnl3b"]
 [ext_resource type="PackedScene" uid="uid://d3ro32w1akkk5" path="res://Data/Scenes/CommonScenes/TileMarker.tscn" id="6_88in0"]
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/PlayerSelectTile.cs" id="7_ou2f5"]
@@ -144,7 +144,7 @@ states/DownAttack/node = SubResource("AnimationNodeAnimation_pxb7g")
 states/DownAttack/position = Vector2(423.929, 226)
 states/End/position = Vector2(254, 160)
 states/HorizontalAttack/node = SubResource("AnimationNodeAnimation_qxduq")
-states/HorizontalAttack/position = Vector2(696.929, 61)
+states/HorizontalAttack/position = Vector2(698.929, 61)
 states/Idle/node = SubResource("AnimationNodeAnimation_cdutd")
 states/Idle/position = Vector2(423.929, 61)
 states/Start/position = Vector2(254, 61)
@@ -154,7 +154,7 @@ transitions = ["Idle", "HorizontalAttack", SubResource("AnimationNodeStateMachin
 graph_offset = Vector2(-278.071, -211.945)
 
 [node name="Player" type="Node2D"]
-script = ExtResource("1_sqds7")
+script = ExtResource("1_a1q7x")
 maxActionPoints = 100
 melee = true
 maxHP = 20
@@ -166,7 +166,7 @@ constitution = 16
 wisdom = 16
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_8bspv")
+texture = ExtResource("2_e2deq")
 hframes = 6
 vframes = 4
 frame = 1
@@ -175,7 +175,7 @@ frame = 1
 script = ExtResource("3_vfvsw")
 
 [node name="TakeDamage" type="Node2D" parent="."]
-script = ExtResource("4_810vi")
+script = ExtResource("4_2c1mo")
 
 [node name="PlayerTileManager" type="Node2D" parent="."]
 script = ExtResource("3_4q0qh")

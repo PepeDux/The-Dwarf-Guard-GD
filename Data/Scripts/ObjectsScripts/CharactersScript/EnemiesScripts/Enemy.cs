@@ -6,10 +6,6 @@ using System.Threading.Tasks;
 
 public partial class Enemy : Character
 {
-	//[Header("Тип противника")]
-	public TypeEnemy typeEnemy;
-	public enum TypeEnemy { captain, melee, range, wizard };
-
 	private bool isFacingRight = true;
 
 	public Player player;

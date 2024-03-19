@@ -110,6 +110,8 @@ public partial class AttackScript : Node
 	{
 		if (attackCell == target.coordinate && target != null && attacker.ActionPoints > 0)
 		{
+			GD.Print(GetParent().Name);
+
 			if (sideAttack == "HorizontalAttack")
 			{
 				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("HorizontalAttack");
