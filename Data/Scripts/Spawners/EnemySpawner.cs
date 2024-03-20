@@ -14,29 +14,29 @@ public partial class EnemySpawner : Spawner
 	{
 		Events.levelGenerated += SpawnEnemy;
 
-		generateLevelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
+        levelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
 	}
 
 	public void SpawnEnemy()
 	{
-		for (int i = 0; i < generateLevelInfo.melee; i++)
+		for (int i = 0; i < levelInfo.melee; i++)
 		{
-			Spawn(melee);
+			Spawn(melee, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < generateLevelInfo.range; i++)
+		for (int i = 0; i < levelInfo.range; i++)
 		{
-			Spawn(range);
+			Spawn(range, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < generateLevelInfo.captain; i++)
+		for (int i = 0; i < levelInfo.captain; i++)
 		{
-			Spawn(captain);
+			Spawn(captain, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < generateLevelInfo.wizard; i++)
+		for (int i = 0; i < levelInfo.wizard; i++)
 		{
-			Spawn(wizard);
+			Spawn(wizard, Vector2I.Zero);
 		}
 	}
 }

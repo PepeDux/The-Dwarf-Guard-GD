@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://b2xh8cto5uvph"]
 
 [ext_resource type="PackedScene" uid="uid://dx6sxyfguth4d" path="res://Data/Scenes/BaseObjects/BaseObject.tscn" id="1_leavt"]
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/CharactersScript/Character.cs" id="2_8vwku"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Character.cs" id="2_8vwku"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Characteristics/Statuses/СharacteristicModifierCalculation.cs" id="3_442ou"]
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/CharactersScript/TakeDamage.cs" id="4_akvk5"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/TakeDamage.cs" id="4_akvk5"]
 
 [sub_resource type="Curve" id="Curve_oni1p"]
 min_value = -500.0

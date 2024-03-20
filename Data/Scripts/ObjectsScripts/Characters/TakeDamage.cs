@@ -5,12 +5,11 @@ public partial class TakeDamage : Node
 {
 	public static Action playerDead;
 
+	private Random random = new Random();
+
 	private Character target;
 
 	//public GameObject corpse; //Труп или объект после смерти(не путать с лутом)
-	//public GameObject[] lootAfterDeath; //Вещи выпадающие из обхекта после смерти
-
-
 
 	// Скрипт TakeDamage обрабатывает типы урона поступаемые объектам
 	// Он учитывает сопроивления к урону в объекте и выдает  итоге дамаг после вычислений
@@ -72,19 +71,20 @@ public partial class TakeDamage : Node
 	{
 		GD.Print($"Я {GetParent().Name} умер");
 
-		// Спавнит случайны лут из списка с вероятностью 50%
-		//if (Random.Range(0, 100) > 50 && lootAfterDeath != null)
-		//{
-		//	try
-		//	{
-		//		GameObject loot = Instantiate(lootAfterDeath[Random.Range(0, lootAfterDeath.Length)]);
-		//		loot.GetComponent<BaseObject>().coordinate = GetComponent<BaseObject>().tileMap.WorldToCell(transform.position);
-		//	}
-		//	catch
-		//	{
+		PackedScene[] loot = GetParent<Character>().loot;
 
-		//	}
-		//}
+		//Спавнит случайны лут из списка с вероятностью 50 %
+		if (random.Next(0, 100) > 50 && loot.Length > 0)
+		{
+			try
+			{
+				GetTree().Root.GetNode("GameScene").GetNode("Holders").GetNode<FunctionalObjectSpawner>("FunctioanalObjectsHolder").Spawn(loot, GetParent<Character>().coordinate);
+			}
+			catch
+			{
+
+			}
+		}
 
 
 

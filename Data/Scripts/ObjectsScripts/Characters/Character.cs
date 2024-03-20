@@ -7,6 +7,9 @@ public partial class Character : BaseObject
 {
 	public AnimationPlayer anim;
 
+	[ExportGroup ("Лут после смерти")]
+	[Export] public PackedScene[] loot;
+
 	[ExportGroup ("Очки перемещения")]
 	// Очки перемещения
 	[Export] private int movePoints = 0;

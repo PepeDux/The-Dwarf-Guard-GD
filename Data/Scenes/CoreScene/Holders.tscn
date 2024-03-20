@@ -9,6 +9,9 @@
 
 [node name="Holders" type="Node2D"]
 
+[node name="FunctioanalObjectsHolder" type="Node2D" parent="."]
+script = ExtResource("5_fqsji")
+
 [node name="PlayerHolder" type="Node2D" parent="."]
 script = ExtResource("1_4w0t7")
 player = Array[PackedScene]([ExtResource("2_262sn")])
@@ -16,9 +19,6 @@ player = Array[PackedScene]([ExtResource("2_262sn")])
 [node name="EnemiesHolder" type="Node2D" parent="."]
 script = ExtResource("3_2t50k")
 captain = Array[PackedScene]([ExtResource("4_kb44o")])
-
-[node name="FunctioanalObjectsHolder" type="Node2D" parent="."]
-script = ExtResource("5_fqsji")
 
 [node name="StaticObjectsHolder" type="Node2D" parent="."]
 script = ExtResource("6_titob")

@@ -1,10 +1,11 @@
-[gd_scene load_steps=29 format=3 uid="uid://cekprly7rk5a6"]
+[gd_scene load_steps=30 format=3 uid="uid://cekprly7rk5a6"]
 
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/CharactersScript/EnemiesScripts/Enemy.cs" id="1_okoys"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Enemies/Enemy.cs" id="1_yx5mh"]
+[ext_resource type="PackedScene" uid="uid://l3wyir15t0cc" path="res://Data/Scenes/7.tscn" id="2_5oncq"]
 [ext_resource type="Texture2D" uid="uid://cdg7usmy0yp3x" path="res://Data/Scenes/Units/Captain/Captain-Sheet.png" id="2_rydsd"]
 [ext_resource type="Script" path="res://Data/Scripts/AnimationScripts/AnimationController.cs" id="3_0rr8i"]
 [ext_resource type="PackedScene" uid="uid://echwr1sqgpyt" path="res://Data/Scenes/CommonScenes/EnemyTileManager.tscn" id="4_7li0j"]
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/CharactersScript/TakeDamage.cs" id="5_12vyt"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/TakeDamage.cs" id="5_nlgwi"]
 [ext_resource type="Script" path="res://Data/Scripts/AttackScripts/AttackScript.cs" id="6_l4b7r"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Characteristics/Statuses/СharacteristicModifierCalculation.cs" id="7_6igpo"]
 
@@ -167,11 +168,13 @@ _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.501691), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [node name="Captain" type="Node2D"]
-script = ExtResource("1_okoys")
+z_index = 5
+script = ExtResource("1_yx5mh")
+loot = Array[PackedScene]([ExtResource("2_5oncq")])
 maxMovePoints = 3
 maxActionPoints = 1
 melee = true
-maxHP = 40
+maxHP = 5
 physicalDamage = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -200,7 +203,7 @@ parameters/conditions/HorizontalAttack = false
 parameters/conditions/UpAttack = false
 
 [node name="TakeDamage" type="Node2D" parent="."]
-script = ExtResource("5_12vyt")
+script = ExtResource("5_nlgwi")
 
 [node name="AttackScript" type="Node2D" parent="."]
 script = ExtResource("6_l4b7r")

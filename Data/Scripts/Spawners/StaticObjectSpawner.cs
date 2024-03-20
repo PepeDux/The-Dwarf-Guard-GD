@@ -10,22 +10,22 @@ public partial class StaticObjectSpawner : Spawner
 
 	public override void _Ready()
 	{
-		//Events.levelStarted += SpawnStaticTileObject;
+        //Events.levelStarted += SpawnStaticTileObject;
 
-		generateLevelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
+        levelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
 		//SpawnStaticTileObject();
 	}
 
 	public void SpawnStaticTileObject()
 	{
-		for (int i = 0; i < generateLevelInfo.wall; i++)
+		for (int i = 0; i < levelInfo.wall; i++)
 		{
-			Spawn(wall);
+			Spawn(wall, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < generateLevelInfo.pit; i++)
+		for (int i = 0; i < levelInfo.pit; i++)
 		{
-			Spawn(pit);
+			Spawn(pit, Vector2I.Zero);
 		}
 	}
 }

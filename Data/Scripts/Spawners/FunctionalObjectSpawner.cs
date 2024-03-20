@@ -14,30 +14,30 @@ public partial class FunctionalObjectSpawner : Spawner
 	{
 		//Events.levelStarted += SpawnFunctionalObject;
 
-		generateLevelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
+		levelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
 		//SpawnFunctionalObject();
 	}
 
 	public void SpawnFunctionalObject()
 	{
-		for (int i = 0; i < generateLevelInfo.trap; i++)
+		for (int i = 0; i < levelInfo.trap; i++)
 		{
-			Spawn(trap);
+			Spawn(trap, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < generateLevelInfo.food; i++)
+		for (int i = 0; i < levelInfo.food; i++)
 		{
-			Spawn(food);
+			Spawn(food, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < generateLevelInfo.money; i++)
+		for (int i = 0; i < levelInfo.money; i++)
 		{
-			Spawn(money);
+			Spawn(money, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < generateLevelInfo.crystal; i++)
+		for (int i = 0; i < levelInfo.crystal; i++)
 		{
-			Spawn(crystal);
+			Spawn(crystal, Vector2I.Zero);
 		}
 	}
 }

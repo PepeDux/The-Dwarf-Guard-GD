@@ -11,14 +11,14 @@ public partial class PlayerSpawner : Spawner
 	{
 		Events.levelGenerated += SpawnPlayer;
 
-		generateLevelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
+		levelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
 	}
 
 	public void SpawnPlayer()
 	{
 		for (int i = 0; i < 1; i++)
 		{
-			Spawn(player);
+			Spawn(player, Vector2I.Zero);
 		}
 	}
 }

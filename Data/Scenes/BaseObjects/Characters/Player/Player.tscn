@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=3 uid="uid://bsmae37apy2nw"]
 
 [ext_resource type="PackedScene" uid="uid://b2xh8cto5uvph" path="res://Data/Scenes/BaseObjects/Characters/Character.tscn" id="1_lghd7"]
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/CharactersScript/PlayerScripts/Player.cs" id="2_rapmf"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Player/Player.cs" id="2_el8n6"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/PlayerTurn.cs" id="3_1lsjb"]
 [ext_resource type="Texture2D" uid="uid://b2rw7ldcqv2qt" path="res://Data/Scenes/Player/GwarfGuard-Sheet.png" id="3_pgr1q"]
 [ext_resource type="PackedScene" uid="uid://d3ro32w1akkk5" path="res://Data/Scenes/CommonScenes/TileMarker.tscn" id="4_114d2"]
@@ -152,7 +152,8 @@ states/UpAttack/position = Vector2(629, 145)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_imuea"), "Idle", "HorizontalAttack", SubResource("AnimationNodeStateMachineTransition_4pqsn"), "Idle", "UpAttack", SubResource("AnimationNodeStateMachineTransition_j62f6"), "UpAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_nusjd"), "HorizontalAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_yq0oq"), "Idle", "DownAttack", SubResource("AnimationNodeStateMachineTransition_vaql8"), "DownAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_ktw4t")]
 
 [node name="Player" instance=ExtResource("1_lghd7")]
-script = ExtResource("2_rapmf")
+script = ExtResource("2_el8n6")
+loot = null
 melee = true
 physicalDamage = 5
 poisonDamage = 4
