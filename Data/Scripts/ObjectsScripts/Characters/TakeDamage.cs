@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Threading.Tasks;
 
 public partial class TakeDamage : Node
 {
@@ -62,12 +63,12 @@ public partial class TakeDamage : Node
 		else
 		{
 			// Вызов анимации получения урона
-			//GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("Hurt");
+			GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("TakeDamage");
 		}
 	}
 
 
-	public void Die()
+	public async void Die()
 	{
 		GD.Print($"Я {GetParent().Name} умер");
 
@@ -88,9 +89,12 @@ public partial class TakeDamage : Node
 
 
 
-		//Instantiate(corpse, transform.position, transform.rotation);
+		GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("Die");
 
-		//GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("Die");
+		// Очищаем координаты персонажа из хранилища координат 
+		TileStorage.RemoveCharacter(GetParent<Character>());
+
+		await Task.Delay(1500);
 
 		if (GetParent() is Player)
 		{
@@ -102,8 +106,6 @@ public partial class TakeDamage : Node
 			Events.levelEnded?.Invoke();
 		}
 
-		// Очищаем координаты персонажа из хранилища координат 
-		TileStorage.RemoveCharacter(GetParent<Character>());
 		GetParent().QueueFree();
 	}
 }

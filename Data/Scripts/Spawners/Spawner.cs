@@ -1,98 +1,92 @@
-using Godot;
+п»їusing Godot;
 using System;
 
 public partial class Spawner : Node2D
 {
-    // Random объект для генерации случайных чисел
+    // Random РѕР±СЉРµРєС‚ РґР»СЏ РіРµРЅРµСЂР°С†РёРё СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР»
     private Random random = new Random();
 
-    // Координата спауна
+    // РљРѕРѕСЂРґРёРЅР°С‚Р° СЃРїР°СѓРЅР°
     private Vector2I spawnCoordinate;
 
-    // Информация о уровне
+    // РРЅС„РѕСЂРјР°С†РёСЏ Рѕ СѓСЂРѕРІРЅРµ
     public LevelInfo levelInfo;
 
-    // Вызывается при готовности узла
+    // Р’С‹Р·С‹РІР°РµС‚СЃСЏ РїСЂРё РіРѕС‚РѕРІРЅРѕСЃС‚Рё СѓР·Р»Р°
     public override void _Ready()
     {
-        // Получаем информацию об уровне при готовности
+        // РџРѕР»СѓС‡Р°РµРј РёРЅС„РѕСЂРјР°С†РёСЋ РѕР± СѓСЂРѕРІРЅРµ РїСЂРё РіРѕС‚РѕРІРЅРѕСЃС‚Рё
         levelInfo = GetLevelInfo();
     }
 
-    // Метод для спауна объектов
+    // РњРµС‚РѕРґ РґР»СЏ СЃРїР°СѓРЅР° РѕР±СЉРµРєС‚РѕРІ
     public void Spawn(PackedScene[] spawnableScenes, Vector2I spawnPosition)
     {
-        // Если нет объектов для спауна, выходим
-        if (spawnableScenes.Length == 0)
-        {
-            return;
-        }
-
-        // Если позиция спауна не указана, спауним на случайной координате
+        // Р•СЃР»Рё РїРѕР·РёС†РёСЏ СЃРїР°СѓРЅР° РЅРµ СѓРєР°Р·Р°РЅР°, СЃРїР°СѓРЅРёРј РЅР° СЃР»СѓС‡Р°Р№РЅРѕР№ РєРѕРѕСЂРґРёРЅР°С‚Рµ
         if (spawnPosition == Vector2I.Zero)
         {
             TrySpawnWithRandomCoordinate(spawnableScenes);
         }
         else
         {
-            // Иначе спауним на указанной позиции
+            // РРЅР°С‡Рµ СЃРїР°СѓРЅРёРј РЅР° СѓРєР°Р·Р°РЅРЅРѕР№ РїРѕР·РёС†РёРё
             TrySpawnAtPosition(spawnableScenes, spawnPosition);
         }
     }
 
-    // Попытка спауна на случайной координате
+    // РџРѕРїС‹С‚РєР° СЃРїР°СѓРЅР° РЅР° СЃР»СѓС‡Р°Р№РЅРѕР№ РєРѕРѕСЂРґРёРЅР°С‚Рµ
     private void TrySpawnWithRandomCoordinate(PackedScene[] spawnableScenes)
     {
-        // Пробуем спаунить 20 раз
+        // РџСЂРѕР±СѓРµРј СЃРїР°СѓРЅРёС‚СЊ 20 СЂР°Р·
         for (int i = 0; i < 20; i++)
         {
             if (TryGetRandomCoordinate())
             {
-                // Если удалось получить координату, спауним объект на ней
+                // Р•СЃР»Рё СѓРґР°Р»РѕСЃСЊ РїРѕР»СѓС‡РёС‚СЊ РєРѕРѕСЂРґРёРЅР°С‚Сѓ, СЃРїР°СѓРЅРёРј РѕР±СЉРµРєС‚ РЅР° РЅРµР№
                 SpawnObject(spawnableScenes[random.Next(0, spawnableScenes.Length)]);
                 break;
             }
         }
     }
 
-    // Получение случайной свободной координаты
+    // РџРѕР»СѓС‡РµРЅРёРµ СЃР»СѓС‡Р°Р№РЅРѕР№ СЃРІРѕР±РѕРґРЅРѕР№ РєРѕРѕСЂРґРёРЅР°С‚С‹
     private bool TryGetRandomCoordinate()
     {
         spawnCoordinate = GetRandomFreeCoordinate();
         return IsCoordinateAvailable(spawnCoordinate);
     }
 
-    // Попытка спауна на указанной позиции
+    // РџРѕРїС‹С‚РєР° СЃРїР°СѓРЅР° РЅР° СѓРєР°Р·Р°РЅРЅРѕР№ РїРѕР·РёС†РёРё
     private void TrySpawnAtPosition(PackedScene[] spawnableScenes, Vector2I spawnPosition)
     {
         SpawnObject(spawnableScenes[random.Next(0, spawnableScenes.Length)]);
     }
 
-    // Получение случайной свободной координаты
+    // РџРѕР»СѓС‡РµРЅРёРµ СЃР»СѓС‡Р°Р№РЅРѕР№ СЃРІРѕР±РѕРґРЅРѕР№ РєРѕРѕСЂРґРёРЅР°С‚С‹
     private Vector2I GetRandomFreeCoordinate()
     {
         return TileStorage.freeCells[random.Next(0, TileStorage.freeCells.Count)];
     }
 
-    // Проверка доступности координаты для спауна
+    // РџСЂРѕРІРµСЂРєР° РґРѕСЃС‚СѓРїРЅРѕСЃС‚Рё РєРѕРѕСЂРґРёРЅР°С‚С‹ РґР»СЏ СЃРїР°СѓРЅР°
     private bool IsCoordinateAvailable(Vector2I coordinate)
     {
         return TileStorage.freeCells.Contains(coordinate) && !TileStorage.occupiedCells.Contains(coordinate);
     }
 
-    // Спаун объекта
+    // РЎРїР°СѓРЅ РѕР±СЉРµРєС‚Р°
     private void SpawnObject(PackedScene scene)
     {
-        // Инстанциируем сцену и добавляем объект на сцену
+        // РРЅСЃС‚Р°РЅС†РёРёСЂСѓРµРј СЃС†РµРЅСѓ Рё РґРѕР±Р°РІР»СЏРµРј РѕР±СЉРµРєС‚ РЅР° СЃС†РµРЅСѓ
         BaseObject node = (BaseObject)scene.Instantiate();
         node.coordinate = spawnCoordinate;
         AddChild(node);
     }
 
-    // Получение информации об уровне
+    // РџРѕР»СѓС‡РµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё РѕР± СѓСЂРѕРІРЅРµ
     private LevelInfo GetLevelInfo()
     {
-        // Получаем информацию об уровне из корневого узла сцены
+        // РџРѕР»СѓС‡Р°РµРј РёРЅС„РѕСЂРјР°С†РёСЋ РѕР± СѓСЂРѕРІРЅРµ РёР· РєРѕСЂРЅРµРІРѕРіРѕ СѓР·Р»Р° СЃС†РµРЅС‹
         return GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
     }
 }

@@ -226,7 +226,7 @@ metadata/_edit_use_anchors_ = true
 script = ExtResource("9_lclkq")
 captain = 2
 crystal = 10
-tile = 10
+tile = 20
 
 [node name="SpawnModifierCalculation" type="Node2D" parent="LevelInfo"]
 script = ExtResource("7_2krpp")

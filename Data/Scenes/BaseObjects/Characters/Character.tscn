@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2xh8cto5uvph"]
+[gd_scene load_steps=9 format=3 uid="uid://b2xh8cto5uvph"]
 
 [ext_resource type="PackedScene" uid="uid://dx6sxyfguth4d" path="res://Data/Scenes/BaseObjects/BaseObject.tscn" id="1_leavt"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Character.cs" id="2_8vwku"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Characteristics/Statuses/СharacteristicModifierCalculation.cs" id="3_442ou"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/TakeDamage.cs" id="4_akvk5"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xy7h0"]
 
 [sub_resource type="Curve" id="Curve_oni1p"]
 min_value = -500.0
@@ -23,6 +25,7 @@ point_count = 2
 
 [node name="Character" instance=ExtResource("1_leavt")]
 script = ExtResource("2_8vwku")
+loot = null
 movePoints = 0
 maxMovePoints = 6
 actionPoints = 0
@@ -52,6 +55,11 @@ dexterity = 0
 inteligence = 0
 constitution = 0
 wisdom = 0
+
+[node name="AnimationPlayer" parent="." index="3"]
+libraries = {
+"": SubResource("AnimationLibrary_xy7h0")
+}
 
 [node name="СharacteristicModifierCalculation" type="Node2D" parent="." index="4"]
 script = ExtResource("3_442ou")

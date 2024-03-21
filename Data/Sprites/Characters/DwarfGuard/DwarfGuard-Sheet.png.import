@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2rw7ldcqv2qt"
-path="res://.godot/imported/GwarfGuard-Sheet.png-5319d70b14a7efdb590b2ff47e7f827f.ctex"
+uid="uid://beykux031yyxv"
+path="res://.godot/imported/DwarfGuard-Sheet.png-99f414e84cc9fa25c770ce3bdabe770d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Data/Scenes/Player/GwarfGuard-Sheet.png"
-dest_files=["res://.godot/imported/GwarfGuard-Sheet.png-5319d70b14a7efdb590b2ff47e7f827f.ctex"]
+source_file="res://Data/Sprites/Characters/DwarfGuard/DwarfGuard-Sheet.png"
+dest_files=["res://.godot/imported/DwarfGuard-Sheet.png-99f414e84cc9fa25c770ce3bdabe770d.ctex"]
 
 [params]
 

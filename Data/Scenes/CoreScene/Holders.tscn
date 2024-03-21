@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/PlayerSpawner.cs" id="1_4w0t7"]
 [ext_resource type="PackedScene" uid="uid://bsmae37apy2nw" path="res://Data/Scenes/BaseObjects/Characters/Player/Player.tscn" id="2_262sn"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/EnemySpawner.cs" id="3_2t50k"]
-[ext_resource type="PackedScene" uid="uid://cekprly7rk5a6" path="res://Data/Scenes/Units/Captain/Captain.tscn" id="4_kb44o"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/FunctionalObjectSpawner.cs" id="5_fqsji"]
+[ext_resource type="PackedScene" uid="uid://dbfigrwbx63ex" path="res://Data/Scenes/BaseObjects/Characters/Enemies/Captain/Captain.tscn" id="5_ml4ad"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/StaticObjectSpawner.cs" id="6_titob"]
 
 [node name="Holders" type="Node2D"]
@@ -18,7 +18,7 @@ player = Array[PackedScene]([ExtResource("2_262sn")])
 
 [node name="EnemiesHolder" type="Node2D" parent="."]
 script = ExtResource("3_2t50k")
-captain = Array[PackedScene]([ExtResource("4_kb44o")])
+captain = Array[PackedScene]([ExtResource("5_ml4ad")])
 
 [node name="StaticObjectsHolder" type="Node2D" parent="."]
 script = ExtResource("6_titob")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdg7usmy0yp3x"
-path="res://.godot/imported/Captain-Sheet.png-55728bbab85f7464f5c6d1a348e9a803.ctex"
+uid="uid://djo7th6bch2wd"
+path="res://.godot/imported/Captain-Sheet.png-d9c869560984e374593501df23fe94da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Data/Scenes/Units/Captain/Captain-Sheet.png"
-dest_files=["res://.godot/imported/Captain-Sheet.png-55728bbab85f7464f5c6d1a348e9a803.ctex"]
+source_file="res://Data/Sprites/Characters/Captain/Captain-Sheet.png"
+dest_files=["res://.godot/imported/Captain-Sheet.png-d9c869560984e374593501df23fe94da.ctex"]
 
 [params]
 
