@@ -4,6 +4,54 @@
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Enemies/Captain/Captain.cs" id="2_6no2r"]
 [ext_resource type="Texture2D" uid="uid://djo7th6bch2wd" path="res://Data/Sprites/Characters/Captain/Captain-Sheet.png" id="2_it51s"]
 
+[sub_resource type="Animation" id="Animation_yygy1"]
+resource_name = "Die"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [24, 25, 26, 27]
+}
+
+[sub_resource type="Animation" id="Animation_7im87"]
+resource_name = "DownAttack"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [12, 13, 14, 15, 16, 17]
+}
+
+[sub_resource type="Animation" id="Animation_3g0p1"]
+resource_name = "HorizontalAttack"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [18, 19, 20, 21, 22, 23]
+}
+
 [sub_resource type="Animation" id="Animation_om6p4"]
 resource_name = "Idle"
 length = 0.6
@@ -36,9 +84,9 @@ tracks/0/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_3g0p1"]
-resource_name = "HorizontalAttack"
-length = 0.6
+[sub_resource type="Animation" id="Animation_3k12g"]
+resource_name = "TakeDamage"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -46,10 +94,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [18, 19, 20, 21, 22, 23]
+"values": [30, 31, 30, 31, 30]
 }
 
 [sub_resource type="Animation" id="Animation_0j1pk"]
@@ -66,54 +114,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [6, 7, 8, 9, 10, 11]
-}
-
-[sub_resource type="Animation" id="Animation_7im87"]
-resource_name = "DownAttack"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [12, 13, 14, 15, 16, 17]
-}
-
-[sub_resource type="Animation" id="Animation_yygy1"]
-resource_name = "Die"
-length = 0.8
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [24, 25, 26, 27]
-}
-
-[sub_resource type="Animation" id="Animation_3k12g"]
-resource_name = "TakeDamage"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [30, 31, 30, 31, 30]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f6fho"]
@@ -204,7 +204,7 @@ graph_offset = Vector2(-214.6, -132.996)
 [node name="Captain" instance=ExtResource("1_ct7er")]
 script = ExtResource("2_6no2r")
 melee = true
-maxHP = 5
+maxHP = 20
 physicalDamage = 5
 
 [node name="Sprite2D" parent="." index="0"]
