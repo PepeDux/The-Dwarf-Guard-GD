@@ -129,6 +129,11 @@ public partial class AttackScript : Node
 			{
 				GiveDamage();
 			}
+			else
+			{
+				target.GetNode<SubViewport>("SubViewport").GetNode<Label>("Label").Text = "MISS";
+				target.GetNode<CpuParticles2D>("MessageParticles").Emitting = true;
+			}
 
 			attacker.ActionPoints -= 1;
 		}

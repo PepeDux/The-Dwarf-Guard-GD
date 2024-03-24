@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bsmae37apy2nw"]
+[gd_scene load_steps=36 format=3 uid="uid://bsmae37apy2nw"]
 
 [ext_resource type="PackedScene" uid="uid://b2xh8cto5uvph" path="res://Data/Scenes/BaseObjects/Characters/Character.tscn" id="1_lghd7"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Player/Player.cs" id="2_el8n6"]
@@ -208,8 +208,12 @@ states/UpAttack/position = Vector2(399, 145)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_imuea"), "Idle", "HorizontalAttack", SubResource("AnimationNodeStateMachineTransition_4pqsn"), "Idle", "UpAttack", SubResource("AnimationNodeStateMachineTransition_j62f6"), "UpAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_nusjd"), "HorizontalAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_yq0oq"), "Idle", "DownAttack", SubResource("AnimationNodeStateMachineTransition_vaql8"), "DownAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_ktw4t"), "Idle", "Die", SubResource("AnimationNodeStateMachineTransition_arsfg"), "Idle", "TakeDamage", SubResource("AnimationNodeStateMachineTransition_8mbsg"), "TakeDamage", "Idle", SubResource("AnimationNodeStateMachineTransition_8rv6p")]
 graph_offset = Vector2(0, 43.5655)
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_3w645"]
+viewport_path = NodePath("SubViewport")
+
 [node name="Player" instance=ExtResource("1_lghd7")]
 script = ExtResource("2_el8n6")
+maxActionPoints = 100
 melee = true
 maxHP = 10
 physicalDamage = 5
@@ -259,3 +263,6 @@ script = ExtResource("6_4opki")
 
 [node name="PlayerTileManager" type="Node2D" parent="." index="11"]
 script = ExtResource("7_j8mox")
+
+[node name="MessageParticles" parent="." index="14"]
+texture = SubResource("ViewportTexture_3w645")

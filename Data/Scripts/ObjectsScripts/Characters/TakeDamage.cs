@@ -55,6 +55,9 @@ public partial class TakeDamage : Node
 		// Вызываем партиклы крови при получении урона
 		GetParent().GetNode<CpuParticles2D>("BloodParticles").Emitting = true;
 
+		GetParent().GetNode<SubViewport>("SubViewport").GetNode<Label>("Label").Text = totalDamage.ToString();
+		GetParent().GetNode<CpuParticles2D>("MessageParticles").Emitting = true;
+
 
 		if (target.HP <= 0)
 		{

@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://b2xh8cto5uvph"]
+[gd_scene load_steps=11 format=3 uid="uid://b2xh8cto5uvph"]
 
 [ext_resource type="PackedScene" uid="uid://dx6sxyfguth4d" path="res://Data/Scenes/BaseObjects/BaseObject.tscn" id="1_leavt"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Character.cs" id="2_8vwku"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Characteristics/Statuses/СharacteristicModifierCalculation.cs" id="3_442ou"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/TakeDamage.cs" id="4_akvk5"]
+[ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="5_28we2"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xy7h0"]
 
@@ -22,6 +23,9 @@ point_count = 2
 [sub_resource type="Curve" id="Curve_rl7n5"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.501691), 0.0, 0.0, 0, 0]
 point_count = 2
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_amvck"]
+viewport_path = NodePath("SubViewport")
 
 [node name="Character" instance=ExtResource("1_leavt")]
 script = ExtResource("2_8vwku")
@@ -86,3 +90,33 @@ color = Color(0.509804, 0.129412, 0.113725, 1)
 
 [node name="TakeDamage" type="Node2D" parent="." index="6"]
 script = ExtResource("4_akvk5")
+
+[node name="SubViewport" type="SubViewport" parent="." index="7"]
+transparent_bg = true
+mesh_lod_threshold = 0.0
+sdf_oversize = 3
+sdf_scale = 0
+size = Vector2i(128, 128)
+size_2d_override = Vector2i(64, 64)
+
+[node name="Label" type="Label" parent="SubViewport" index="0"]
+offset_left = 54.0
+offset_top = 50.0
+offset_right = 449.0
+offset_bottom = 185.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
+theme_override_fonts/font = ExtResource("5_28we2")
+theme_override_font_sizes/font_size = 128
+text = "miss
+"
+horizontal_alignment = 1
+
+[node name="MessageParticles" type="CPUParticles2D" parent="." index="8"]
+position = Vector2(0, -11)
+emitting = false
+amount = 1
+lifetime = 0.5
+one_shot = true
+texture = SubResource("ViewportTexture_amvck")
+gravity = Vector2(0, -24)

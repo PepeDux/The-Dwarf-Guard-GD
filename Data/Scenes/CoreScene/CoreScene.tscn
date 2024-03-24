@@ -415,9 +415,9 @@ sources/0 = SubResource("TileSetAtlasSource_mcski")
 z_index = 100
 material = SubResource("ShaderMaterial_at4ju")
 offset_left = 128.0
-offset_top = 248.0
+offset_top = 240.0
 offset_right = 640.0
-offset_bottom = 520.0
+offset_bottom = 528.0
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ivx7g")
@@ -509,10 +509,10 @@ script = ExtResource("18_m7nb1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
-offset_left = -2408.0
-offset_top = -3112.0
-offset_right = 3992.0
-offset_bottom = 3288.0
+offset_left = -3048.0
+offset_top = -3088.0
+offset_right = 3352.0
+offset_bottom = 3312.0
 color = Color(0.109804, 0.101961, 0.101961, 1)
 script = ExtResource("11_lk4uu")
 metadata/_edit_use_anchors_ = true

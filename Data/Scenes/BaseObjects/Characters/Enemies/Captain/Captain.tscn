@@ -204,7 +204,6 @@ graph_offset = Vector2(-214.6, -132.996)
 [node name="Captain" instance=ExtResource("1_ct7er")]
 script = ExtResource("2_6no2r")
 melee = true
-maxHP = 20
 physicalDamage = 5
 
 [node name="Sprite2D" parent="." index="0"]
