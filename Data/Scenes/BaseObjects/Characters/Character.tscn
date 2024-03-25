@@ -100,6 +100,8 @@ size = Vector2i(128, 128)
 size_2d_override = Vector2i(64, 64)
 
 [node name="Label" type="Label" parent="SubViewport" index="0"]
+light_mask = 1048575
+visibility_layer = 1048575
 offset_left = 54.0
 offset_top = 50.0
 offset_right = 449.0
@@ -116,7 +118,7 @@ horizontal_alignment = 1
 position = Vector2(0, -11)
 emitting = false
 amount = 1
-lifetime = 0.5
+lifetime = 0.2
 one_shot = true
 texture = SubResource("ViewportTexture_amvck")
 gravity = Vector2(0, -24)

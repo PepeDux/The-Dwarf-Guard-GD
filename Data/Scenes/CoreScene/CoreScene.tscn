@@ -537,8 +537,6 @@ offset_top = 320.0
 offset_right = 352.0
 offset_bottom = 448.0
 
-[node name="test" type="Node2D" parent="."]
-
 [node name="LevelModifier" type="Node2D" parent="."]
 script = ExtResource("14_xe5ua")
 

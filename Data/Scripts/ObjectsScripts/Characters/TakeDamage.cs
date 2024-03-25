@@ -27,6 +27,7 @@ public partial class TakeDamage : Node
 
 	public void Take
 		(
+		bool isCriticalDamage = false,
 		int physicalDamage = 0,
 		int poisonDamage = 0,
 		int fireDamage = 0,
@@ -38,6 +39,9 @@ public partial class TakeDamage : Node
 
 		int totalDamage = 0;
 
+		// Перекрашиваем label в белый цвет
+		GetParent().GetNode<SubViewport>("SubViewport").GetNode<Label>("Label").Modulate = new Color(0.96f, 0.96f, 0.98f);
+
 		//target.HP -= poisonDamage * (1 - target.poisonResist / 100);
 		//target.HP -= fireDamage * (1 - target.fireResist / 100);
 		//target.HP -= frostDamage * (1 - target.frostResist / 100);
@@ -45,19 +49,34 @@ public partial class TakeDamage : Node
 
 		totalDamage += physicalDamage - target.physicalResist;
 
-		if (totalDamage > 0)
+		if (isCriticalDamage == true)
 		{
-			target.HP -= totalDamage;
+			totalDamage *= 2;
+
+			// Перекрашиваем label в красный цвет
+			GetParent().GetNode<SubViewport>("SubViewport").GetNode<Label>("Label").Modulate = new Color(1, 0, 0);
+
+			// Дрожание экрана при получении критического урона
+			GetTree().Root.GetNode("GameScene").GetNode<CameraShake>("CameraShake").ShakeAsync(3, 1, 20, 10);
+		}
+		else
+		{
+			// Дрожание экрана при получении обычного урона
+			GetTree().Root.GetNode("GameScene").GetNode<CameraShake>("CameraShake").ShakeAsync(1, 1, 15, 10);
 		}
 
-		// Дрожание экрана при получении урона
-		GetTree().Root.GetNode("GameScene").GetNode<CameraShake>("CameraShake").ShakeAsync(1, 1, 15, 10);
+
+		
 		// Вызываем партиклы крови при получении урона
 		GetParent().GetNode<CpuParticles2D>("BloodParticles").Emitting = true;
 
 		GetParent().GetNode<SubViewport>("SubViewport").GetNode<Label>("Label").Text = totalDamage.ToString();
 		GetParent().GetNode<CpuParticles2D>("MessageParticles").Emitting = true;
 
+		if (totalDamage > 0)
+		{
+			target.HP -= totalDamage;
+		}
 
 		if (target.HP <= 0)
 		{

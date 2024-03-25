@@ -9,6 +9,8 @@ public partial class AttackScript : Node
 
 	private Character attacker;
 
+	private bool isCriticalDamage;
+
 	public override void _Ready()
 	{
 		attacker = GetParent<Character>();
@@ -125,7 +127,17 @@ public partial class AttackScript : Node
 				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("DownAttack");
 			}
 
-			if (DiceRoll.Roll(20, 1) + attacker.strengthModifier >= target.AC)
+			isCriticalDamage = false;
+
+			// Кидаем 1D20 на попадание
+			int D20DiceRoll = DiceRoll.Roll(20, 1);
+
+			if (D20DiceRoll == 20)
+			{
+				isCriticalDamage = true;
+				GiveDamage();
+			}
+			else if (D20DiceRoll + attacker.strengthModifier >= target.AC) 
 			{
 				GiveDamage();
 			}
@@ -145,6 +157,7 @@ public partial class AttackScript : Node
 	{
 
 		target.GetNode<TakeDamage>("TakeDamage").Take(
+		isCriticalDamage: isCriticalDamage,
 		physicalDamage: attacker.physicalDamage,
 		poisonDamage: attacker.poisonDamage,
 		fireDamage: attacker.fireDamage,
