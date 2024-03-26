@@ -413,7 +413,6 @@ sources/0 = SubResource("TileSetAtlasSource_mcski")
 [node name="GameScene" type="Node2D"]
 
 [node name="VHS-Shader" type="ColorRect" parent="."]
-visible = false
 z_index = 100
 material = SubResource("ShaderMaterial_at4ju")
 offset_left = 128.0

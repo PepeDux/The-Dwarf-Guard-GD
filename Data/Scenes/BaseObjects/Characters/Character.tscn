@@ -1,10 +1,19 @@
-[gd_scene load_steps=11 format=3 uid="uid://b2xh8cto5uvph"]
+[gd_scene load_steps=20 format=3 uid="uid://b2xh8cto5uvph"]
 
 [ext_resource type="PackedScene" uid="uid://dx6sxyfguth4d" path="res://Data/Scenes/BaseObjects/BaseObject.tscn" id="1_leavt"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Character.cs" id="2_8vwku"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Characteristics/Statuses/СharacteristicModifierCalculation.cs" id="3_442ou"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/TakeDamage.cs" id="4_akvk5"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="5_28we2"]
+[ext_resource type="Script" path="res://Data/Scripts/AudioScripts/CharacterAudioController.cs" id="6_pe6ut"]
+[ext_resource type="AudioStream" uid="uid://ceh7eimmrveyv" path="res://Data/Audio/Hurt/Hurt1.wav" id="7_pk1ay"]
+[ext_resource type="AudioStream" uid="uid://b0mm71fqgrddn" path="res://Data/Audio/Hurt/Hurt2.wav" id="8_mt50h"]
+[ext_resource type="AudioStream" uid="uid://qkbgenkh4fxk" path="res://Data/Audio/Hurt/Hurt3.wav" id="9_leu3j"]
+[ext_resource type="AudioStream" uid="uid://1thejoj2lt2d" path="res://Data/Audio/Hurt/Hurt4.wav" id="10_e3nbd"]
+[ext_resource type="AudioStream" uid="uid://cg1pwgdrtipo3" path="res://Data/Audio/Move/Move1.wav" id="14_l0hxx"]
+[ext_resource type="AudioStream" uid="uid://dv424i1qoveao" path="res://Data/Audio/Miss/Miss1.wav" id="20_vqs0h"]
+[ext_resource type="AudioStream" uid="uid://e5cck14xyj0h" path="res://Data/Audio/Miss/Miss2.wav" id="21_5w3hn"]
+[ext_resource type="AudioStream" uid="uid://cbhjai3ibwdt" path="res://Data/Audio/Miss/Miss3.wav" id="22_v8gjh"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xy7h0"]
 
@@ -118,7 +127,16 @@ horizontal_alignment = 1
 light_mask = 1048575
 visibility_layer = 1048575
 position = Vector2(0, -11)
+emitting = false
 amount = 1
 lifetime = 0.2
+one_shot = true
 texture = SubResource("ViewportTexture_amvck")
 gravity = Vector2(0, -24)
+
+[node name="CharacterAudioController" type="AudioStreamPlayer" parent="." index="9"]
+bus = &"Sounds"
+script = ExtResource("6_pe6ut")
+hurtSounds = Array[AudioStreamWAV]([ExtResource("7_pk1ay"), ExtResource("8_mt50h"), ExtResource("9_leu3j"), ExtResource("10_e3nbd")])
+moveSounds = Array[AudioStreamWAV]([ExtResource("14_l0hxx")])
+missSound = Array[AudioStreamWAV]([ExtResource("20_vqs0h"), ExtResource("21_5w3hn"), ExtResource("22_v8gjh")])

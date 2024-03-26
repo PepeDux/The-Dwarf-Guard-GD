@@ -1,10 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://btukw3yl3ouwt"]
+[gd_scene load_steps=6 format=3 uid="uid://btukw3yl3ouwt"]
 
 [ext_resource type="PackedScene" uid="uid://b2xh8cto5uvph" path="res://Data/Scenes/BaseObjects/Characters/Character.tscn" id="1_tacpj"]
 [ext_resource type="PackedScene" uid="uid://echwr1sqgpyt" path="res://Data/Scenes/CommonScenes/EnemyTileManager.tscn" id="2_m0vok"]
 [ext_resource type="Script" path="res://Data/Scripts/AttackScripts/AttackScript.cs" id="3_0bk16"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_diuqp"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_0h4o2"]
+viewport_path = NodePath("SubViewport")
 
 [node name="Character" instance=ExtResource("1_tacpj")]
 
@@ -17,3 +20,6 @@ libraries = {
 
 [node name="AttackScript" type="Node2D" parent="." index="8"]
 script = ExtResource("3_0bk16")
+
+[node name="MessageParticles" parent="." index="10"]
+texture = SubResource("ViewportTexture_0h4o2")

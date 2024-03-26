@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 
 window/size/viewport_width=490
 window/size/viewport_height=270
+window/size/mode=4
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 mouse_cursor/custom_image="res://Data/UI/Cursors/Arrow.png"
@@ -31,6 +32,7 @@ project/assembly_name="The Dwarf Guard"
 folder_colors={
 "res://Data/Scripts/AnimationScripts/": "green",
 "res://Data/Scripts/AttackScripts/": "red",
+"res://Data/Scripts/AudioScripts/": "teal",
 "res://Data/Scripts/CameraScripts/": "orange",
 "res://Data/Scripts/CardsScripts/": "blue",
 "res://Data/Scripts/GlobalScripts/": "gray",

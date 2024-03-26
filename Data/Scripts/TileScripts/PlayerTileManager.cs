@@ -55,7 +55,9 @@ public partial class PlayerTileManager : Node2D
 			GetParent<Player>().coordinate = cellPosition; //Перемещаем игрока на место кликнутого тайла           
 
 			GetParent<Player>().MovePoints -= 1; //Отнимаем у игрока очки движения
-		}
+
+            GetParent().GetNode<CharacterAudioController>("CharacterAudioController").PlaySound("Move", 0.8f, 1f);
+        }
 	}
 
 	private bool CheckCells()

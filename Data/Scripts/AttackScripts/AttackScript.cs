@@ -145,6 +145,9 @@ public partial class AttackScript : Node
 			{
 				// Перекрашиваем label в белый цвет
 				GetParent().GetNode<SubViewport>("SubViewport").GetNode<Label>("Label").Modulate = new Color(0.96f, 0.96f, 0.98f);
+				// Проигрываем звук промаха
+				GetParent().GetNode<CharacterAudioController>("CharacterAudioController").PlaySound("Miss", 0.5f, 1f);
+				//
 				target.GetNode<SubViewport>("SubViewport").GetNode<Label>("Label").Text = "MISS";
 				target.GetNode<CpuParticles2D>("MessageParticles").Emitting = true;
 			}

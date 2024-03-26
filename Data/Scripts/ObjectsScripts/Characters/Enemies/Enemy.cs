@@ -81,6 +81,7 @@ public partial class Enemy : Character
 				pathToTarget.RemoveAt(0);
 				coordinate = pathToTarget[pathToTarget.Count - 1];
 				UpdateCoordinate();
+				GetNode<CharacterAudioController>("CharacterAudioController").PlaySound("Move", 0.8f, 1f);
 				MovePoints -= moveCost;
 
 				TileStorage.AddCharacter(this);
