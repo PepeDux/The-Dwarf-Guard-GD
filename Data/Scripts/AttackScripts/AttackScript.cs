@@ -143,6 +143,8 @@ public partial class AttackScript : Node
 			}
 			else
 			{
+				// Перекрашиваем label в белый цвет
+				GetParent().GetNode<SubViewport>("SubViewport").GetNode<Label>("Label").Modulate = new Color(0.96f, 0.96f, 0.98f);
 				target.GetNode<SubViewport>("SubViewport").GetNode<Label>("Label").Text = "MISS";
 				target.GetNode<CpuParticles2D>("MessageParticles").Emitting = true;
 			}

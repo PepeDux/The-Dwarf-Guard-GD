@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ubithf5ubebc"]
+[gd_scene load_steps=24 format=3 uid="uid://ubithf5ubebc"]
 
 [ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/CoreScene/Holders.tscn" id="1_78hkp"]
 [ext_resource type="Texture2D" uid="uid://7fit1uamlql4" path="res://Data/Sprites/Tilemaps/MainTileMap.png" id="1_sg0qk"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelModifier.cs" id="14_xe5ua"]
 [ext_resource type="Script" path="res://Data/Scripts/CardsScripts/CardHolder.cs" id="15_xnraa"]
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/TileStorage.cs" id="16_si61r"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/CharacterStorage.cs" id="17_qpsic"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/ClearHolder.cs" id="18_m7nb1"]
 
 [sub_resource type="Shader" id="Shader_i4r16"]
@@ -412,6 +413,7 @@ sources/0 = SubResource("TileSetAtlasSource_mcski")
 [node name="GameScene" type="Node2D"]
 
 [node name="VHS-Shader" type="ColorRect" parent="."]
+visible = false
 z_index = 100
 material = SubResource("ShaderMaterial_at4ju")
 offset_left = 128.0
@@ -489,9 +491,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="LevelInfo" type="Node2D" parent="."]
 script = ExtResource("9_lclkq")
-captain = 2
+captain = 4
 crystal = 10
-tile = 20
+tile = 50
 
 [node name="SpawnModifierCalculation" type="Node2D" parent="LevelInfo"]
 script = ExtResource("7_2krpp")
@@ -542,3 +544,6 @@ script = ExtResource("14_xe5ua")
 
 [node name="TileStorage" type="Node2D" parent="."]
 script = ExtResource("16_si61r")
+
+[node name="CharacterStorage" type="Node2D" parent="."]
+script = ExtResource("17_qpsic")

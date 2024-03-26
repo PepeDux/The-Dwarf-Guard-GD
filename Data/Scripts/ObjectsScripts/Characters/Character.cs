@@ -399,6 +399,11 @@ public partial class Character : BaseObject
 		wisdomModifier= (wisdom - 10) / 2;
 	}
 
+	private void AddCharacterToCharacterStorage()
+	{
+		CharacterStorage.characters.Add(this);
+	}
+
 	public void Starter()
 	{
 		FindTileMap();
@@ -408,6 +413,7 @@ public partial class Character : BaseObject
 		UpdatePoints();
 		UpdateCharacteristicModifier();
 		UpdateAC();
+		AddCharacterToCharacterStorage();
 
 		//Добавляем персонажа в хранилище тайлов
 		TileStorage.AddCharacter(this);

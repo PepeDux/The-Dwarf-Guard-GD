@@ -215,7 +215,6 @@ viewport_path = NodePath("SubViewport")
 script = ExtResource("2_el8n6")
 maxActionPoints = 100
 melee = true
-maxHP = 10
 physicalDamage = 5
 poisonDamage = 4
 strength = 10

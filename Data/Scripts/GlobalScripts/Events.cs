@@ -13,20 +13,15 @@ public partial class Events : Node
 	/// </summary>
 	public static Action playerTurnFinished;
 
-	/// <summary>
-	/// Событие на смерть игрока
-	/// </summary>
-	public static Action playerDied;
+    /// <summary>
+    /// Событие на конец хода объекта
+    /// </summary>
+    public static Action finishedEnemyTurn;
 
-	/// <summary>
-	/// Событие на конец хода объекта
-	/// </summary>
-	public static Action endedHisTurn;
-
-	/// <summary>
-	/// Событие на окончание хода других объектов на поле
-	/// </summary>
-	public static Action otherTurnFinished;
+    /// <summary>
+    /// Событие на смерть игрока
+    /// </summary>
+    public static Action playerDied;
 
 	/// <summary>
 	/// Событие на окончание уровня

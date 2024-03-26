@@ -92,7 +92,7 @@ public partial class Enemy : Character
 	{
 		while (MovePoints >= moveCost)
 		{
-			await Task.Delay(500);
+			await Task.Delay(250);
 
 			int startPoints = MovePoints;
 
@@ -106,7 +106,7 @@ public partial class Enemy : Character
 
 		while (ActionPoints >= meleeAttackCost || ActionPoints >= rangeAttackCost && player != null)
 		{
-			await Task.Delay(500);
+			await Task.Delay(250);
 
 			int startPoints = ActionPoints;
 
@@ -118,6 +118,6 @@ public partial class Enemy : Character
 			}
 		}
 
-		//Events.endedHisTurn?.Invoke();
+		Events.finishedEnemyTurn?.Invoke();
 	}
 }

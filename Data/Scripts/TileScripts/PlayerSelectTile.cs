@@ -16,6 +16,6 @@ public partial class PlayerSelectTile : Node2D
 	{
 		cellPosition = tileMap.LocalToMap((Vector2I)GetGlobalMousePosition()); //Переводим мировые координаты в координаты на тайлмапе
 
-		DataBank.currentMouseTarget = TileStorage.characters.Where(c => c.coordinate == cellPosition).FirstOrDefault();
+		DataBank.currentMouseTarget = CharacterStorage.characters.Where(c => c.coordinate == cellPosition).FirstOrDefault();
 	}
 }

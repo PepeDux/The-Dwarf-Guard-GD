@@ -206,6 +206,7 @@ viewport_path = NodePath("SubViewport")
 
 [node name="Captain" instance=ExtResource("1_ct7er")]
 script = ExtResource("2_6no2r")
+maxActionPoints = 1
 melee = true
 physicalDamage = 5
 
@@ -234,8 +235,8 @@ libraries = {
 [node name="Label" parent="SubViewport" index="0"]
 light_mask = 1
 visibility_layer = 1
-theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
 
 [node name="MessageParticles" parent="." index="10"]
-lifetime = 0.5
+light_mask = 1
+visibility_layer = 1
 texture = SubResource("ViewportTexture_kdlun")

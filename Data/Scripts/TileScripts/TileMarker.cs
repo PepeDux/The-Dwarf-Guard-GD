@@ -101,7 +101,7 @@ public partial class TileMarker : Node2D
 
 	private bool CheckEnemyCell()
 	{
-		foreach (Character character in TileStorage.characters)
+		foreach (Character character in CharacterStorage.characters)
 		{
 			if (cellPosition == character.coordinate && character is Enemy)
 			{

@@ -115,10 +115,10 @@ text = "miss
 horizontal_alignment = 1
 
 [node name="MessageParticles" type="CPUParticles2D" parent="." index="8"]
+light_mask = 1048575
+visibility_layer = 1048575
 position = Vector2(0, -11)
-emitting = false
 amount = 1
 lifetime = 0.2
-one_shot = true
 texture = SubResource("ViewportTexture_amvck")
 gravity = Vector2(0, -24)

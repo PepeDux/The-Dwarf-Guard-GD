@@ -115,6 +115,7 @@ public partial class TakeDamage : Node
 
 		// Очищаем координаты персонажа из хранилища координат 
 		TileStorage.RemoveCharacter(GetParent<Character>());
+		CharacterStorage.characters.Remove(GetParent<Character>());
 
 		await Task.Delay(1500);
 
