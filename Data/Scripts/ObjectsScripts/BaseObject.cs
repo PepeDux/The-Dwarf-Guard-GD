@@ -23,7 +23,7 @@ public partial class BaseObject : Node2D
 
 	public void UpdateCoordinate()
 	{
-		Position = tileMap.MapToLocal(coordinate); //Привязываем координаты объекта к мировым координатам
+		Position = tileMap.MapToLocal(coordinate); //Привязываем координаты объекта на поле к мировым координатам
 
 		//Если координата объекта оказываектся за пределами границ поля,
 		//то его телепортирует на максимально возможное в пределах поля значение координаты по одной из осей

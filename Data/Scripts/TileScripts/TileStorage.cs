@@ -17,8 +17,7 @@ public partial class TileStorage : Node2D
 	// Функциональные объекты
 	public static List<Vector2I> functionalCells = new List<Vector2I>();
 
-	// Список всех персонажей на сцене
-	public static List<Character> characters = new List<Character>();
+
 
 	// Метод для очистки всех списков клеток
 	public static void ClearAllCells()
@@ -28,18 +27,16 @@ public partial class TileStorage : Node2D
 		functionalCells.Clear();
 	}
 
-	// Метод для добавления персонажа в хранилище
-	public static void AddCharacter(Character character)
+	// Метод для добавления объекта в хранилище тайлов
+	public static void AddCell(Character character)
 	{
-		characters.Add(character);
 		occupiedCells.Add(character.coordinate);
 		impassableCells.Add(character.coordinate);
 	}
 
-	// Метод для удаления персонажа из хранилища
-	public static void RemoveCharacter(Character character)
+	// Метод для удаления объекта из хранилища тайлов
+	public static void RemoveCell(Character character)
 	{
-		characters.Remove(character);
 		occupiedCells.Remove(character.coordinate);
 		impassableCells.Remove(character.coordinate);
 	}

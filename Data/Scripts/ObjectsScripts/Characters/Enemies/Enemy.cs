@@ -67,24 +67,27 @@ public partial class Enemy : Character
 
 	public void EnemyMove()
 	{
-		List<Vector2I> pathToTarget = GetNode<EnemyTileManager>("EnemyTileManager").pathToTarget;
+		List<Vector2I> pathToTarget = GetNode<Pathfinding>("Pathfinding").pathToTarget;
 
 		if (MovePoints >= moveCost && player != null)
 		{
 			pathToTarget.Clear();
-			pathToTarget = GetNode<EnemyTileManager>("EnemyTileManager").GetPath(player.coordinate);
+			pathToTarget = GetNode<Pathfinding>("Pathfinding").GetPath(player.coordinate);
 
 			if (pathToTarget.Count > 1)
 			{
-				TileStorage.RemoveCharacter(this);
+				TileStorage.RemoveCell(this);
 
 				pathToTarget.RemoveAt(0);
 				coordinate = pathToTarget[pathToTarget.Count - 1];
+				// Обновляем Position исходя из координат объекта
 				UpdateCoordinate();
+				// Проигрываем звук ходьбы
 				GetNode<CharacterAudioController>("CharacterAudioController").PlaySound("Move", 0.8f, 1f);
+				// Отнимаем стоимость шага
 				MovePoints -= moveCost;
 
-				TileStorage.AddCharacter(this);
+				TileStorage.AddCell(this);
 			}
 		}
 	}

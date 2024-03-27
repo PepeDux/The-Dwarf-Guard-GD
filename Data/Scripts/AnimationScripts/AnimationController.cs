@@ -14,6 +14,7 @@ public partial class AnimationController : Node
 
 		try
 		{
+			// Проигрываем анимацию
 			stateMachine.Travel(animation);
 		}       
 		catch

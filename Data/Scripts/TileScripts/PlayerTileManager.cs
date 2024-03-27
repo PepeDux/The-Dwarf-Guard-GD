@@ -21,7 +21,7 @@ public partial class PlayerTileManager : Node2D
 	{
 		if (Input.IsActionJustPressed("LeftMouseClick") && GetParent<Player>().MovePoints > 0)
 		{
-			TileStorage.RemoveCharacter(player);
+			TileStorage.RemoveCell(player);
 
 			cellPosition = GetParent().GetNode<PlayerSelectTile>("PlayerSelectTile").cellPosition;
 			playerPosition = player.coordinate;
@@ -44,7 +44,7 @@ public partial class PlayerTileManager : Node2D
 				Move(new Vector2I(-1, -1));  //Влево вверх
 			}
 
-            TileStorage.AddCharacter(player);
+            TileStorage.AddCell(player);
         }
 	}
 

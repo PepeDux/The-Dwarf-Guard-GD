@@ -7,7 +7,7 @@ public partial class PlayerAttack : AttackScript
 	{
 		if (Input.IsActionJustPressed("RightMouseClick") && GetParent<Player>().ActionPoints >= GetParent<Player>().meleeAttackCost)
 		{
-			foreach (var target in TileStorage.characters)
+			foreach (var target in CharacterStorage.characters)
 			{
 				if (GetParent().GetNode<PlayerSelectTile>("PlayerSelectTile").cellPosition == target.coordinate && target is Enemy)
 				{

@@ -416,6 +416,6 @@ public partial class Character : BaseObject
 		AddCharacterToCharacterStorage();
 
 		//Добавляем персонажа в хранилище тайлов
-		TileStorage.AddCharacter(this);
+		TileStorage.AddCell(this);
 	}
 }

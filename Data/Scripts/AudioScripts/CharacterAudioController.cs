@@ -1,4 +1,4 @@
-using Godot;
+﻿using Godot;
 using System;
 using System.Collections.Generic;
 
@@ -6,8 +6,11 @@ public partial class CharacterAudioController : AudioStreamPlayer
 {
 	Random random = new Random();
 
+	// Звуки получекния урона
 	[Export] AudioStreamWav[] hurtSounds;
+	// Звуки ходьбы
 	[Export] AudioStreamWav[] moveSounds;
+	// Звуки промаха
 	[Export] AudioStreamWav[] missSound;
 	
 	public void PlaySound(string typeSound, float pitchScaleMin, float pitchScaleMax)
@@ -25,14 +28,11 @@ public partial class CharacterAudioController : AudioStreamPlayer
 				break;
 			default:
 				break;
-			//case "Move":
-			//case "MeleeAttack":
-			//case "RangeAttack":
-
-
 		}
 
+		// Питчим звук в диапазоне, чтобы звук звучал более по разному
 		this.PitchScale = (float)(pitchScaleMin + (random.NextDouble() * (pitchScaleMax - pitchScaleMin)));
+		// Проигрываем анимацию
 		this.Play();
 	}
 }

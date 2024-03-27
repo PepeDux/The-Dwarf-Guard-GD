@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://6vg2i4nmjoal"]
 
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Enemies/Enemy.cs" id="1_ieyk8"]
-[ext_resource type="Script" path="res://Data/Scripts/TileScripts/EnemyTileManager.cs" id="2_qi438"]
+[ext_resource type="Script" path="res://Data/Scripts/TileScripts/Pathfinding.cs" id="2_qi438"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/TakeDamage.cs" id="3_2ev8x"]
 [ext_resource type="Texture2D" path="res://Data/Scenes/Units/Captain/CaptainIdle-Sheet.png" id="4_us4f6"]
 

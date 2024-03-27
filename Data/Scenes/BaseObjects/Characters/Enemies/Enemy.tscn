@@ -16,7 +16,7 @@ libraries = {
 "": SubResource("AnimationLibrary_diuqp")
 }
 
-[node name="EnemyTileManager" parent="." index="7" instance=ExtResource("2_m0vok")]
+[node name="Pathfinding" parent="." index="7" instance=ExtResource("2_m0vok")]
 
 [node name="AttackScript" type="Node2D" parent="." index="8"]
 script = ExtResource("3_0bk16")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://echwr1sqgpyt"]
 
-[ext_resource type="Script" path="res://Data/Scripts/TileScripts/EnemyTileManager.cs" id="1_e8ld7"]
+[ext_resource type="Script" path="res://Data/Scripts/TileScripts/Pathfinding.cs" id="1_e8ld7"]
 
 [node name="EnemyTileManager" type="Node2D"]
 script = ExtResource("1_e8ld7")

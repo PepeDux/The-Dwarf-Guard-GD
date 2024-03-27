@@ -55,17 +55,16 @@ public partial class TakeDamage : Node
 
 			// Перекрашиваем label в красный цвет
 			GetParent().GetNode<SubViewport>("SubViewport").GetNode<Label>("Label").Modulate = new Color(1, 0, 0);
-
 			// Дрожание экрана при получении критического урона
 			GetTree().Root.GetNode("GameScene").GetNode<CameraShake>("CameraShake").ShakeAsync(3, 1, 20, 10);
-
-			GetParent().GetNode<CharacterAudioController>("CharacterAudioController").PlaySound("Hurt", 0.6f, 0.9f);
+			// Проигрываем звук получения урона при крите
+			GetParent().GetNode<CharacterAudioController>("CharacterAudioController").PlaySound("Hurt", 0.4f, 0.6f);
 		}
 		else
 		{
 			// Дрожание экрана при получении обычного урона
 			GetTree().Root.GetNode("GameScene").GetNode<CameraShake>("CameraShake").ShakeAsync(1, 1, 15, 10);
-
+			// Проигрываем звук получения урона 
 			GetParent().GetNode<CharacterAudioController>("CharacterAudioController").PlaySound("Hurt", 0.9f, 1.3f);
 		}
 
@@ -73,8 +72,9 @@ public partial class TakeDamage : Node
 		
 		// Вызываем партиклы крови при получении урона
 		GetParent().GetNode<CpuParticles2D>("BloodParticles").Emitting = true;
-
+		// Текст лабела партикли
 		GetParent().GetNode<SubViewport>("SubViewport").GetNode<Label>("Label").Text = totalDamage.ToString();
+		// Проигрываем партиклю
 		GetParent().GetNode<CpuParticles2D>("MessageParticles").Emitting = true;
 
 		if (totalDamage > 0)
@@ -118,7 +118,7 @@ public partial class TakeDamage : Node
 		GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("Die");
 
 		// Очищаем координаты персонажа из хранилища координат 
-		TileStorage.RemoveCharacter(GetParent<Character>());
+		TileStorage.RemoveCell(GetParent<Character>());
 		CharacterStorage.characters.Remove(GetParent<Character>());
 
 		await Task.Delay(1500);

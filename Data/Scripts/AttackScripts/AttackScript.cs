@@ -9,8 +9,6 @@ public partial class AttackScript : Node
 
 	private Character attacker;
 
-	private bool isCriticalDamage;
-
 	public override void _Ready()
 	{
 		attacker = GetParent<Character>();
@@ -110,10 +108,11 @@ public partial class AttackScript : Node
 
 	public void Attack(Vector2I attackCell, Character target, string sideAttack)
 	{
+		// Переменная отвечает за то, является ли атака критической
+		bool isCriticalDamage = false;
+
 		if (attackCell == target.coordinate && target != null && attacker.ActionPoints > 0)
 		{
-			GD.Print(GetParent().Name);
-
 			if (sideAttack == "HorizontalAttack")
 			{
 				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("HorizontalAttack");
@@ -127,19 +126,18 @@ public partial class AttackScript : Node
 				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("DownAttack");
 			}
 
-			isCriticalDamage = false;
-
 			// Кидаем 1D20 на попадание
-			int D20DiceRoll = DiceRoll.Roll(20, 1);
+			int D20AttackDiceRoll = DiceRoll.Roll(20, 1);
 
-			if (D20DiceRoll == 20)
+			if (D20AttackDiceRoll == 20)
 			{
+				// При выпадании критической 20 урон становится критическим и увеличивает в 2 раза
 				isCriticalDamage = true;
-				GiveDamage();
+				GiveDamage(isCriticalDamage);
 			}
-			else if (D20DiceRoll + attacker.strengthModifier >= target.AC) 
+			else if (D20AttackDiceRoll + attacker.strengthModifier >= target.AC) 
 			{
-				GiveDamage();
+				GiveDamage(isCriticalDamage);
 			}
 			else
 			{
@@ -147,20 +145,20 @@ public partial class AttackScript : Node
 				GetParent().GetNode<SubViewport>("SubViewport").GetNode<Label>("Label").Modulate = new Color(0.96f, 0.96f, 0.98f);
 				// Проигрываем звук промаха
 				GetParent().GetNode<CharacterAudioController>("CharacterAudioController").PlaySound("Miss", 0.5f, 1f);
-				//
+				// Текст лабела партикли
 				target.GetNode<SubViewport>("SubViewport").GetNode<Label>("Label").Text = "MISS";
+				// Вызываем партикли
 				target.GetNode<CpuParticles2D>("MessageParticles").Emitting = true;
 			}
 
-			attacker.ActionPoints -= 1;
+			attacker.ActionPoints -= attackCost;
 		}
 	}
 
 
 
-	private void GiveDamage()
+	private void GiveDamage(bool isCriticalDamage)
 	{
-
 		target.GetNode<TakeDamage>("TakeDamage").Take(
 		isCriticalDamage: isCriticalDamage,
 		physicalDamage: attacker.physicalDamage,
@@ -169,8 +167,5 @@ public partial class AttackScript : Node
 		frostDamage: attacker.frostDamage,
 		drunkennessDamage: attacker.drunkennessDamage
 		);
-
-
-		attacker.ActionPoints -= attackCost;
 	}
 }
