@@ -3,77 +3,123 @@ using System;
 
 public partial class CharacteristicModifierData : ModifierData
 {
-	[ExportGroup("Префаб еффекта")]
-	//Сцена еффекта(необязательно)
-	[Export] public PackedScene scene { get; set; }
+    [ExportGroup("Здоровье")]
+    // Здоровье
+    [Export] public int HP { get; set; }
+    [Export] public int maxHP { get; set; }
 
 
 
-	[ExportGroup("Здоровье")]
-	//Здоровье
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int HP { get; set; }
+    [ExportGroup("Урон наносимый объекту")]
+    // Физический урон
+    [Export] public int physicalDamage { get; set; }
+
+    // Ядовитый урон
+    [Export] public int poisonDamage { get; set; }
+
+    // Огненный урон
+    [Export] public int fireDamage { get; set; }
+
+    // Морозный урон
+    [Export] public int frostDamage { get; set; }
+
+    // Алкогольный урон
+    [Export] public int drunkennessDamage { get; set; }
 
 
 
-	[ExportGroup("Урон наносимый объекту")]
-	//Физический урон
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int physicalDamage { get; set; }
+    [ExportGroup("Очки перемещения")]
+    [Export] public int movePoints { get; set; }
+    [Export] public int maxMovePoints { get; set; }
 
 
 
-	[ExportGroup("Очки")]
-	//Очки передвижения
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int movePoint { get; set; }
-
-	//Очки Действий
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int actionPoint { get; set; }
-
-	//Очки пива
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int beerPoint { get; set; }
+    [ExportGroup("Очки действия")]
+    [Export] public int actionPoints { get; set; }
+    [Export] public int maxActionPoints { get; set; }
 
 
 
-	[ExportGroup("Основнык характеристики")]
-	//Сила
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int strength { get; set; }
-
-	//Ловкость
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int dexterity { get; set; }
-
-	//Интеллект
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int intel { get; set; }
-
-	//Телосложение
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int constitution { get; set; }
-
-	//Мудрость
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int wisdom { get; set; }
+    [ExportGroup("Очки пива")]
+    [Export] public int beerPoints { get; set; }
+    [Export] public int maxBeerPoints { get; set; }
 
 
 
-	[ExportGroup("Вторичные характеристики")]
-
-	//Переносимый вес
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int carryingCapacity { get; set; }
-
-	//Опьянение
-	[Export(PropertyHint.Range, "-50, 50, 1")] public int drunkenness { get; set; }
+    [ExportGroup("Цена действий")]
+    [Export] public int moveCost { get; set; }
+    [Export] public int meleeAttackCost { get; set; }
+    [Export] public int rangeAttackCost { get; set; }
 
 
 
-	[ExportGroup("Сопротивления к урону")]
-	//Сопротивление колющему📌
-	[Export(PropertyHint.Range, "-100, 100, 1")] public int prickResist { get; set; }
+    [ExportGroup("Тип передвиженя")]
+    [Export] public bool lineMove { get; set; }
+    [Export] public bool diagonalMove { get; set; }
 
-	//Сопротивление ядам🍄
-	[Export(PropertyHint.Range, "-100, 100, 1")] public int poisonResist { get; set; }
 
-	//Сопротивление огню🔥
-	[Export(PropertyHint.Range, "-100, 100, 1")] public int fireResist { get; set; }
 
-	//Сопростивление морозу❄ 
-	[Export(PropertyHint.Range, "-100, 100, 1")] public int frostResist { get; set; }
+    [ExportGroup("Напрвление атаки")]
+    [Export] public bool lineAttack { get; set; }
+    [Export] public bool diagonalAttack { get; set; }
 
-	//Сопротивление АлКоГоЛю🍺
-	[Export(PropertyHint.Range, "-100, 100, 1")] public int drunkennessResist { get; set; }
+
+
+    [ExportGroup("Тип атаки")]
+    [Export] public bool melee { get; set; }
+    [Export] public bool range { get; set; }
+
+
+
+    [ExportGroup("Дальность атаки")]
+    [Export] public int rangeAttackDistance { get; set; }
+    [Export] public int meleeAttackDistance { get; set; }
+
+
+
+    [ExportGroup("Броня")]
+    [Export] public int AC { get; set; }
+
+
+
+    [ExportGroup("Монетки")]
+    [Export] public int money { get; set; }
+
+
+
+    [ExportGroup("Основные характеристики")]
+    [Export] public int strength { get; set; }
+
+    [Export] public int dexterity { get; set; }
+
+    [Export] public int intel { get; set; }
+
+    [Export] public int constitution { get; set; }
+
+    [Export] public int wisdom { get; set; }
+
+
+
+    [ExportGroup("Вторичные характеристики")]
+    [Export] public int drunkenness { get; set; }
+
+
+
+    [ExportGroup("Сопротивления к урону")]
+    // Сопротивление колющему📌
+    [Export] public int physicalResist { get; set; }
+
+    // Сопротивление ядам🍄
+    [Export] public int poisonResist { get; set; }
+
+    // Сопротивление огню🔥
+    [Export] public int fireResist { get; set; }
+
+    // Сопростивление морозу❄ 
+    [Export] public int frostResist { get; set; }
+
+    // Сопротивление АлКоГоЛю🍺
+    [Export] public int drunkennessResist { get; set; }
 }
+
+

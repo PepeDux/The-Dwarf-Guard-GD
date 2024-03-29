@@ -1,0 +1,48 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dcwpi2qvq08ca"]
+
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Characteristics/Statuses/CharacteristicModifierData.cs" id="1_daa8u"]
+
+[resource]
+script = ExtResource("1_daa8u")
+HP = 10
+maxHP = 10
+physicalDamage = 0
+poisonDamage = 0
+fireDamage = 0
+frostDamage = 0
+drunkennessDamage = 0
+movePoints = 0
+maxMovePoints = 0
+actionPoints = 0
+maxActionPoints = 0
+beerPoints = 0
+maxBeerPoints = 0
+moveCost = 0
+meleeAttackCost = 0
+rangeAttackCost = 0
+lineMove = false
+diagonalMove = false
+lineAttack = false
+diagonalAttack = false
+melee = false
+range = false
+rangeAttackDistance = 0
+meleeAttackDistance = 0
+AC = 0
+money = 0
+strength = 0
+dexterity = 0
+intel = 0
+constitution = 0
+wisdom = 0
+drunkenness = 0
+physicalResist = 0
+poisonResist = 0
+fireResist = 0
+frostResist = 0
+drunkennessResist = 0
+name = ""
+cardDescription = ""
+cardStrength = 0
+type = 0
+accessory = 0

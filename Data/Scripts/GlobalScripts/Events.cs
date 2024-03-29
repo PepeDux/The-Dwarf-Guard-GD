@@ -42,4 +42,9 @@ public partial class Events : Node
 	/// Событие на окончание выбора карты игроком
 	/// </summary>
 	public static Action endSelectCard;
+
+    /// <summary>
+    /// Событие на передвиженеи пересонажа
+    /// </summary>
+    public static Action characterMoved;
 }

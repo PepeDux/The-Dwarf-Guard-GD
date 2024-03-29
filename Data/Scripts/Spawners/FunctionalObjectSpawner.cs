@@ -12,10 +12,9 @@ public partial class FunctionalObjectSpawner : Spawner
 
 	public override void _Ready()
 	{
-		//Events.levelStarted += SpawnFunctionalObject;
+		Events.levelGenerated += SpawnFunctionalObject;
 
 		levelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
-		//SpawnFunctionalObject();
 	}
 
 	public void SpawnFunctionalObject()

@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://vcns8byu0kqa"]
+[gd_scene load_steps=8 format=3 uid="uid://vcns8byu0kqa"]
 
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/PlayerSpawner.cs" id="1_4w0t7"]
+[ext_resource type="PackedScene" uid="uid://c57a0nip7ah3q" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Beer.tscn" id="2_52x7f"]
 [ext_resource type="PackedScene" uid="uid://bsmae37apy2nw" path="res://Data/Scenes/BaseObjects/Characters/Player/Player.tscn" id="2_262sn"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/EnemySpawner.cs" id="3_2t50k"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/FunctionalObjectSpawner.cs" id="5_fqsji"]
@@ -11,6 +12,7 @@
 
 [node name="FunctioanalObjectsHolder" type="Node2D" parent="."]
 script = ExtResource("5_fqsji")
+food = Array[PackedScene]([ExtResource("2_52x7f")])
 
 [node name="PlayerHolder" type="Node2D" parent="."]
 script = ExtResource("1_4w0t7")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c57a0nip7ah3q"]
+
+[ext_resource type="PackedScene" uid="uid://djcta1m6ke4i5" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/PickableObject.tscn" id="1_rigpj"]
+[ext_resource type="Resource" uid="uid://dcwpi2qvq08ca" path="res://Data/Resources/CharacteristicStatuses/Food/Beer.tres" id="2_jpfi7"]
+[ext_resource type="Texture2D" uid="uid://btdaoqflmgfbw" path="res://Data/Sprites/Food/Food.png" id="3_vuhse"]
+
+[node name="Beer" instance=ExtResource("1_rigpj")]
+modifier = ExtResource("2_jpfi7")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_vuhse")
+hframes = 7
+vframes = 4
+frame = 5

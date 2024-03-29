@@ -491,7 +491,7 @@ metadata/_edit_use_anchors_ = true
 [node name="LevelInfo" type="Node2D" parent="."]
 script = ExtResource("9_lclkq")
 captain = 4
-crystal = 10
+food = 2
 tile = 50
 
 [node name="SpawnModifierCalculation" type="Node2D" parent="LevelInfo"]

@@ -3,12 +3,12 @@ using System;
 
 public partial class PlayerTileManager : Node2D
 {
-	[Export] private TileMap tileMap; //Тайлмап
+	[Export] private TileMap tileMap; // Тайлмап
 
 	private Player player;
 
-	private Vector2I cellPosition; //Тайловая координата курсора
-	private Vector2I playerPosition; //Тайловая координата игрока
+	private Vector2I cellPosition; // Тайловая координата курсора
+	private Vector2I playerPosition; // Тайловая координата игрока
 
 
 
@@ -30,18 +30,18 @@ public partial class PlayerTileManager : Node2D
 
 			if (GetParent<Player>().lineMove == true)
 			{
-				Move(new Vector2I(0, -1));  //Вверх
-				Move(new Vector2I(0, 1)); //Вниз
-				Move(new Vector2I(-1, 0)); //Влево
-				Move(new Vector2I(1, 0));  //Вправо
+				Move(new Vector2I(0, -1));  // Вверх
+				Move(new Vector2I(0, 1)); // Вниз
+				Move(new Vector2I(-1, 0)); // Влево
+				Move(new Vector2I(1, 0));  // Вправо
 			}
 
 			if (GetParent<Player>().diagonalMove == true)
 			{
-				Move(new Vector2I(1, -1));   //Вправо вверх
-				Move(new Vector2I(1, 1));  //Вправо вниз
-				Move(new Vector2I(-1, 1)); //Влево вниз
-				Move(new Vector2I(-1, -1));  //Влево вверх
+				Move(new Vector2I(1, -1));   // Вправо вверх
+				Move(new Vector2I(1, 1));  // Вправо вниз
+				Move(new Vector2I(-1, 1)); // Влево вниз
+				Move(new Vector2I(-1, -1));  // Влево вверх
 			}
 
             TileStorage.AddCell(player);
@@ -52,11 +52,14 @@ public partial class PlayerTileManager : Node2D
 	{
 		if (cellPosition == playerPosition + move && CheckCells() == true)
 		{
-			GetParent<Player>().coordinate = cellPosition; //Перемещаем игрока на место кликнутого тайла           
-
-			GetParent<Player>().MovePoints -= 1; //Отнимаем у игрока очки движения
+            // Перемещаем игрока на место кликнутого тайла   
+            GetParent<Player>().coordinate = cellPosition;         
+            // Отнимаем у игрока очки движения
+            GetParent<Player>().MovePoints -= 1;
 
             GetParent().GetNode<CharacterAudioController>("CharacterAudioController").PlaySound("Move", 0.8f, 1f);
+
+            Events.characterMoved.Invoke();
         }
 	}
 
@@ -66,12 +69,12 @@ public partial class PlayerTileManager : Node2D
 		{
 			if (cellPosition == cell)
 			{
-				//Если желаемая клетка занята, то ходить на нее запрещается
+				// Если желаемая клетка занята, то ходить на нее запрещается
 				return false;
 			}
 		}
 
-		//Возвращает true если при проверке клеток желаемая клетка была свободной
+		// Возвращает true если при проверке клеток желаемая клетка была свободной
 		return true;
 	}
 }

@@ -86,6 +86,9 @@ public partial class Enemy : Character
 				GetNode<CharacterAudioController>("CharacterAudioController").PlaySound("Move", 0.8f, 1f);
 				// Отнимаем стоимость шага
 				MovePoints -= moveCost;
+				//
+				Events.characterMoved.Invoke();
+
 
 				TileStorage.AddCell(this);
 			}
