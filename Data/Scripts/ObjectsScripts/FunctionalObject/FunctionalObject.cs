@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Threading.Tasks;
 
 public partial class FunctionalObject : BaseObject
 {
@@ -24,10 +25,17 @@ public partial class FunctionalObject : BaseObject
 		{
 			if (this.coordinate == character.coordinate)
 			{
-				// Добавляем модификатор к персонажу наступившему на этот объект
-				character.GetNode<СharacteristicModifierCalculation>("СharacteristicModifierCalculation").AddModifier(modifier as CharacteristicModifierData);
-				// Удаляем объект со сцены
-				this.Free();
+				if (GetNode<AudioController>("AudioStreamPlayer").PlaySound("Pick", 0.9f, 1.3f)) 
+				{
+					// Добавляем модификатор к персонажу, наступившему на этот объект
+					character.GetNode<СharacteristicModifierCalculation>("СharacteristicModifierCalculation").AddModifier(modifier as CharacteristicModifierData);
+
+					// Отписываемся от события
+					Events.characterMoved -= CheckWalkerCell;
+
+					// Удаляем объект со сцены
+					this.Free();
+				}
 			}
 		}
 	}

@@ -44,23 +44,23 @@ public partial class PlayerTileManager : Node2D
 				Move(new Vector2I(-1, -1));  // Влево вверх
 			}
 
-            TileStorage.AddCell(player);
-        }
+			TileStorage.AddCell(player);
+		}
 	}
 
 	private void Move(Vector2I move)
 	{
 		if (cellPosition == playerPosition + move && CheckCells() == true)
 		{
-            // Перемещаем игрока на место кликнутого тайла   
-            GetParent<Player>().coordinate = cellPosition;         
-            // Отнимаем у игрока очки движения
-            GetParent<Player>().MovePoints -= 1;
+			// Перемещаем игрока на место кликнутого тайла   
+			GetParent<Player>().coordinate = cellPosition;         
+			// Отнимаем у игрока очки движения
+			GetParent<Player>().MovePoints -= 1;
 
-            GetParent().GetNode<CharacterAudioController>("CharacterAudioController").PlaySound("Move", 0.8f, 1f);
+			GetParent().GetNode<AudioController>("AudioStreamPlayer").PlaySound("Move", 0.8f, 1f);
 
-            Events.characterMoved.Invoke();
-        }
+			Events.characterMoved?.Invoke();
+		}
 	}
 
 	private bool CheckCells()

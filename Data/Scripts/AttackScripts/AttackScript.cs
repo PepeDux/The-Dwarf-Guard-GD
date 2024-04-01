@@ -144,7 +144,7 @@ public partial class AttackScript : Node
 				// Перекрашиваем label в белый цвет
 				GetParent().GetNode<SubViewport>("SubViewport").GetNode<Label>("Label").Modulate = new Color(0.96f, 0.96f, 0.98f);
 				// Проигрываем звук промаха
-				GetParent().GetNode<CharacterAudioController>("CharacterAudioController").PlaySound("Miss", 0.5f, 1f);
+				GetParent().GetNode<AudioController>("AudioStreamPlayer").PlaySound("Miss", 0.5f, 1f);
 				// Текст лабела партикли
 				target.GetNode<SubViewport>("SubViewport").GetNode<Label>("Label").Text = "MISS";
 				// Вызываем партикли
