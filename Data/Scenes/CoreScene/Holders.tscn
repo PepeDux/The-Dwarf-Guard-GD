@@ -9,18 +9,23 @@
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/StaticObjectSpawner.cs" id="6_titob"]
 
 [node name="Holders" type="Node2D"]
+y_sort_enabled = true
 
 [node name="FunctioanalObjectsHolder" type="Node2D" parent="."]
+y_sort_enabled = true
 script = ExtResource("5_fqsji")
 food = Array[PackedScene]([ExtResource("2_52x7f")])
 
 [node name="PlayerHolder" type="Node2D" parent="."]
+y_sort_enabled = true
 script = ExtResource("1_4w0t7")
 player = Array[PackedScene]([ExtResource("2_262sn")])
 
 [node name="EnemiesHolder" type="Node2D" parent="."]
+y_sort_enabled = true
 script = ExtResource("3_2t50k")
 captain = Array[PackedScene]([ExtResource("5_ml4ad")])
 
 [node name="StaticObjectsHolder" type="Node2D" parent="."]
+y_sort_enabled = true
 script = ExtResource("6_titob")

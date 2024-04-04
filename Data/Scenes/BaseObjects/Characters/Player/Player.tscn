@@ -212,6 +212,7 @@ graph_offset = Vector2(0, 43.5655)
 viewport_path = NodePath("SubViewport")
 
 [node name="Player" instance=ExtResource("1_lghd7")]
+y_sort_enabled = false
 script = ExtResource("2_el8n6")
 maxActionPoints = 100
 melee = true

@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://jynmkarttuov" path="res://Data/Audio/Pickup_Coin66.wav" id="12_mpw4w"]
 
 [node name="BaseObject" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_sulsi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

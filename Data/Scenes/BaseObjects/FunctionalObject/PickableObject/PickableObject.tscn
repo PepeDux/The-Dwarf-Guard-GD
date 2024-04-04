@@ -4,4 +4,5 @@
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/FunctionalObject/PickableObject/PickableObject.cs" id="2_n7btu"]
 
 [node name="PickableObject" instance=ExtResource("1_7u8y2")]
+y_sort_enabled = false
 script = ExtResource("2_n7btu")
