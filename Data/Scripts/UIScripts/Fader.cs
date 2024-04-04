@@ -13,7 +13,7 @@ public partial class Fader : ColorRect
 
 	private void Fade()
 	{
-		this.ZIndex = 0;
+		this.ZIndex = 1;
 	}
 
 	private void UnFaid()

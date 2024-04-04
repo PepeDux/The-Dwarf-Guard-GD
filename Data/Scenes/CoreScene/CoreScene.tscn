@@ -312,10 +312,17 @@ y_sort_enabled = true
 visible = false
 z_index = 100
 material = SubResource("ShaderMaterial_at4ju")
-offset_left = 128.0
-offset_top = 240.0
-offset_right = 640.0
-offset_bottom = 528.0
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 138.0
+offset_top = 249.0
+offset_right = 630.0
+offset_bottom = 519.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_yxedi")
@@ -388,7 +395,7 @@ metadata/_edit_use_anchors_ = true
 [node name="LevelInfo" type="Node2D" parent="."]
 script = ExtResource("9_lclkq")
 captain = 2
-food = 2
+food = 4
 tile = 50
 
 [node name="SpawnModifierCalculation" type="Node2D" parent="LevelInfo"]
@@ -406,11 +413,10 @@ tileMap = NodePath("../TileMap")
 script = ExtResource("18_m7nb1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-z_index = -1
-offset_left = -3048.0
-offset_top = -3088.0
-offset_right = 3352.0
-offset_bottom = 3312.0
+offset_left = -3005.0
+offset_top = -3049.0
+offset_right = 3395.0
+offset_bottom = 3351.0
 color = Color(0.109804, 0.101961, 0.101961, 1)
 script = ExtResource("11_lk4uu")
 metadata/_edit_use_anchors_ = true
@@ -423,6 +429,7 @@ script = ExtResource("15_xnraa")
 
 [node name="Card1" parent="CardHolder" instance=ExtResource("13_l7glq")]
 visible = false
+z_index = 1
 offset_left = 416.0
 offset_top = 320.0
 offset_right = 576.0
@@ -430,6 +437,7 @@ offset_bottom = 448.0
 
 [node name="Card2" parent="CardHolder" instance=ExtResource("13_l7glq")]
 visible = false
+z_index = 1
 offset_left = 192.0
 offset_top = 320.0
 offset_right = 352.0

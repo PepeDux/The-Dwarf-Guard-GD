@@ -19,16 +19,17 @@ public partial class FunctionalObject : BaseObject
 		UpdateCoordinate();
 	}
 
-	public void CheckWalkerCell()
+	public virtual void CheckWalkerCell()
 	{
 		foreach (var character in CharacterStorage.characters)
 		{
 			if (this.coordinate == character.coordinate)
 			{
-				if (GetNode<AudioController>("AudioStreamPlayer").PlaySound("Pick", 0.9f, 1.3f)) 
+
+				if(GetNode<AudioController>("AudioStreamPlayer").PlaySound("Pick", 0.9f, 1.3f))
 				{
 					// Добавляем модификатор к персонажу, наступившему на этот объект
-					character.GetNode<СharacteristicModifierCalculation>("СharacteristicModifierCalculation").AddModifier(modifier as CharacteristicModifierData);
+					character.GetNode<СharacteristicModifierCalculation>("СharacteristicModifierCalculation").AddModifier(modifier as CharacteristicModifierData, false);
 
 					// Отписываемся от события
 					Events.characterMoved -= CheckWalkerCell;

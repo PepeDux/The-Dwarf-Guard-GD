@@ -20,12 +20,12 @@ public partial class AttackScript : Node
 	{
 		this.target = target;
 
-		if (attacker.melee == true)
+		if (attacker.meleeAttack == true)
 		{
 			FindTarget(attacker.meleeAttackDistance, target);
 		}
 
-		if (attacker.range == true)
+		if (attacker.rangeAttack == true)
 		{
 			FindTarget(FieldCoordinate.xFieldSize, target);
 		}

@@ -81,8 +81,8 @@ public partial class Character : BaseObject
 
 
 	[ExportGroup("Тип атаки")]
-	[Export] public bool melee = false; //Ближняя атака
-	[Export] public bool range = false; //Дальняя атака
+	[Export] public bool meleeAttack = true; //Ближняя атака
+	[Export] public bool rangeAttack = false; //Дальняя атака
 
 
 
@@ -182,11 +182,6 @@ public partial class Character : BaseObject
 
 
 	[ExportGroup("Первичные характеристики")]
-	// 1 переменная - итоговове значение характеристики
-	// 2 переменная - текущее значение характеристики(в прокачке, независимо от бонусов)
-	// 3 переменная - максимальное допустимое значение характеристики(в прокачке, независимо от бонусов)
-	// 4 переменная - бонус к значению характеристики
-
 	// Сила
 	[Export] public int strength = 0;
 	public int Strength

@@ -2,6 +2,8 @@ using Godot;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Threading.Tasks;
 
 public partial class СharacteristicModifierCalculation : Node
 {
@@ -27,12 +29,23 @@ public partial class СharacteristicModifierCalculation : Node
     }
 
 
-    public void AddModifier(CharacteristicModifierData modifier)
+    public void AddModifier(CharacteristicModifierData modifier, bool checkContain = true)
     {
         if (modifier != null)
         {
-            if (!activeCharacteristicModifiers.Contains(modifier))
+            if (checkContain == true) 
             {
+                // При наличии модификатора в списке не добавляет его
+                if (!activeCharacteristicModifiers.Contains(modifier))
+                {
+                    Сalculation(modifier, 1);
+                    activeCharacteristicModifiers.Add(modifier);
+                }
+            }       
+            else if (checkContain == false) 
+            {
+                // Тут он добавит модификатор в люьом случае
+
                 Сalculation(modifier, 1);
                 activeCharacteristicModifiers.Add(modifier);
             }
@@ -71,14 +84,14 @@ public partial class СharacteristicModifierCalculation : Node
         GetParent<Character>().meleeAttackCost += mod * modifier.meleeAttackCost;
         GetParent<Character>().rangeAttackCost += mod * modifier.rangeAttackCost;
 
-        //GetParent<Character>().lineMove = modifier.lineMove;
-        //GetParent<Character>().diagonalMove = modifier.diagonalMove;
+        BoolCalculation(GetParent<Character>().lineMove, modifier.lineMove);
+        BoolCalculation(GetParent<Character>().diagonalMove, modifier.diagonalMove);
 
-        //GetParent<Character>().lineAttack = modifier.lineAttack;
-        //GetParent<Character>().diagonalAttack = modifier.diagonalAttack;
+        BoolCalculation(GetParent<Character>().lineAttack, modifier.lineAttack);
+        BoolCalculation(GetParent<Character>().diagonalAttack, modifier.diagonalAttack);
 
-        //GetParent<Character>().melee = modifier.melee;
-        //GetParent<Character>().range = modifier.range;
+        BoolCalculation(GetParent<Character>().meleeAttack, modifier.meleeAttack);
+        BoolCalculation(GetParent<Character>().rangeAttack, modifier.rangeAttack);
 
         GetParent<Character>().rangeAttackDistance += mod * modifier.rangeAttackDistance;
         GetParent<Character>().meleeAttackDistance += mod * modifier.meleeAttackDistance;
@@ -99,6 +112,18 @@ public partial class СharacteristicModifierCalculation : Node
         GetParent<Character>().fireResist += mod * modifier.fireResist;
         GetParent<Character>().frostResist += mod * modifier.frostResist;
         GetParent<Character>().drunkennessResist += mod * modifier.drunkennessResist;
+    }
+
+    public void BoolCalculation(bool characteristic, CharacteristicModifierData.BoolStatus boolStatus)
+    {
+        if (boolStatus == CharacteristicModifierData.BoolStatus.Add)
+        {
+            characteristic = true;
+        }
+        else if (boolStatus == CharacteristicModifierData.BoolStatus.Remove)
+        {
+            characteristic = false;
+        }
     }
 }
 

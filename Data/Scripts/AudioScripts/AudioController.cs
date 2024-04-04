@@ -37,7 +37,7 @@ public partial class AudioController : AudioStreamPlayer
 
 		// Питчим звук в диапазоне, чтобы звук звучал более по разному
 		this.PitchScale = (float)(pitchScaleMin + (random.NextDouble() * (pitchScaleMax - pitchScaleMin)));
-		// Проигрываем анимацию
+		// Проигрываем звук
 		this.Play();
 
 		return true;
