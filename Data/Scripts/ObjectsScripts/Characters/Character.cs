@@ -183,7 +183,7 @@ public partial class Character : BaseObject
 
 	[ExportGroup("Первичные характеристики")]
 	// Сила
-	[Export] public int strength = 0;
+	[Export] private int strength = 0;
 	public int Strength
 	{
 		get
@@ -199,7 +199,7 @@ public partial class Character : BaseObject
 	public int strengthModifier = 0;
 
 	// Ловкость
-	[Export] public int dexterity = 0;
+	[Export] private int dexterity = 0;
 	public int Dexterity
 	{
 		get
@@ -215,7 +215,7 @@ public partial class Character : BaseObject
 	public int dexterityModifier = 0;
 
 	// Интеллект
-	[Export] public int inteligence = 0;
+	[Export] private int inteligence = 0;
 	public int Inteligence
 	{
 		get
@@ -231,7 +231,7 @@ public partial class Character : BaseObject
 	public int inteligenceModifier = 0;
 
 	// Телосложение
-	[Export] public int constitution = 0;
+	[Export] private int constitution = 0;
 	public int Constitution
 	{
 		get
@@ -247,7 +247,7 @@ public partial class Character : BaseObject
 	public int constitutionModifier = 0;
 
 	// Мудрость
-	[Export] public int wisdom = 0;
+	[Export] private int wisdom = 0;
 	public int Wisdom
 	{
 		get
@@ -387,11 +387,11 @@ public partial class Character : BaseObject
 
 	private void UpdateCharacteristicModifier()
 	{
-		strengthModifier = (strength - 10) / 2;
-		dexterityModifier = (dexterity - 10) / 2;
-		inteligenceModifier = (inteligence - 10) / 2;
-		constitutionModifier = (constitution - 10) / 2;
-		wisdomModifier= (wisdom - 10) / 2;
+		strengthModifier = (Strength - 10) / 2;
+		dexterityModifier = (Dexterity - 10) / 2;
+		inteligenceModifier = (Inteligence - 10) / 2;
+		constitutionModifier = (Constitution - 10) / 2;
+		wisdomModifier= (Wisdom - 10) / 2;
 	}
 
 	private void AddCharacterToCharacterStorage()

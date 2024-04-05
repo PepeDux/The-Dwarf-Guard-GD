@@ -19,24 +19,26 @@ public partial class FunctionalObject : BaseObject
 		UpdateCoordinate();
 	}
 
-	public virtual void CheckWalkerCell()
+	public virtual async void CheckWalkerCell()
 	{
 		foreach (var character in CharacterStorage.characters)
 		{
 			if (this.coordinate == character.coordinate)
 			{
+				// Проигрываем звук
+				GetNode<AudioController>("AudioStreamPlayer").PlaySound("Pick", 0.9f, 1.3f);
+				// Немного ждем, для того чтобы звук точно проигрался
+				await Task.Delay(10);
 
-				if(GetNode<AudioController>("AudioStreamPlayer").PlaySound("Pick", 0.9f, 1.3f))
-				{
-					// Добавляем модификатор к персонажу, наступившему на этот объект
-					character.GetNode<СharacteristicModifierCalculation>("СharacteristicModifierCalculation").AddModifier(modifier as CharacteristicModifierData, false);
+				// Добавляем модификатор к персонажу, наступившему на этот объект
+				character.GetNode<СharacteristicModifierCalculation>("СharacteristicModifierCalculation").AddModifier(modifier as CharacteristicModifierData, false);
 
-					// Отписываемся от события
-					Events.characterMoved -= CheckWalkerCell;
+				// Отписываемся от события
+				Events.characterMoved -= CheckWalkerCell;
 
-					// Удаляем объект со сцены
-					this.Free();
-				}
+				// Удаляем объект со сцены
+				this.QueueFree();
+
 			}
 		}
 	}
