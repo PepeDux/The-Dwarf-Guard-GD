@@ -1,0 +1,54 @@
+[gd_scene load_steps=12 format=3 uid="uid://clt58eakiro5h"]
+
+[ext_resource type="Texture2D" uid="uid://chu2iy1nkrufm" path="res://Data/Sprites/MainMenu/StartNormal.png" id="1_2urq0"]
+[ext_resource type="Script" path="res://Data/Scripts/MainMenuScripts/StartGame.cs" id="1_nv84a"]
+[ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/VHS-Shader/VHS-Shader.tscn" id="1_ouh40"]
+[ext_resource type="Texture2D" uid="uid://c4dngyxbn1apl" path="res://Data/Sprites/MainMenu/StartHover.png" id="2_1y55b"]
+[ext_resource type="Texture2D" uid="uid://co6glrxeyg4wk" path="res://Data/Sprites/MainMenu/SettingsNormal.png" id="3_s0036"]
+[ext_resource type="Texture2D" uid="uid://38s4wrd1l5yq" path="res://Data/Sprites/MainMenu/SettingsHover.png" id="4_e3ytg"]
+[ext_resource type="Texture2D" uid="uid://bf16aeueubvux" path="res://Data/Sprites/MainMenu/ExitNormal.png" id="5_lxrbd"]
+[ext_resource type="Texture2D" uid="uid://boykkkjm8ccpm" path="res://Data/Sprites/MainMenu/ExitHover.png" id="6_tb2tg"]
+[ext_resource type="Script" path="res://Data/Scripts/MainMenuScripts/ToSettings.cs" id="6_xpypw"]
+[ext_resource type="Script" path="res://Data/Scripts/MainMenuScripts/ExitGame.cs" id="8_8mtgu"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/Fader.cs" id="10_p6xmb"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="Vhs-shader" parent="." instance=ExtResource("1_ouh40")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_as_relative = false
+offset_left = -3005.0
+offset_top = -3049.0
+offset_right = 3395.0
+offset_bottom = 3351.0
+color = Color(0.109804, 0.101961, 0.101961, 1)
+script = ExtResource("10_p6xmb")
+metadata/_edit_use_anchors_ = true
+
+[node name="StartButton" type="TextureButton" parent="."]
+offset_left = 196.0
+offset_top = 80.0
+offset_right = 294.0
+offset_bottom = 106.0
+texture_normal = ExtResource("1_2urq0")
+texture_hover = ExtResource("2_1y55b")
+script = ExtResource("1_nv84a")
+
+[node name="SettingsButton" type="TextureButton" parent="."]
+offset_left = 196.0
+offset_top = 128.0
+offset_right = 294.0
+offset_bottom = 154.0
+texture_normal = ExtResource("3_s0036")
+texture_hover = ExtResource("4_e3ytg")
+script = ExtResource("6_xpypw")
+
+[node name="ExitButton" type="TextureButton" parent="."]
+offset_left = 196.0
+offset_top = 176.0
+offset_right = 294.0
+offset_bottom = 202.0
+texture_normal = ExtResource("5_lxrbd")
+texture_hover = ExtResource("6_tb2tg")
+script = ExtResource("8_8mtgu")

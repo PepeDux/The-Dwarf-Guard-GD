@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 
 window/size/viewport_width=490
 window/size/viewport_height=270
+window/size/mode=4
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 mouse_cursor/custom_image="res://Data/UI/Cursors/Arrow.png"
@@ -36,6 +37,7 @@ folder_colors={
 "res://Data/Scripts/CardsScripts/": "blue",
 "res://Data/Scripts/GlobalScripts/": "gray",
 "res://Data/Scripts/LevelScripts/": "yellow",
+"res://Data/Scripts/MainMenuScripts/": "orange",
 "res://Data/Scripts/ObjectsScripts/": "red",
 "res://Data/Scripts/ResourcesScripts/": "purple",
 "res://Data/Scripts/ResourcesScripts/Characteristics/": "purple",
