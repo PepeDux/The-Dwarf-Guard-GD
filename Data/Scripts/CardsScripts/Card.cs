@@ -95,6 +95,8 @@ public partial class Card : BaseButton
 
 	public override void ButtonPressed()
 	{
+		base.ButtonPressed();
+		
 		// Враги
 		if (cardPositive is CharacteristicModifierData && cardPositive.accessory == ModifierData.Accessory.enemy)
 		{

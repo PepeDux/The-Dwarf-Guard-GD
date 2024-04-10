@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/VHS-Shader/VHS-Shader.tscn" id="1_5seje"]
 [ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/CoreScene/Holders.tscn" id="1_78hkp"]
-[ext_resource type="PackedScene" uid="uid://hegp6rbt487a" path="res://Data/Scenes/PauseMenu/PauseMenu.tscn" id="1_b3wt7"]
+[ext_resource type="PackedScene" uid="uid://hegp6rbt487a" path="res://Data/Scenes/UI/PauseMenu/PauseMenu.tscn" id="1_b3wt7"]
 [ext_resource type="Texture2D" uid="uid://csw0qwm2nm2r7" path="res://Data/Sprites/Tilemaps/TileMap.png" id="1_f5wi8"]
-[ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/Markers/Markers.png" id="2_outi2"]
+[ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/UI/Markers/Markers.png" id="2_outi2"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Spawn/SpawnModifierCalculation.cs" id="7_2krpp"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelInfo.cs" id="9_lclkq"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="10_3v6ox"]
@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/Fader.cs" id="11_lk4uu"]
 [ext_resource type="Script" path="res://Data/Scripts/CameraScripts/CameraShake.cs" id="11_qh8oq"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelGenerator.cs" id="12_13kvq"]
-[ext_resource type="PackedScene" uid="uid://dt43ky47ci4jg" path="res://Data/Scenes/Card/Card.tscn" id="13_l7glq"]
+[ext_resource type="PackedScene" uid="uid://cgyw5qsp8s6b7" path="res://Data/Scenes/UI/Card/Card.tscn" id="13_l7glq"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnController.cs" id="14_07t1w"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelModifier.cs" id="14_xe5ua"]
 [ext_resource type="Script" path="res://Data/Scripts/CardsScripts/CardHolder.cs" id="15_xnraa"]
@@ -54,7 +54,8 @@ sources/0 = SubResource("TileSetAtlasSource_mcski")
 y_sort_enabled = true
 
 [node name="Vhs-shader" parent="." instance=ExtResource("1_5seje")]
-position = Vector2(128, 240)
+visible = false
+position = Vector2(139, 249)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_yxedi")
@@ -168,20 +169,18 @@ script = ExtResource("17_qpsic")
 [node name="CardHolder" type="Node2D" parent="."]
 script = ExtResource("15_xnraa")
 
-[node name="Card1" parent="CardHolder" instance=ExtResource("13_l7glq")]
-visible = false
-z_index = 1
-offset_left = 416.0
-offset_top = 320.0
-offset_right = 576.0
-offset_bottom = 448.0
-
 [node name="Card2" parent="CardHolder" instance=ExtResource("13_l7glq")]
 visible = false
-z_index = 1
 offset_left = 192.0
 offset_top = 320.0
 offset_right = 352.0
+offset_bottom = 448.0
+
+[node name="Card1" parent="CardHolder" instance=ExtResource("13_l7glq")]
+visible = false
+offset_left = 416.0
+offset_top = 320.0
+offset_right = 576.0
 offset_bottom = 448.0
 
 [node name="PauseMenu" parent="." instance=ExtResource("1_b3wt7")]

@@ -1,0 +1,67 @@
+[gd_scene load_steps=14 format=3 uid="uid://clt58eakiro5h"]
+
+[ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/VHS-Shader/VHS-Shader.tscn" id="1_kdeov"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/Fader.cs" id="2_hungq"]
+[ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/Button/Button.tscn" id="3_70clf"]
+[ext_resource type="Texture2D" uid="uid://chu2iy1nkrufm" path="res://Data/Sprites/UI/MainMenu/StartNormal.png" id="3_jnh7o"]
+[ext_resource type="Texture2D" uid="uid://c4dngyxbn1apl" path="res://Data/Sprites/UI/MainMenu/StartHover.png" id="4_afojs"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/MainMenuScripts/StartGame.cs" id="5_hk3uw"]
+[ext_resource type="Texture2D" uid="uid://co6glrxeyg4wk" path="res://Data/Sprites/UI/MainMenu/SettingsNormal.png" id="6_yj28f"]
+[ext_resource type="Texture2D" uid="uid://38s4wrd1l5yq" path="res://Data/Sprites/UI/MainMenu/SettingsHover.png" id="7_rbocu"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/MainMenuScripts/ToSettings.cs" id="8_4ghj2"]
+[ext_resource type="Texture2D" uid="uid://bf16aeueubvux" path="res://Data/Sprites/UI/MainMenu/ExitNormal.png" id="9_jsoyx"]
+[ext_resource type="Texture2D" uid="uid://boykkkjm8ccpm" path="res://Data/Sprites/UI/MainMenu/ExitHover.png" id="10_lrgf4"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/MainMenuScripts/ExitGame.cs" id="11_t0200"]
+[ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="13_qo8qe"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="Vhs-shader" parent="." instance=ExtResource("1_kdeov")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_as_relative = false
+offset_left = -3005.0
+offset_top = -3049.0
+offset_right = 3395.0
+offset_bottom = 3351.0
+color = Color(0.109804, 0.101961, 0.101961, 1)
+script = ExtResource("2_hungq")
+metadata/_edit_use_anchors_ = true
+
+[node name="StartButton" parent="." instance=ExtResource("3_70clf")]
+offset_left = 196.0
+offset_top = 88.0
+offset_right = 294.0
+offset_bottom = 114.0
+texture_normal = ExtResource("3_jnh7o")
+texture_hover = ExtResource("4_afojs")
+script = ExtResource("5_hk3uw")
+
+[node name="SettingsButton" parent="." instance=ExtResource("3_70clf")]
+offset_left = 196.0
+offset_top = 136.0
+offset_right = 294.0
+offset_bottom = 162.0
+texture_normal = ExtResource("6_yj28f")
+texture_hover = ExtResource("7_rbocu")
+script = ExtResource("8_4ghj2")
+
+[node name="ExitButton" parent="." instance=ExtResource("3_70clf")]
+offset_left = 196.0
+offset_top = 184.0
+offset_right = 294.0
+offset_bottom = 210.0
+texture_normal = ExtResource("9_jsoyx")
+texture_hover = ExtResource("10_lrgf4")
+script = ExtResource("11_t0200")
+
+[node name="CardNamePositive" type="Label" parent="."]
+offset_left = 136.0
+offset_top = 40.0
+offset_right = 4506.0
+offset_bottom = 517.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
+theme_override_fonts/font = ExtResource("13_qo8qe")
+theme_override_font_sizes/font_size = 456
+text = "the dwarf guard"

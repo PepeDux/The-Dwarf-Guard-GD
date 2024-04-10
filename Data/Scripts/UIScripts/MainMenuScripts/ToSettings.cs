@@ -10,6 +10,8 @@ public partial class ToSettings : BaseButton
 
     public override void ButtonPressed()
     {
+        base.ButtonPressed();
+
         GetTree().Paused = false;
     }
 }

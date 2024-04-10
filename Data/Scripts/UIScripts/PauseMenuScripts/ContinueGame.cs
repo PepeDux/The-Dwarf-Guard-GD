@@ -10,6 +10,8 @@ public partial class ContinueGame : BaseButton
 
     public override void ButtonPressed()
     {
+        base.ButtonPressed();
+
         GetParent<Node2D>().Visible = false;
         GetTree().Paused = false;
     }

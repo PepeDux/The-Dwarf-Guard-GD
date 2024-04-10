@@ -1,4 +1,4 @@
-using Godot;
+﻿using Godot;
 using System;
 
 public partial class ExitGame : BaseButton
@@ -10,6 +10,8 @@ public partial class ExitGame : BaseButton
 
 	public override void ButtonPressed()
 	{
+		base.ButtonPressed();
+
 		GetTree().Quit();
 	}
 }
