@@ -1,36 +1,15 @@
 using Godot;
 using System;
 
-public partial class StartGame : TextureButton
+public partial class StartGame : BaseButton
 {
 	public override void _Ready()
 	{
-		// Событие на нажатие
-		Pressed += ButtonPressed;
-		// Событие на вход курсора на карту
-		MouseEntered += Entered;
-		// Событие на выход курсора на карту
-		MouseExited += Exited;
+		ButtonEventSubscribing();
 	}
 
-	private void ButtonPressed()
+	public override void ButtonPressed()
 	{
 		GetTree().ChangeSceneToFile("res://Data/Scenes/CoreScene/CoreScene.tscn");
-	}
-
-	private void Entered()
-	{
-		// Задаем курсору вид "лапки"
-		CursorStyleController.SetBeam();
-
-		Position = new Vector2(Position.X, Position.Y - 2);
-	}
-
-	private void Exited()
-	{
-		// Задаем курсору вид "стрелки"
-		CursorStyleController.SetArrow();
-
-		Position = new Vector2(Position.X, Position.Y + 2);
 	}
 }

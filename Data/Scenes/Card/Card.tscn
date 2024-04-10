@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dt43ky47ci4jg"]
 
 [ext_resource type="Texture2D" uid="uid://cjubqb7dam4ib" path="res://Data/Sprites/CardMaket.png" id="1_ytoex"]
-[ext_resource type="Script" path="res://Data/Scripts/CardsScripts/CardMaker.cs" id="2_qg8jn"]
+[ext_resource type="Script" path="res://Data/Scripts/CardsScripts/Card.cs" id="2_qg8jn"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="3_ggr5r"]
 
 [node name="Card1" type="TextureButton"]
