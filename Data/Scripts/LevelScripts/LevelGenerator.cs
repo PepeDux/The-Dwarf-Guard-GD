@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 public partial class LevelGenerator : Node2D
 {
@@ -20,8 +21,8 @@ public partial class LevelGenerator : Node2D
 	{
 		// Подписка на событие на окончание выбора карт
 		Events.endSelectCard += Generate;
-        // Генерация карты при старте
-        Generate();
+		// Генерация карты при старте
+		Generate();
 	}
 
 
@@ -35,11 +36,11 @@ public partial class LevelGenerator : Node2D
 		// Очищаем хранилище координат тайлов
 		TileStorage.ClearAllCells();
 
-        // Лимит тайлов
-        countTile = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").tile;
+		// Лимит тайлов
+		countTile = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").tile;
 
-        //Старотовый тайл
-        Tile tile = new Tile(startTile, tileMap);
+		//Старотовый тайл
+		Tile tile = new Tile(startTile, tileMap);
 
 		for (int i = 0; TileStorage.freeCells.Count < countTile; i++)
 		{
@@ -84,7 +85,7 @@ public partial class LevelGenerator : Node2D
 		Events.levelGenerated?.Invoke();
 	}
 
-	private void SetTile(Vector2I route)
+	private async void SetTile(Vector2I route)
 	{
 		Tile tile = new Tile(TileStorage.freeCells.ElementAt(random.Next(0, TileStorage.freeCells.Count)) + route, tileMap);
 	}

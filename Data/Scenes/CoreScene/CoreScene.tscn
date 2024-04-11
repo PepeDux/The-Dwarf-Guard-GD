@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://ubithf5ubebc"]
 
-[ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/VHS-Shader/VHS-Shader.tscn" id="1_5seje"]
+[ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS-Shader/VHS-Shader.tscn" id="1_5seje"]
 [ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/CoreScene/Holders.tscn" id="1_78hkp"]
 [ext_resource type="PackedScene" uid="uid://hegp6rbt487a" path="res://Data/Scenes/UI/PauseMenu/PauseMenu.tscn" id="1_b3wt7"]
 [ext_resource type="Texture2D" uid="uid://csw0qwm2nm2r7" path="res://Data/Sprites/Tilemaps/TileMap.png" id="1_f5wi8"]
@@ -52,10 +52,6 @@ sources/0 = SubResource("TileSetAtlasSource_mcski")
 
 [node name="GameScene" type="Node2D"]
 y_sort_enabled = true
-
-[node name="Vhs-shader" parent="." instance=ExtResource("1_5seje")]
-visible = false
-position = Vector2(139, 249)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_yxedi")
@@ -125,6 +121,9 @@ theme_override_font_sizes/font_size = 128
 text = "AC:"
 metadata/_edit_use_anchors_ = true
 
+[node name="Vhs-shader" parent="Camera2D" instance=ExtResource("1_5seje")]
+position = Vector2(-245, -135)
+
 [node name="LevelInfo" type="Node2D" parent="."]
 script = ExtResource("9_lclkq")
 captain = 2
@@ -133,6 +132,15 @@ tile = 50
 
 [node name="SpawnModifierCalculation" type="Node2D" parent="LevelInfo"]
 script = ExtResource("7_2krpp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -3000.0
+offset_top = -3048.0
+offset_right = 3400.0
+offset_bottom = 3352.0
+color = Color(0.109804, 0.101961, 0.101961, 1)
+script = ExtResource("11_lk4uu")
+metadata/_edit_use_anchors_ = true
 
 [node name="CameraShake" type="Node2D" parent="." node_paths=PackedStringArray("camera")]
 script = ExtResource("11_qh8oq")
@@ -144,15 +152,6 @@ tileMap = NodePath("../TileMap")
 
 [node name="HolderCleaner" type="Node2D" parent="LevelGenerator"]
 script = ExtResource("18_m7nb1")
-
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -3000.0
-offset_top = -3048.0
-offset_right = 3400.0
-offset_bottom = 3352.0
-color = Color(0.109804, 0.101961, 0.101961, 1)
-script = ExtResource("11_lk4uu")
-metadata/_edit_use_anchors_ = true
 
 [node name="TurnController" type="Node2D" parent="."]
 script = ExtResource("14_07t1w")

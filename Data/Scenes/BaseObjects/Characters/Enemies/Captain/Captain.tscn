@@ -207,7 +207,9 @@ viewport_path = NodePath("SubViewport")
 [node name="Captain" instance=ExtResource("1_ct7er")]
 script = ExtResource("2_6no2r")
 maxActionPoints = 1
-melee = true
+meleeAttack = true
+rangeAttack = false
+maxHP = 10
 physicalDamage = 5
 
 [node name="Sprite2D" parent="." index="0"]
@@ -240,3 +242,6 @@ visibility_layer = 1
 light_mask = 1
 visibility_layer = 1
 texture = SubResource("ViewportTexture_kdlun")
+
+[node name="AudioStreamPlayer" parent="." index="11"]
+bus = &"Master"

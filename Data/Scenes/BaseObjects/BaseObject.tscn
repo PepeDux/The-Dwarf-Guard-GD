@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://qkbgenkh4fxk" path="res://Data/Audio/Hurt/Hurt3.wav" id="6_pcxmw"]
 [ext_resource type="AudioStream" uid="uid://1thejoj2lt2d" path="res://Data/Audio/Hurt/Hurt4.wav" id="7_ftt4l"]
 [ext_resource type="AudioStream" uid="uid://jynmkarttuov" path="res://Data/Audio/Pick/Pick1.wav" id="8_361xj"]
-[ext_resource type="AudioStream" uid="uid://cg1pwgdrtipo3" path="res://Data/Audio/Move/Move1.wav" id="8_vfx1y"]
+[ext_resource type="AudioStream" uid="uid://41gu6pjgamy2" path="res://Data/Audio/Move/Move2.wav" id="8_caqn2"]
 [ext_resource type="AudioStream" uid="uid://dv424i1qoveao" path="res://Data/Audio/Miss/Miss1.wav" id="9_0i8um"]
 [ext_resource type="AudioStream" uid="uid://e5cck14xyj0h" path="res://Data/Audio/Miss/Miss2.wav" id="10_cqhai"]
 [ext_resource type="AudioStream" uid="uid://cbhjai3ibwdt" path="res://Data/Audio/Miss/Miss3.wav" id="11_wjmoo"]
@@ -27,8 +27,9 @@ script = ExtResource("2_epauy")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"Sounds"
 script = ExtResource("3_p7g0i")
 hurtSounds = Array[AudioStreamWAV]([ExtResource("4_m3c11"), ExtResource("5_ophgm"), ExtResource("6_pcxmw"), ExtResource("7_ftt4l")])
-moveSounds = Array[AudioStreamWAV]([ExtResource("8_vfx1y")])
+moveSounds = Array[AudioStreamWAV]([ExtResource("8_caqn2")])
 missSound = Array[AudioStreamWAV]([ExtResource("9_0i8um"), ExtResource("10_cqhai"), ExtResource("11_wjmoo")])
 pickSound = Array[AudioStreamWAV]([ExtResource("8_361xj")])
