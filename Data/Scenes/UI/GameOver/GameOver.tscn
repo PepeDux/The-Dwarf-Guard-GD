@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bthuydw3peyqe"]
+[gd_scene load_steps=6 format=3 uid="uid://bthuydw3peyqe"]
 
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameOver/GameOver.cs" id="1_s2ub0"]
 [ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS-Shader/VHS-Shader.tscn" id="1_vnuuv"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="2_j64m8"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameOver/PressEscBlink.cs" id="3_xof6s"]
+[ext_resource type="AudioStream" uid="uid://b4cysnvj7mibm" path="res://Data/Audio/Music/GameOver/GameOver1.wav" id="4_cide8"]
 
 [node name="GameOver" type="Node2D"]
 script = ExtResource("1_s2ub0")
@@ -42,6 +44,7 @@ theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
 theme_override_fonts/font = ExtResource("2_j64m8")
 theme_override_font_sizes/font_size = 128
 text = "Press esc"
+script = ExtResource("3_xof6s")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 490.0
@@ -49,3 +52,8 @@ offset_bottom = 270.0
 color = Color(0.109804, 0.101961, 0.101961, 1)
 
 [node name="Vhs-shader" parent="." instance=ExtResource("1_vnuuv")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_cide8")
+autoplay = true
+bus = &"GameOverMusic"
