@@ -5,11 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://btdaoqflmgfbw" path="res://Data/Sprites/Food/Food.png" id="3_vuhse"]
 
 [node name="Beer" instance=ExtResource("1_rigpj")]
-y_sort_enabled = false
 modifier = ExtResource("2_jpfi7")
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("3_vuhse")
 hframes = 7
 vframes = 4
-frame = 5
+frame = 6

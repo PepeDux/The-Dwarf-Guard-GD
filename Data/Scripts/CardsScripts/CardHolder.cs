@@ -1,4 +1,4 @@
-﻿using Godot;
+using Godot;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +14,11 @@ public partial class CardHolder : Node
 
 		// Добавляем все карты в лист
 		cards.AddRange(GetChildren().OfType<TextureButton>());
+	}
+
+	public override void _ExitTree()
+	{
+		Events.levelEnded -= ShowCard;
 	}
 
 

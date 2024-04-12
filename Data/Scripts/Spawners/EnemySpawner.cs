@@ -17,7 +17,12 @@ public partial class EnemySpawner : Spawner
         levelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
 	}
 
-	public void SpawnEnemy()
+    public override void _ExitTree()
+    {
+        Events.levelGenerated -= SpawnEnemy;
+    }
+
+    public void SpawnEnemy()
 	{
 		for (int i = 0; i < levelInfo.melee; i++)
 		{

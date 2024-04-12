@@ -16,7 +16,12 @@ public partial class StaticObjectSpawner : Spawner
 		//SpawnStaticTileObject();
 	}
 
-	public void SpawnStaticTileObject()
+    public override void _ExitTree()
+    {
+        Events.levelGenerated -= SpawnStaticTileObject;
+    }
+
+    public void SpawnStaticTileObject()
 	{
 		for (int i = 0; i < levelInfo.wall; i++)
 		{

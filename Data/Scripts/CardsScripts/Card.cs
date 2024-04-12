@@ -64,6 +64,11 @@ public partial class Card : BaseButton
 		MakeCard();
 	}
 
+	public override void _ExitTree()
+	{
+		Events.endSelectCard -= EndSelectCard;
+	}
+
 
 
 	private void MakeCard()

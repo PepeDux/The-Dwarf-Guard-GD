@@ -15,6 +15,14 @@ public partial class FunctionalObjectSpawner : Spawner
 		Events.levelGenerated += SpawnFunctionalObject;
 
 		levelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
+
+
+		GD.Print(Events.levelGenerated.GetInvocationList().Length);
+	}
+
+	public override void _ExitTree()
+	{
+		Events.levelGenerated -= SpawnFunctionalObject;
 	}
 
 	public void SpawnFunctionalObject()

@@ -16,6 +16,12 @@ public partial class UIManager : Node
 	{
 		Events.playerSpawned += AddPlayer;
 	}
+
+	public override void _ExitTree()
+	{
+		Events.playerSpawned -= AddPlayer;
+	}
+
 	public override void _Process(double delta)
 	{
 		if (DataBank.currentMouseTarget == null)
@@ -27,10 +33,13 @@ public partial class UIManager : Node
 			target = DataBank.currentMouseTarget;
 		}
 
-		HPLabel.Text = "HP: " + target.HP.ToString() + "/" + target.maxHP;
-		MovePointsLabel.Text = "Move: " + target.MovePoints.ToString() + "/" + target.maxMovePoints;
-		ActionPointsLabel.Text = "Action: " + target.ActionPoints.ToString() + "/" + target.maxActionPoints;
-		ACLabel.Text = "AC: " + target.AC;
+		if(target != null)
+		{
+			HPLabel.Text = "HP: " + target.HP.ToString() + "/" + target.maxHP;
+			MovePointsLabel.Text = "Move: " + target.MovePoints.ToString() + "/" + target.maxMovePoints;
+			ActionPointsLabel.Text = "Action: " + target.ActionPoints.ToString() + "/" + target.maxActionPoints;
+			ACLabel.Text = "AC: " + target.AC;
+		}
 	}
 
 	private void AddPlayer()

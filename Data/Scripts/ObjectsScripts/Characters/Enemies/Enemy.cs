@@ -27,8 +27,12 @@ public partial class Enemy : Character
 		Events.playerTurnFinished += UpdatePoints;
 
 		Starter();
+	}
 
-		GD.Print(coordinate);
+	public override void _ExitTree()
+	{
+		Events.playerSpawned -= GetPlayer;
+		Events.playerTurnFinished -= UpdatePoints;
 	}
 
 	private void GetPlayer()

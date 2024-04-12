@@ -13,6 +13,12 @@ public partial class CharacterStorage : Node
         Events.levelEnded += ClearAllCharacters;
     }
 
+    public override void _ExitTree()
+    {
+        Events.playerDied -= ClearAllCharacters;
+        Events.levelEnded -= ClearAllCharacters;
+    }
+
     private void ClearAllCharacters()
     {
         characters.Clear();

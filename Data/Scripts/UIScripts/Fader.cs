@@ -6,9 +6,14 @@ public partial class Fader : ColorRect
 {
 	public override void _Ready()
 	{
-		//Events.playerDied += Fade;
 		Events.levelEnded += Fade;
 		Events.endSelectCard += UnFaid;
+	}
+
+	public override void _ExitTree()
+	{
+		Events.levelEnded -= Fade;
+		Events.endSelectCard -= UnFaid;
 	}
 
 	private void Fade()

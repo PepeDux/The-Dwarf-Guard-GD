@@ -24,6 +24,10 @@ public partial class LevelGenerator : Node2D
 		// Генерация карты при старте
 		Generate();
 	}
+	public override void _ExitTree()
+	{
+		Events.endSelectCard -= Generate;
+	}
 
 
 

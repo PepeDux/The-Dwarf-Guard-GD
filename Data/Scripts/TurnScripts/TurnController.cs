@@ -1,4 +1,4 @@
-﻿using Godot;
+using Godot;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,6 +13,13 @@ public partial class TurnController : Node
 		Events.playerTurnFinished += AddTurn;
 		Events.playerTurnFinished += AddCurrentWalker;
 		Events.finishedEnemyTurn += AddCurrentWalker;
+	}
+
+	public override void _ExitTree()
+	{
+		Events.playerTurnFinished -= AddTurn;
+		Events.playerTurnFinished -= AddCurrentWalker;
+		Events.finishedEnemyTurn -= AddCurrentWalker;
 	}
 
 	private void AddTurn()

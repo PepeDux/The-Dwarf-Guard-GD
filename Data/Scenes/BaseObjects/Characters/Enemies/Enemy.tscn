@@ -11,6 +11,8 @@ viewport_path = NodePath("SubViewport")
 
 [node name="Character" instance=ExtResource("1_tacpj")]
 y_sort_enabled = false
+meleeAttack = true
+rangeAttack = false
 
 [node name="AnimationPlayer" parent="." index="3"]
 libraries = {

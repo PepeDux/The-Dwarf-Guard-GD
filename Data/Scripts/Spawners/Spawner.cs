@@ -52,8 +52,16 @@ public partial class Spawner : Node2D
 	// Получение случайной свободной координаты
 	private bool TryGetRandomCoordinate()
 	{
-		spawnCoordinate = GetRandomFreeCoordinate();
-		return IsCoordinateAvailable(spawnCoordinate);
+		if (TileStorage.freeCells.Count > 0)
+		{
+			spawnCoordinate = GetRandomFreeCoordinate();
+			return IsCoordinateAvailable(spawnCoordinate);
+		}
+		else
+		{
+			GD.PrintErr("TileStorage не инициализирован или не содержит свободных ячеек.");
+			return false;
+		}
 	}
 
 	// Попытка спауна на указанной позиции

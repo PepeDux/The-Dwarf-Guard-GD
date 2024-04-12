@@ -16,8 +16,7 @@ public partial class PauseMenu : Node2D
 			{
 				Visible = true;
 				GetTree().Paused = true;
-			}
-			
+			}		
 		}
 	}
 }

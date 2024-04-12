@@ -17,6 +17,11 @@ public partial class Player : Character
 		Events.playerSpawned?.Invoke();
 	}
 
+	public override void _ExitTree()
+	{
+		Events.playerTurnFinished -= UpdatePoints;
+	}
+
 	public override void _Process(double delta)
 	{
 		Updater();
