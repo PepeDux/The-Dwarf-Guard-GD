@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7ix3rygpdvxs"]
+
+[ext_resource type="PackedScene" uid="uid://djcta1m6ke4i5" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/PickableObject.tscn" id="1_l2as5"]
+[ext_resource type="Texture2D" uid="uid://xeecwfopfcqm" path="res://Data/Sprites/PickableObjects/Crystals/Crystals.png" id="2_qmbo7"]
+
+[node name="Crystal" instance=ExtResource("1_l2as5")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_qmbo7")
+hframes = 5
+vframes = 11

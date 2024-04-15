@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dejp63chsiv2j"]
+
+[ext_resource type="PackedScene" uid="uid://djcta1m6ke4i5" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/PickableObject.tscn" id="1_nrndo"]
+[ext_resource type="Texture2D" uid="uid://b3ippq5fk4nkl" path="res://Data/Sprites/PickableObjects/Coins/Coin.png" id="2_vut13"]
+
+[node name="Coin" instance=ExtResource("1_nrndo")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_vut13")
+hframes = 3
+vframes = 7
+frame = 1

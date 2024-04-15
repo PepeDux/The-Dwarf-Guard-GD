@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dns2vuoxyi7fb"]
+
+[ext_resource type="Resource" uid="uid://c4csjm5g77rer" path="res://Data/Resources/CharacteristicModifier/CharacteristicModifier.tres" id="1_d18sv"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_6pppi"]
+
+[resource]
+script = ExtResource("2_6pppi")
+modifier = ExtResource("1_d18sv")
+name = "Я плохой"
+cardDescription = "Я плохой"
+cardStrength = 1
+type = 1
+accessory = 0

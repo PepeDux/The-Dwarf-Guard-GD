@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://kmbhd0m40div"]
+
+[ext_resource type="PackedScene" uid="uid://b7ix3rygpdvxs" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Crystal/Crystal.tscn" id="1_gn7ju"]
+
+[node name="GreenCrystal" instance=ExtResource("1_gn7ju")]
+
+[node name="Sprite2D" parent="." index="0"]
+frame = 2

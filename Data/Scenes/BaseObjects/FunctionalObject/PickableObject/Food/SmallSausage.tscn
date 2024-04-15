@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2bsgyuway4ft"]
+
+[ext_resource type="PackedScene" uid="uid://c57a0nip7ah3q" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Food.tscn" id="1_hfjyf"]
+
+[node name="SmallSausage" instance=ExtResource("1_hfjyf")]
+
+[node name="Sprite2D" parent="." index="0"]
+frame = 4

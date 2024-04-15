@@ -10,13 +10,13 @@ public partial class Card : BaseButton
 	Random random = new Random();
 
 	// Позитивная и негативная карта
-	public ModifierData cardPositive;
-	public ModifierData cardNegative;
+	public CardData cardPositive;
+	public CardData cardNegative;
 
 	// Массив модификаторов
-	public List<ModifierData> modifiers = new List<ModifierData>();
+	public List<CardData> cards = new List<CardData>();
 
-	// Нода/класс содержащая все статусы
+	// Нода/класс содержащая все модификаторы
 	public LevelModifier levelModifier;
 
 
@@ -40,17 +40,15 @@ public partial class Card : BaseButton
 		Events.endSelectCard += EndSelectCard;
 
 		ButtonEventSubscribing();
+		
 
-	   
 
-		// Загружаем все карточки
-		modifiers.AddRange(LoadResourceFromDirectory.Load("res://Data/Resources/CharacteristicStatuses/"));
-		//modifiers.AddRange(LoadResourceFromDirectory.Load("res://Data/Resources/SpawnStatuses/"));
-		//modifiers.AddRange(LoadResourceFromDirectory.Load("res://Data/Resources/OperationStatuses/"));
+		// Загружаем все модификаторы
+		cards.AddRange(CardLoader.Load("res://Data/Resources/Cards/"));
 
 		// Получаем LevelModifier
 		levelModifier = GetTree().Root.GetNode("GameScene").GetNode<LevelModifier>("LevelModifier");
-
+		
 		// Ноды позитивной карты
 		cardNamePositive = GetNode<Label>("CardNamePositive");
 		cardDescriptionPositive = GetNode<Label>("CardDescriptionPositive");
@@ -74,16 +72,14 @@ public partial class Card : BaseButton
 	private void MakeCard()
 	{
 		// Выбор позитивной карты
-		cardPositive = modifiers.Where(c => c.type == ModifierData.Type.positive).OrderBy(с => Guid.NewGuid()).FirstOrDefault();
+		cardPositive = cards.Where(c => c.type == CardData.Type.positive).OrderBy(с => Guid.NewGuid()).FirstOrDefault();
 		// Выбор негативной карты исхояд из силы позитимвной карты в диапазоне -1 - +1
 		cardNegative =
-			modifiers.Where(c => c.type == ModifierData.Type.negative &&
+			cards.Where(c => c.type == CardData.Type.negative &&
 			(c.cardStrength == cardPositive.cardStrength ||
 			c.cardStrength == cardPositive.cardStrength - 1 ||
 			c.cardStrength == cardPositive.cardStrength + 1))
 			.OrderBy(с => Guid.NewGuid()).FirstOrDefault();
-
-
 
 		// Задаем название позитивной карты
 		cardNamePositive.Text = cardPositive.name;
@@ -103,34 +99,34 @@ public partial class Card : BaseButton
 		base.ButtonPressed();
 		
 		// Враги
-		if (cardPositive is CharacteristicModifierData && cardPositive.accessory == ModifierData.Accessory.enemy)
+		if (cardPositive.modifier is CharacteristicModifierData && cardPositive.accessory == CardData.Accessory.enemy)
 		{
-			levelModifier.enemyModifiers.Add(cardPositive as CharacteristicModifierData);
+			levelModifier.enemyModifiers.Add(cardPositive.modifier as CharacteristicModifierData);
 		}
-		if (cardNegative is CharacteristicModifierData && cardNegative.accessory == ModifierData.Accessory.enemy)
+		if (cardNegative.modifier is CharacteristicModifierData && cardNegative.accessory == CardData.Accessory.enemy)
 		{
-			levelModifier.enemyModifiers.Add(cardNegative as CharacteristicModifierData);
+			levelModifier.enemyModifiers.Add(cardNegative.modifier as CharacteristicModifierData);
 		}
 		
 		// Игрок
-		if (cardPositive is CharacteristicModifierData && cardPositive.accessory == ModifierData.Accessory.player)
+		if (cardPositive.modifier is CharacteristicModifierData && cardPositive.accessory == CardData.Accessory.player)
 		{
-			levelModifier.playerModifiers.Add(cardPositive as CharacteristicModifierData);
+			levelModifier.playerModifiers.Add(cardPositive.modifier as CharacteristicModifierData);
 		}
-		if (cardNegative is CharacteristicModifierData && cardNegative.accessory == ModifierData.Accessory.player)
+		if (cardNegative.modifier is CharacteristicModifierData && cardNegative.accessory == CardData.Accessory.player)
 		{
-			levelModifier.playerModifiers.Add(cardNegative as CharacteristicModifierData);
+			levelModifier.playerModifiers.Add(cardNegative.modifier as CharacteristicModifierData);
 		}
 
 		// Спавн
-		if (cardPositive is SpawnModifierData && cardPositive.accessory == ModifierData.Accessory.spawn)
+		if (cardPositive.modifier is SpawnModifierData && cardPositive.accessory == CardData.Accessory.spawn)
 		{
-			GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").GetNode<SpawnModifierCalculation>("SpawnCalculation").AddSpawn(cardPositive as SpawnModifierData);
+			GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").GetNode<SpawnModifierCalculation>("SpawnCalculation").AddSpawn(cardPositive.modifier as SpawnModifierData);
 
 		}
-		if (cardNegative is SpawnModifierData && cardNegative.accessory == ModifierData.Accessory.spawn)
+		if (cardNegative.modifier is SpawnModifierData && cardNegative.accessory == CardData.Accessory.spawn)
 		{
-			GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").GetNode<SpawnModifierCalculation>("SpawnCalculation").AddSpawn(cardNegative as SpawnModifierData);
+			GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").GetNode<SpawnModifierCalculation>("SpawnCalculation").AddSpawn(cardNegative.modifier as SpawnModifierData);
 			GD.Print("Модификатор карты: " + cardNegative.GetType() + " Для кого: " + cardNegative.accessory);
 		}
 

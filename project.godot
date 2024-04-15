@@ -37,7 +37,7 @@ folder_colors={
 "res://Data/Scripts/LevelScripts/": "yellow",
 "res://Data/Scripts/ObjectsScripts/": "red",
 "res://Data/Scripts/ResourcesScripts/": "purple",
-"res://Data/Scripts/ResourcesScripts/Characteristics/": "purple",
+"res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/": "purple",
 "res://Data/Scripts/Spawners/": "yellow",
 "res://Data/Scripts/TileScripts/": "yellow",
 "res://Data/Scripts/TurnScripts/": "yellow",

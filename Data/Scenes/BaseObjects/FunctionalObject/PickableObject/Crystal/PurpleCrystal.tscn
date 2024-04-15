@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://de6ce12wtp1ub"]
+
+[ext_resource type="PackedScene" uid="uid://b7ix3rygpdvxs" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Crystal/Crystal.tscn" id="1_yvqgm"]
+
+[node name="PurpleCrystal" instance=ExtResource("1_yvqgm")]
+
+[node name="Sprite2D" parent="." index="0"]
+frame = 3

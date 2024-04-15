@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr6r080hn3sv6"]
+
+[ext_resource type="PackedScene" uid="uid://c57a0nip7ah3q" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Food.tscn" id="1_bu1e2"]
+
+[node name="Orange" instance=ExtResource("1_bu1e2")]
+
+[node name="Sprite2D" parent="." index="0"]
+frame = 13

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://hegp6rbt487a" path="res://Data/Scenes/UI/PauseMenu/PauseMenu.tscn" id="1_b3wt7"]
 [ext_resource type="Texture2D" uid="uid://csw0qwm2nm2r7" path="res://Data/Sprites/Tilemaps/TileMap.png" id="1_f5wi8"]
 [ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/UI/Markers/Markers.png" id="2_outi2"]
-[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Spawn/SpawnModifierCalculation.cs" id="7_2krpp"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Spawn/SpawnModifierCalculation.cs" id="7_2krpp"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelInfo.cs" id="9_lclkq"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="10_3v6ox"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/UIManager.cs" id="10_bwtok"]

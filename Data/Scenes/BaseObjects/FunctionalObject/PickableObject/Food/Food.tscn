@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c57a0nip7ah3q"]
+
+[ext_resource type="PackedScene" uid="uid://djcta1m6ke4i5" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/PickableObject.tscn" id="1_lx3mu"]
+[ext_resource type="Texture2D" uid="uid://btdaoqflmgfbw" path="res://Data/Sprites/PickableObjects/Food/Food.png" id="2_qnyd1"]
+[ext_resource type="Resource" uid="uid://c4csjm5g77rer" path="res://Data/Resources/CharacteristicModifier/CharacteristicModifier.tres" id="2_yqfqp"]
+
+[node name="Food" instance=ExtResource("1_lx3mu")]
+modifier = ExtResource("2_yqfqp")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_qnyd1")
+hframes = 7
+vframes = 4
+frame = 19

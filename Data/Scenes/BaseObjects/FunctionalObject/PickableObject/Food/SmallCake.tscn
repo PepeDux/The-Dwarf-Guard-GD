@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8qd0rxwq85sv"]
+
+[ext_resource type="PackedScene" uid="uid://c57a0nip7ah3q" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Food.tscn" id="1_k6jt3"]
+
+[node name="SmallCake" instance=ExtResource("1_k6jt3")]
+
+[node name="Sprite2D" parent="." index="0"]
+frame = 14

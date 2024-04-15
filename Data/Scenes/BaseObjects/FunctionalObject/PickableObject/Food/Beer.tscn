@@ -1,14 +1,51 @@
-[gd_scene load_steps=4 format=3 uid="uid://c57a0nip7ah3q"]
+[gd_scene load_steps=4 format=3 uid="uid://c4xxlsmf7do23"]
 
-[ext_resource type="PackedScene" uid="uid://djcta1m6ke4i5" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/PickableObject.tscn" id="1_rigpj"]
-[ext_resource type="Resource" uid="uid://dcwpi2qvq08ca" path="res://Data/Resources/CharacteristicStatuses/Food/Beer.tres" id="2_jpfi7"]
-[ext_resource type="Texture2D" uid="uid://btdaoqflmgfbw" path="res://Data/Sprites/Food/Food.png" id="3_vuhse"]
+[ext_resource type="PackedScene" uid="uid://c57a0nip7ah3q" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Food.tscn" id="1_umat4"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/CharacteristicModifierData.cs" id="2_rb0ll"]
 
-[node name="Beer" instance=ExtResource("1_rigpj")]
-modifier = ExtResource("2_jpfi7")
+[sub_resource type="Resource" id="Resource_1x33a"]
+resource_local_to_scene = true
+script = ExtResource("2_rb0ll")
+HP = 15
+maxHP = 0
+physicalDamage = 0
+poisonDamage = 0
+fireDamage = 0
+frostDamage = 0
+drunkennessDamage = 0
+movePoints = 0
+maxMovePoints = 0
+actionPoints = 0
+maxActionPoints = 0
+beerPoints = 0
+maxBeerPoints = 0
+moveCost = 0
+meleeAttackCost = 0
+rangeAttackCost = 0
+lineMove = 0
+diagonalMove = 0
+lineAttack = 0
+diagonalAttack = 0
+meleeAttack = 0
+rangeAttack = 0
+rangeAttackDistance = 0
+meleeAttackDistance = 0
+AC = 0
+money = 0
+strength = 0
+dexterity = 0
+intel = 0
+constitution = 0
+wisdom = 0
+drunkenness = 0
+physicalResist = 0
+poisonResist = 0
+fireResist = 0
+frostResist = 0
+drunkennessResist = 0
+
+[node name="Beer" instance=ExtResource("1_umat4")]
+modifier = SubResource("Resource_1x33a")
 
 [node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("3_vuhse")
-hframes = 7
-vframes = 4
 frame = 6
