@@ -362,6 +362,32 @@ public partial class Character : BaseObject
 	#endregion
 
 
+	public override void _Ready()
+	{
+		base._Ready();
+
+		FindTileMap();
+		IdleAnimation();
+		UpdateHP();
+		UpdateCoordinate();
+		UpdatePoints();
+		UpdateCharacteristicModifier();
+		UpdateAC();
+		AddCharacterToCharacterStorage();
+
+		//Добавляем персонажа в хранилище тайлов
+		TileStorage.AddCell(this);
+	}
+
+	public override void _Process(double delta)
+	{
+		base._Process(delta);
+
+		UpdateCharacteristicModifier();
+	}
+
+
+
 	public void UpdatePoints()
 	{
 		movePoints = maxMovePoints;
@@ -379,12 +405,6 @@ public partial class Character : BaseObject
 		AC = 10 + dexterityModifier;
 	}
 
-	public override void Updater()
-	{
-		UpdateCoordinate();
-		UpdateCharacteristicModifier();
-	}
-
 	private void UpdateCharacteristicModifier()
 	{
 		strengthModifier = (Strength - 10) / 2;
@@ -397,20 +417,5 @@ public partial class Character : BaseObject
 	private void AddCharacterToCharacterStorage()
 	{
 		CharacterStorage.characters.Add(this);
-	}
-
-	public void Starter()
-	{
-		FindTileMap();
-		IdleAnimation();
-		UpdateHP();
-		UpdateCoordinate();
-		UpdatePoints();
-		UpdateCharacteristicModifier();
-		UpdateAC();
-		AddCharacterToCharacterStorage();
-
-		//Добавляем персонажа в хранилище тайлов
-		TileStorage.AddCell(this);
 	}
 }

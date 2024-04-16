@@ -12,21 +12,21 @@ public partial class Enemy : Character
 
 
 
-	public override void _Process(double delta)
-	{
-		Updater();
-		Orientation();
-
-		GetPlayer();
-	}
-
 	public override void _Ready()
 	{
 		//Подписываемся на события
 		Events.playerSpawned += GetPlayer;
 		Events.playerTurnFinished += UpdatePoints;
 
-		Starter();
+		base._Ready();
+	}
+
+	public override void _Process(double delta)
+	{
+		base._Process(delta);
+		Orientation();
+
+		GetPlayer();
 	}
 
 	public override void _ExitTree()

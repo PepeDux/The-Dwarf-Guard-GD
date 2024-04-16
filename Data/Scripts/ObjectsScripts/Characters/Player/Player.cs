@@ -12,9 +12,7 @@ public partial class Player : Character
 		//Подписываемся на события	
 		Events.playerTurnFinished += UpdatePoints;
 
-		Starter();
-
-		Events.playerSpawned?.Invoke();
+		base._Ready();
 	}
 
 	public override void _ExitTree()
@@ -22,9 +20,12 @@ public partial class Player : Character
 		Events.playerTurnFinished -= UpdatePoints;
 	}
 
+	
+
 	public override void _Process(double delta)
 	{
-		Updater();
+		base._Process(delta);
+
 		MoveOrientation(); //Отвечает за направление
 	}
 

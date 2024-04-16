@@ -7,52 +7,20 @@ public partial class BaseObject : Node2D
 	[Export] public Vector2I coordinate;
 	private TileMap tileMap;
 
+	public override void _Ready()
+	{
 
-	//private void OnEnable()
-	//{
-	//    //Подписываемся на событие конца хода игрока 
-	//    //LevelManager.levelEnded += Destroy;
-	//}
+	}
 
-	//private void OnDisable()
-	//{
-	//    //Отписываемся на событие конца хода игрока 
-	//    //LevelManager.levelEnded -= Destroy;
-	//}
+	public override void _Process(double delta)
+	{
+		UpdateCoordinate();
+	}
 
 
 	public void UpdateCoordinate()
 	{
 		Position = tileMap.MapToLocal(coordinate); //Привязываем координаты объекта на поле к мировым координатам
-
-		//Если координата объекта оказываектся за пределами границ поля,
-		//то его телепортирует на максимально возможное в пределах поля значение координаты по одной из осей
-		//-----------------------------------------
-		//if (coordinate.Y > TileManager.maxTop)
-		//{
-		//	coordinate.Y = TileManager.maxTop;
-		//}
-
-		//if (coordinate.Y < TileManager.maxDown)
-		//{
-		//	coordinate.Y = TileManager.maxDown;
-		//}
-
-		//if (coordinate.X > TileManager.maxRight)
-		//{
-		//	coordinate.X = TileManager.maxRight;
-		//}
-
-		//if (coordinate.X < TileManager.maxLeft)
-		//{
-		//	coordinate.X = TileManager.maxLeft;
-		//}
-		//-----------------------------------------
-	}
-
-	public virtual void Updater()
-	{
-		UpdateCoordinate();
 	}
 
 	public void FindTileMap()

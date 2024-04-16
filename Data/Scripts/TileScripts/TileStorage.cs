@@ -28,14 +28,14 @@ public partial class TileStorage : Node2D
 	}
 
 	// Метод для добавления объекта в хранилище тайлов
-	public static void AddCell(Character character)
+	public static void AddCell(BaseObject character)
 	{
 		occupiedCells.Add(character.coordinate);
 		impassableCells.Add(character.coordinate);
 	}
 
 	// Метод для удаления объекта из хранилища тайлов
-	public static void RemoveCell(Character character)
+	public static void RemoveCell(BaseObject character)
 	{
 		occupiedCells.Remove(character.coordinate);
 		impassableCells.Remove(character.coordinate);

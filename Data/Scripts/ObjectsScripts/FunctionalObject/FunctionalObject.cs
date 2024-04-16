@@ -7,16 +7,16 @@ public partial class FunctionalObject : BaseObject
 	[Export] Resource modifier;
 	public override void _Ready()
 	{
-		Starter();
-	}
-
-	public virtual void Starter()
-	{
 		// Подписываемся на событие
 		Events.characterMoved += CheckWalkerCell;
 
 		FindTileMap();
 		UpdateCoordinate();
+	}
+
+	public override void _ExitTree()
+	{
+		Events.characterMoved -= CheckWalkerCell;
 	}
 
 	public virtual async void CheckWalkerCell()
@@ -26,7 +26,7 @@ public partial class FunctionalObject : BaseObject
 			if (this.coordinate == character.coordinate)
 			{
 				// Проигрываем звук
-				//GetNode<AudioController>("AudioStreamPlayer").PlaySound("Pick", 0.9f, 1.3f);
+				GetNode<AudioController>("AudioStreamPlayer").PlaySound("Pick", 0.9f, 1.3f);
 				// Немного ждем, для того чтобы звук точно проигрался
 				await Task.Delay(10);
 
