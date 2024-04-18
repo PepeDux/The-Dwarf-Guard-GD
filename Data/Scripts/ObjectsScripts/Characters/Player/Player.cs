@@ -13,6 +13,8 @@ public partial class Player : Character
 		Events.playerTurnFinished += UpdatePoints;
 
 		base._Ready();
+
+		Events.playerSpawned?.Invoke();
 	}
 
 	public override void _ExitTree()

@@ -10,6 +10,81 @@
 [ext_resource type="Script" path="res://Data/Scripts/AttackScripts/PlayerAttack.cs" id="6_4opki"]
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/PlayerTileManager.cs" id="7_j8mox"]
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_okx83"]
+animation = &"Die"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1rtgj"]
+animation = &"DownAttack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rnw3c"]
+animation = &"HorizontalAttack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vkewf"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_reuj4"]
+animation = &"TakeDamage"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oukj6"]
+animation = &"UpAttack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_imuea"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4pqsn"]
+advance_mode = 2
+advance_condition = &"HorizontalAttack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_j62f6"]
+advance_mode = 2
+advance_condition = &"UpAttack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nusjd"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yq0oq"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vaql8"]
+advance_mode = 2
+advance_condition = &"DownAttack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ktw4t"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_arsfg"]
+advance_mode = 2
+advance_condition = &"Die"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8mbsg"]
+advance_mode = 2
+advance_condition = &"TakeDamage"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8rv6p"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_m1fea"]
+states/Die/node = SubResource("AnimationNodeAnimation_okx83")
+states/Die/position = Vector2(629, 384)
+states/DownAttack/node = SubResource("AnimationNodeAnimation_1rtgj")
+states/DownAttack/position = Vector2(845, 145)
+states/End/position = Vector2(399, 384)
+states/HorizontalAttack/node = SubResource("AnimationNodeAnimation_rnw3c")
+states/HorizontalAttack/position = Vector2(629, 145)
+states/Idle/node = SubResource("AnimationNodeAnimation_vkewf")
+states/Idle/position = Vector2(629, 274)
+states/Start/position = Vector2(399, 274)
+states/TakeDamage/node = SubResource("AnimationNodeAnimation_reuj4")
+states/TakeDamage/position = Vector2(845, 384)
+states/UpAttack/node = SubResource("AnimationNodeAnimation_oukj6")
+states/UpAttack/position = Vector2(399, 145)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_imuea"), "Idle", "HorizontalAttack", SubResource("AnimationNodeStateMachineTransition_4pqsn"), "Idle", "UpAttack", SubResource("AnimationNodeStateMachineTransition_j62f6"), "UpAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_nusjd"), "HorizontalAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_yq0oq"), "Idle", "DownAttack", SubResource("AnimationNodeStateMachineTransition_vaql8"), "DownAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_ktw4t"), "Idle", "Die", SubResource("AnimationNodeStateMachineTransition_arsfg"), "Idle", "TakeDamage", SubResource("AnimationNodeStateMachineTransition_8mbsg"), "TakeDamage", "Idle", SubResource("AnimationNodeStateMachineTransition_8rv6p")]
+graph_offset = Vector2(0, 43.5655)
+
 [sub_resource type="Animation" id="Animation_10qv3"]
 resource_name = "Die"
 length = 0.8
@@ -133,81 +208,6 @@ _data = {
 "UpAttack": SubResource("Animation_f7m0p")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_okx83"]
-animation = &"Die"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1rtgj"]
-animation = &"DownAttack"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rnw3c"]
-animation = &"HorizontalAttack"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vkewf"]
-animation = &"Idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_reuj4"]
-animation = &"TakeDamage"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oukj6"]
-animation = &"UpAttack"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_imuea"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4pqsn"]
-advance_mode = 2
-advance_condition = &"HorizontalAttack"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_j62f6"]
-advance_mode = 2
-advance_condition = &"UpAttack"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nusjd"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yq0oq"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vaql8"]
-advance_mode = 2
-advance_condition = &"DownAttack"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ktw4t"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_arsfg"]
-advance_mode = 2
-advance_condition = &"Die"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8mbsg"]
-advance_mode = 2
-advance_condition = &"TakeDamage"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8rv6p"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_m1fea"]
-states/Die/node = SubResource("AnimationNodeAnimation_okx83")
-states/Die/position = Vector2(629, 384)
-states/DownAttack/node = SubResource("AnimationNodeAnimation_1rtgj")
-states/DownAttack/position = Vector2(845, 145)
-states/End/position = Vector2(399, 384)
-states/HorizontalAttack/node = SubResource("AnimationNodeAnimation_rnw3c")
-states/HorizontalAttack/position = Vector2(629, 145)
-states/Idle/node = SubResource("AnimationNodeAnimation_vkewf")
-states/Idle/position = Vector2(629, 274)
-states/Start/position = Vector2(399, 274)
-states/TakeDamage/node = SubResource("AnimationNodeAnimation_reuj4")
-states/TakeDamage/position = Vector2(845, 384)
-states/UpAttack/node = SubResource("AnimationNodeAnimation_oukj6")
-states/UpAttack/position = Vector2(399, 145)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_imuea"), "Idle", "HorizontalAttack", SubResource("AnimationNodeStateMachineTransition_4pqsn"), "Idle", "UpAttack", SubResource("AnimationNodeStateMachineTransition_j62f6"), "UpAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_nusjd"), "HorizontalAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_yq0oq"), "Idle", "DownAttack", SubResource("AnimationNodeStateMachineTransition_vaql8"), "DownAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_ktw4t"), "Idle", "Die", SubResource("AnimationNodeStateMachineTransition_arsfg"), "Idle", "TakeDamage", SubResource("AnimationNodeStateMachineTransition_8mbsg"), "TakeDamage", "Idle", SubResource("AnimationNodeStateMachineTransition_8rv6p")]
-graph_offset = Vector2(0, 43.5655)
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_3w645"]
 viewport_path = NodePath("SubViewport")
 
@@ -215,16 +215,11 @@ viewport_path = NodePath("SubViewport")
 y_sort_enabled = false
 script = ExtResource("2_el8n6")
 maxActionPoints = 100
-meleeAttack = true
-rangeAttack = false
+diagonalMove = true
 maxHP = 10
 physicalDamage = 5
 poisonDamage = 4
-strength = 10
-dexterity = 10
-inteligence = 10
-constitution = 10
-wisdom = 10
+constitution = 20
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("3_3dqnq")
@@ -236,9 +231,6 @@ frame = 1
 script = ExtResource("4_d5p20")
 
 [node name="AnimationTree" parent="." index="3"]
-libraries = {
-"": SubResource("AnimationLibrary_gduxn")
-}
 tree_root = SubResource("AnimationNodeStateMachine_m1fea")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/Die = false

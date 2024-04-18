@@ -69,13 +69,18 @@ light_mask = 512
 visibility_layer = 512
 position = Vector2(384, 384)
 
-[node name="UI" type="Node2D" parent="Camera2D" node_paths=PackedStringArray("HPLabel", "MovePointsLabel", "ActionPointsLabel", "ACLabel")]
+[node name="UI" type="Node2D" parent="Camera2D" node_paths=PackedStringArray("HPLabel", "MovePointsLabel", "ActionPointsLabel", "ACLabel", "strengthLabel", "dexterityLabel", "constitutionLabel", "intelligenceLabel", "wisdomLabel")]
 position = Vector2(-344, -408)
 script = ExtResource("10_bwtok")
 HPLabel = NodePath("HPLabel")
 MovePointsLabel = NodePath("MovePointsLabel")
 ActionPointsLabel = NodePath("ActionPointsLabel")
 ACLabel = NodePath("ACLabel")
+strengthLabel = NodePath("StrengthLabel")
+dexterityLabel = NodePath("DexterityLabel")
+constitutionLabel = NodePath("ConstitutionLabel")
+intelligenceLabel = NodePath("IntelligenceLabel")
+wisdomLabel = NodePath("WisdomLabel")
 
 [node name="HPLabel" type="Label" parent="Camera2D/UI"]
 offset_left = 152.0
@@ -119,6 +124,61 @@ scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 128
 text = "AC:"
+metadata/_edit_use_anchors_ = true
+
+[node name="StrengthLabel" type="Label" parent="Camera2D/UI"]
+offset_left = 472.0
+offset_top = 376.0
+offset_right = 1752.0
+offset_bottom = 696.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("10_3v6ox")
+theme_override_font_sizes/font_size = 128
+text = "STR:"
+metadata/_edit_use_anchors_ = true
+
+[node name="DexterityLabel" type="Label" parent="Camera2D/UI"]
+offset_left = 472.0
+offset_top = 392.0
+offset_right = 1752.0
+offset_bottom = 712.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("10_3v6ox")
+theme_override_font_sizes/font_size = 128
+text = "DEX:"
+metadata/_edit_use_anchors_ = true
+
+[node name="ConstitutionLabel" type="Label" parent="Camera2D/UI"]
+offset_left = 472.0
+offset_top = 408.0
+offset_right = 1752.0
+offset_bottom = 728.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("10_3v6ox")
+theme_override_font_sizes/font_size = 128
+text = "CON:"
+metadata/_edit_use_anchors_ = true
+
+[node name="IntelligenceLabel" type="Label" parent="Camera2D/UI"]
+offset_left = 472.0
+offset_top = 424.0
+offset_right = 1752.0
+offset_bottom = 744.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("10_3v6ox")
+theme_override_font_sizes/font_size = 128
+text = "INT:"
+metadata/_edit_use_anchors_ = true
+
+[node name="WisdomLabel" type="Label" parent="Camera2D/UI"]
+offset_left = 472.0
+offset_top = 440.0
+offset_right = 1752.0
+offset_bottom = 760.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("10_3v6ox")
+theme_override_font_sizes/font_size = 128
+text = "WIS:"
 metadata/_edit_use_anchors_ = true
 
 [node name="Vhs-shader" parent="Camera2D" instance=ExtResource("1_5seje")]

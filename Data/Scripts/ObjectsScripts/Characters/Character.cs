@@ -115,8 +115,8 @@ public partial class Character : BaseObject
 		}
 	}
 
-	[ExportGroup("Броня")]
-	// Броня
+	[ExportGroup("КД")]
+	// КД
 	[Export] public int AC = 10;
 
 	[ExportGroup("Монетки")]
@@ -198,6 +198,22 @@ public partial class Character : BaseObject
 	// Модификатор силы
 	public int strengthModifier = 0;
 
+	// Телосложение
+	[Export] private int constitution = 0;
+	public int Constitution
+	{
+		get
+		{
+			return constitution;
+		}
+		set
+		{
+			constitution = Math.Clamp(value, 0, 20);
+		}
+	}
+	// Модификатор телосложения
+	public int constitutionModifier = 0;
+
 	// Ловкость
 	[Export] private int dexterity = 0;
 	public int Dexterity
@@ -229,22 +245,6 @@ public partial class Character : BaseObject
 	}
 	// Модификатор интеллект
 	public int inteligenceModifier = 0;
-
-	// Телосложение
-	[Export] private int constitution = 0;
-	public int Constitution
-	{
-		get
-		{
-			return level;
-		}
-		set
-		{
-			constitution = Math.Clamp(value, 0, 20);
-		}
-	}
-	// Модификатор телосложения
-	public int constitutionModifier = 0;
 
 	// Мудрость
 	[Export] private int wisdom = 0;
@@ -368,12 +368,12 @@ public partial class Character : BaseObject
 
 		FindTileMap();
 		IdleAnimation();
-		UpdateHP();
 		UpdateCoordinate();
 		UpdatePoints();
 		UpdateCharacteristicModifier();
 		UpdateAC();
 		AddCharacterToCharacterStorage();
+		UpdateHP();
 
 		//Добавляем персонажа в хранилище тайлов
 		TileStorage.AddCell(this);
@@ -397,6 +397,7 @@ public partial class Character : BaseObject
 
 	private void UpdateHP()
 	{
+		maxHP += constitutionModifier * 3;
 		HP = maxHP;
 	}
 
@@ -409,9 +410,9 @@ public partial class Character : BaseObject
 	{
 		strengthModifier = (Strength - 10) / 2;
 		dexterityModifier = (Dexterity - 10) / 2;
-		inteligenceModifier = (Inteligence - 10) / 2;
 		constitutionModifier = (Constitution - 10) / 2;
-		wisdomModifier= (Wisdom - 10) / 2;
+		inteligenceModifier = (Inteligence - 10) / 2;
+		wisdomModifier = (Wisdom - 10) / 2;
 	}
 
 	private void AddCharacterToCharacterStorage()

@@ -43,8 +43,8 @@ lineMove = true
 diagonalMove = false
 lineAttack = true
 diagonalAttack = false
-melee = false
-range = false
+meleeAttack = true
+rangeAttack = false
 hP = 0
 maxHP = 100
 AC = 10
@@ -54,11 +54,11 @@ poisonDamage = 0
 fireDamage = 0
 frostDamage = 0
 drunkennessDamage = 0
-strength = 0
-dexterity = 0
-inteligence = 0
-constitution = 0
-wisdom = 0
+strength = 10
+constitution = 10
+dexterity = 10
+inteligence = 10
+wisdom = 10
 
 [node name="AnimationPlayer" parent="." index="3"]
 libraries = {

@@ -9,6 +9,13 @@ public partial class UIManager : Node
 	[Export] Label ActionPointsLabel;
 	[Export] Label ACLabel;
 
+	[Export] Label strengthLabel;
+	[Export] Label dexterityLabel;
+	[Export] Label constitutionLabel;
+	[Export] Label intelligenceLabel;
+	[Export] Label wisdomLabel;
+
+
 	Player player;
 	Character target;
 
@@ -33,12 +40,18 @@ public partial class UIManager : Node
 			target = DataBank.currentMouseTarget;
 		}
 
-		if(target != null)
+		if (target != null) 
 		{
-			HPLabel.Text = "HP: " + target.HP.ToString() + "/" + target.maxHP;
-			MovePointsLabel.Text = "Move: " + target.MovePoints.ToString() + "/" + target.maxMovePoints;
-			ActionPointsLabel.Text = "Action: " + target.ActionPoints.ToString() + "/" + target.maxActionPoints;
-			ACLabel.Text = "AC: " + target.AC;
+			HPLabel.Text = $"HP: {target.HP}/{target.maxHP}";
+			MovePointsLabel.Text = $"Move: {target.MovePoints}/{target.maxMovePoints}";
+			ActionPointsLabel.Text = $"Action: {target.ActionPoints}/{target.maxActionPoints}";
+			ACLabel.Text = $"AC: {target.AC}";
+
+			strengthLabel.Text = $"STR: {target.Strength} ({target.strengthModifier})";
+			dexterityLabel.Text = $"DEX: {target.Dexterity} ({target.dexterityModifier})";
+			constitutionLabel.Text = $"CON: {target.Constitution} ({target.constitutionModifier})";
+			intelligenceLabel.Text = $"INT: {target.Inteligence} ({target.inteligenceModifier})";
+			wisdomLabel.Text = $"WIS: {target.Wisdom} ({target.wisdomModifier})";
 		}
 	}
 
