@@ -367,7 +367,6 @@ public partial class Character : BaseObject
 		base._Ready();
 
 		FindTileMap();
-		IdleAnimation();
 		UpdateCoordinate();
 		UpdatePoints();
 		UpdateCharacteristicModifier();
@@ -377,6 +376,11 @@ public partial class Character : BaseObject
 
 		//Добавляем персонажа в хранилище тайлов
 		TileStorage.AddCell(this);
+	}
+
+	public override void _ExitTree()
+	{
+		base._ExitTree();
 	}
 
 	public override void _Process(double delta)

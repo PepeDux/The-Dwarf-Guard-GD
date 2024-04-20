@@ -19,6 +19,7 @@ public partial class Player : Character
 
 	public override void _ExitTree()
 	{
+		base._ExitTree();
 		Events.playerTurnFinished -= UpdatePoints;
 	}
 

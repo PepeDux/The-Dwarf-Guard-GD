@@ -10,4 +10,8 @@ public partial class PickableObject : FunctionalObject
 
 		TileStorage.occupiedCells.Add(this.coordinate);
 	}
+	public override void _ExitTree()
+	{
+		base._ExitTree();
+	}
 }

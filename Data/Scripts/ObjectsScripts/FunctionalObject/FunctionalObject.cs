@@ -16,6 +16,7 @@ public partial class FunctionalObject : BaseObject
 
 	public override void _ExitTree()
 	{
+		base._ExitTree();
 		Events.characterMoved -= CheckWalkerCell;
 	}
 

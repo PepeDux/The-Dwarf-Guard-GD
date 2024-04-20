@@ -135,6 +135,6 @@ public partial class TakeDamage : Node
 			Events.levelEnded?.Invoke();
 		}
 
-		GetParent().Free();
+		GetParent().QueueFree();
 	}
 }

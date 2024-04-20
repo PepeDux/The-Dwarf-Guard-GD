@@ -70,40 +70,40 @@ public partial class AttackScript : Node
 			}
 		}
 
-		//if (attacker.diagonalAttack == true)
-		//{
-		//	//Вверх-налево
-		//	for (int i = 0; i <= distanceAttack; i++)
-		//	{
-		//		attackCell = new Vector2I(attacker.coordinate.X - i, attacker.coordinate.Y + i);
+		if (attacker.diagonalAttack == true)
+		{
+			//Вверх-налево
+			for (int i = 0; i <= distanceAttack; i++)
+			{
+				attackCell = new Vector2I(attacker.coordinate.X - i, attacker.coordinate.Y + i);
 
-		//		//Attack(attackCell, target, attackCost);
-		//	}
+				Attack(attackCell, target, "UpDiagonalAttack");
+			}
 
-		//	//Вверх-направо
-		//	for (int i = 0; i <= distanceAttack; i++)
-		//	{
-		//		attackCell = new Vector2I(attacker.coordinate.X + i, attacker.coordinate.Y + i);
+			//Вверх-направо
+			for (int i = 0; i <= distanceAttack; i++)
+			{
+				attackCell = new Vector2I(attacker.coordinate.X + i, attacker.coordinate.Y + i);
 
-		//		//Attack(attackCell, target, attackCost);
-		//	}
+				Attack(attackCell, target, "UpDiagonalAttack");
+			}
 
-		//	//Вниз-налево
-		//	for (int i = 0; i <= distanceAttack; i++)
-		//	{
-		//		attackCell = new Vector2I(attacker.coordinate.X - i, attacker.coordinate.Y - i);
+			//Вниз-налево
+			for (int i = 0; i <= distanceAttack; i++)
+			{
+				attackCell = new Vector2I(attacker.coordinate.X - i, attacker.coordinate.Y - i);
 
-		//		//Attack(attackCell, target, attackCost);
-		//	}
+				Attack(attackCell, target, "DownDiagonalAttack");
+			}
 
-		//	//Вниз-направо
-		//	for (int i = 0; i <= distanceAttack; i++)
-		//	{
-		//		attackCell = new Vector2I(attacker.coordinate.X + i, attacker.coordinate.Y - i);
+			//Вниз-направо
+			for (int i = 0; i <= distanceAttack; i++)
+			{
+				attackCell = new Vector2I(attacker.coordinate.X + i, attacker.coordinate.Y - i);
 
-		//		//Attack(attackCell, target, attackCost);
-		//	}
-		//}
+				Attack(attackCell, target, "DownDiagonalAttack");
+			}
+		}
 	}
 
 	public void Attack(Vector2I attackCell, Character target, string sideAttack)
@@ -125,6 +125,16 @@ public partial class AttackScript : Node
 			{
 				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("DownAttack");
 			}
+			else if (sideAttack == "UpDiagonalAttack")
+			{
+				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("UpDiagonalAttack");
+			}
+			else if (sideAttack == "DownDiagonalAttack")
+			{
+				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("DownDiagonalAttack");
+			}
+
+
 
 			// Кидаем 1D20 на попадание
 			int D20AttackDiceRoll = DiceRoll.Roll(20, 1);
@@ -161,7 +171,7 @@ public partial class AttackScript : Node
 	{
 		target.GetNode<TakeDamage>("TakeDamage").Take(
 		isCriticalDamage: isCriticalDamage,
-		physicalDamage: attacker.physicalDamage,
+		physicalDamage: DiceRoll.Roll(4, 1) + attacker.physicalDamage + attacker.strengthModifier,
 		poisonDamage: attacker.poisonDamage,
 		fireDamage: attacker.fireDamage,
 		frostDamage: attacker.frostDamage,

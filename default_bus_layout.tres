@@ -2,8 +2,9 @@
 
 [sub_resource type="AudioEffectReverb" id="AudioEffectReverb_vswkd"]
 resource_name = "Reverb"
+room_size = 0.5
 damping = 0.2
-spread = 0.2
+spread = 0.5
 hipass = 0.5
 dry = 0.5
 

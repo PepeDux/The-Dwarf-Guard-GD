@@ -21,6 +21,11 @@ public partial class TileMarker : Node2D
 		markerTileMap = GetTree().Root.GetNode("GameScene").GetNode<TileMap>("MarkerTileMap");
 	}
 
+	public override void _ExitTree()
+	{
+		markerTileMap.Clear();
+	}
+
 
 	public override void _Process(double delta)
 	{

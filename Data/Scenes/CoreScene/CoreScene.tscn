@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/Fader.cs" id="11_lk4uu"]
 [ext_resource type="Script" path="res://Data/Scripts/CameraScripts/CameraShake.cs" id="11_qh8oq"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelGenerator.cs" id="12_13kvq"]
-[ext_resource type="PackedScene" uid="uid://cgyw5qsp8s6b7" path="res://Data/Scenes/UI/Card/Card.tscn" id="13_l7glq"]
+[ext_resource type="PackedScene" uid="uid://cgyw5qsp8s6b7" path="res://Data/Scenes/UI/Cards/Card.tscn" id="13_l7glq"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnController.cs" id="14_07t1w"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelModifier.cs" id="14_xe5ua"]
 [ext_resource type="Script" path="res://Data/Scripts/CardsScripts/CardHolder.cs" id="15_xnraa"]

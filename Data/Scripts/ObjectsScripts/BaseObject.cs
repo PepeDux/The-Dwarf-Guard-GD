@@ -9,8 +9,14 @@ public partial class BaseObject : Node2D
 
 	public override void _Ready()
 	{
-
+		Events.levelEnded += QueueFree;
 	}
+
+	public override void _ExitTree()
+	{
+		Events.levelEnded -= QueueFree;
+	}
+
 
 	public override void _Process(double delta)
 	{
@@ -26,10 +32,5 @@ public partial class BaseObject : Node2D
 	public void FindTileMap()
 	{
 		tileMap = GetTree().Root.GetNode("GameScene").GetNode<TileMap>("TileMap");
-	}
-
-	public void IdleAnimation()
-	{
-		//GetNode<Sprite2D>("Sprite2D").Play("Idle");
 	}
 }

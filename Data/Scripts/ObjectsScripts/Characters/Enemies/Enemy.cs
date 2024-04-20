@@ -20,6 +20,12 @@ public partial class Enemy : Character
 
 		base._Ready();
 	}
+	public override void _ExitTree()
+	{
+		base._ExitTree();
+		Events.playerSpawned -= GetPlayer;
+		Events.playerTurnFinished -= UpdatePoints;
+	}
 
 	public override void _Process(double delta)
 	{
@@ -29,11 +35,7 @@ public partial class Enemy : Character
 		GetPlayer();
 	}
 
-	public override void _ExitTree()
-	{
-		Events.playerSpawned -= GetPlayer;
-		Events.playerTurnFinished -= UpdatePoints;
-	}
+	
 
 	private void GetPlayer()
 	{

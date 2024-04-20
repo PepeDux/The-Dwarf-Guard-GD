@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b2xh8cto5uvph"]
+[gd_scene load_steps=19 format=3 uid="uid://b2xh8cto5uvph"]
 
 [ext_resource type="PackedScene" uid="uid://dx6sxyfguth4d" path="res://Data/Scenes/BaseObjects/BaseObject.tscn" id="1_leavt"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Character.cs" id="2_8vwku"]
@@ -6,7 +6,41 @@
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/TakeDamage.cs" id="4_akvk5"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="5_28we2"]
 
+[sub_resource type="Animation" id="Animation_qlw5a"]
+resource_name = "Idle"
+
+[sub_resource type="Animation" id="Animation_j77ws"]
+resource_name = "Die"
+
+[sub_resource type="Animation" id="Animation_6ya8v"]
+resource_name = "TakeDamage"
+
+[sub_resource type="Animation" id="Animation_g3fn6"]
+resource_name = "HorizontalAttack"
+
+[sub_resource type="Animation" id="Animation_f0m5i"]
+resource_name = "UpAttack"
+
+[sub_resource type="Animation" id="Animation_oeg3p"]
+resource_name = "DownAttack"
+
+[sub_resource type="Animation" id="Animation_3uw27"]
+resource_name = "UpDiagonalAttack"
+
+[sub_resource type="Animation" id="Animation_s75nq"]
+resource_name = "DownDiagonalAttack"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xy7h0"]
+_data = {
+"Die": SubResource("Animation_j77ws"),
+"DownAttack": SubResource("Animation_oeg3p"),
+"DownDiagonalAttack": SubResource("Animation_s75nq"),
+"HorizontalAttack": SubResource("Animation_g3fn6"),
+"Idle": SubResource("Animation_qlw5a"),
+"TakeDamage": SubResource("Animation_6ya8v"),
+"UpAttack": SubResource("Animation_f0m5i"),
+"UpDiagonalAttack": SubResource("Animation_3uw27")
+}
 
 [sub_resource type="Curve" id="Curve_oni1p"]
 min_value = -500.0
@@ -120,7 +154,7 @@ visibility_layer = 1048575
 position = Vector2(0, -11)
 emitting = false
 amount = 1
-lifetime = 0.2
+lifetime = 0.5
 one_shot = true
 texture = SubResource("ViewportTexture_amvck")
 gravity = Vector2(0, -24)

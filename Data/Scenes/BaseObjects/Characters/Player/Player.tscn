@@ -98,7 +98,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [24, 25, 26, 27]
+"values": [36, 37, 38, 39]
 }
 
 [sub_resource type="Animation" id="Animation_xt2pc"]
@@ -178,7 +178,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [30, 31, 30, 31, 30]
+"values": [42, 43, 42, 43, 42]
 }
 
 [sub_resource type="Animation" id="Animation_f7m0p"]
@@ -216,6 +216,7 @@ y_sort_enabled = false
 script = ExtResource("2_el8n6")
 maxActionPoints = 100
 diagonalMove = true
+diagonalAttack = true
 maxHP = 10
 physicalDamage = 5
 poisonDamage = 4
@@ -224,7 +225,7 @@ constitution = 20
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("3_3dqnq")
 hframes = 6
-vframes = 6
+vframes = 8
 frame = 1
 
 [node name="AnimationContoller" type="Node2D" parent="." index="1"]
