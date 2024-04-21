@@ -12,8 +12,8 @@ public partial class LevelGenerator : Node2D
 	Random random = new Random();
 
 	//Стартовый тайл от которого будут строиться последующие
-	Vector2I startTile = new Vector2I(24, 24);
-	int countTile = 10;
+	Vector2I startTile = new Vector2I(23, 24);
+	int countTile;
 
 
 
@@ -46,7 +46,7 @@ public partial class LevelGenerator : Node2D
 		//Старотовый тайл
 		Tile tile = new Tile(startTile, tileMap);
 
-		for (int i = 0; TileStorage.freeCells.Count < countTile; i++)
+		for (int i = 0; i < countTile; i++)
 		{
 			switch (random.Next(0, 4))
 			{
@@ -72,13 +72,13 @@ public partial class LevelGenerator : Node2D
 			}
 		}
 
-		for (int x = 0; x < FieldCoordinate.xFieldSize; x++)
+		for (int x = 0; x < 100; x++)
 		{
-			for (int y = 0; y < FieldCoordinate.yFieldSize; y++)
+			for (int y = 0; y < 100; y++)
 			{
-				if (TileStorage.freeCells.Contains(new Vector2I(FieldCoordinate.xStartPoint + x, FieldCoordinate.yStartPoint + y)) == false)
+				if (TileStorage.freeCells.Contains(new Vector2I(x, y)) == false)
 				{
-					TileStorage.impassableCells.Add(new Vector2I(FieldCoordinate.xStartPoint + x, FieldCoordinate.yStartPoint + y));
+					TileStorage.impassableCells.Add(new Vector2I(x, y));
 				}
 			}
 		}
@@ -91,7 +91,25 @@ public partial class LevelGenerator : Node2D
 
 	private async void SetTile(Vector2I route)
 	{
-		Tile tile = new Tile(TileStorage.freeCells.ElementAt(random.Next(0, TileStorage.freeCells.Count)) + route, tileMap);
+		for (int i = 0; i < 100; i++)
+		{
+			Vector2I coordinate = TileStorage.freeCells.ElementAt(random.Next(0, TileStorage.freeCells.Count)) + route;
+
+			if (coordinate.X > FieldCoordinate.xStartPoint &&
+				coordinate.X < FieldCoordinate.xFieldSize &&
+				coordinate.Y > FieldCoordinate.yStartPoint &&
+				coordinate.Y < FieldCoordinate.yFieldSize &&
+				TileStorage.freeCells.Contains(coordinate) == false)
+			{
+				Tile tile = new Tile(coordinate, tileMap);
+
+				break;
+			}
+			else
+			{
+				continue;
+			}
+		}
 	}
 
 	private class Tile
@@ -101,25 +119,22 @@ public partial class LevelGenerator : Node2D
 
 		public Tile(Vector2I coordinate, TileMap tileMap)
 		{
-			if (TileStorage.freeCells.Contains(coordinate) == false)
-			{
-				Random random = new Random();
+			Random random = new Random();
 
-				// Координаты массива тайловой палитры
-				int xPalette = 5;
-				int yPalette = 3;
+			// Координаты массива тайловой палитры
+			int xPalette = 5;
+			int yPalette = 3;
 
-				// Присваиваем координату тайлу
-				this.coordinate = coordinate;
-				// Выбираем случайны тайлов из палитры тайлов
-				this.paletteCoordinate = new Vector2I(random.Next(1, xPalette + 1), random.Next(1, yPalette + 1));
+			// Присваиваем координату тайлу
+			this.coordinate = coordinate;
+			// Выбираем случайны тайлов из палитры тайлов
+			this.paletteCoordinate = new Vector2I(random.Next(1, xPalette + 1), random.Next(1, yPalette + 1));
 
-				// Спавним тайл
-				tileMap.SetCell(0, this.coordinate, 0, this.paletteCoordinate);
+			// Спавним тайл
+			tileMap.SetCell(0, this.coordinate, 0, this.paletteCoordinate);
 
-				// Записываем тайл в список свободных тайлов
-				TileStorage.freeCells.Add(this.coordinate);
-			}
+			// Записываем тайл в список свободных тайлов
+			TileStorage.freeCells.Add(this.coordinate);
 		}
 	}
 }

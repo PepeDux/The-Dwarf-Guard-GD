@@ -69,13 +69,13 @@ public partial class Character : BaseObject
 
 
 	[ExportGroup("Тип передвиженя")]
-	[Export] public bool lineMove = true;
+	[Export] public bool horizontalMove = true;
 	[Export] public bool diagonalMove = false;
 
 
 
 	[ExportGroup("Напрвление атаки")]
-	[Export] public bool lineAttack = true;
+	[Export] public bool horizontalAttack = true;
 	[Export] public bool diagonalAttack = false;
 
 
@@ -87,17 +87,12 @@ public partial class Character : BaseObject
 
 
 	[ExportGroup("Дальность атаки")]
-	public int rangeAttackDistance; //Дальность дальней атаки
 	public int meleeAttackDistance = 1;
-
-
+	public int rangeAttackDistance; //Дальность дальней атаки
+	
 
 
 	#region Characteristic
-
-	// private int freeCharacteristicLevel = 0;
-	// private int CharacteristicLevel = 0;
-	// private int maxCharacteristicLevel = 10;
 
 	[ExportGroup("Здоровье")]
 	// Здоровье
@@ -153,9 +148,6 @@ public partial class Character : BaseObject
 
 	// Морозный урон
 	[Export] public int frostDamage = 0;
-
-	// Алкогольный урон
-	[Export] public int drunkennessDamage = 0;
 
 
 

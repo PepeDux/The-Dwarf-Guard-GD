@@ -194,10 +194,10 @@ tile = 50
 script = ExtResource("7_2krpp")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -3000.0
-offset_top = -3048.0
-offset_right = 3400.0
-offset_bottom = 3352.0
+offset_left = -2824.0
+offset_top = -2984.0
+offset_right = 3576.0
+offset_bottom = 3416.0
 color = Color(0.109804, 0.101961, 0.101961, 1)
 script = ExtResource("11_lk4uu")
 metadata/_edit_use_anchors_ = true

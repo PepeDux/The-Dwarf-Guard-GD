@@ -88,10 +88,10 @@ public partial class СharacteristicModifierCalculation : Node
         GetParent<Character>().meleeAttackCost += NumericCalculation(mod, modifier.meleeAttackCost);
         GetParent<Character>().rangeAttackCost += NumericCalculation(mod, modifier.rangeAttackCost);
 
-        GetParent<Character>().lineMove = BoolCalculation(mod, GetParent<Character>().lineMove, modifier.lineMove);
+        GetParent<Character>().horizontalMove = BoolCalculation(mod, GetParent<Character>().horizontalMove, modifier.horizontalMove);
         GetParent<Character>().diagonalMove = BoolCalculation(mod, GetParent<Character>().diagonalMove, modifier.diagonalMove);
 
-        GetParent<Character>().lineAttack = BoolCalculation(mod, GetParent<Character>().lineAttack, modifier.lineAttack);
+        GetParent<Character>().horizontalAttack = BoolCalculation(mod, GetParent<Character>().horizontalAttack, modifier.horizontalAttack);
         GetParent<Character>().diagonalAttack = BoolCalculation(mod, GetParent<Character>().diagonalAttack, modifier.diagonalAttack);
 
         GetParent<Character>().meleeAttack = BoolCalculation(mod, GetParent<Character>().meleeAttack, modifier.meleeAttack);
@@ -115,7 +115,6 @@ public partial class СharacteristicModifierCalculation : Node
         GetParent<Character>().poisonResist += NumericCalculation(mod, modifier.poisonResist);
         GetParent<Character>().fireResist += NumericCalculation(mod, modifier.fireResist);
         GetParent<Character>().frostResist += NumericCalculation(mod, modifier.frostResist);
-        GetParent<Character>().drunkennessResist += NumericCalculation(mod, modifier.drunkennessResist);
     }
 
     public bool BoolCalculation(int mod, bool characteristic, CharacteristicModifierData.BoolStatus boolStatus)
@@ -144,7 +143,3 @@ public partial class СharacteristicModifierCalculation : Node
         return mod * numericStatus;
     }
 }
-
-
-
-

@@ -28,7 +28,7 @@ public partial class PlayerTileManager : Node2D
 
 			CheckCells();
 
-			if (GetParent<Player>().lineMove == true)
+			if (GetParent<Player>().horizontalMove == true)
 			{
 				Move(new Vector2I(0, -1));  // Вверх
 				Move(new Vector2I(0, 1)); // Вниз

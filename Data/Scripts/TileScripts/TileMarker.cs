@@ -36,7 +36,7 @@ public partial class TileMarker : Node2D
 
 
 
-		if (player.lineMove == true)
+		if (player.horizontalMove == true)
 		{
 			SelectMoveCell(new Vector2I(0, -1));  //Вверх
 			SelectMoveCell(new Vector2I(0, 1)); //Вниз
@@ -52,7 +52,7 @@ public partial class TileMarker : Node2D
 			SelectMoveCell(new Vector2I(-1, -1));  //Влево вверх
 		}
 
-		if (player.lineAttack == true)
+		if (player.horizontalAttack == true)
 		{
 			SelectEnemyCell(new Vector2I(0, -1));  //Вверх
 			SelectEnemyCell(new Vector2I(0, 1)); //Вниз

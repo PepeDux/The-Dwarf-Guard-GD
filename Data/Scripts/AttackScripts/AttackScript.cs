@@ -35,7 +35,7 @@ public partial class AttackScript : Node
 	{
 		Vector2I attackCell = new Vector2I();
 
-		if (attacker.lineAttack == true)
+		if (attacker.horizontalAttack == true)
 		{
 			//Напрво от атакующего
 			for (int i = 0; i <= distanceAttack; i++)
@@ -174,8 +174,7 @@ public partial class AttackScript : Node
 		physicalDamage: DiceRoll.Roll(4, 1) + attacker.physicalDamage + attacker.strengthModifier,
 		poisonDamage: attacker.poisonDamage,
 		fireDamage: attacker.fireDamage,
-		frostDamage: attacker.frostDamage,
-		drunkennessDamage: attacker.drunkennessDamage
+		frostDamage: attacker.frostDamage
 		);
 	}
 }

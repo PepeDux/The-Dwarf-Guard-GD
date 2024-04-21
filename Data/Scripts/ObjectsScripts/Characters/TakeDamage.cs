@@ -31,8 +31,7 @@ public partial class TakeDamage : Node
 		int physicalDamage = 0,
 		int poisonDamage = 0,
 		int fireDamage = 0,
-		int frostDamage = 0,
-		int drunkennessDamage = 0
+		int frostDamage = 0
 		)
 	{
 		Random random = new Random();

@@ -23,9 +23,6 @@ public partial class CharacteristicModifierData : ModifierData
 	// Морозный урон
 	[Export] public int frostDamage { get; set; }
 
-	// Алкогольный урон
-	[Export] public int drunkennessDamage { get; set; }
-
 
 
 	[ExportGroup("Очки перемещения")]
@@ -62,13 +59,13 @@ public partial class CharacteristicModifierData : ModifierData
 
 
 	[ExportGroup("Тип передвиженя")]
-	[Export] public BoolStatus lineMove { get; set; }
+	[Export] public BoolStatus horizontalMove { get; set; }
 	[Export] public BoolStatus diagonalMove { get; set; }
 
 
 
 	[ExportGroup("Напрвление атаки")]
-	[Export] public BoolStatus lineAttack { get; set; }
+	[Export] public BoolStatus horizontalAttack { get; set; }
 	[Export] public BoolStatus diagonalAttack { get; set; }
 
 
@@ -125,9 +122,6 @@ public partial class CharacteristicModifierData : ModifierData
 
 	// Сопростивление морозу❄ 
 	[Export] public int frostResist { get; set; }
-
-	// Сопротивление АлКоГоЛю🍺
-	[Export] public int drunkennessResist { get; set; }
 }
 
 
