@@ -77,7 +77,7 @@ public partial class AttackScript : Node
 			{
 				attackCell = new Vector2I(attacker.coordinate.X - i, attacker.coordinate.Y + i);
 
-				Attack(attackCell, target, "UpDiagonalAttack");
+				Attack(attackCell, target, "DownDiagonalAttack");
 			}
 
 			//Вверх-направо
@@ -85,7 +85,7 @@ public partial class AttackScript : Node
 			{
 				attackCell = new Vector2I(attacker.coordinate.X + i, attacker.coordinate.Y + i);
 
-				Attack(attackCell, target, "UpDiagonalAttack");
+				Attack(attackCell, target, "DownDiagonalAttack");
 			}
 
 			//Вниз-налево
@@ -93,7 +93,7 @@ public partial class AttackScript : Node
 			{
 				attackCell = new Vector2I(attacker.coordinate.X - i, attacker.coordinate.Y - i);
 
-				Attack(attackCell, target, "DownDiagonalAttack");
+				Attack(attackCell, target, "UpDiagonalAttack");
 			}
 
 			//Вниз-направо
@@ -101,7 +101,7 @@ public partial class AttackScript : Node
 			{
 				attackCell = new Vector2I(attacker.coordinate.X + i, attacker.coordinate.Y - i);
 
-				Attack(attackCell, target, "DownDiagonalAttack");
+				Attack(attackCell, target, "UpDiagonalAttack");
 			}
 		}
 	}

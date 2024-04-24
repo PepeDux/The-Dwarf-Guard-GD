@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://vcns8byu0kqa"]
 
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/PlayerSpawner.cs" id="1_4w0t7"]
-[ext_resource type="PackedScene" uid="uid://bsmae37apy2nw" path="res://Data/Scenes/BaseObjects/Characters/Player/Player.tscn" id="2_262sn"]
+[ext_resource type="PackedScene" uid="uid://blf6xj5s7jbr8" path="res://Data/Scenes/BaseObjects/Characters/Player/Player.tscn" id="2_262sn"]
 [ext_resource type="PackedScene" uid="uid://ctrudbudq41a7" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Bread.tscn" id="2_gq0su"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/EnemySpawner.cs" id="3_2t50k"]
 [ext_resource type="PackedScene" uid="uid://cr6r080hn3sv6" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Orange.tscn" id="3_obrcb"]
 [ext_resource type="PackedScene" uid="uid://c8qd0rxwq85sv" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/SmallCake.tscn" id="4_2v82o"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/FunctionalObjectSpawner.cs" id="5_fqsji"]
-[ext_resource type="PackedScene" uid="uid://dbfigrwbx63ex" path="res://Data/Scenes/BaseObjects/Characters/Enemies/Captain/Captain.tscn" id="5_ml4ad"]
+[ext_resource type="PackedScene" uid="uid://dymhneh8nbn0j" path="res://Data/Scenes/BaseObjects/Characters/Enemies/Captain/Captain.tscn" id="5_ml4ad"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/StaticObjectSpawner.cs" id="6_titob"]
 
 [node name="Holders" type="Node2D"]

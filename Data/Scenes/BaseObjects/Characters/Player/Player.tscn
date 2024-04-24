@@ -1,268 +1,40 @@
-[gd_scene load_steps=36 format=3 uid="uid://bsmae37apy2nw"]
+[gd_scene load_steps=10 format=3 uid="uid://blf6xj5s7jbr8"]
 
 [ext_resource type="PackedScene" uid="uid://b2xh8cto5uvph" path="res://Data/Scenes/BaseObjects/Characters/Character.tscn" id="1_lghd7"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Player/Player.cs" id="2_el8n6"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/PlayerTurn.cs" id="3_1lsjb"]
 [ext_resource type="Texture2D" uid="uid://beykux031yyxv" path="res://Data/Sprites/Characters/DwarfGuard/DwarfGuard-Sheet.png" id="3_3dqnq"]
-[ext_resource type="PackedScene" uid="uid://d3ro32w1akkk5" path="res://Data/Scenes/CommonScenes/TileMarker.tscn" id="4_114d2"]
-[ext_resource type="Script" path="res://Data/Scripts/AnimationScripts/AnimationController.cs" id="4_d5p20"]
+[ext_resource type="Script" path="res://Data/Scripts/TileScripts/TileMarker.cs" id="4_vxp6a"]
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/PlayerSelectTile.cs" id="5_r4enq"]
 [ext_resource type="Script" path="res://Data/Scripts/AttackScripts/PlayerAttack.cs" id="6_4opki"]
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/PlayerTileManager.cs" id="7_j8mox"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_okx83"]
-animation = &"Die"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1rtgj"]
-animation = &"DownAttack"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rnw3c"]
-animation = &"HorizontalAttack"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vkewf"]
-animation = &"Idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_reuj4"]
-animation = &"TakeDamage"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oukj6"]
-animation = &"UpAttack"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_imuea"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4pqsn"]
-advance_mode = 2
-advance_condition = &"HorizontalAttack"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_j62f6"]
-advance_mode = 2
-advance_condition = &"UpAttack"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nusjd"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yq0oq"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vaql8"]
-advance_mode = 2
-advance_condition = &"DownAttack"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ktw4t"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_arsfg"]
-advance_mode = 2
-advance_condition = &"Die"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8mbsg"]
-advance_mode = 2
-advance_condition = &"TakeDamage"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8rv6p"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_m1fea"]
-states/Die/node = SubResource("AnimationNodeAnimation_okx83")
-states/Die/position = Vector2(629, 384)
-states/DownAttack/node = SubResource("AnimationNodeAnimation_1rtgj")
-states/DownAttack/position = Vector2(845, 145)
-states/End/position = Vector2(399, 384)
-states/HorizontalAttack/node = SubResource("AnimationNodeAnimation_rnw3c")
-states/HorizontalAttack/position = Vector2(629, 145)
-states/Idle/node = SubResource("AnimationNodeAnimation_vkewf")
-states/Idle/position = Vector2(629, 274)
-states/Start/position = Vector2(399, 274)
-states/TakeDamage/node = SubResource("AnimationNodeAnimation_reuj4")
-states/TakeDamage/position = Vector2(845, 384)
-states/UpAttack/node = SubResource("AnimationNodeAnimation_oukj6")
-states/UpAttack/position = Vector2(399, 145)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_imuea"), "Idle", "HorizontalAttack", SubResource("AnimationNodeStateMachineTransition_4pqsn"), "Idle", "UpAttack", SubResource("AnimationNodeStateMachineTransition_j62f6"), "UpAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_nusjd"), "HorizontalAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_yq0oq"), "Idle", "DownAttack", SubResource("AnimationNodeStateMachineTransition_vaql8"), "DownAttack", "Idle", SubResource("AnimationNodeStateMachineTransition_ktw4t"), "Idle", "Die", SubResource("AnimationNodeStateMachineTransition_arsfg"), "Idle", "TakeDamage", SubResource("AnimationNodeStateMachineTransition_8mbsg"), "TakeDamage", "Idle", SubResource("AnimationNodeStateMachineTransition_8rv6p")]
-graph_offset = Vector2(0, 43.5655)
-
-[sub_resource type="Animation" id="Animation_10qv3"]
-resource_name = "Die"
-length = 0.8
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [36, 37, 38, 39]
-}
-
-[sub_resource type="Animation" id="Animation_xt2pc"]
-resource_name = "DownAttack"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [12, 13, 14, 15, 16, 17]
-}
-
-[sub_resource type="Animation" id="Animation_pofei"]
-resource_name = "HorizontalAttack"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [6, 7, 8, 9, 10, 11]
-}
-
-[sub_resource type="Animation" id="Animation_6ber2"]
-resource_name = "Idle"
-length = 0.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
-}
-
-[sub_resource type="Animation" id="Animation_k6g04"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_ijybw"]
-resource_name = "TakeDamage"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [42, 43, 42, 43, 42]
-}
-
-[sub_resource type="Animation" id="Animation_f7m0p"]
-resource_name = "UpAttack"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [18, 19, 20, 21, 22, 23]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_gduxn"]
-_data = {
-"Die": SubResource("Animation_10qv3"),
-"DownAttack": SubResource("Animation_xt2pc"),
-"HorizontalAttack": SubResource("Animation_pofei"),
-"Idle": SubResource("Animation_6ber2"),
-"RESET": SubResource("Animation_k6g04"),
-"TakeDamage": SubResource("Animation_ijybw"),
-"UpAttack": SubResource("Animation_f7m0p")
-}
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_3w645"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_axnta"]
 viewport_path = NodePath("SubViewport")
 
 [node name="Player" instance=ExtResource("1_lghd7")]
-y_sort_enabled = false
 script = ExtResource("2_el8n6")
-maxActionPoints = 100
-horizontalMove = true
-diagonalMove = true
-horizontalAttack = true
 diagonalAttack = true
 maxHP = 10
 physicalDamage = 5
-poisonDamage = 4
-constitution = 20
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("3_3dqnq")
-hframes = 6
-vframes = 8
-frame = 1
 
-[node name="AnimationContoller" type="Node2D" parent="." index="1"]
-script = ExtResource("4_d5p20")
+[node name="MessageParticles" parent="." index="8"]
+texture = SubResource("ViewportTexture_axnta")
 
-[node name="AnimationTree" parent="." index="3"]
-tree_root = SubResource("AnimationNodeStateMachine_m1fea")
-anim_player = NodePath("../AnimationPlayer")
-parameters/conditions/Die = false
-parameters/conditions/DownAttack = false
-parameters/conditions/HorizontalAttack = false
-parameters/conditions/TakeDamage = false
-parameters/conditions/UpAttack = false
-
-[node name="AnimationPlayer" parent="." index="4"]
-libraries = {
-"": SubResource("AnimationLibrary_gduxn")
-}
-
-[node name="PlayerTurn" type="Node2D" parent="." index="7"]
+[node name="PlayerTurn" type="Node2D" parent="." index="10"]
 script = ExtResource("3_1lsjb")
 
-[node name="TileMarker" parent="." index="8" instance=ExtResource("4_114d2")]
+[node name="TileMarker" type="Node2D" parent="." index="11"]
+script = ExtResource("4_vxp6a")
 
-[node name="PlayerSelectTile" type="Node2D" parent="." index="9"]
+[node name="PlayerSelectTile" type="Node2D" parent="." index="12"]
 script = ExtResource("5_r4enq")
 
-[node name="PlayerAttack" type="Node2D" parent="." index="10"]
+[node name="PlayerAttack" type="Node2D" parent="." index="13"]
 script = ExtResource("6_4opki")
 
-[node name="PlayerTileManager" type="Node2D" parent="." index="11"]
+[node name="PlayerTileManager" type="Node2D" parent="." index="14"]
 script = ExtResource("7_j8mox")
-
-[node name="MessageParticles" parent="." index="14"]
-texture = SubResource("ViewportTexture_3w645")
-
-[node name="AudioStreamPlayer" parent="." index="15"]
-bus = &"Master"
