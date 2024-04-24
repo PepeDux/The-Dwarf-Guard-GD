@@ -34,38 +34,39 @@ public partial class TileMarker : Node2D
 	  
 		markerTileMap.Clear(); //Очищаем тайлмап от предыдущих тайлов-маркеров
 
-
-
-		if (player.horizontalMove == true)
+		if (GetParent<Player>().canPerformAction == true) 
 		{
-			SelectMoveCell(new Vector2I(0, -1));  //Вверх
-			SelectMoveCell(new Vector2I(0, 1)); //Вниз
-			SelectMoveCell(new Vector2I(-1, 0)); //Влево
-			SelectMoveCell(new Vector2I(1, 0));  //Вправо
-		}
+			if (player.horizontalMove == true)
+			{
+				SelectMoveCell(new Vector2I(0, -1));	//Вверх
+				SelectMoveCell(new Vector2I(0, 1));		//Вниз
+				SelectMoveCell(new Vector2I(-1, 0));	//Влево
+				SelectMoveCell(new Vector2I(1, 0));		//Вправо
+			}
 
-		if (player.diagonalMove == true)
-		{
-			SelectMoveCell(new Vector2I(1, -1));   //Вправо вверх
-			SelectMoveCell(new Vector2I(1, 1));  //Вправо вниз
-			SelectMoveCell(new Vector2I(-1, 1)); //Влево вниз
-			SelectMoveCell(new Vector2I(-1, -1));  //Влево вверх
-		}
+			if (player.diagonalMove == true)
+			{
+				SelectMoveCell(new Vector2I(1, -1));	//Вправо вверх
+				SelectMoveCell(new Vector2I(1, 1));		//Вправо вниз
+				SelectMoveCell(new Vector2I(-1, 1));	//Влево вниз
+				SelectMoveCell(new Vector2I(-1, -1));	//Влево вверх
+			}
 
-		if (player.horizontalAttack == true)
-		{
-			SelectEnemyCell(new Vector2I(0, -1));  //Вверх
-			SelectEnemyCell(new Vector2I(0, 1)); //Вниз
-			SelectEnemyCell(new Vector2I(-1, 0)); //Влево
-			SelectEnemyCell(new Vector2I(1, 0));  //Вправо
-		}
+			if (player.horizontalAttack == true)
+			{
+				SelectEnemyCell(new Vector2I(0, -1));	//Вверх
+				SelectEnemyCell(new Vector2I(0, 1));	//Вниз
+				SelectEnemyCell(new Vector2I(-1, 0));	//Влево
+				SelectEnemyCell(new Vector2I(1, 0));	//Вправо
+			}
 
-		if (player.diagonalAttack == true)
-		{
-			SelectEnemyCell(new Vector2I(1, -1));   //Вправо вверх
-			SelectEnemyCell(new Vector2I(1, 1));  //Вправо вниз
-			SelectEnemyCell(new Vector2I(-1, 1)); //Влево вниз
-			SelectEnemyCell(new Vector2I(-1, -1));  //Влево вверх
+			if (player.diagonalAttack == true)
+			{
+				SelectEnemyCell(new Vector2I(1, -1));   //Вправо вверх
+				SelectEnemyCell(new Vector2I(1, 1));	//Вправо вниз
+				SelectEnemyCell(new Vector2I(-1, 1));	//Влево вниз
+				SelectEnemyCell(new Vector2I(-1, -1));  //Влево вверх
+			}
 		}
 	}
 

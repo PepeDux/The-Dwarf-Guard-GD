@@ -1,11 +1,11 @@
 using Godot;
 using System;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
 public partial class TurnController : Node
 {
-	private int currentTurn = 1;
 	private int currentWalker = 0;
 
 	public override void _Ready()
@@ -24,7 +24,6 @@ public partial class TurnController : Node
 
 	private void AddTurn()
 	{
-		currentTurn++;
 		currentWalker = 0;
 	}
 
@@ -44,6 +43,11 @@ public partial class TurnController : Node
 			{
 				((Enemy)charac).Turn();
 			}
+		}
+
+		if (currentWalker == CharacterStorage.characters.Count) 
+		{
+			Events.finishedAllTurn?.Invoke();
 		}
 	}
 }

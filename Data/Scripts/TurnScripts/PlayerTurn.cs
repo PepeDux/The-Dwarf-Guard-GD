@@ -6,13 +6,15 @@ public partial class PlayerTurn : Node
 {
 	public override void _Process(double delta)
 	{
-		if (Input.IsActionJustPressed("SpaceClick"))
+		if (Input.IsActionJustPressed("SpaceClick") && GetParent<Player>().canPerformAction == true)
 		{
-			Events.playerTurnFinished?.Invoke();
+            GetParent<Player>().canPerformAction = false;
 
-			//GD.Print("End Turn");
+            Events.playerTurnFinished?.Invoke();
 
-			//TurnManager.turnCount += 1;
-		}
+            //GD.Print("End Turn");
+
+            //TurnManager.turnCount += 1;            
+        }
 	}
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 public partial class Enemy : Character
 {
-	private bool isFacingRight = true;
-
 	public Player player;
+
+	public bool isFacingRight = true;
 
 
 
@@ -60,7 +60,8 @@ public partial class Enemy : Character
 		}
 	}
 
-	private void Flip()
+	// Метод который зеркалит персонажа
+	public void Flip()
 	{
 		isFacingRight = !isFacingRight;
 		//получаем размеры персонажа

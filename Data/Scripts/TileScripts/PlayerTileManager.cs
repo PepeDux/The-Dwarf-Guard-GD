@@ -19,7 +19,7 @@ public partial class PlayerTileManager : Node2D
 
 	public override void _Process(double delta)
 	{
-		if (Input.IsActionJustPressed("LeftMouseClick") && GetParent<Player>().MovePoints > 0)
+		if (Input.IsActionJustPressed("LeftMouseClick") && GetParent<Player>().MovePoints > 0 && GetParent<Player>().canPerformAction == true)
 		{
 			TileStorage.RemoveCell(player);
 

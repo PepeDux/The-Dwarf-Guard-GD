@@ -97,7 +97,7 @@ public partial class Character : BaseObject
 	[ExportGroup("Здоровье")]
 	// Здоровье
 	[Export] private int hP;
-	[Export] public int maxHP = 100;
+	[Export] public int maxHP = 10;
 	public int HP
 	{
 		get
@@ -112,7 +112,7 @@ public partial class Character : BaseObject
 
 	[ExportGroup("КД")]
 	// КД
-	[Export] public int AC = 10;
+	[Export] public int AC = 5;
 
 	[ExportGroup("Монетки")]
 	// Монетки
@@ -358,7 +358,6 @@ public partial class Character : BaseObject
 	{
 		base._Ready();
 
-		FindTileMap();
 		UpdateCoordinate();
 		UpdatePoints();
 		UpdateCharacteristicModifier();

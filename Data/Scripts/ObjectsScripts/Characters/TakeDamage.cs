@@ -125,6 +125,7 @@ public partial class TakeDamage : Node
 		if (GetParent() is Player)
 		{
 			Events.playerDied?.Invoke();
+			GetParent<Player>().canPerformAction = false;
 
 			GetTree().ChangeSceneToFile("res://Data/Scenes/UI/GameOver/GameOver.tscn");
 		}

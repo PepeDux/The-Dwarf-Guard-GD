@@ -38,3 +38,10 @@ script = ExtResource("6_4opki")
 
 [node name="PlayerTileManager" type="Node2D" parent="." index="14"]
 script = ExtResource("7_j8mox")
+
+[node name="Timer" type="Timer" parent="." index="15"]
+process_callback = 0
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

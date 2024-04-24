@@ -7,16 +7,18 @@ public partial class FunctionalObject : BaseObject
 	[Export] Resource modifier;
 	public override void _Ready()
 	{
+		base._Ready();
+
 		// Подписываемся на событие
 		Events.characterMoved += CheckWalkerCell;
 
-		FindTileMap();
 		UpdateCoordinate();
 	}
 
 	public override void _ExitTree()
 	{
 		base._ExitTree();
+
 		Events.characterMoved -= CheckWalkerCell;
 	}
 

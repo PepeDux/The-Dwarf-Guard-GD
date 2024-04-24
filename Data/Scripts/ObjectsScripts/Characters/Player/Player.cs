@@ -5,14 +5,17 @@ public partial class Player : Character
 {
 	private bool isFacingRight = true;
 
+	public bool canPerformAction = true;
 
 
 	public override void _Ready()
 	{
+		base._Ready();
+
 		//Подписываемся на события	
 		Events.playerTurnFinished += UpdatePoints;
-
-		base._Ready();
+		Events.finishedAllTurn += StartTimer;
+		Events.finishedPlayerAction += StartTimer;
 
 		Events.playerSpawned?.Invoke();
 	}
@@ -20,7 +23,10 @@ public partial class Player : Character
 	public override void _ExitTree()
 	{
 		base._ExitTree();
+
 		Events.playerTurnFinished -= UpdatePoints;
+		Events.finishedAllTurn -= StartTimer;
+		Events.finishedPlayerAction -= StartTimer;
 	}
 
 	
@@ -29,10 +35,11 @@ public partial class Player : Character
 	{
 		base._Process(delta);
 
-		MoveOrientation(); //Отвечает за направление
+		MoveOrientation();
 	}
 
-	void MoveOrientation()
+	// Метод который разворачивает персонажа в соответсвии с положением курсора
+	private void MoveOrientation()
 	{
 		if (GetGlobalMousePosition().X < Position.X && isFacingRight == true)
 		{
@@ -44,7 +51,8 @@ public partial class Player : Character
 		}
 	}
 
-	private void Flip()
+	// Метод который зеркалит персонажа
+	public void Flip()
 	{
 		isFacingRight = !isFacingRight;
 		//получаем размеры персонажа
@@ -53,5 +61,18 @@ public partial class Player : Character
 		theScale.X *= -1;
 		//задаем новый размер персонажа, равный старому, но зеркально отраженный
 		GetNode<Sprite2D>("Sprite2D").Scale = theScale;
+	}
+
+
+	// Метод который запускает таймер
+	private void StartTimer()
+	{
+		GetNode<Timer>("Timer").Start();
+	}
+	
+	// Сигнао на окончание таймера. После окончания разрешает игроку дальше интерактировать с окружением
+	private void _on_timer_timeout()
+	{
+		canPerformAction = true;
 	}
 }
