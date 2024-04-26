@@ -3,8 +3,12 @@ using System;
 
 public partial class CharacteristicModifierData : ModifierData
 {
+	[ExportGroup("Перманентность")]
+	// Данная переменная отвечает за то, будет ли эффект модификатора распространяться на все этажи или
+	// же будет распространяться только на 1 этаж (ПОКА ЧТО АКТАЛЬНО ТОЛЬКО ДЛЯ ПОДИБРАЕМЫХ ОБЪЕКТОВ ПОДОБРАННЫХ ИГРОКОМ)
+	[Export] public bool permanent { get; set; }
+
 	[ExportGroup("Здоровье")]
-	// Здоровье
 	[Export] public int HP { get; set; }
 	[Export] public int maxHP { get; set; }
 
@@ -97,7 +101,7 @@ public partial class CharacteristicModifierData : ModifierData
 
 	[Export] public int dexterity { get; set; }
 
-	[Export] public int intel { get; set; }
+	[Export] public int inteligence { get; set; }
 
 	[Export] public int constitution { get; set; }
 

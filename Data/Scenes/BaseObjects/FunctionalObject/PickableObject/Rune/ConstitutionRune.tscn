@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://bk3irmsiyrlcn"]
+
+[ext_resource type="PackedScene" uid="uid://cmrkj2k4p38k0" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Rune/Rune.tscn" id="1_emkqd"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/CharacteristicModifierData.cs" id="2_awxn0"]
+
+[sub_resource type="Resource" id="Resource_et4eu"]
+resource_local_to_scene = true
+script = ExtResource("2_awxn0")
+permanent = true
+HP = 0
+maxHP = 0
+physicalDamage = 0
+poisonDamage = 0
+fireDamage = 0
+frostDamage = 0
+movePoints = 0
+maxMovePoints = 0
+actionPoints = 0
+maxActionPoints = 0
+beerPoints = 0
+maxBeerPoints = 0
+moveCost = 0
+meleeAttackCost = 0
+rangeAttackCost = 0
+horizontalMove = 0
+diagonalMove = 0
+horizontalAttack = 0
+diagonalAttack = 0
+meleeAttack = 0
+rangeAttack = 0
+rangeAttackDistance = 0
+meleeAttackDistance = 0
+AC = 0
+money = 0
+strength = 0
+dexterity = 0
+inteligence = 0
+constitution = 1
+wisdom = 0
+drunkenness = 0
+physicalResist = 0
+poisonResist = 0
+fireResist = 0
+frostResist = 0
+
+[node name="ConstitutionRune" instance=ExtResource("1_emkqd")]
+modifier = SubResource("Resource_et4eu")
+
+[node name="Sprite2D" parent="." index="0"]
+frame = 1

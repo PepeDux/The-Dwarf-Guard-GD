@@ -1,7 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://dejp63chsiv2j"]
+[gd_scene load_steps=6 format=3 uid="uid://dejp63chsiv2j"]
 
 [ext_resource type="PackedScene" uid="uid://djcta1m6ke4i5" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/PickableObject.tscn" id="1_nrndo"]
 [ext_resource type="Texture2D" uid="uid://b3ippq5fk4nkl" path="res://Data/Sprites/PickableObjects/Coins/Coin.png" id="2_vut13"]
+
+[sub_resource type="Animation" id="Animation_oe5da"]
+resource_name = "Idle"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 4, 7, 10, 13, 16, 19, 4]
+}
+
+[sub_resource type="Animation" id="Animation_eu78l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vklh1"]
+_data = {
+"Idle": SubResource("Animation_oe5da"),
+"RESET": SubResource("Animation_eu78l")
+}
 
 [node name="Coin" instance=ExtResource("1_nrndo")]
 
@@ -10,3 +48,8 @@ texture = ExtResource("2_vut13")
 hframes = 3
 vframes = 7
 frame = 1
+
+[node name="AnimationPlayer" parent="." index="3"]
+libraries = {
+"": SubResource("AnimationLibrary_vklh1")
+}

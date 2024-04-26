@@ -46,17 +46,18 @@ public partial class SpawnModifierCalculation : Node
 
 	public void Сalculation(SpawnModifierData spawn, int mod)
 	{
-		GetParent<LevelInfo>().melee += mod * spawn.melee;
-		GetParent<LevelInfo>().range += mod * spawn.range;
-		GetParent<LevelInfo>().captain += mod * spawn.captain;
-		GetParent<LevelInfo>().wizard += mod * spawn.wizard;
+		GetParent<LevelInfo>().meleeCount += mod * spawn.meleeCount;
+		GetParent<LevelInfo>().rangeCount += mod * spawn.rangeCount;
+		GetParent<LevelInfo>().captainCount += mod * spawn.captainCount;
+		GetParent<LevelInfo>().wizardCount += mod * spawn.wizardCount;
 
-		GetParent<LevelInfo>().wall += mod * spawn.wall;
-		GetParent<LevelInfo>().pit += mod * spawn.pit;
+		GetParent<LevelInfo>().wallCount += mod * spawn.wallCount;
+		GetParent<LevelInfo>().pitCount += mod * spawn.pitCount;
 
-		GetParent<LevelInfo>().trap += mod * spawn.trap;
-		GetParent<LevelInfo>().food += mod * spawn.food;
-		GetParent<LevelInfo>().money += mod * spawn.money;
-		GetParent<LevelInfo>().crystal += mod * spawn.crystal;
+		GetParent<LevelInfo>().trapCount += mod * spawn.trapCount;
+		GetParent<LevelInfo>().foodCount += mod * spawn.foodCount;
+		GetParent<LevelInfo>().moneyCount += mod * spawn.moneyCount;
+		GetParent<LevelInfo>().crystalCount += mod * spawn.crystalCount;
+		GetParent<LevelInfo>().runeCount += mod * spawn.runeCount;
 	}
 }

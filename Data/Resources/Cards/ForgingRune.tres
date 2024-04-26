@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://eo3g5o530v3g"]
+
+[ext_resource type="Resource" uid="uid://8yfjju4n8frt" path="res://Data/Resources/SpawnModifier/SpawnModifier.tres" id="1_ki5yu"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_q76lo"]
+
+[resource]
+script = ExtResource("2_q76lo")
+modifier = ExtResource("1_ki5yu")
+name = "Ковка рун"
+cardDescription = "Вы создаете на 1 руну больше на этаж. тук-тук-тук-тук-тук-дзинь"
+cardStrength = 2
+type = 0
+accessory = 2

@@ -97,7 +97,17 @@ public partial class Card : BaseButton
 	public override void ButtonPressed()
 	{
 		base.ButtonPressed();
-		
+
+		AddModifier();
+
+		// Вызов события при окончании выбора карты
+		Events.endSelectCard?.Invoke();
+	}
+
+	// Добавляет модификаторы к LevelModifier
+	private void AddModifier()
+	{
+
 		// Враги
 		if (cardPositive.modifier is CharacteristicModifierData && cardPositive.accessory == CardData.Accessory.enemy)
 		{
@@ -107,7 +117,7 @@ public partial class Card : BaseButton
 		{
 			levelModifier.enemyModifiers.Add(cardNegative.modifier as CharacteristicModifierData);
 		}
-		
+
 		// Игрок
 		if (cardPositive.modifier is CharacteristicModifierData && cardPositive.accessory == CardData.Accessory.player)
 		{
@@ -121,22 +131,13 @@ public partial class Card : BaseButton
 		// Спавн
 		if (cardPositive.modifier is SpawnModifierData && cardPositive.accessory == CardData.Accessory.spawn)
 		{
-			GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").GetNode<SpawnModifierCalculation>("SpawnCalculation").AddSpawn(cardPositive.modifier as SpawnModifierData);
-
+			GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").GetNode<SpawnModifierCalculation>("SpawnModifierCalculation").AddSpawn(cardPositive.modifier as SpawnModifierData);
 		}
 		if (cardNegative.modifier is SpawnModifierData && cardNegative.accessory == CardData.Accessory.spawn)
 		{
-			GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").GetNode<SpawnModifierCalculation>("SpawnCalculation").AddSpawn(cardNegative.modifier as SpawnModifierData);
-			GD.Print("Модификатор карты: " + cardNegative.GetType() + " Для кого: " + cardNegative.accessory);
+			GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").GetNode<SpawnModifierCalculation>("SpawnModifierCalculation").AddSpawn(cardNegative.modifier as SpawnModifierData);
 		}
-
-
-
-		// Вызов события при окончании выбора карты
-		Events.endSelectCard?.Invoke();
 	}
-
-
 
 	private void EndSelectCard()
 	{

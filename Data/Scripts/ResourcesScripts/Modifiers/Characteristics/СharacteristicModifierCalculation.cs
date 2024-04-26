@@ -105,7 +105,7 @@ public partial class СharacteristicModifierCalculation : Node
 
         GetParent<Character>().Strength += NumericCalculation(mod, modifier.strength);
         GetParent<Character>().Dexterity += NumericCalculation(mod, modifier.dexterity);
-        GetParent<Character>().Inteligence += NumericCalculation(mod, modifier.intel);
+        GetParent<Character>().Inteligence += NumericCalculation(mod, modifier.inteligence);
         GetParent<Character>().Constitution += NumericCalculation(mod, modifier.constitution);
         GetParent<Character>().Wisdom += NumericCalculation(mod, modifier.wisdom);
 

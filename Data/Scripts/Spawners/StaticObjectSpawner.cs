@@ -23,12 +23,12 @@ public partial class StaticObjectSpawner : Spawner
 
     public void SpawnStaticTileObject()
 	{
-		for (int i = 0; i < levelInfo.wall; i++)
+		for (int i = 0; i < levelInfo.wallCount; i++)
 		{
 			Spawn(wall, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < levelInfo.pit; i++)
+		for (int i = 0; i < levelInfo.pitCount; i++)
 		{
 			Spawn(pit, Vector2I.Zero);
 		}

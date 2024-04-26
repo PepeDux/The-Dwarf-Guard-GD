@@ -14,8 +14,6 @@ public partial class TileStorage : Node2D
 	public static List<Vector2I> occupiedCells = new List<Vector2I>();
 	// Клетки на которые нельзя наступить
 	public static List<Vector2I> impassableCells = new List<Vector2I>();
-	// Функциональные объекты
-	public static List<Vector2I> functionalCells = new List<Vector2I>();
 
 
 
@@ -23,8 +21,8 @@ public partial class TileStorage : Node2D
 	public static void ClearAllCells()
 	{
 		freeCells.Clear();
-		impassableCells.Clear();
-		functionalCells.Clear();
+        occupiedCells.Clear();
+        impassableCells.Clear();
 	}
 
 	// Метод для добавления объекта в хранилище тайлов

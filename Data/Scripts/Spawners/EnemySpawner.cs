@@ -24,22 +24,22 @@ public partial class EnemySpawner : Spawner
 
     public void SpawnEnemy()
 	{
-		for (int i = 0; i < levelInfo.melee; i++)
+		for (int i = 0; i < levelInfo.meleeCount; i++)
 		{
 			Spawn(melee, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < levelInfo.range; i++)
+		for (int i = 0; i < levelInfo.rangeCount; i++)
 		{
 			Spawn(range, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < levelInfo.captain; i++)
+		for (int i = 0; i < levelInfo.captainCount; i++)
 		{
 			Spawn(captain, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < levelInfo.wizard; i++)
+		for (int i = 0; i < levelInfo.wizardCount; i++)
 		{
 			Spawn(wizard, Vector2I.Zero);
 		}

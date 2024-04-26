@@ -1,14 +1,39 @@
-[gd_scene load_steps=10 format=3 uid="uid://vcns8byu0kqa"]
+[gd_scene load_steps=35 format=3 uid="uid://vcns8byu0kqa"]
 
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/PlayerSpawner.cs" id="1_4w0t7"]
 [ext_resource type="PackedScene" uid="uid://blf6xj5s7jbr8" path="res://Data/Scenes/BaseObjects/Characters/Player/Player.tscn" id="2_262sn"]
 [ext_resource type="PackedScene" uid="uid://ctrudbudq41a7" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Bread.tscn" id="2_gq0su"]
+[ext_resource type="PackedScene" uid="uid://rgyrgqg4224k" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Apple.tscn" id="2_iat1i"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/EnemySpawner.cs" id="3_2t50k"]
 [ext_resource type="PackedScene" uid="uid://cr6r080hn3sv6" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Orange.tscn" id="3_obrcb"]
+[ext_resource type="PackedScene" uid="uid://b60cgwtkhdlq1" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Banana.tscn" id="3_rhpv7"]
 [ext_resource type="PackedScene" uid="uid://c8qd0rxwq85sv" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/SmallCake.tscn" id="4_2v82o"]
+[ext_resource type="PackedScene" uid="uid://c4xxlsmf7do23" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Beer.tscn" id="4_fvuhm"]
+[ext_resource type="PackedScene" uid="uid://fsdpmd5uflkh" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/BigBeer.tscn" id="5_aug31"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/FunctionalObjectSpawner.cs" id="5_fqsji"]
 [ext_resource type="PackedScene" uid="uid://dymhneh8nbn0j" path="res://Data/Scenes/BaseObjects/Characters/Enemies/Captain/Captain.tscn" id="5_ml4ad"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/StaticObjectSpawner.cs" id="6_titob"]
+[ext_resource type="PackedScene" uid="uid://bhxywyramgd1p" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Cake.tscn" id="7_81eyp"]
+[ext_resource type="PackedScene" uid="uid://7jxbkulfabc3" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Cheese.tscn" id="8_g7uhm"]
+[ext_resource type="PackedScene" uid="uid://cowd8wwvaceow" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Cherry.tscn" id="9_0hbtt"]
+[ext_resource type="PackedScene" uid="uid://c0iqglnececer" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Chiken.tscn" id="10_dkir3"]
+[ext_resource type="PackedScene" uid="uid://1rq220iu04gd" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Egg.tscn" id="11_oyqbe"]
+[ext_resource type="PackedScene" uid="uid://64lo0hvjlyq4" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Grape.tscn" id="12_mk8xq"]
+[ext_resource type="PackedScene" uid="uid://c1cd184ubgsob" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Pear.tscn" id="14_4h4px"]
+[ext_resource type="PackedScene" uid="uid://bad6wwqiftw5t" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Plum.tscn" id="15_nmgrh"]
+[ext_resource type="PackedScene" uid="uid://rncuebtx8hex" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Sausage.tscn" id="16_ruhen"]
+[ext_resource type="PackedScene" uid="uid://b2bsgyuway4ft" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/SmallSausage.tscn" id="18_v8423"]
+[ext_resource type="PackedScene" uid="uid://cpeoxd8ofxrk2" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Watermelon.tscn" id="19_y6480"]
+[ext_resource type="PackedScene" uid="uid://cf01mrhvcysl4" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Crystal/BlueCrystal.tscn" id="20_1h2ir"]
+[ext_resource type="PackedScene" uid="uid://kmbhd0m40div" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Crystal/GreenCrystal.tscn" id="21_87tvx"]
+[ext_resource type="PackedScene" uid="uid://de6ce12wtp1ub" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Crystal/PurpleCrystal.tscn" id="22_t3n8h"]
+[ext_resource type="PackedScene" uid="uid://drl5jfl3c2k8w" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Crystal/RedCrystal.tscn" id="23_2iql2"]
+[ext_resource type="PackedScene" uid="uid://clh0w4vwp5bpe" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Crystal/YellowCrystal.tscn" id="24_yhm64"]
+[ext_resource type="PackedScene" uid="uid://bk3irmsiyrlcn" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Rune/ConstitutionRune.tscn" id="25_0jes4"]
+[ext_resource type="PackedScene" uid="uid://crvi5328iqt0w" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Rune/DexterityRune.tscn" id="26_xjjky"]
+[ext_resource type="PackedScene" uid="uid://bfnebtysb8aqk" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Rune/InteligenceRune.tscn" id="27_ij81f"]
+[ext_resource type="PackedScene" uid="uid://2lmuwyw410nn" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Rune/StrengthRune.tscn" id="28_niybl"]
+[ext_resource type="PackedScene" uid="uid://e48baug1koqi" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Rune/WisdomRune.tscn" id="29_cra4w"]
 
 [node name="Holders" type="Node2D"]
 y_sort_enabled = true
@@ -16,7 +41,9 @@ y_sort_enabled = true
 [node name="FunctioanalObjectsHolder" type="Node2D" parent="."]
 y_sort_enabled = true
 script = ExtResource("5_fqsji")
-food = Array[PackedScene]([ExtResource("2_gq0su"), ExtResource("3_obrcb"), ExtResource("4_2v82o")])
+foods = Array[PackedScene]([ExtResource("2_iat1i"), ExtResource("3_rhpv7"), ExtResource("4_fvuhm"), ExtResource("5_aug31"), ExtResource("2_gq0su"), ExtResource("7_81eyp"), ExtResource("8_g7uhm"), ExtResource("9_0hbtt"), ExtResource("10_dkir3"), ExtResource("11_oyqbe"), ExtResource("12_mk8xq"), ExtResource("3_obrcb"), ExtResource("14_4h4px"), ExtResource("15_nmgrh"), ExtResource("16_ruhen"), ExtResource("4_2v82o"), ExtResource("18_v8423"), ExtResource("19_y6480")])
+crystals = Array[PackedScene]([ExtResource("20_1h2ir"), ExtResource("21_87tvx"), ExtResource("22_t3n8h"), ExtResource("23_2iql2"), ExtResource("24_yhm64")])
+runes = Array[PackedScene]([ExtResource("25_0jes4"), ExtResource("26_xjjky"), ExtResource("27_ij81f"), ExtResource("28_niybl"), ExtResource("29_cra4w")])
 
 [node name="PlayerHolder" type="Node2D" parent="."]
 y_sort_enabled = true

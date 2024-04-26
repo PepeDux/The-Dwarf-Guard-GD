@@ -186,9 +186,10 @@ position = Vector2(-245, -135)
 
 [node name="LevelInfo" type="Node2D" parent="."]
 script = ExtResource("9_lclkq")
-captain = 2
-food = 4
-tile = 50
+captainCount = 2
+foodCount = 2
+runeCount = 3
+tileCount = 30
 
 [node name="SpawnModifierCalculation" type="Node2D" parent="LevelInfo"]
 script = ExtResource("7_2krpp")

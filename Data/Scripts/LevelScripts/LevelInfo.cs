@@ -5,26 +5,25 @@ public partial class LevelInfo : Node
 {
 	[ExportGroup("Юниты на уровне")]
 	// Колличество юнитов которые нужно заспавнить при старте уровня
-	[Export] public int melee; //Ближники 
-	[Export] public int range; //Дальники
-	[Export] public int captain; //Капитаны
-	[Export] public int wizard; //Колдуны
+	[Export] public int meleeCount; // Ближники 
+	[Export] public int rangeCount; // Дальники
+	[Export] public int captainCount; // Капитаны
+	[Export] public int wizardCount; // Колдуны
 
 	[ExportGroup("Статичные объекты")]
 	// Колличество статичных объектов которые нужно заспавнить при старте уровня
-	[Export] public int wall; //Стены
-	[Export] public int pit; //Ямы
+	[Export] public int wallCount; // Стены
+	[Export] public int pitCount; // Ямы
 
 	[ExportGroup("Функциональные объекты")]
 	// Колличество функциональных объектов которые нужно заспавнить при старте уровня
-	[Export] public int trap; //Ловушки
-	[Export] public int food; //Еда
-	[Export] public int money; //Монеты
-	[Export] public int crystal; //Кристаллы
+	[Export] public int trapCount; // Ловушки
+	[Export] public int foodCount; // Еда
+	[Export] public int moneyCount; // Монеты
+	[Export] public int crystalCount; // Кристаллы
+    [Export] public int runeCount; // Кристаллы
 
-	[ExportGroup("Тайлы")]
+    [ExportGroup("Тайлы")]
 	// Колличество тайлов которые нужно заспавнить при стрте уровня
-    [Export] public int tile; //Ловушки
-
-
+    [Export] public int tileCount;
 }

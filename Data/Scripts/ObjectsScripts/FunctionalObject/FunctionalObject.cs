@@ -33,15 +33,31 @@ public partial class FunctionalObject : BaseObject
 				// Немного ждем, для того чтобы звук точно проигрался
 				await Task.Delay(10);
 
-				// Добавляем модификатор к персонажу, наступившему на этот объект
-				character.GetNode<СharacteristicModifierCalculation>("СharacteristicModifierCalculation").AddModifier(modifier as CharacteristicModifierData, false);
+				CharacteristicModifierData mod = modifier as CharacteristicModifierData;
 
-				// Отписываемся от события
-				Events.characterMoved -= CheckWalkerCell;
+
+
+				if (mod.permanent == true)
+				{
+					if (character is Player) 
+					{
+						// Добавляем модификатор к общему пулу модификаторов игрока
+						GetTree().Root.GetNode("GameScene").GetNode<LevelModifier>("LevelModifier").playerModifiers.Add(modifier as CharacteristicModifierData);
+
+						// Добавляем модификатор к персонажу, наступившему на этот объект
+						character.GetNode<СharacteristicModifierCalculation>("СharacteristicModifierCalculation").AddModifier(modifier as CharacteristicModifierData, false);
+					}
+				}
+				else if (mod.permanent == false)
+				{
+					// Добавляем модификатор к персонажу, наступившему на этот объект
+					character.GetNode<СharacteristicModifierCalculation>("СharacteristicModifierCalculation").AddModifier(modifier as CharacteristicModifierData, false);
+				}
+				
+
 
 				// Удаляем объект со сцены
 				this.QueueFree();
-
 			}
 		}
 	}

@@ -5,32 +5,32 @@ public partial class SpawnModifierData : ModifierData
 {
 	[ExportGroup("Юниты на уровне")]
 
-	[Export] public int melee { get; set; }
+	[Export] public int meleeCount { get; set; }
 
-	[Export] public int range { get; set; }
+	[Export] public int rangeCount { get; set; }
 
-	[Export] public int captain { get; set; }
+	[Export] public int captainCount { get; set; }
 
-	[Export] public int wizard { get; set; }
+	[Export] public int wizardCount { get; set; }
 
 
 
 	[ExportGroup("Статичные объекты")]
 
-	[Export] public int wall { get; set; }
+	[Export] public int wallCount { get; set; }
 
-	[Export] public int pit { get; set; }
+	[Export] public int pitCount { get; set; }
 
 
 
 	[ExportGroup("Функциональные объекты")]
 
-	[Export] public int trap { get; set; }
+	[Export] public int trapCount { get; set; }
 
-	[Export] public int food { get; set; }
+	[Export] public int foodCount { get; set; }
 
-	[Export] public int money { get; set; }
+	[Export] public int moneyCount { get; set; }
 
-	[Export] public int crystal { get; set; }
-
+	[Export] public int crystalCount { get; set; }
+    [Export] public int runeCount { get; set; }
 }

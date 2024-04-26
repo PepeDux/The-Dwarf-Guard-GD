@@ -398,7 +398,7 @@ public partial class Character : BaseObject
 
 	private void UpdateAC()
 	{
-		AC = 10 + dexterityModifier;
+		AC += dexterityModifier;
 	}
 
 	private void UpdateCharacteristicModifier()
