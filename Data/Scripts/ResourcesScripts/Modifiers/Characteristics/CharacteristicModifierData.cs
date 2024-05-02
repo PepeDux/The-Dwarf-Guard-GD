@@ -9,8 +9,8 @@ public partial class CharacteristicModifierData : ModifierData
 	[Export] public bool permanent { get; set; }
 
 	[ExportGroup("Здоровье")]
-	[Export] public int HP { get; set; }
 	[Export] public int maxHP { get; set; }
+	[Export] public int HP { get; set; }
 
 
 
@@ -30,20 +30,20 @@ public partial class CharacteristicModifierData : ModifierData
 
 
 	[ExportGroup("Очки перемещения")]
-	[Export] public int movePoints { get; set; }
 	[Export] public int maxMovePoints { get; set; }
+	[Export] public int movePoints { get; set; }
 
 
 
 	[ExportGroup("Очки действия")]
-	[Export] public int actionPoints { get; set; }
 	[Export] public int maxActionPoints { get; set; }
+	[Export] public int actionPoints { get; set; }
 
 
 
 	[ExportGroup("Очки пива")]
-	[Export] public int beerPoints { get; set; }
 	[Export] public int maxBeerPoints { get; set; }
+	[Export] public int beerPoints { get; set; }
 
 
 

@@ -3,10 +3,10 @@ using System;
 
 public partial class EnemySpawner : Spawner
 {
-	[Export] public PackedScene[] melee;
-	[Export] public PackedScene[] range;
 	[Export] public PackedScene[] captain;
-	[Export] public PackedScene[] wizard;
+	[Export] public PackedScene[] infantry;
+	[Export] public PackedScene[] rifleman;
+	[Export] public PackedScene[] spellcaster;
 
 
 
@@ -24,24 +24,24 @@ public partial class EnemySpawner : Spawner
 
     public void SpawnEnemy()
 	{
-		for (int i = 0; i < levelInfo.meleeCount; i++)
+        for (int i = 0; i < levelInfo.CaptainCount; i++)
+        {
+            Spawn(captain, Vector2I.Zero);
+        }
+
+        for (int i = 0; i < levelInfo.InfantryCount; i++)
 		{
-			Spawn(melee, Vector2I.Zero);
+			Spawn(infantry, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < levelInfo.rangeCount; i++)
+		for (int i = 0; i < levelInfo.RiflemanCount; i++)
 		{
-			Spawn(range, Vector2I.Zero);
+			Spawn(rifleman, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < levelInfo.captainCount; i++)
+		for (int i = 0; i < levelInfo.SpellcasterCount; i++)
 		{
-			Spawn(captain, Vector2I.Zero);
-		}
-
-		for (int i = 0; i < levelInfo.wizardCount; i++)
-		{
-			Spawn(wizard, Vector2I.Zero);
+			Spawn(spellcaster, Vector2I.Zero);
 		}
 	}
 }

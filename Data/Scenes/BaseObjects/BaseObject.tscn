@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dx6sxyfguth4d"]
+[gd_scene load_steps=12 format=3 uid="uid://dx6sxyfguth4d"]
 
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/BaseObject.cs" id="1_sulsi"]
 [ext_resource type="Script" path="res://Data/Scripts/AnimationScripts/AnimationController.cs" id="2_epauy"]
@@ -9,7 +9,6 @@
 [ext_resource type="AudioStream" uid="uid://1thejoj2lt2d" path="res://Data/Audio/Sound/Hurt/Hurt4.wav" id="7_2vvtf"]
 [ext_resource type="AudioStream" uid="uid://41gu6pjgamy2" path="res://Data/Audio/Sound/Move/Move2.wav" id="8_l4i8t"]
 [ext_resource type="AudioStream" uid="uid://dv424i1qoveao" path="res://Data/Audio/Sound/Miss/Miss1.wav" id="9_kv1n6"]
-[ext_resource type="AudioStream" uid="uid://e5cck14xyj0h" path="res://Data/Audio/Sound/Miss/Miss2.wav" id="10_nta2f"]
 [ext_resource type="AudioStream" uid="uid://cbhjai3ibwdt" path="res://Data/Audio/Sound/Miss/Miss3.wav" id="11_03hhs"]
 [ext_resource type="AudioStream" uid="uid://jynmkarttuov" path="res://Data/Audio/Sound/Pick/Pick1.wav" id="12_ot1ju"]
 
@@ -31,5 +30,5 @@ bus = &"Sounds"
 script = ExtResource("3_p7g0i")
 hurtSounds = Array[AudioStreamWAV]([ExtResource("4_irsqu"), ExtResource("5_ea871"), ExtResource("6_hl67k"), ExtResource("7_2vvtf")])
 moveSounds = Array[AudioStreamWAV]([ExtResource("8_l4i8t")])
-missSound = Array[AudioStreamWAV]([ExtResource("9_kv1n6"), ExtResource("10_nta2f"), ExtResource("11_03hhs")])
+missSound = Array[AudioStreamWAV]([ExtResource("9_kv1n6"), ExtResource("11_03hhs")])
 pickSound = Array[AudioStreamWAV]([ExtResource("12_ot1ju")])

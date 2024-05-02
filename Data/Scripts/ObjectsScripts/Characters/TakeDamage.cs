@@ -46,7 +46,7 @@ public partial class TakeDamage : Node
 		//target.HP -= frostDamage * (1 - target.frostResist / 100);
 		//target.HP -= drunkennessDamage * (1 - target.drunkennessResist / 100);
 
-		totalDamage += physicalDamage - target.physicalResist;
+		totalDamage += physicalDamage - target.PhysicalResist;
 
 		if (isCriticalDamage == true)
 		{
@@ -127,11 +127,13 @@ public partial class TakeDamage : Node
 			Events.playerDied?.Invoke();
 			GetParent<Player>().canPerformAction = false;
 
+			// Вызывает экран GAME OVER
 			GetTree().ChangeSceneToFile("res://Data/Scenes/UI/GameOver/GameOver.tscn");
 		}
 
 		if (GetParent() is Captain)
 		{
+			// Заканчиваем левел при смерти капитана
 			Events.levelEnded?.Invoke();
 		}
 

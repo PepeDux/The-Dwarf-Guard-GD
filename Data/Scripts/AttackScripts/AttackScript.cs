@@ -22,16 +22,16 @@ public partial class AttackScript : Node
 
 		if (attacker.meleeAttack == true)
 		{
-			FindTarget(attacker.meleeAttackDistance, target);
+			FindTarget(attacker.meleeAttackDistance, target, attacker.MeleeAttackCost);
 		}
 
 		if (attacker.rangeAttack == true)
 		{
-			FindTarget(FieldCoordinate.xFieldSize, target);
+			FindTarget(FieldCoordinate.xFieldSize, target, attacker.RangeAttackCost);
 		}
 	}
 
-	public void FindTarget(int distanceAttack, Character target)
+	public void FindTarget(int distanceAttack, Character target, int attackCost)
 	{
 		Vector2I attackCell = new Vector2I();
 
@@ -42,7 +42,7 @@ public partial class AttackScript : Node
 			{
 				attackCell = new Vector2I(attacker.coordinate.X + i, attacker.coordinate.Y);
 
-				Attack(attackCell, target, "HorizontalAttack");
+				Attack(attackCell, target, "HorizontalAttack", attackCost);
 			}
 
 			//Налево от атакующего
@@ -50,7 +50,7 @@ public partial class AttackScript : Node
 			{
 				attackCell = new Vector2I(attacker.coordinate.X - i, attacker.coordinate.Y);
 
-				Attack(attackCell, target, "HorizontalAttack");
+				Attack(attackCell, target, "HorizontalAttack", attackCost);
 			}
 
 			//Вниз от атакующего
@@ -58,7 +58,7 @@ public partial class AttackScript : Node
 			{
 				attackCell = new Vector2I(attacker.coordinate.X, attacker.coordinate.Y + i);
 
-				Attack(attackCell, target, "DownAttack");
+				Attack(attackCell, target, "DownAttack", attackCost);
 			}
 
 			//Вверх от атакующего
@@ -66,7 +66,7 @@ public partial class AttackScript : Node
 			{
 				attackCell = new Vector2I(attacker.coordinate.X, attacker.coordinate.Y - i);
 
-				Attack(attackCell, target, "UpAttack");
+				Attack(attackCell, target, "UpAttack", attackCost);
 			}
 		}
 
@@ -77,7 +77,7 @@ public partial class AttackScript : Node
 			{
 				attackCell = new Vector2I(attacker.coordinate.X - i, attacker.coordinate.Y + i);
 
-				Attack(attackCell, target, "DownDiagonalAttack");
+				Attack(attackCell, target, "DownDiagonalAttack", attackCost);
 			}
 
 			//Вверх-направо
@@ -85,7 +85,7 @@ public partial class AttackScript : Node
 			{
 				attackCell = new Vector2I(attacker.coordinate.X + i, attacker.coordinate.Y + i);
 
-				Attack(attackCell, target, "DownDiagonalAttack");
+				Attack(attackCell, target, "DownDiagonalAttack", attackCost);
 			}
 
 			//Вниз-налево
@@ -93,7 +93,7 @@ public partial class AttackScript : Node
 			{
 				attackCell = new Vector2I(attacker.coordinate.X - i, attacker.coordinate.Y - i);
 
-				Attack(attackCell, target, "UpDiagonalAttack");
+				Attack(attackCell, target, "UpDiagonalAttack", attackCost);
 			}
 
 			//Вниз-направо
@@ -101,12 +101,12 @@ public partial class AttackScript : Node
 			{
 				attackCell = new Vector2I(attacker.coordinate.X + i, attacker.coordinate.Y - i);
 
-				Attack(attackCell, target, "UpDiagonalAttack");
+				Attack(attackCell, target, "UpDiagonalAttack", attackCost);
 			}
 		}
 	}
 
-	public void Attack(Vector2I attackCell, Character target, string sideAttack)
+	public void Attack(Vector2I attackCell, Character target, string sideAttack, int attackCost)
 	{
 		// Переменная отвечает за то, является ли атака критической
 		bool isCriticalDamage = false;
@@ -161,6 +161,7 @@ public partial class AttackScript : Node
 				target.GetNode<CpuParticles2D>("MessageParticles").Emitting = true;
 			}
 
+			// Отнимаем у атакуещго цену атаки
 			attacker.ActionPoints -= attackCost;
 		}
 	}
@@ -171,10 +172,10 @@ public partial class AttackScript : Node
 	{
 		target.GetNode<TakeDamage>("TakeDamage").Take(
 		isCriticalDamage: isCriticalDamage,
-		physicalDamage: DiceRoll.Roll(4, 1) + attacker.physicalDamage + attacker.strengthModifier,
-		poisonDamage: attacker.poisonDamage,
-		fireDamage: attacker.fireDamage,
-		frostDamage: attacker.frostDamage
+		physicalDamage: DiceRoll.Roll(4, 1) + attacker.PhysicalDamage + attacker.strengthModifier,
+		poisonDamage: attacker.PoisonDamage,
+		fireDamage: attacker.FireDamage,
+		frostDamage: attacker.FrostDamage
 		);
 	}
 }

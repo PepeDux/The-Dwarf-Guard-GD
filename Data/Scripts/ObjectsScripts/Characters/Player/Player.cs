@@ -41,13 +41,16 @@ public partial class Player : Character
 	// Метод который разворачивает персонажа в соответсвии с положением курсора
 	private void MoveOrientation()
 	{
-		if (GetGlobalMousePosition().X < Position.X && isFacingRight == true)
+		if (canPerformAction == true) 
 		{
-			Flip();
-		}
-		else if (GetGlobalMousePosition().X > Position.X && isFacingRight == false)
-		{
-			Flip();
+			if (GetGlobalMousePosition().X < Position.X && isFacingRight == true)
+			{
+				Flip();
+			}
+			else if (GetGlobalMousePosition().X > Position.X && isFacingRight == false)
+			{
+				Flip();
+			}
 		}
 	}
 

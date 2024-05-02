@@ -14,6 +14,10 @@ config/name="The Dwarf Guard"
 run/main_scene="res://Data/Scenes/CoreScene/CoreScene.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 
+[audio]
+
+buses/default_bus_layout="res://Data/Audio/Bus/default_bus_layout.tres"
+
 [display]
 
 window/size/viewport_width=490
@@ -25,6 +29,10 @@ mouse_cursor/custom_image="res://Data/UI/Cursors/Arrow.png"
 
 project/assembly_name="The Dwarf Guard"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/sprite_cutter/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
@@ -33,6 +41,8 @@ folder_colors={
 "res://Data/Scripts/AudioScripts/": "teal",
 "res://Data/Scripts/CameraScripts/": "orange",
 "res://Data/Scripts/CardsScripts/": "blue",
+"res://Data/Scripts/DiceScripts/": "gray",
+"res://Data/Scripts/Events/": "gray",
 "res://Data/Scripts/GlobalScripts/": "gray",
 "res://Data/Scripts/LevelScripts/": "yellow",
 "res://Data/Scripts/ObjectsScripts/": "red",

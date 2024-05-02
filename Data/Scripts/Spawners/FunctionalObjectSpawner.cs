@@ -25,27 +25,27 @@ public partial class FunctionalObjectSpawner : Spawner
 
 	public void SpawnFunctionalObject()
 	{
-		for (int i = 0; i < levelInfo.trapCount; i++)
+		for (int i = 0; i < levelInfo.TrapCount; i++)
 		{
 			Spawn(traps, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < levelInfo.foodCount; i++)
+		for (int i = 0; i < levelInfo.FoodCount; i++)
 		{
 			Spawn(foods, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < levelInfo.moneyCount; i++)
+		for (int i = 0; i < levelInfo.MoneyCount; i++)
 		{
 			Spawn(moneys, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < levelInfo.crystalCount; i++)
+		for (int i = 0; i < levelInfo.CrystalCount; i++)
 		{
 			Spawn(crystals, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < levelInfo.runeCount; i++)
+		for (int i = 0; i < levelInfo.RuneCount; i++)
 		{
 			Spawn(runes, Vector2I.Zero);
 		}

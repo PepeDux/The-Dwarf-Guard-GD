@@ -12,24 +12,50 @@ public partial class Character : BaseObject
 
 	[ExportGroup ("Очки перемещения")]
 	// Очки перемещения
-	[Export] private int movePoints = 0;
-	[Export] public int maxMovePoints = 6;
-	public int MovePoints
-	{ 
-		get 
-		{ 
-			return movePoints; 
-		} 
-		set 
-		{ 
-			movePoints = Math.Clamp(value, 0, maxMovePoints);
-		} 
+	[Export] private int maxMovePoints = 6;
+	public int MaxMovePoints
+	{
+		get
+		{
+			return maxMovePoints;
+		}
+		set
+		{
+			maxMovePoints = Math.Clamp(value, 1, 20);
+		}
 	}
+
+	[Export] private int movePoints = 0;
+	public int MovePoints
+	{
+		get
+		{
+			return movePoints;
+		}
+		set
+		{
+			movePoints = Math.Clamp(value, 0, maxMovePoints);
+		}
+	}
+	
+	
 
 	[ExportGroup("Очки действия")]
 	// Очки действий
+	[Export] private int maxActionPoints = 2;
+	public int MaxActionPoints
+	{
+		get
+		{
+			return maxActionPoints;
+		}
+		set
+		{
+			maxActionPoints = Math.Clamp(value, 1, 50);
+		}
+	}
+
 	[Export] private int actionPoints = 0;
-	[Export] public int maxActionPoints = 2;
 	public int ActionPoints
 	{
 		get
@@ -45,8 +71,20 @@ public partial class Character : BaseObject
 
 	[ExportGroup("Очки пива")]
 	// Очки пива
+	[Export] private int maxBeerPoints = 6;
+	public int MaxBeerPoints
+	{
+		get
+		{
+			return maxBeerPoints;
+		}
+		set
+		{
+			maxBeerPoints = Math.Clamp(value, 0, 50);
+		}
+	}
+
 	[Export] private int beerPoints = 0;
-	[Export] public int maxBeerPoints = 6;
 	public int BeerPoints
 	{
 		get
@@ -62,9 +100,47 @@ public partial class Character : BaseObject
 
 
 	[ExportGroup("Цена действий")]
-	[Export] public int moveCost = 1;
-	[Export] public int meleeAttackCost = 1;
-	[Export] public int rangeAttackCost = 2;
+	// Цена передвижений
+	[Export] private int moveCost = 1;
+	public int MoveCost
+	{
+		get
+		{
+			return moveCost;
+		}
+		set
+		{
+			moveCost = Math.Clamp(value, 1, 20);
+		}
+	}
+
+	// Цена ближней атаки
+	[Export] private int meleeAttackCost = 1;
+	public int MeleeAttackCost
+	{
+		get
+		{
+			return meleeAttackCost;
+		}
+		set
+		{
+			meleeAttackCost = Math.Clamp(value, 1, 20);
+		}
+	}
+
+	// Цена дальней атаки
+	[Export] private int rangeAttackCost = 1;
+	public int RangeAttackCost
+	{
+		get
+		{
+			return rangeAttackCost;
+		}
+		set
+		{
+			rangeAttackCost = Math.Clamp(value, 1, 20);
+		}
+	}
 
 
 
@@ -96,8 +172,20 @@ public partial class Character : BaseObject
 
 	[ExportGroup("Здоровье")]
 	// Здоровье
+	[Export] private int maxHP = 10;
+	public int MaxHP
+	{
+		get
+		{
+			return maxHP;
+		}
+		set
+		{
+			maxHP = Math.Clamp(value, 0, 1000);
+		}
+	}
+
 	[Export] private int hP;
-	[Export] public int maxHP = 10;
 	public int HP
 	{
 		get
@@ -112,11 +200,22 @@ public partial class Character : BaseObject
 
 	[ExportGroup("КД")]
 	// КД
-	[Export] public int AC = 5;
+	[Export] private int ac = 5;
+	public int AC
+	{
+		get
+		{
+			return ac;
+		}
+		set
+		{
+			ac = Math.Clamp(value, 0, 20);
+		}
+	}
 
 	[ExportGroup("Монетки")]
 	// Монетки
-	[Export] public int money = 0;
+	[Export] private int money = 0;
 	public int Money
 	{
 		get
@@ -138,16 +237,60 @@ public partial class Character : BaseObject
 	// 3 переменная - бонусный урон, отрицательный или положительный
 
 	// Физический урон
-	[Export] public int physicalDamage = 0;
+	[Export] private int physicalDamage = 0;
+	public int PhysicalDamage
+	{
+		get
+		{
+			return physicalDamage;
+		}
+		set
+		{
+			physicalDamage = Math.Clamp(value, 0, 50);
+		}
+	}
 
 	// Ядовитый урон
-	[Export] public int poisonDamage = 0;
+	[Export] private int poisonDamage = 0;
+	public int PoisonDamage
+	{
+		get
+		{
+			return poisonDamage;
+		}
+		set
+		{
+			poisonDamage = Math.Clamp(value, 0, 50);
+		}
+	}
 
 	// Огненный урон
-	[Export] public int fireDamage = 0;
+	[Export] private int fireDamage = 0;
+	public int FireDamage
+	{
+		get
+		{
+			return fireDamage;
+		}
+		set
+		{
+			fireDamage = Math.Clamp(value, 0, 50);
+		}
+	}
 
 	// Морозный урон
-	[Export] public int frostDamage = 0;
+	[Export] private int frostDamage = 0;
+	public int FrostDamage
+	{
+		get
+		{
+			return frostDamage;
+		}
+		set
+		{
+			frostDamage = Math.Clamp(value, 0, 50);
+		}
+	}
 
 
 
@@ -157,7 +300,7 @@ public partial class Character : BaseObject
 	public int maxXP;
 
 	// Уровень
-	public int level = 0;
+	private int level = 0;
 	public int maxLevel = 10;
 	public int Level
 	{
@@ -263,7 +406,7 @@ public partial class Character : BaseObject
 	// 3 переменная - максимальное допустимое значение характеристики
 
 	//Опьянение
-	public int drunkenness = 0;
+	private int drunkenness = 0;
 	public int Drunkenness
 	{
 		get
@@ -280,7 +423,7 @@ public partial class Character : BaseObject
 
 	[ExportGroup("Сопротивления к урону")]
 	// Сопротивление физическому
-	public int physicalResist = 0;
+	private int physicalResist = 0;
 	public int PhysicalResist
 	{
 		get
@@ -294,7 +437,7 @@ public partial class Character : BaseObject
 	}
 
 	// Сопротивление ядам
-	public int poisonResist = 0;
+	private int poisonResist = 0;
 	public int PoisonResist
 	{
 		get
@@ -308,7 +451,7 @@ public partial class Character : BaseObject
 	}
 
 	// Сопротивление огню
-	public int fireResist = 0;
+	private int fireResist = 0;
 	public int FireResist
 	{
 		get
@@ -322,7 +465,7 @@ public partial class Character : BaseObject
 	}
 
 	// Сопростивление морозу
-	public int frostResist = 0;
+	private int frostResist = 0;
 	public int FrostResist
 	{
 		get
@@ -336,7 +479,7 @@ public partial class Character : BaseObject
 	}
 
 	// Сопротивление АлКоГоЛю
-	public int drunkennessResist = 0;
+	private int drunkennessResist = 0;
 	public int DrunkennessResist
 	{
 		get
@@ -385,15 +528,15 @@ public partial class Character : BaseObject
 
 	public void UpdatePoints()
 	{
-		movePoints = maxMovePoints;
-		actionPoints = maxActionPoints;
-		beerPoints = maxBeerPoints;
+		movePoints = MaxMovePoints;
+		actionPoints = MaxActionPoints;
+		beerPoints = MaxBeerPoints;
 	}
 
 	private void UpdateHP()
 	{
-		maxHP += constitutionModifier * 3;
-		HP = maxHP;
+		MaxHP += constitutionModifier * 3;
+		HP = MaxHP;
 	}
 
 	private void UpdateAC()

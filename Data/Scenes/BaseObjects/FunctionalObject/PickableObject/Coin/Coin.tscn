@@ -1,7 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dejp63chsiv2j"]
+[gd_scene load_steps=10 format=3 uid="uid://dejp63chsiv2j"]
 
 [ext_resource type="PackedScene" uid="uid://djcta1m6ke4i5" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/PickableObject.tscn" id="1_nrndo"]
+[ext_resource type="Resource" uid="uid://c4csjm5g77rer" path="res://Data/Resources/CharacteristicModifier/CharacteristicModifier.tres" id="2_0ed3m"]
 [ext_resource type="Texture2D" uid="uid://b3ippq5fk4nkl" path="res://Data/Sprites/PickableObjects/Coins/Coin.png" id="2_vut13"]
+[ext_resource type="AudioStream" uid="uid://dv424i1qoveao" path="res://Data/Audio/Sound/Miss/Miss1.wav" id="4_ang2n"]
+[ext_resource type="AudioStream" uid="uid://e5cck14xyj0h" path="res://Data/Audio/Sound/Miss/Miss2.wav" id="5_p6hco"]
+[ext_resource type="AudioStream" uid="uid://cbhjai3ibwdt" path="res://Data/Audio/Sound/Miss/Miss3.wav" id="6_3f28v"]
 
 [sub_resource type="Animation" id="Animation_oe5da"]
 resource_name = "Idle"
@@ -42,6 +46,7 @@ _data = {
 }
 
 [node name="Coin" instance=ExtResource("1_nrndo")]
+modifier = ExtResource("2_0ed3m")
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_vut13")
@@ -53,3 +58,6 @@ frame = 1
 libraries = {
 "": SubResource("AnimationLibrary_vklh1")
 }
+
+[node name="AudioStreamPlayer" parent="." index="4"]
+missSound = Array[AudioStreamWAV]([ExtResource("4_ang2n"), ExtResource("5_p6hco"), ExtResource("6_3f28v")])

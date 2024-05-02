@@ -76,7 +76,7 @@ public partial class Enemy : Character
 	{
 		List<Vector2I> pathToTarget = GetNode<Pathfinding>("Pathfinding").pathToTarget;
 
-		if (MovePoints >= moveCost && player != null)
+		if (MovePoints >= MoveCost && player != null)
 		{
 			pathToTarget.Clear();
 			pathToTarget = GetNode<Pathfinding>("Pathfinding").GetPath(player.coordinate);
@@ -92,7 +92,7 @@ public partial class Enemy : Character
 				// Проигрываем звук ходьбы
 				GetNode<AudioController>("AudioStreamPlayer").PlaySound("Move", 0.8f, 1f);
 				// Отнимаем стоимость шага
-				MovePoints -= moveCost;
+				MovePoints -= MoveCost;
 				//
 				Events.characterMoved?.Invoke();
 
@@ -104,7 +104,7 @@ public partial class Enemy : Character
 
 	public async void Turn()
 	{
-		while (MovePoints >= moveCost)
+		while (MovePoints >= MoveCost)
 		{
 			await Task.Delay(250);
 
@@ -118,7 +118,7 @@ public partial class Enemy : Character
 			}
 		}
 
-		while (ActionPoints >= meleeAttackCost || ActionPoints >= rangeAttackCost && player != null)
+		while (ActionPoints >= MeleeAttackCost || ActionPoints >= RangeAttackCost && player != null)
 		{
 			await Task.Delay(250);
 

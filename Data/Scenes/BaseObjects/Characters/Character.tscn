@@ -1,9 +1,8 @@
-[gd_scene load_steps=44 format=3 uid="uid://b2xh8cto5uvph"]
+[gd_scene load_steps=43 format=3 uid="uid://b2xh8cto5uvph"]
 
 [ext_resource type="PackedScene" uid="uid://dx6sxyfguth4d" path="res://Data/Scenes/BaseObjects/BaseObject.tscn" id="1_leavt"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Character.cs" id="2_8vwku"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/СharacteristicModifierCalculation.cs" id="3_442ou"]
-[ext_resource type="Texture2D" uid="uid://pxro8nu1tmp3" path="res://Data/Sprites/Cards/card1.png" id="3_er7t4"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/TakeDamage.cs" id="4_akvk5"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="5_28we2"]
 
@@ -188,6 +187,21 @@ tracks/0/keys = {
 "values": [0, 1, 2]
 }
 
+[sub_resource type="Animation" id="Animation_5l7ax"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1]
+}
+
 [sub_resource type="Animation" id="Animation_6ya8v"]
 resource_name = "TakeDamage"
 length = 0.5
@@ -236,21 +250,6 @@ tracks/0/keys = {
 "values": [12, 12, 13, 14, 15, 16, 17]
 }
 
-[sub_resource type="Animation" id="Animation_5l7ax"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xy7h0"]
 _data = {
 "Die": SubResource("Animation_j77ws"),
@@ -286,15 +285,15 @@ viewport_path = NodePath("SubViewport")
 [node name="Character" instance=ExtResource("1_leavt")]
 script = ExtResource("2_8vwku")
 loot = null
+maxMovePoints = 3
 movePoints = 0
-maxMovePoints = 6
+maxActionPoints = 1
 actionPoints = 0
-maxActionPoints = 2
 beerPoints = 0
-maxBeerPoints = 6
+maxBeerPoints = 0
 moveCost = 1
 meleeAttackCost = 1
-rangeAttackCost = 2
+rangeAttackCost = 1
 horizontalMove = true
 diagonalMove = false
 horizontalAttack = true
@@ -302,8 +301,8 @@ diagonalAttack = false
 meleeAttack = true
 rangeAttack = false
 hP = 0
-maxHP = 100
-AC = 10
+maxHP = 10
+ac = 5
 money = 0
 physicalDamage = 0
 poisonDamage = 0
@@ -316,7 +315,6 @@ inteligence = 10
 wisdom = 10
 
 [node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("3_er7t4")
 hframes = 6
 vframes = 8
 frame = 1

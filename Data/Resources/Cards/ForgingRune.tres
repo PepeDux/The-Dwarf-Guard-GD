@@ -1,13 +1,29 @@
-[gd_resource type="Resource" load_steps=3 format=3 uid="uid://eo3g5o530v3g"]
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://eo3g5o530v3g"]
 
-[ext_resource type="Resource" uid="uid://8yfjju4n8frt" path="res://Data/Resources/SpawnModifier/SpawnModifier.tres" id="1_ki5yu"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Spawn/SpawnModifierData.cs" id="1_2xi0p"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_q76lo"]
 
+[sub_resource type="Resource" id="Resource_o85ue"]
+resource_local_to_scene = true
+script = ExtResource("1_2xi0p")
+meleeCount = 0
+rangeCount = 0
+captainCount = 0
+wizardCount = 0
+wallCount = 0
+pitCount = 0
+trapCount = 0
+foodCount = 0
+moneyCount = 0
+crystalCount = 0
+runeCount = 1
+
 [resource]
+resource_local_to_scene = true
 script = ExtResource("2_q76lo")
-modifier = ExtResource("1_ki5yu")
+modifier = SubResource("Resource_o85ue")
 name = "Ковка рун"
 cardDescription = "Вы создаете на 1 руну больше на этаж. тук-тук-тук-тук-тук-дзинь"
-cardStrength = 2
+cardStrength = 5
 type = 0
 accessory = 2

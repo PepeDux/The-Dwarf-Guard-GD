@@ -6,7 +6,7 @@ public partial class PlayerAttack : AttackScript
 {
 	public override void _Process(double delta)
 	{
-		if (Input.IsActionJustPressed("RightMouseClick") && GetParent<Player>().ActionPoints >= GetParent<Player>().meleeAttackCost && GetParent<Player>().canPerformAction == true)
+		if (Input.IsActionJustPressed("RightMouseClick") && GetParent<Player>().ActionPoints >= GetParent<Player>().MeleeAttackCost && GetParent<Player>().canPerformAction == true)
 		{
 			foreach (var target in CharacterStorage.characters)
 			{

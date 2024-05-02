@@ -42,9 +42,9 @@ public partial class UIManager : Node
 
 		if (target != null) 
 		{
-			HPLabel.Text = $"HP: {target.HP}/{target.maxHP}";
-			MovePointsLabel.Text = $"Move: {target.MovePoints}/{target.maxMovePoints}";
-			ActionPointsLabel.Text = $"Action: {target.ActionPoints}/{target.maxActionPoints}";
+			HPLabel.Text = $"HP: {target.HP}/{target.MaxHP}";
+			MovePointsLabel.Text = $"Move: {target.MovePoints}/{target.MaxMovePoints}";
+			ActionPointsLabel.Text = $"Action: {target.ActionPoints}/{target.MaxActionPoints}";
 			ACLabel.Text = $"AC: {target.AC}";
 
 			strengthLabel.Text = $"STR: {target.Strength} ({target.strengthModifier})";

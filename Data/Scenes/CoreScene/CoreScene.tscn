@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://uixniamcrmq2"]
+[gd_scene load_steps=25 format=3 uid="uid://uixniamcrmq2"]
 
 [ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS-Shader/VHS-Shader.tscn" id="1_5seje"]
 [ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/CoreScene/Holders.tscn" id="1_78hkp"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/TileStorage.cs" id="16_si61r"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/CharacterStorage.cs" id="17_qpsic"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/ClearHolder.cs" id="18_m7nb1"]
+[ext_resource type="Script" path="res://Data/Scripts/test.cs" id="20_3r02s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_thffw"]
 texture = ExtResource("1_f5wi8")
@@ -186,10 +187,10 @@ position = Vector2(-245, -135)
 
 [node name="LevelInfo" type="Node2D" parent="."]
 script = ExtResource("9_lclkq")
-captainCount = 2
+captainCount = 1
+infantryCount = 2
 foodCount = 2
-runeCount = 3
-tileCount = 30
+tileCount = 40
 
 [node name="SpawnModifierCalculation" type="Node2D" parent="LevelInfo"]
 script = ExtResource("7_2krpp")
@@ -246,3 +247,6 @@ offset_bottom = 448.0
 [node name="PauseMenu" parent="." instance=ExtResource("1_b3wt7")]
 visible = false
 position = Vector2(144, 256)
+
+[node name="TEST" type="Node2D" parent="."]
+script = ExtResource("20_3r02s")

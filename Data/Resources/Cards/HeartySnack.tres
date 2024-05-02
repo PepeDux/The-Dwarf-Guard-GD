@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://djaoklswprgaf"]
+
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Spawn/SpawnModifierData.cs" id="1_ypaos"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_l5cdg"]
+
+[sub_resource type="Resource" id="Resource_agdcf"]
+resource_local_to_scene = true
+script = ExtResource("1_ypaos")
+meleeCount = 0
+rangeCount = 0
+captainCount = 0
+wizardCount = 0
+wallCount = 0
+pitCount = 0
+trapCount = 0
+foodCount = 1
+moneyCount = 0
+crystalCount = 0
+runeCount = 0
+
+[resource]
+script = ExtResource("2_l5cdg")
+modifier = SubResource("Resource_agdcf")
+name = "Сытный перекус"
+cardDescription = "Добавляет на 1 еду больге на уровень. МММ вкуснотище"
+cardStrength = 3
+type = 0
+accessory = 2

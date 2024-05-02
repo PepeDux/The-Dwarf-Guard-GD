@@ -10,12 +10,6 @@ public partial class PressEscBlink : Label
         Blink();
     }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-		
-	}
-
 	private async void Blink()
 	{
 		while(true)

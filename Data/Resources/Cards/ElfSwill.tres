@@ -1,0 +1,55 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://dppnmbma0avcl"]
+
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/CharacteristicModifierData.cs" id="1_rdtn8"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_3lbbf"]
+[ext_resource type="Texture2D" uid="uid://c7w7fmjhtqq0k" path="res://Data/Sprites/Cards/Card_02.png" id="3_ywfmv"]
+
+[sub_resource type="Resource" id="Resource_6kgpo"]
+resource_local_to_scene = true
+script = ExtResource("1_rdtn8")
+permanent = true
+maxHP = 0
+HP = 0
+physicalDamage = 0
+poisonDamage = 0
+fireDamage = 0
+frostDamage = 0
+maxMovePoints = 0
+movePoints = 0
+maxActionPoints = 0
+actionPoints = 0
+maxBeerPoints = 0
+beerPoints = 0
+moveCost = 0
+meleeAttackCost = 0
+rangeAttackCost = 0
+horizontalMove = 0
+diagonalMove = 0
+horizontalAttack = 0
+diagonalAttack = 0
+meleeAttack = 0
+rangeAttack = 0
+rangeAttackDistance = 0
+meleeAttackDistance = 0
+AC = 0
+money = 0
+strength = -1
+dexterity = -1
+inteligence = -1
+constitution = -1
+wisdom = -1
+drunkenness = 0
+physicalResist = 0
+poisonResist = 0
+fireResist = 0
+frostResist = 0
+
+[resource]
+script = ExtResource("2_3lbbf")
+modifier = SubResource("Resource_6kgpo")
+texture = ExtResource("3_ywfmv")
+name = "Эльфийское пойло"
+cardDescription = "-1 ко всем характеристикам игрока. Тьфу, какая гадость"
+cardStrength = 3
+type = 1
+accessory = 0

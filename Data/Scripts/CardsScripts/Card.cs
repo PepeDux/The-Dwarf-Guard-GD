@@ -71,15 +71,7 @@ public partial class Card : BaseButton
 
 	private void MakeCard()
 	{
-		// Выбор позитивной карты
-		cardPositive = cards.Where(c => c.type == CardData.Type.positive).OrderBy(с => Guid.NewGuid()).FirstOrDefault();
-		// Выбор негативной карты исхояд из силы позитимвной карты в диапазоне -1 - +1
-		cardNegative =
-			cards.Where(c => c.type == CardData.Type.negative &&
-			(c.cardStrength == cardPositive.cardStrength ||
-			c.cardStrength == cardPositive.cardStrength - 1 ||
-			c.cardStrength == cardPositive.cardStrength + 1))
-			.OrderBy(с => Guid.NewGuid()).FirstOrDefault();
+		FindCards();
 
 		// Задаем название позитивной карты
 		cardNamePositive.Text = cardPositive.name;
@@ -92,6 +84,24 @@ public partial class Card : BaseButton
 		// Задаем изображение карты
 		cardImagePositive.Texture = cardPositive.texture;
 		cardImageNegative.Texture = cardNegative.texture;
+	}
+
+	private void FindCards()
+	{
+		// Выбор позитивной карты
+		cardPositive = cards.Where(c => c.type == CardData.Type.positive).OrderBy(с => Guid.NewGuid()).FirstOrDefault();
+		// Выбор негативной карты исхояд из силы позитимвной карты в диапазоне -1 - +1
+		cardNegative =
+			cards.Where(c => c.type == CardData.Type.negative &&
+			(c.cardStrength == cardPositive.cardStrength ||
+			c.cardStrength == cardPositive.cardStrength - 1 ||
+			c.cardStrength == cardPositive.cardStrength + 1))
+			.OrderBy(с => Guid.NewGuid()).FirstOrDefault();
+
+		if (cardNegative == null)
+		{
+			cardNegative = cards.Where(c => c.type == CardData.Type.negative).OrderBy(с => Guid.NewGuid()).FirstOrDefault();
+		}
 	}
 
 	public override void ButtonPressed()

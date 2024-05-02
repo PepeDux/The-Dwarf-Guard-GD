@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://vcns8byu0kqa"]
+[gd_scene load_steps=36 format=3 uid="uid://vcns8byu0kqa"]
 
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/PlayerSpawner.cs" id="1_4w0t7"]
 [ext_resource type="PackedScene" uid="uid://blf6xj5s7jbr8" path="res://Data/Scenes/BaseObjects/Characters/Player/Player.tscn" id="2_262sn"]
@@ -34,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://bfnebtysb8aqk" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Rune/InteligenceRune.tscn" id="27_ij81f"]
 [ext_resource type="PackedScene" uid="uid://2lmuwyw410nn" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Rune/StrengthRune.tscn" id="28_niybl"]
 [ext_resource type="PackedScene" uid="uid://e48baug1koqi" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Rune/WisdomRune.tscn" id="29_cra4w"]
+[ext_resource type="PackedScene" uid="uid://cvpjexd3xcygf" path="res://Data/Scenes/BaseObjects/Characters/Enemies/Infantry/Infantry.tscn" id="33_r2sec"]
 
 [node name="Holders" type="Node2D"]
 y_sort_enabled = true
@@ -53,6 +54,7 @@ player = Array[PackedScene]([ExtResource("2_262sn")])
 [node name="EnemiesHolder" type="Node2D" parent="."]
 y_sort_enabled = true
 script = ExtResource("3_2t50k")
+infantry = Array[PackedScene]([ExtResource("33_r2sec")])
 captain = Array[PackedScene]([ExtResource("5_ml4ad")])
 
 [node name="StaticObjectsHolder" type="Node2D" parent="."]

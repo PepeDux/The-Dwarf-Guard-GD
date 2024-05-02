@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dfb4qql0u0vr0"]
+
+[ext_resource type="Resource" uid="uid://8yfjju4n8frt" path="res://Data/Resources/SpawnModifier/SpawnModifier.tres" id="1_07kob"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_daxsa"]
+
+[resource]
+script = ExtResource("2_daxsa")
+modifier = ExtResource("1_07kob")
+name = "Голод"
+cardDescription = "Уменьшает еду на 2 на уровне"
+cardStrength = 3
+type = 1
+accessory = 2

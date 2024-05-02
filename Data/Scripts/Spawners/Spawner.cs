@@ -20,25 +20,26 @@ public partial class Spawner : Node2D
 	}
 
 	// Метод для спауна объектов
-	public void Spawn(PackedScene[] spawnableScenes, Vector2I spawnPosition)
+	public void Spawn(PackedScene[] spawnableScenes, Vector2I spawnCoordinate)
 	{
 		// Если позиция спауна не указана, спауним на случайной координате
-		if (spawnPosition == Vector2I.Zero)
+		if (spawnCoordinate == Vector2I.Zero)
 		{
 			TrySpawnWithRandomCoordinate(spawnableScenes);
 		}
 		else
 		{
 			// Иначе спауним на указанной позиции
-			TrySpawnAtPosition(spawnableScenes, spawnPosition);
+			this.spawnCoordinate = spawnCoordinate;
+			SpawnAtCoordinate(spawnableScenes, spawnCoordinate);			
 		}
 	}
 
 	// Попытка спауна на случайной координате
 	private void TrySpawnWithRandomCoordinate(PackedScene[] spawnableScenes)
 	{
-		// Пробуем спаунить 20 раз
-		for (int i = 0; i < 20; i++)
+		// Пробуем спаунить 100 раз
+		for (int i = 0; i < 100; i++)
 		{
 			if (TryGetRandomCoordinate())
 			{
@@ -65,7 +66,7 @@ public partial class Spawner : Node2D
 	}
 
 	// Попытка спауна на указанной позиции
-	private void TrySpawnAtPosition(PackedScene[] spawnableScenes, Vector2I spawnPosition)
+	private void SpawnAtCoordinate(PackedScene[] spawnableScenes, Vector2I spawnCoordinate)
 	{
 		SpawnObject(spawnableScenes[random.Next(0, spawnableScenes.Length)]);
 	}
