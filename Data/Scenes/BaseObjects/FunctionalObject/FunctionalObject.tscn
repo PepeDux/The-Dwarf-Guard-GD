@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dh70ptfl2c5th"]
 
 [ext_resource type="PackedScene" uid="uid://dx6sxyfguth4d" path="res://Data/Scenes/BaseObjects/BaseObject.tscn" id="1_tm7yi"]
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/FunctionalObject/FunctionalObject.cs" id="2_l31jq"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/FunctionalObject/FunctionalObject.cs" id="2_7b3w6"]
 
 [node name="FunctionalObject" instance=ExtResource("1_tm7yi")]
-script = ExtResource("2_l31jq")
+script = ExtResource("2_7b3w6")
