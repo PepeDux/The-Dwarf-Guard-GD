@@ -16,7 +16,6 @@ viewport_path = NodePath("SubViewport")
 script = ExtResource("2_el8n6")
 maxMovePoints = 6
 maxActionPoints = 10
-ac = 5
 physicalDamage = 5
 
 [node name="Sprite2D" parent="." index="0"]

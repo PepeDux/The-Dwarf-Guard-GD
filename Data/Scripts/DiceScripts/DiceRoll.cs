@@ -15,7 +15,7 @@ public partial class DiceRoll
         for (int i = 0; i < roll; i++)
         {
             // Сумируем результаты
-            total += random.Next(0, diceEdge + 1);
+            total += random.Next(1, diceEdge + 1);
         }
 
         return total;

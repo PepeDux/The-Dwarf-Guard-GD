@@ -1,7 +1,8 @@
-[gd_scene load_steps=36 format=3 uid="uid://vcns8byu0kqa"]
+[gd_scene load_steps=37 format=3 uid="uid://vcns8byu0kqa"]
 
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/PlayerSpawner.cs" id="1_4w0t7"]
 [ext_resource type="PackedScene" uid="uid://blf6xj5s7jbr8" path="res://Data/Scenes/BaseObjects/Characters/Player/Player.tscn" id="2_262sn"]
+[ext_resource type="PackedScene" uid="uid://xbbme4tmtfb7" path="res://Data/Scenes/BaseObjects/FunctionalObject/Traps/SpikeTrap.tscn" id="2_eautm"]
 [ext_resource type="PackedScene" uid="uid://ctrudbudq41a7" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Bread.tscn" id="2_gq0su"]
 [ext_resource type="PackedScene" uid="uid://rgyrgqg4224k" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Apple.tscn" id="2_iat1i"]
 [ext_resource type="Script" path="res://Data/Scripts/Spawners/EnemySpawner.cs" id="3_2t50k"]
@@ -42,6 +43,7 @@ y_sort_enabled = true
 [node name="FunctioanalObjectsHolder" type="Node2D" parent="."]
 y_sort_enabled = true
 script = ExtResource("5_fqsji")
+traps = Array[PackedScene]([ExtResource("2_eautm")])
 foods = Array[PackedScene]([ExtResource("2_iat1i"), ExtResource("3_rhpv7"), ExtResource("4_fvuhm"), ExtResource("5_aug31"), ExtResource("2_gq0su"), ExtResource("7_81eyp"), ExtResource("8_g7uhm"), ExtResource("9_0hbtt"), ExtResource("10_dkir3"), ExtResource("11_oyqbe"), ExtResource("12_mk8xq"), ExtResource("3_obrcb"), ExtResource("14_4h4px"), ExtResource("15_nmgrh"), ExtResource("16_ruhen"), ExtResource("4_2v82o"), ExtResource("18_v8423"), ExtResource("19_y6480")])
 crystals = Array[PackedScene]([ExtResource("20_1h2ir"), ExtResource("21_87tvx"), ExtResource("22_t3n8h"), ExtResource("23_2iql2"), ExtResource("24_yhm64")])
 runes = Array[PackedScene]([ExtResource("25_0jes4"), ExtResource("26_xjjky"), ExtResource("27_ij81f"), ExtResource("28_niybl"), ExtResource("29_cra4w")])
@@ -54,8 +56,8 @@ player = Array[PackedScene]([ExtResource("2_262sn")])
 [node name="EnemiesHolder" type="Node2D" parent="."]
 y_sort_enabled = true
 script = ExtResource("3_2t50k")
-infantry = Array[PackedScene]([ExtResource("33_r2sec")])
 captain = Array[PackedScene]([ExtResource("5_ml4ad")])
+infantry = Array[PackedScene]([ExtResource("33_r2sec")])
 
 [node name="StaticObjectsHolder" type="Node2D" parent="."]
 y_sort_enabled = true

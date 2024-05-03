@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="The Dwarf Guard"
-run/main_scene="res://Data/Scenes/CoreScene/CoreScene.tscn"
+run/main_scene="res://Data/Scenes/UI/MainMenu/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
+config/icon="res://Data/UI/Icon/Icon.png"
 
 [audio]
 

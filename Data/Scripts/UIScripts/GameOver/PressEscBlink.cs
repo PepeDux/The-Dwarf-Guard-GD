@@ -7,16 +7,16 @@ public partial class PressEscBlink : Label
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-        Blink();
-    }
+		Blink();
+	}
 
 	private async void Blink()
 	{
 		while(true)
 		{
-            await Task.Delay(500);
+			await Task.Delay(500);
 
-            Visible = !Visible;
-        }
-    }
+			Visible = !Visible;
+		}
+	}
 }

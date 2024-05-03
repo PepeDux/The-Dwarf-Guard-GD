@@ -7,7 +7,7 @@ public partial class AnimationController : Node
 	AnimationTree animationTree;
 	AnimationNodeStateMachinePlayback stateMachine;
 
-	public void SetAnimation(string animation)
+	public void PlayAnimation(string animation)
 	{
 		animationTree = GetParent().GetNode<AnimationTree>("AnimationTree");
 		stateMachine = (AnimationNodeStateMachinePlayback)animationTree.Get("parameters/playback");

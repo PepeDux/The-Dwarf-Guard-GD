@@ -115,23 +115,23 @@ public partial class AttackScript : Node
 		{
 			if (sideAttack == "HorizontalAttack")
 			{
-				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("HorizontalAttack");
+				GetParent().GetNode<AnimationController>("AnimationController").PlayAnimation("HorizontalAttack");
 			}
 			else if (sideAttack == "UpAttack")
 			{
-				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("UpAttack");
+				GetParent().GetNode<AnimationController>("AnimationController").PlayAnimation("UpAttack");
 			}
 			else if (sideAttack == "DownAttack")
 			{
-				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("DownAttack");
+				GetParent().GetNode<AnimationController>("AnimationController").PlayAnimation("DownAttack");
 			}
 			else if (sideAttack == "UpDiagonalAttack")
 			{
-				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("UpDiagonalAttack");
+				GetParent().GetNode<AnimationController>("AnimationController").PlayAnimation("UpDiagonalAttack");
 			}
 			else if (sideAttack == "DownDiagonalAttack")
 			{
-				GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("DownDiagonalAttack");
+				GetParent().GetNode<AnimationController>("AnimationController").PlayAnimation("DownDiagonalAttack");
 			}
 
 

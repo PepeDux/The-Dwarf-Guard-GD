@@ -48,6 +48,11 @@ public partial class TakeDamage : Node
 
 		totalDamage += physicalDamage - target.PhysicalResist;
 
+		if (totalDamage <= 0) 
+		{
+			totalDamage = 1;
+		}
+
 		if (isCriticalDamage == true)
 		{
 			totalDamage *= 2;
@@ -88,7 +93,7 @@ public partial class TakeDamage : Node
 		else
 		{
 			// Вызов анимации получения урона
-			GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("TakeDamage");
+			GetParent().GetNode<AnimationController>("AnimationController").PlayAnimation("TakeDamage");
 		}
 	}
 
@@ -114,7 +119,7 @@ public partial class TakeDamage : Node
 
 
 
-		GetParent().GetNode<AnimationController>("AnimationController").SetAnimation("Die");
+		GetParent().GetNode<AnimationController>("AnimationController").PlayAnimation("Die");
 
 		// Очищаем координаты персонажа из хранилища координат 
 		TileStorage.RemoveCell(GetParent<Character>());

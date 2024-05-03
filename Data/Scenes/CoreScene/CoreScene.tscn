@@ -189,6 +189,7 @@ position = Vector2(-245, -135)
 script = ExtResource("9_lclkq")
 captainCount = 1
 infantryCount = 2
+trapCount = 2
 foodCount = 2
 tileCount = 40
 

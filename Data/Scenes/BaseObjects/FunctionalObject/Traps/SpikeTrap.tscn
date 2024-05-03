@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://xbbme4tmtfb7"]
+
+[ext_resource type="PackedScene" uid="uid://dh70ptfl2c5th" path="res://Data/Scenes/BaseObjects/FunctionalObject/FunctionalObject.tscn" id="1_kllka"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/FunctionalObject/Traps/Trap.cs" id="2_ubkqr"]
+[ext_resource type="Texture2D" uid="uid://decqrmiiexoyy" path="res://Data/Sprites/Traps/SpikeTrap-Sheet.png" id="3_sdaw3"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1u0vp"]
+animation = &"Activation"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5smwy"]
+advance_mode = 2
+advance_condition = &"Activation"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dem43"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_kreld"]
+states/Activation/node = SubResource("AnimationNodeAnimation_1u0vp")
+states/Activation/position = Vector2(557, 100)
+states/Start/position = Vector2(216, 100)
+transitions = ["Start", "Activation", SubResource("AnimationNodeStateMachineTransition_5smwy"), "Activation", "End", SubResource("AnimationNodeStateMachineTransition_dem43")]
+
+[sub_resource type="Animation" id="Animation_4dad3"]
+resource_name = "Activation"
+length = 2.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.15, 0.2, 1.2, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 0]
+}
+
+[sub_resource type="Animation" id="Animation_32snw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s4a1a"]
+_data = {
+"Activation": SubResource("Animation_4dad3"),
+"RESET": SubResource("Animation_32snw")
+}
+
+[node name="SpikeTrap" instance=ExtResource("1_kllka")]
+script = ExtResource("2_ubkqr")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_sdaw3")
+hframes = 7
+
+[node name="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeStateMachine_kreld")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/Activation = false
+
+[node name="AnimationPlayer" parent="." index="3"]
+libraries = {
+"": SubResource("AnimationLibrary_s4a1a")
+}

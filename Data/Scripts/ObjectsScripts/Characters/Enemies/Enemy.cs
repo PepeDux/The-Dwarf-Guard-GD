@@ -94,7 +94,7 @@ public partial class Enemy : Character
 				// Отнимаем стоимость шага
 				MovePoints -= MoveCost;
 				//
-				Events.characterMoved?.Invoke();
+				Events.characterMoved?.Invoke(this);
 
 
 				TileStorage.AddCell(this);

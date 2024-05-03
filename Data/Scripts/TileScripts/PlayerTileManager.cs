@@ -59,7 +59,7 @@ public partial class PlayerTileManager : Node2D
 
 			GetParent().GetNode<AudioController>("AudioStreamPlayer").PlaySound("Move", 0.8f, 1f);
 
-			Events.characterMoved?.Invoke();
+			Events.characterMoved?.Invoke(GetParent<Player>());
 		}
 	}
 

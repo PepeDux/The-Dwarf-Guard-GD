@@ -5,4 +5,3 @@
 
 [node name="FunctionalObject" instance=ExtResource("1_tm7yi")]
 script = ExtResource("2_l31jq")
-modifier = null

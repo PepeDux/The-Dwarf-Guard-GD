@@ -65,3 +65,14 @@ theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
 theme_override_fonts/font = ExtResource("13_qo8qe")
 theme_override_font_sizes/font_size = 456
 text = "the dwarf guard"
+
+[node name="Version" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 232.0
+offset_right = 1624.0
+offset_bottom = 552.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
+theme_override_fonts/font = ExtResource("13_qo8qe")
+theme_override_font_sizes/font_size = 256
+text = "ver 0.0.1"

@@ -56,5 +56,5 @@ public partial class Events : Node
     /// <summary>
     /// Событие на передвиженеи пересонажа
     /// </summary>
-    public static Action characterMoved;
+    public static Action<Character> characterMoved;
 }
