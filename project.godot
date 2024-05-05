@@ -23,6 +23,7 @@ buses/default_bus_layout="res://Data/Audio/Bus/default_bus_layout.tres"
 
 window/size/viewport_width=490
 window/size/viewport_height=270
+window/size/mode=4
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="res://Data/UI/Cursors/Arrow.png"
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://uixniamcrmq2"]
+[gd_scene load_steps=30 format=3 uid="uid://uixniamcrmq2"]
 
 [ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS-Shader/VHS-Shader.tscn" id="1_5seje"]
 [ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/CoreScene/Holders.tscn" id="1_78hkp"]
@@ -6,13 +6,18 @@
 [ext_resource type="Texture2D" uid="uid://csw0qwm2nm2r7" path="res://Data/Sprites/Tilemaps/TileMap.png" id="1_f5wi8"]
 [ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/UI/Markers/Markers.png" id="2_outi2"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Spawn/SpawnModifierCalculation.cs" id="7_2krpp"]
+[ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnButton.cs" id="9_f7nk1"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelInfo.cs" id="9_lclkq"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="10_3v6ox"]
+[ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/Button/Button.tscn" id="10_7hchu"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/UIManager.cs" id="10_bwtok"]
+[ext_resource type="Texture2D" uid="uid://ct0xsiy6ay6x8" path="res://Data/Sprites/UI/TurnButton/NextTurn.png" id="11_3vad7"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/Fader.cs" id="11_lk4uu"]
 [ext_resource type="Script" path="res://Data/Scripts/CameraScripts/CameraShake.cs" id="11_qh8oq"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelGenerator.cs" id="12_13kvq"]
+[ext_resource type="Texture2D" uid="uid://k2i6a78b782p" path="res://Data/Sprites/UI/TurnButton/NextTurnHower.png" id="12_ilwqk"]
 [ext_resource type="PackedScene" uid="uid://cgyw5qsp8s6b7" path="res://Data/Scenes/UI/Cards/Card.tscn" id="13_l7glq"]
+[ext_resource type="Texture2D" uid="uid://bvarsh4qj0s4" path="res://Data/Sprites/UI/TurnButton/Wait.png" id="13_mmukt"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnController.cs" id="14_07t1w"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelModifier.cs" id="14_xe5ua"]
 [ext_resource type="Script" path="res://Data/Scripts/CardsScripts/CardHolder.cs" id="15_xnraa"]
@@ -71,6 +76,7 @@ visibility_layer = 512
 position = Vector2(384, 384)
 
 [node name="UI" type="Node2D" parent="Camera2D" node_paths=PackedStringArray("HPLabel", "MovePointsLabel", "ActionPointsLabel", "ACLabel", "strengthLabel", "dexterityLabel", "constitutionLabel", "intelligenceLabel", "wisdomLabel")]
+visibility_layer = 524289
 position = Vector2(-344, -408)
 script = ExtResource("10_bwtok")
 HPLabel = NodePath("HPLabel")
@@ -197,13 +203,23 @@ tileCount = 40
 script = ExtResource("7_2krpp")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -2824.0
-offset_top = -2984.0
-offset_right = 3576.0
-offset_bottom = 3416.0
+offset_left = -2792.0
+offset_top = -2936.0
+offset_right = 3608.0
+offset_bottom = 3464.0
 color = Color(0.109804, 0.101961, 0.101961, 1)
 script = ExtResource("11_lk4uu")
 metadata/_edit_use_anchors_ = true
+
+[node name="TurnButton" parent="." instance=ExtResource("10_7hchu")]
+offset_left = 368.0
+offset_top = 464.0
+offset_right = 400.0
+offset_bottom = 496.0
+texture_normal = ExtResource("11_3vad7")
+texture_hover = ExtResource("12_ilwqk")
+texture_disabled = ExtResource("13_mmukt")
+script = ExtResource("9_f7nk1")
 
 [node name="CameraShake" type="Node2D" parent="." node_paths=PackedStringArray("camera")]
 script = ExtResource("11_qh8oq")

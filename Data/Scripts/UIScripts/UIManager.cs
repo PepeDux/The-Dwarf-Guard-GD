@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Diagnostics;
+using System.Linq;
 
 public partial class UIManager : Node
 {
@@ -57,7 +58,7 @@ public partial class UIManager : Node
 
 	private void AddPlayer()
 	{
-		player = GetTree().Root.GetNode("GameScene").GetNode("Holders").GetNode<PlayerSpawner>("PlayerHolder").GetChild<Player>(0);
+		player = GetTree().Root.GetNode("GameScene").GetNode("Holders").GetNode<PlayerSpawner>("PlayerHolder").GetChildren().OfType<Player>().FirstOrDefault();
 	}
 }
 

@@ -14,8 +14,10 @@ public partial class Player : Character
 
 		//Подписываемся на события	
 		Events.playerTurnFinished += UpdatePoints;
+		Events.playerTurnFinished += ActionComplete;
 		Events.finishedAllTurn += StartTimer;
 		Events.finishedPlayerAction += StartTimer;
+		Events.playerDied += PlayerDied;
 
 		Events.playerSpawned?.Invoke();
 	}
@@ -25,9 +27,11 @@ public partial class Player : Character
 		base._ExitTree();
 
 		Events.playerTurnFinished -= UpdatePoints;
+		Events.playerTurnFinished -= ActionComplete;
 		Events.finishedAllTurn -= StartTimer;
 		Events.finishedPlayerAction -= StartTimer;
-	}
+        Events.playerDied -= PlayerDied;
+    }
 
 	
 
@@ -77,5 +81,15 @@ public partial class Player : Character
 	private void _on_timer_timeout()
 	{
 		canPerformAction = true;
+	}
+
+	private void ActionComplete()
+	{
+		canPerformAction = false;
+	}
+
+	private void PlayerDied()
+	{
+		ActionComplete();
 	}
 }
