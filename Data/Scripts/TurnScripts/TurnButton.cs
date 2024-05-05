@@ -5,6 +5,8 @@ public partial class TurnButton : BaseButton
 {
 	public override void _Ready()
 	{
+		base._Ready();
+
 		ButtonEventSubscribing();
 
 		Events.finishedAllTurn += Enable;

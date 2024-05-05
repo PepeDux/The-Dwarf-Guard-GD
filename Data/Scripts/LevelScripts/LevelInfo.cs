@@ -3,8 +3,49 @@ using System;
 
 public partial class LevelInfo : Node
 {
-	[ExportGroup("Юниты на уровне")]
-	// Колличество юнитов которые нужно заспавнить при старте уровня
+    public override void _Ready()
+    {
+        Events.levelGenerated += AddLevel;
+        Events.finishedAllTurn += AddTurn;
+    }
+
+    public override void _ExitTree()
+    {
+        Events.levelGenerated -= AddLevel;
+        Events.finishedAllTurn -= AddTurn;
+    }
+
+    // Текущий уровень
+    private int currentLevel = 0;
+    public int CurrentLevel
+    {
+        get
+        {
+            return currentLevel;
+        }
+        set
+        {
+            currentLevel = Math.Clamp(value, 0, 1000);
+        }
+    }
+
+    // Текущий ход
+    private int currentTurn = 0;
+    public int CurrentTurn
+    {
+        get
+        {
+            return currentTurn;
+        }
+        set
+        {
+            currentTurn = Math.Clamp(value, 0, 1000);
+        }
+    }
+
+
+    [ExportGroup("Юниты на уровне")]
+    // Колличество юнитов которые нужно заспавнить при старте уровня
     [Export] private int captainCount; // Капитаны
     public int CaptainCount
     {
@@ -17,7 +58,7 @@ public partial class LevelInfo : Node
             captainCount = Math.Clamp(value, 1, 20);
         }
     }
-	[Export] private int infantryCount; // Ближники 
+    [Export] private int infantryCount; // Ближники 
     public int InfantryCount
     {
         get
@@ -55,8 +96,8 @@ public partial class LevelInfo : Node
     }
 
     [ExportGroup("Статичные объекты")]
-	// Колличество статичных объектов которые нужно заспавнить при старте уровня
-	[Export] private int wallCount; // Стены
+    // Колличество статичных объектов которые нужно заспавнить при старте уровня
+    [Export] private int wallCount; // Стены
     public int WallCount
     {
         get
@@ -82,8 +123,8 @@ public partial class LevelInfo : Node
     }
 
     [ExportGroup("Функциональные объекты")]
-	// Колличество функциональных объектов которые нужно заспавнить при старте уровня
-	[Export] private int trapCount; // Ловушки
+    // Колличество функциональных объектов которые нужно заспавнить при старте уровня
+    [Export] private int trapCount; // Ловушки
     public int TrapCount
     {
         get
@@ -145,7 +186,7 @@ public partial class LevelInfo : Node
     }
 
     [ExportGroup("Тайлы")]
-	// Колличество тайлов которые нужно заспавнить при стрте уровня
+    // Колличество тайлов которые нужно заспавнить при стрте уровня
     [Export] private int tileCount;
     public int TileCount
     {
@@ -157,5 +198,15 @@ public partial class LevelInfo : Node
         {
             tileCount = Math.Clamp(value, 20, 100);
         }
+    }
+
+
+    private void AddLevel()
+    {
+        CurrentLevel++;
+    }
+    private void AddTurn()
+    {
+        CurrentTurn++;
     }
 }

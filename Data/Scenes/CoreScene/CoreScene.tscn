@@ -75,7 +75,7 @@ light_mask = 512
 visibility_layer = 512
 position = Vector2(384, 384)
 
-[node name="UI" type="Node2D" parent="Camera2D" node_paths=PackedStringArray("HPLabel", "MovePointsLabel", "ActionPointsLabel", "ACLabel", "strengthLabel", "dexterityLabel", "constitutionLabel", "intelligenceLabel", "wisdomLabel")]
+[node name="UI" type="Node2D" parent="Camera2D" node_paths=PackedStringArray("HPLabel", "MovePointsLabel", "ActionPointsLabel", "ACLabel", "strengthLabel", "dexterityLabel", "constitutionLabel", "intelligenceLabel", "wisdomLabel", "currentLevelLabel", "currentTurnLabel")]
 visibility_layer = 524289
 position = Vector2(-344, -408)
 script = ExtResource("10_bwtok")
@@ -88,6 +88,8 @@ dexterityLabel = NodePath("DexterityLabel")
 constitutionLabel = NodePath("ConstitutionLabel")
 intelligenceLabel = NodePath("IntelligenceLabel")
 wisdomLabel = NodePath("WisdomLabel")
+currentLevelLabel = NodePath("CurrentLevelLabel")
+currentTurnLabel = NodePath("CurrentTurnLabel")
 
 [node name="HPLabel" type="Label" parent="Camera2D/UI"]
 offset_left = 152.0
@@ -97,7 +99,7 @@ offset_bottom = 696.0
 scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 128
-text = "HP:"
+text = "ОЗ:"
 metadata/_edit_use_anchors_ = true
 
 [node name="MovePointsLabel" type="Label" parent="Camera2D/UI"]
@@ -108,7 +110,7 @@ offset_bottom = 744.0
 scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 128
-text = "Move:"
+text = "ОП:"
 metadata/_edit_use_anchors_ = true
 
 [node name="ActionPointsLabel" type="Label" parent="Camera2D/UI"]
@@ -119,7 +121,7 @@ offset_bottom = 728.0
 scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 128
-text = "Action:"
+text = "ОД:"
 metadata/_edit_use_anchors_ = true
 
 [node name="ACLabel" type="Label" parent="Camera2D/UI"]
@@ -130,7 +132,7 @@ offset_bottom = 712.0
 scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 128
-text = "AC:"
+text = "КД:"
 metadata/_edit_use_anchors_ = true
 
 [node name="StrengthLabel" type="Label" parent="Camera2D/UI"]
@@ -141,7 +143,7 @@ offset_bottom = 696.0
 scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 128
-text = "STR:"
+text = "Сил:"
 metadata/_edit_use_anchors_ = true
 
 [node name="DexterityLabel" type="Label" parent="Camera2D/UI"]
@@ -152,7 +154,7 @@ offset_bottom = 712.0
 scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 128
-text = "DEX:"
+text = "ЛОВ:"
 metadata/_edit_use_anchors_ = true
 
 [node name="ConstitutionLabel" type="Label" parent="Camera2D/UI"]
@@ -163,7 +165,7 @@ offset_bottom = 728.0
 scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 128
-text = "CON:"
+text = "ТЕЛ:"
 metadata/_edit_use_anchors_ = true
 
 [node name="IntelligenceLabel" type="Label" parent="Camera2D/UI"]
@@ -174,7 +176,7 @@ offset_bottom = 744.0
 scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 128
-text = "INT:"
+text = "ИНТ:"
 metadata/_edit_use_anchors_ = true
 
 [node name="WisdomLabel" type="Label" parent="Camera2D/UI"]
@@ -185,7 +187,29 @@ offset_bottom = 760.0
 scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("10_3v6ox")
 theme_override_font_sizes/font_size = 128
-text = "WIS:"
+text = "МУД:"
+metadata/_edit_use_anchors_ = true
+
+[node name="CurrentLevelLabel" type="Label" parent="Camera2D/UI"]
+offset_left = 368.0
+offset_top = 496.0
+offset_right = 1008.0
+offset_bottom = 816.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("10_3v6ox")
+theme_override_font_sizes/font_size = 128
+text = "ур: 100"
+metadata/_edit_use_anchors_ = true
+
+[node name="CurrentTurnLabel" type="Label" parent="Camera2D/UI"]
+offset_left = 368.0
+offset_top = 504.0
+offset_right = 1008.0
+offset_bottom = 824.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("10_3v6ox")
+theme_override_font_sizes/font_size = 128
+text = "ход: 100"
 metadata/_edit_use_anchors_ = true
 
 [node name="Vhs-shader" parent="Camera2D" instance=ExtResource("1_5seje")]
@@ -194,10 +218,9 @@ position = Vector2(-245, -135)
 [node name="LevelInfo" type="Node2D" parent="."]
 script = ExtResource("9_lclkq")
 captainCount = 1
-infantryCount = 2
 trapCount = 2
 foodCount = 2
-tileCount = 40
+tileCount = 20
 
 [node name="SpawnModifierCalculation" type="Node2D" parent="LevelInfo"]
 script = ExtResource("7_2krpp")

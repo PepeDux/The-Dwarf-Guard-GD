@@ -16,13 +16,20 @@ public partial class UIManager : Node
 	[Export] Label intelligenceLabel;
 	[Export] Label wisdomLabel;
 
+	[Export] Label currentLevelLabel;
+	[Export] Label currentTurnLabel;
+
 
 	Player player;
 	Character target;
 
+	LevelInfo levelInfo;
+
 	public override void _Ready()
 	{
 		Events.playerSpawned += AddPlayer;
+
+		AddLevelInfo();
 	}
 
 	public override void _ExitTree()
@@ -43,22 +50,30 @@ public partial class UIManager : Node
 
 		if (target != null) 
 		{
-			HPLabel.Text = $"HP: {target.HP}/{target.MaxHP}";
-			MovePointsLabel.Text = $"Move: {target.MovePoints}/{target.MaxMovePoints}";
-			ActionPointsLabel.Text = $"Action: {target.ActionPoints}/{target.MaxActionPoints}";
-			ACLabel.Text = $"AC: {target.AC}";
+			HPLabel.Text = $"ОЗ: {target.HP}/{target.MaxHP}";
+			MovePointsLabel.Text = $"ОП: {target.MovePoints}/{target.MaxMovePoints}";
+			ActionPointsLabel.Text = $"ОД: {target.ActionPoints}/{target.MaxActionPoints}";
+			ACLabel.Text = $"КД: {target.AC}";
 
-			strengthLabel.Text = $"STR: {target.Strength} ({target.strengthModifier})";
-			dexterityLabel.Text = $"DEX: {target.Dexterity} ({target.dexterityModifier})";
-			constitutionLabel.Text = $"CON: {target.Constitution} ({target.constitutionModifier})";
-			intelligenceLabel.Text = $"INT: {target.Inteligence} ({target.inteligenceModifier})";
-			wisdomLabel.Text = $"WIS: {target.Wisdom} ({target.wisdomModifier})";
+			strengthLabel.Text = $"СИЛ: {target.Strength} ({target.strengthModifier})";
+			dexterityLabel.Text = $"ЛОВ: {target.Dexterity} ({target.dexterityModifier})";
+			constitutionLabel.Text = $"ТЕЛ: {target.Constitution} ({target.constitutionModifier})";
+			intelligenceLabel.Text = $"ИНТ: {target.Inteligence} ({target.inteligenceModifier})";
+			wisdomLabel.Text = $"МУД: {target.Wisdom} ({target.wisdomModifier})";
+
+			currentLevelLabel.Text = $"УР: {levelInfo.CurrentLevel}";
+			currentTurnLabel.Text = $"Ход: {levelInfo.CurrentTurn}";
 		}
 	}
 
 	private void AddPlayer()
 	{
 		player = GetTree().Root.GetNode("GameScene").GetNode("Holders").GetNode<PlayerSpawner>("PlayerHolder").GetChildren().OfType<Player>().FirstOrDefault();
+	}
+
+	private void AddLevelInfo()
+	{
+		levelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
 	}
 }
 

@@ -10,6 +10,8 @@ public partial class Trap : FunctionalObject
 	{
 		base._Ready();
 		Events.finishedAllTurn += Activation;
+
+		TileStorage.trapCells.Add(this.coordinate);
 	}
 
 	public override void _ExitTree()

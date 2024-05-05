@@ -14,15 +14,18 @@ public partial class TileStorage : Node2D
 	public static List<Vector2I> occupiedCells = new List<Vector2I>();
 	// Клетки на которые нельзя наступить
 	public static List<Vector2I> impassableCells = new List<Vector2I>();
+    // Клетки ловушек
+    public static List<Vector2I> trapCells = new List<Vector2I>();
 
 
 
-	// Метод для очистки всех списков клеток
-	public static void ClearAllCells()
+    // Метод для очистки всех списков клеток
+    public static void ClearAllCells()
 	{
 		freeCells.Clear();
         occupiedCells.Clear();
         impassableCells.Clear();
+		trapCells.Clear();
 	}
 
 	// Метод для добавления объекта в хранилище тайлов

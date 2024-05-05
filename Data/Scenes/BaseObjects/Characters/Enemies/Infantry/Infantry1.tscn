@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://cvpjexd3xcygf"]
+
+[ext_resource type="PackedScene" uid="uid://dic37rim4ufsk" path="res://Data/Scenes/BaseObjects/Characters/Enemies/Enemy.tscn" id="1_3cj7b"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Enemies/Infantry/Infantry.cs" id="2_q8xx7"]
+[ext_resource type="PackedScene" uid="uid://dejp63chsiv2j" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Coin/Coin.tscn" id="3_uumap"]
+[ext_resource type="Texture2D" uid="uid://b0mqimx70ycxr" path="res://Data/Sprites/Characters/Infantry/Infantry1-Sheet.png" id="4_2npra"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vpv5h"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Infantry1" instance=ExtResource("1_3cj7b")]
+script = ExtResource("2_q8xx7")
+loot = Array[PackedScene]([ExtResource("3_uumap")])
+physicalDamage = 2
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("4_2npra")
+
+[node name="MessageParticles" parent="." index="8"]
+texture = SubResource("ViewportTexture_vpv5h")

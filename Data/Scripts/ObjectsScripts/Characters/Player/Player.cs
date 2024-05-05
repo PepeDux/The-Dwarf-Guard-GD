@@ -30,8 +30,8 @@ public partial class Player : Character
 		Events.playerTurnFinished -= ActionComplete;
 		Events.finishedAllTurn -= StartTimer;
 		Events.finishedPlayerAction -= StartTimer;
-        Events.playerDied -= PlayerDied;
-    }
+		Events.playerDied -= PlayerDied;
+	}
 
 	
 
@@ -77,7 +77,7 @@ public partial class Player : Character
 		GetNode<Timer>("Timer").Start();
 	}
 	
-	// Сигнао на окончание таймера. После окончания разрешает игроку дальше интерактировать с окружением
+	// Сигнал на окончание таймера. После окончания разрешает игроку дальше интерактировать с окружением
 	private void _on_timer_timeout()
 	{
 		canPerformAction = true;

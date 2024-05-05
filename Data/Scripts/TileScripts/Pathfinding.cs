@@ -74,12 +74,21 @@ public partial class Pathfinding : Node2D
 				return CalculatePathFromNode(nodeToCheck);
 			}
 
+			//Проверяем ноду на ловушку
+			foreach (var trapCell in TileStorage.trapCells)
+			{
+				if (trapCell == nodeToCheck.Position)
+				{
+					nodeToCheck.G += 3;
+				}
+			}
+
 			bool walkable = true;
 
 			//Проверяем ноду на проходимость из списка непроходимых нод
-			foreach (var cell in TileStorage.impassableCells)	
+			foreach (var impassableCell in TileStorage.impassableCells)	
 			{
-				if (cell == nodeToCheck.Position)
+				if (impassableCell == nodeToCheck.Position)
 				{
 					walkable = false;
 				}
@@ -101,7 +110,7 @@ public partial class Pathfinding : Node2D
 					checkedNodes.Add(nodeToCheck);
 					waitingNodes.AddRange(GetNeighbourNodes(nodeToCheck));
 				}
-			}
+			}			
 		}
 
 		freeNodes = checkedNodes;
@@ -111,18 +120,18 @@ public partial class Pathfinding : Node2D
 
 	private List<Vector2I> CalculatePathFromNode(Cell node)
 	{
-		var path = new List<Vector2I>();
-		path.Clear();
+		var pathToTarget = new List<Vector2I>();
+		pathToTarget.Clear();
 
 		Cell currentNode = node;
 
 		while (currentNode.PreviousNode != null)
 		{
-			path.Add(new Vector2I(currentNode.Position.X, currentNode.Position.Y));
+			pathToTarget.Add(new Vector2I(currentNode.Position.X, currentNode.Position.Y));
 			currentNode = currentNode.PreviousNode;
 		}
 
-		return path;
+		return pathToTarget;
 	}
 
 	private List<Cell> GetNeighbourNodes(Cell node)
@@ -133,23 +142,24 @@ public partial class Pathfinding : Node2D
 		//Линейное перевдвижение
 		if (GetParent<Enemy>().horizontalMove == true)
 		{
-			Neighbours.Add(new Cell(node.G + 1, new Vector2I(
-				node.Position.X, node.Position.Y + 1),
-				 node.TargetPosition,
-				 node));
-
-			Neighbours.Add(new Cell(node.G + 1, new Vector2I(
-				 node.Position.X, node.Position.Y - 1),
-				 node.TargetPosition,
-				 node));
-
+			//Напрво
 			Neighbours.Add(new Cell(node.G + 1, new Vector2I(
 				 node.Position.X + 1, node.Position.Y),
 				 node.TargetPosition,
 				 node));
-
+			//Налево
 			Neighbours.Add(new Cell(node.G + 1, new Vector2I(
 				 node.Position.X - 1, node.Position.Y),
+				 node.TargetPosition,
+				 node));
+			//Вниз
+			Neighbours.Add(new Cell(node.G + 1, new Vector2I(
+				node.Position.X, node.Position.Y + 1),
+				 node.TargetPosition,
+				 node));
+			//Вверх
+			Neighbours.Add(new Cell(node.G + 1, new Vector2I(
+				 node.Position.X, node.Position.Y - 1),
 				 node.TargetPosition,
 				 node));
 		}
@@ -157,23 +167,24 @@ public partial class Pathfinding : Node2D
 		//Диагональе передвижение
 		if (GetParent<Enemy>().diagonalMove == true)
 		{
+			//Вверх-налево
+			Neighbours.Add(new Cell(node.G + 1.4f, new Vector2I(
+				 node.Position.X - 1, node.Position.Y + 1),
+				 node.TargetPosition,
+				 node));
+			//Вверх-направо
 			Neighbours.Add(new Cell(node.G + 1.4f, new Vector2I(
 				 node.Position.X + 1, node.Position.Y + 1),
 				 node.TargetPosition,
 				 node));
-
+			//Вниз-налево
+			Neighbours.Add(new Cell(node.G + 1.4f, new Vector2I(
+				 node.Position.X - 1, node.Position.Y - 1),
+				 node.TargetPosition,
+				 node));
+			//Вниз-направо
 			Neighbours.Add(new Cell(node.G + 1.4f, new Vector2I(
 				 node.Position.X + 1, node.Position.Y - 1),
-				 node.TargetPosition,
-				 node));
-
-			Neighbours.Add(new Cell(node.G + 1.4f, new Vector2I(
-				 node.Position.X - 1, node.Position.Y - 1),
-				 node.TargetPosition,
-				 node));
-
-			Neighbours.Add(new Cell(node.G + 1.4f, new Vector2I(
-				 node.Position.X - 1, node.Position.Y - 1),
 				 node.TargetPosition,
 				 node));
 		}

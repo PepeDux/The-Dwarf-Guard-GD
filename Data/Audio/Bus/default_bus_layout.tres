@@ -11,7 +11,7 @@ dry = 0.5
 [resource]
 bus/0/volume_db = 0.464998
 bus/0/effect/0/effect = SubResource("AudioEffectReverb_vswkd")
-bus/0/effect/0/enabled = false
+bus/0/effect/0/enabled = true
 bus/1/name = &"Sounds"
 bus/1/solo = false
 bus/1/mute = false
