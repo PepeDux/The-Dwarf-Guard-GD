@@ -13,7 +13,6 @@ public partial class Player : Character
 		base._Ready();
 
 		//Подписываемся на события	
-		Events.playerTurnFinished += UpdatePoints;
 		Events.playerTurnFinished += ActionComplete;
 		Events.finishedAllTurn += StartTimer;
 		Events.finishedPlayerAction += StartTimer;
@@ -26,7 +25,6 @@ public partial class Player : Character
 	{
 		base._ExitTree();
 
-		Events.playerTurnFinished -= UpdatePoints;
 		Events.playerTurnFinished -= ActionComplete;
 		Events.finishedAllTurn -= StartTimer;
 		Events.finishedPlayerAction -= StartTimer;

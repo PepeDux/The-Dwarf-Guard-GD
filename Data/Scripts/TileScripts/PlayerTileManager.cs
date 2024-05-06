@@ -19,7 +19,9 @@ public partial class PlayerTileManager : Node2D
 
 	public override void _Process(double delta)
 	{
-		if (Input.IsActionJustPressed("LeftMouseClick") && GetParent<Player>().MovePoints > 0 && GetParent<Player>().canPerformAction == true)
+		if (Input.IsActionJustPressed("LeftMouseClick") &&
+			(GetParent<Player>().MovePoints >= GetParent<Player>().MoveCost || GetParent<Player>().ActionPoints >= GetParent<Player>().MoveCost) &&
+			GetParent<Player>().canPerformAction == true)
 		{
 			TileStorage.RemoveCell(player);
 
@@ -53,13 +55,21 @@ public partial class PlayerTileManager : Node2D
 		if (cellPosition == playerPosition + move && CheckCells() == true)
 		{
 			// Перемещаем игрока на место кликнутого тайла   
-			GetParent<Player>().coordinate = cellPosition;         
-			// Отнимаем у игрока очки движения
-			GetParent<Player>().MovePoints -= 1;
+			GetParent<Player>().coordinate = cellPosition;         			
 
 			GetParent().GetNode<AudioController>("AudioStreamPlayer").PlaySound("Move", 0.8f, 1f);
 
 			Events.characterMoved?.Invoke(GetParent<Player>());
+
+			// Отнимаем у игрока очки движения или очки действия если нет очков движения
+			if (GetParent<Player>().MovePoints >= GetParent<Player>().MoveCost) 
+			{
+				GetParent<Player>().MovePoints -= GetParent<Player>().MoveCost;
+			}
+			else if(GetParent<Player>().MovePoints <= GetParent<Player>().MoveCost)
+			{
+				GetParent<Player>().ActionPoints -= GetParent<Player>().MoveCost;
+			}
 		}
 	}
 

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://cdsl1thfxwjwl"]
+
+[ext_resource type="Resource" uid="uid://c4csjm5g77rer" path="res://Data/Resources/CharacteristicModifier/CharacteristicModifier.tres" id="1_8xnll"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_q7yws"]
+[ext_resource type="Texture2D" uid="uid://da0j6hpfucqfo" path="res://Data/Sprites/Cards/Card_35.png" id="3_bmlid"]
+
+[resource]
+script = ExtResource("2_q7yws")
+modifier = ExtResource("1_8xnll")
+texture = ExtResource("3_bmlid")
+name = "Любое направленеи передвижения"
+cardDescription = "Теперь вы можете передвигаться в любом направлении. Бежим остюда!"
+cardStrength = 4
+type = 0
+accessory = 0

@@ -1,0 +1,55 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://bi4ykp67xfdj8"]
+
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/CharacteristicModifierData.cs" id="1_hbh4l"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_xkh3e"]
+[ext_resource type="Texture2D" uid="uid://dpdf4x2qoll31" path="res://Data/Sprites/Cards/Card_33.png" id="3_antke"]
+
+[sub_resource type="Resource" id="Resource_ow87j"]
+resource_local_to_scene = true
+script = ExtResource("1_hbh4l")
+permanent = true
+maxHP = 0
+HP = 0
+physicalDamage = 0
+poisonDamage = 0
+fireDamage = 0
+frostDamage = 0
+maxMovePoints = 0
+movePoints = 0
+maxActionPoints = 0
+actionPoints = 0
+maxBeerPoints = 0
+beerPoints = 0
+moveCost = 0
+meleeAttackCost = 0
+rangeAttackCost = 0
+horizontalMove = 2
+diagonalMove = 1
+horizontalAttack = 0
+diagonalAttack = 0
+meleeAttack = 0
+rangeAttack = 0
+rangeAttackDistance = 0
+meleeAttackDistance = 0
+AC = 0
+money = 0
+strength = 0
+dexterity = 0
+inteligence = 0
+constitution = 0
+wisdom = 0
+drunkenness = 0
+physicalResist = 0
+poisonResist = 0
+fireResist = 0
+frostResist = 0
+
+[resource]
+script = ExtResource("2_xkh3e")
+modifier = SubResource("Resource_ow87j")
+texture = ExtResource("3_antke")
+name = "Диагональное перемещение"
+cardDescription = "Теперь вы можете перемещаться только по диагонали"
+cardStrength = 2
+type = 1
+accessory = 0

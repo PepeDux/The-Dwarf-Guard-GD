@@ -32,7 +32,7 @@ project/assembly_name="The Dwarf Guard"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/sprite_cutter/plugin.cfg")
+enabled=PackedStringArray()
 
 [file_customization]
 

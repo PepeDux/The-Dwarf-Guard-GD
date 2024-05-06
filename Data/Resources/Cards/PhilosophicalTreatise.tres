@@ -1,0 +1,55 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://8l2elxgd0dhf"]
+
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/CharacteristicModifierData.cs" id="1_nsp2a"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_svn1w"]
+[ext_resource type="Texture2D" uid="uid://dpdua05jt6hxk" path="res://Data/Sprites/Cards/Card_16.png" id="3_om7lo"]
+
+[sub_resource type="Resource" id="Resource_s2dki"]
+resource_local_to_scene = true
+script = ExtResource("1_nsp2a")
+permanent = true
+maxHP = 0
+HP = 0
+physicalDamage = 0
+poisonDamage = 0
+fireDamage = 0
+frostDamage = 0
+maxMovePoints = 0
+movePoints = 0
+maxActionPoints = 0
+actionPoints = 0
+maxBeerPoints = 0
+beerPoints = 0
+moveCost = 0
+meleeAttackCost = 0
+rangeAttackCost = 0
+horizontalMove = 0
+diagonalMove = 0
+horizontalAttack = 0
+diagonalAttack = 0
+meleeAttack = 0
+rangeAttack = 0
+rangeAttackDistance = 0
+meleeAttackDistance = 0
+AC = 0
+money = 0
+strength = 0
+dexterity = 0
+inteligence = 0
+constitution = 0
+wisdom = 1
+drunkenness = 0
+physicalResist = 0
+poisonResist = 0
+fireResist = 0
+frostResist = 0
+
+[resource]
+script = ExtResource("2_svn1w")
+modifier = SubResource("Resource_s2dki")
+texture = ExtResource("3_om7lo")
+name = "Философский трактат"
+cardDescription = "Вы настолько преисполнились в своем познании, что получаете 1 мудрости"
+cardStrength = 2
+type = 0
+accessory = 0

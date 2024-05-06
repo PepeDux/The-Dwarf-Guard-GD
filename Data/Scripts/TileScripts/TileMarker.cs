@@ -76,7 +76,14 @@ public partial class TileMarker : Node2D
 	{
 		if (cellPosition == playerPosition + select && CheckMoveCell())
 		{
-			markerTileMap.SetCell(0, cellPosition, 0, new Vector2I(1, 1));
+			if (GetParent<Player>().MovePoints >= GetParent<Player>().MoveCost)
+			{
+				markerTileMap.SetCell(0, cellPosition, 0, new Vector2I(1, 1));
+			}
+			else if (GetParent<Player>().ActionPoints >= GetParent<Player>().MoveCost)
+			{
+				markerTileMap.SetCell(0, cellPosition, 0, new Vector2I(3, 1));
+			}
 		}
 	}
 

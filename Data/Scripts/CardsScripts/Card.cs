@@ -43,8 +43,10 @@ public partial class Card : BaseButton
 		
 
 
-		// Загружаем все модификаторы
+		// Загружаем все карты
 		cards.AddRange(CardLoader.Load("res://Data/Resources/Cards/"));
+
+		GD.Print(cards.Count());
 
 		// Получаем LevelModifier
 		levelModifier = GetTree().Root.GetNode("GameScene").GetNode<LevelModifier>("LevelModifier");
@@ -97,7 +99,7 @@ public partial class Card : BaseButton
 			c.cardStrength == cardPositive.cardStrength - 1 ||
 			c.cardStrength == cardPositive.cardStrength + 1))
 			.OrderBy(с => Guid.NewGuid()).FirstOrDefault();
-
+			
 		if (cardNegative == null)
 		{
 			cardNegative = cards.Where(c => c.type == CardData.Type.negative).OrderBy(с => Guid.NewGuid()).FirstOrDefault();

@@ -14,24 +14,23 @@ public partial class Enemy : Character
 
 	public override void _Ready()
 	{
+		base._Ready();
+
 		//Подписываемся на события
 		Events.playerSpawned += GetPlayer;
-		Events.playerTurnFinished += UpdatePoints;
-
-		base._Ready();
 	}
 	public override void _ExitTree()
 	{
 		base._ExitTree();
+
 		Events.playerSpawned -= GetPlayer;
-		Events.playerTurnFinished -= UpdatePoints;
 	}
 
 	public override void _Process(double delta)
 	{
 		base._Process(delta);
-		Orientation();
 
+		Orientation();
 		GetPlayer();
 	}
 

@@ -501,6 +501,8 @@ public partial class Character : BaseObject
 	{
 		base._Ready();
 
+		Events.finishedAllTurn += UpdatePoints;
+
 		UpdateCoordinate();
 		UpdatePoints();
 		UpdateCharacteristicModifier();
@@ -515,6 +517,8 @@ public partial class Character : BaseObject
 	public override void _ExitTree()
 	{
 		base._ExitTree();
+
+		Events.finishedAllTurn -= UpdatePoints;
 	}
 
 	public override void _Process(double delta)
