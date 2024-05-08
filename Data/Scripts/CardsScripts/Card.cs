@@ -13,13 +13,12 @@ public partial class Card : BaseButton
 	public CardData cardPositive;
 	public CardData cardNegative;
 
-	// Массив модификаторов
-	public List<CardData> cards = new List<CardData>();
-
+	
 	// Нода/класс содержащая все модификаторы
 	public LevelModifier levelModifier;
 
-
+	// Массив модификаторов
+	private CardData[] cards;
 
 	// Имя карты
 	private Label cardNamePositive;
@@ -40,11 +39,10 @@ public partial class Card : BaseButton
 		Events.endSelectCard += EndSelectCard;
 
 		ButtonEventSubscribing();
-		
-
 
 		// Загружаем все карты
-		cards.AddRange(CardLoader.Load("res://Data/Resources/Cards/"));
+		// cards.AddRange(CardLoader.Load("res://Data/Resources/Cards/"));
+		cards = GetParent<CardHolder>().cards;
 
 		GD.Print(cards.Count());
 

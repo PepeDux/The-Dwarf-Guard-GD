@@ -5,15 +5,17 @@ using System.Linq;
 
 public partial class CardHolder : Node
 {
-	private List<TextureButton> cards = new List<TextureButton>();
+	private List<TextureButton> cardFaces = new List<TextureButton>();
 
+	// Массив модификаторов
+	[Export] public CardData[] cards;
 
 	public override void _Ready()
 	{
 		Events.levelEnded += ShowCard;
 
 		// Добавляем все карты в лист
-		cards.AddRange(GetChildren().OfType<TextureButton>());
+		cardFaces.AddRange(GetChildren().OfType<TextureButton>());
 	}
 
 	public override void _ExitTree()
@@ -25,11 +27,11 @@ public partial class CardHolder : Node
 	private void ShowCard()
 	{
 		// Делаем карты видимыми
-		if (cards.Count() > 0)
+		if (cardFaces.Count() > 0)
 		{
-			foreach (var card in cards)
+			foreach (var cardFace in cardFaces)
 			{
-				card.Visible = true;
+				cardFace.Visible = true;
 			}
 		}
 	}

@@ -11,6 +11,7 @@ viewport_path = NodePath("SubViewport")
 [node name="Infantry2" instance=ExtResource("1_6vte5")]
 script = ExtResource("2_sis3m")
 loot = Array[PackedScene]([ExtResource("3_tw38m")])
+maxMovePoints = 4
 horizontalMove = false
 diagonalMove = true
 horizontalAttack = false

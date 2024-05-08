@@ -7,6 +7,7 @@ public partial class Player : Character
 
 	public bool canPerformAction = true;
 
+	private bool timerActive = true;
 
 	public override void _Ready()
 	{
@@ -31,7 +32,7 @@ public partial class Player : Character
 		Events.playerDied -= PlayerDied;
 	}
 
-	
+
 
 	public override void _Process(double delta)
 	{
@@ -43,7 +44,7 @@ public partial class Player : Character
 	// Метод который разворачивает персонажа в соответсвии с положением курсора
 	private void MoveOrientation()
 	{
-		if (canPerformAction == true) 
+		if (canPerformAction == true)
 		{
 			if (GetGlobalMousePosition().X < Position.X && isFacingRight == true)
 			{
@@ -74,11 +75,14 @@ public partial class Player : Character
 	{
 		GetNode<Timer>("Timer").Start();
 	}
-	
+
 	// Сигнал на окончание таймера. После окончания разрешает игроку дальше интерактировать с окружением
 	private void _on_timer_timeout()
 	{
-		canPerformAction = true;
+		if (timerActive == true)
+		{
+			canPerformAction = true;
+		}
 	}
 
 	private void ActionComplete()
@@ -89,5 +93,7 @@ public partial class Player : Character
 	private void PlayerDied()
 	{
 		ActionComplete();
+
+		timerActive = false;
 	}
 }

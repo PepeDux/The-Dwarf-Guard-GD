@@ -97,14 +97,12 @@ public partial class TakeDamage : Node
 		}
 	}
 
-
 	public async void Die()
 	{
-		GD.Print($"Я {GetParent().Name} умер");
-
+		// Массив лута
 		PackedScene[] loot = GetParent<Character>().loot;
 
-		//Спавнит случайны лут из списка с вероятностью 50 %
+		// Спавнит случайны лут из списка с вероятностью 50 %
 		if (random.Next(0, 100) > 50 && loot.Length > 0)
 		{
 			try
@@ -125,23 +123,27 @@ public partial class TakeDamage : Node
 		TileStorage.RemoveCell(GetParent<Character>());
 		CharacterStorage.characters.Remove(GetParent<Character>());
 
-		await Task.Delay(1500);
+		
 
 		if (GetParent() is Player)
 		{
 			Events.playerDied?.Invoke();
-			GetParent<Player>().canPerformAction = false;
 
+			await Task.Delay(1500);
 			// Вызывает экран GAME OVER
 			GetTree().ChangeSceneToFile("res://Data/Scenes/UI/GameOver/GameOver.tscn");
 		}
-
-		if (GetParent() is Captain)
+		else if (GetParent() is Captain)
 		{
+			await Task.Delay(1500);
 			// Заканчиваем левел при смерти капитана
 			Events.levelEnded?.Invoke();
 		}
+		else
+		{
+			await Task.Delay(1500);
+		}
 
-		GetParent().QueueFree();
+		GetParent().Free();
 	}
 }

@@ -13,5 +13,10 @@ public partial class GameOver : Node
 		{
 			GetTree().ChangeSceneToFile("res://Data/Scenes/UI/MainMenu/MainMenu.tscn");
 		}
+
+		if (Input.IsActionJustPressed("RClick"))
+		{
+			GetTree().ChangeSceneToFile("res://Data/Scenes/CoreScene/CoreScene.tscn");
+		}
 	}
 }

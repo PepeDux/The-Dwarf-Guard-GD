@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://uixniamcrmq2"]
+[gd_scene load_steps=49 format=3 uid="uid://uixniamcrmq2"]
 
 [ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS-Shader/VHS-Shader.tscn" id="1_5seje"]
 [ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/CoreScene/Holders.tscn" id="1_78hkp"]
@@ -25,6 +25,25 @@
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/CharacterStorage.cs" id="17_qpsic"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/ClearHolder.cs" id="18_m7nb1"]
 [ext_resource type="Script" path="res://Data/Scripts/test.cs" id="20_3r02s"]
+[ext_resource type="Resource" uid="uid://5hyiplhhml1i" path="res://Data/Resources/Cards/AlloutAttack.tres" id="23_udo4e"]
+[ext_resource type="Resource" uid="uid://cdsl1thfxwjwl" path="res://Data/Resources/Cards/AlloutMovement.tres" id="24_5qbgp"]
+[ext_resource type="Resource" uid="uid://c0f4q6kkgylbv" path="res://Data/Resources/Cards/DiagonalAttack.tres" id="25_4uh86"]
+[ext_resource type="Resource" uid="uid://bi4ykp67xfdj8" path="res://Data/Resources/Cards/DiagonalMovement.tres" id="26_n7833"]
+[ext_resource type="Resource" uid="uid://mmfg1un8iq45" path="res://Data/Resources/Cards/DirectAttack.tres" id="27_kiqwh"]
+[ext_resource type="Resource" uid="uid://citix5pk8ikf2" path="res://Data/Resources/Cards/DirectMovement.tres" id="28_4o4wy"]
+[ext_resource type="Resource" uid="uid://dppnmbma0avcl" path="res://Data/Resources/Cards/ElfSwill.tres" id="29_ld0a2"]
+[ext_resource type="Resource" uid="uid://eo3g5o530v3g" path="res://Data/Resources/Cards/ForgingRune.tres" id="30_5c8ho"]
+[ext_resource type="Resource" uid="uid://bey0as78a23va" path="res://Data/Resources/Cards/ForYourHealth.tres" id="31_f0d5j"]
+[ext_resource type="Resource" uid="uid://b5arv83v6cfck" path="res://Data/Resources/Cards/Hangover.tres" id="32_wlq0u"]
+[ext_resource type="Resource" uid="uid://djaoklswprgaf" path="res://Data/Resources/Cards/HeartySnack.tres" id="33_by7hf"]
+[ext_resource type="Resource" uid="uid://dycg00nvrib4t" path="res://Data/Resources/Cards/HeavyHit.tres" id="34_u0mmd"]
+[ext_resource type="Resource" uid="uid://dfb4qql0u0vr0" path="res://Data/Resources/Cards/Hunger.tres" id="35_3spjh"]
+[ext_resource type="Resource" uid="uid://bt581tn5bf7ce" path="res://Data/Resources/Cards/MoreTraps.tres" id="36_5suig"]
+[ext_resource type="Resource" uid="uid://8l2elxgd0dhf" path="res://Data/Resources/Cards/PhilosophicalTreatise.tres" id="37_j4se0"]
+[ext_resource type="Resource" uid="uid://cdavrpy0hes3e" path="res://Data/Resources/Cards/PoisonedBeer.tres" id="38_k7g52"]
+[ext_resource type="Resource" uid="uid://bxven2cqp7wsn" path="res://Data/Resources/Cards/RaiseShields.tres" id="39_jx7kw"]
+[ext_resource type="Resource" uid="uid://bk8c5h6tmi05c" path="res://Data/Resources/Cards/Reinforcement.tres" id="40_ea224"]
+[ext_resource type="Resource" uid="uid://b6rqgvl3mmqeh" path="res://Data/Resources/Cards/SpeedUp.tres" id="41_ji5e1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_thffw"]
 texture = ExtResource("1_f5wi8")
@@ -218,6 +237,7 @@ position = Vector2(-245, -135)
 [node name="LevelInfo" type="Node2D" parent="."]
 script = ExtResource("9_lclkq")
 captainCount = 1
+infantryCount = 1
 trapCount = 2
 foodCount = 2
 tileCount = 20
@@ -269,6 +289,7 @@ script = ExtResource("17_qpsic")
 
 [node name="CardHolder" type="Node2D" parent="."]
 script = ExtResource("15_xnraa")
+cards = Array[Resource]([ExtResource("23_udo4e"), ExtResource("24_5qbgp"), ExtResource("25_4uh86"), ExtResource("26_n7833"), ExtResource("27_kiqwh"), ExtResource("28_4o4wy"), ExtResource("29_ld0a2"), ExtResource("30_5c8ho"), ExtResource("31_f0d5j"), ExtResource("32_wlq0u"), ExtResource("33_by7hf"), ExtResource("34_u0mmd"), ExtResource("35_3spjh"), ExtResource("36_5suig"), ExtResource("37_j4se0"), ExtResource("38_k7g52"), ExtResource("39_jx7kw"), ExtResource("40_ea224"), ExtResource("41_ji5e1")])
 
 [node name="Card2" parent="CardHolder" instance=ExtResource("13_l7glq")]
 visible = false
