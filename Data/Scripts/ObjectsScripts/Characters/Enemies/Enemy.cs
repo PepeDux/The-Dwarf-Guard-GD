@@ -10,7 +10,7 @@ public partial class Enemy : Character
 
 	public bool isFacingRight = true;
 
-
+	ConfigFile config = new ConfigFile();
 
 	public override void _Ready()
 	{
@@ -103,9 +103,12 @@ public partial class Enemy : Character
 
 	public async void Turn()
 	{
+		config.Load("user://Settings.cfg");
+		int turnSpeed = (int)config.GetValue("TurnSpeed", "TurnSpeed");
+
 		while (MovePoints >= MoveCost)
 		{
-			await Task.Delay(250);
+			await Task.Delay(turnSpeed);
 
 			int startPoints = MovePoints;
 
@@ -119,7 +122,7 @@ public partial class Enemy : Character
 
 		while (ActionPoints >= MeleeAttackCost || ActionPoints >= RangeAttackCost && player != null)
 		{
-			await Task.Delay(250);
+			await Task.Delay(turnSpeed);
 
 			int startPoints = ActionPoints;
 

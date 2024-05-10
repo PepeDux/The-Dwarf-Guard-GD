@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dk5oajn47og3q"]
+[gd_scene load_steps=12 format=3 uid="uid://dk5oajn47og3q"]
 
 [ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="1_p8uvn"]
 [ext_resource type="PackedScene" uid="uid://rjbd6q6xscmg" path="res://Data/Scenes/UI/BaseCheckBox/BaseCheckBox.tscn" id="2_o2e4e"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://or87o5xy26ju" path="res://Data/Sprites/UI/Settings/SaveNormal.png" id="6_qe36h"]
 [ext_resource type="Texture2D" uid="uid://yg2ywsvrgf3p" path="res://Data/Sprites/UI/Settings/SaveHover.png" id="7_0xalm"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/Settings/SaveSettingsButton.cs" id="8_o0247"]
+[ext_resource type="PackedScene" uid="uid://cyqjf6wk41dwj" path="res://Data/Scenes/UI/BaseHScrollBar/BaseHScrollBar.tscn" id="9_lt6av"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/Settings/TurnSpeedHScrollBar.cs" id="10_f1r3c"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/Settings/MasterVolumeHScrollBar.cs" id="11_nu5tb"]
 
 [node name="Settings" type="Node2D"]
 
@@ -26,12 +29,12 @@ offset_right = 184.0
 offset_bottom = 80.0
 script = ExtResource("3_umxfk")
 
-[node name="VHSLabel" type="Label" parent="."]
+[node name="VHSLabel" type="Label" parent="VHSCheckBox"]
 z_index = 5
-offset_left = 64.0
-offset_top = 64.0
-offset_right = 1984.0
-offset_bottom = 384.0
+layout_mode = 0
+offset_left = -104.0
+offset_right = 1816.0
+offset_bottom = 320.0
 scale = Vector2(0.05, 0.05)
 theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
 theme_override_fonts/font = ExtResource("3_1mcjg")
@@ -46,3 +49,20 @@ offset_bottom = 234.0
 texture_normal = ExtResource("6_qe36h")
 texture_hover = ExtResource("7_0xalm")
 script = ExtResource("8_o0247")
+
+[node name="TurnSpeedHScrollBar" parent="." instance=ExtResource("9_lt6av")]
+offset_left = 320.0
+offset_top = 68.0
+offset_right = 384.0
+offset_bottom = 76.0
+max_value = 1000.0
+step = 100.0
+script = ExtResource("10_f1r3c")
+
+[node name="MasterVolumeHScrollBar" parent="." instance=ExtResource("9_lt6av")]
+offset_left = 320.0
+offset_top = 108.0
+offset_right = 384.0
+offset_bottom = 116.0
+step = 1.0
+script = ExtResource("11_nu5tb")

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public partial class CardHolder : Node
+public partial class CardHolder : Node2D
 {
 	private List<TextureButton> cardFaces = new List<TextureButton>();
 
@@ -26,13 +26,6 @@ public partial class CardHolder : Node
 
 	private void ShowCard()
 	{
-		// Делаем карты видимыми
-		if (cardFaces.Count() > 0)
-		{
-			foreach (var cardFace in cardFaces)
-			{
-				cardFace.Visible = true;
-			}
-		}
+		this.Visible = true;
 	}
 }

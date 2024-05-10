@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://uixniamcrmq2"]
+[gd_scene load_steps=29 format=3 uid="uid://uixniamcrmq2"]
 
 [ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="1_5seje"]
 [ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/CoreScene/Holders.tscn" id="1_78hkp"]
@@ -11,39 +11,19 @@
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="10_3v6ox"]
 [ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseButton/BaseButton.tscn" id="10_7hchu"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/UIManager.cs" id="10_bwtok"]
-[ext_resource type="Texture2D" uid="uid://ct0xsiy6ay6x8" path="res://Data/Sprites/UI/TurnButton/NextTurn.png" id="11_3vad7"]
+[ext_resource type="Texture2D" uid="uid://ct0xsiy6ay6x8" path="res://Data/Sprites/UI/MainMenu/TurnButton/NextTurn.png" id="11_3vad7"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/Fader.cs" id="11_lk4uu"]
 [ext_resource type="Script" path="res://Data/Scripts/CameraScripts/CameraShake.cs" id="11_qh8oq"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelGenerator.cs" id="12_13kvq"]
-[ext_resource type="Texture2D" uid="uid://k2i6a78b782p" path="res://Data/Sprites/UI/TurnButton/NextTurnHower.png" id="12_ilwqk"]
-[ext_resource type="PackedScene" uid="uid://cgyw5qsp8s6b7" path="res://Data/Scenes/UI/Cards/Card.tscn" id="13_l7glq"]
-[ext_resource type="Texture2D" uid="uid://bvarsh4qj0s4" path="res://Data/Sprites/UI/TurnButton/Wait.png" id="13_mmukt"]
+[ext_resource type="Texture2D" uid="uid://k2i6a78b782p" path="res://Data/Sprites/UI/MainMenu/TurnButton/NextTurnHower.png" id="12_ilwqk"]
+[ext_resource type="Texture2D" uid="uid://bvarsh4qj0s4" path="res://Data/Sprites/UI/MainMenu/TurnButton/Wait.png" id="13_mmukt"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnController.cs" id="14_07t1w"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelModifier.cs" id="14_xe5ua"]
-[ext_resource type="Script" path="res://Data/Scripts/CardsScripts/CardHolder.cs" id="15_xnraa"]
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/TileStorage.cs" id="16_si61r"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/CharacterStorage.cs" id="17_qpsic"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/ClearHolder.cs" id="18_m7nb1"]
 [ext_resource type="Script" path="res://Data/Scripts/test.cs" id="20_3r02s"]
-[ext_resource type="Resource" uid="uid://5hyiplhhml1i" path="res://Data/Resources/Cards/AlloutAttack.tres" id="23_udo4e"]
-[ext_resource type="Resource" uid="uid://cdsl1thfxwjwl" path="res://Data/Resources/Cards/AlloutMovement.tres" id="24_5qbgp"]
-[ext_resource type="Resource" uid="uid://c0f4q6kkgylbv" path="res://Data/Resources/Cards/DiagonalAttack.tres" id="25_4uh86"]
-[ext_resource type="Resource" uid="uid://bi4ykp67xfdj8" path="res://Data/Resources/Cards/DiagonalMovement.tres" id="26_n7833"]
-[ext_resource type="Resource" uid="uid://mmfg1un8iq45" path="res://Data/Resources/Cards/DirectAttack.tres" id="27_kiqwh"]
-[ext_resource type="Resource" uid="uid://citix5pk8ikf2" path="res://Data/Resources/Cards/DirectMovement.tres" id="28_4o4wy"]
-[ext_resource type="Resource" uid="uid://dppnmbma0avcl" path="res://Data/Resources/Cards/ElfSwill.tres" id="29_ld0a2"]
-[ext_resource type="Resource" uid="uid://eo3g5o530v3g" path="res://Data/Resources/Cards/ForgingRune.tres" id="30_5c8ho"]
-[ext_resource type="Resource" uid="uid://bey0as78a23va" path="res://Data/Resources/Cards/ForYourHealth.tres" id="31_f0d5j"]
-[ext_resource type="Resource" uid="uid://b5arv83v6cfck" path="res://Data/Resources/Cards/Hangover.tres" id="32_wlq0u"]
-[ext_resource type="Resource" uid="uid://djaoklswprgaf" path="res://Data/Resources/Cards/HeartySnack.tres" id="33_by7hf"]
-[ext_resource type="Resource" uid="uid://dycg00nvrib4t" path="res://Data/Resources/Cards/HeavyHit.tres" id="34_u0mmd"]
-[ext_resource type="Resource" uid="uid://dfb4qql0u0vr0" path="res://Data/Resources/Cards/Hunger.tres" id="35_3spjh"]
-[ext_resource type="Resource" uid="uid://bt581tn5bf7ce" path="res://Data/Resources/Cards/MoreTraps.tres" id="36_5suig"]
-[ext_resource type="Resource" uid="uid://8l2elxgd0dhf" path="res://Data/Resources/Cards/PhilosophicalTreatise.tres" id="37_j4se0"]
-[ext_resource type="Resource" uid="uid://cdavrpy0hes3e" path="res://Data/Resources/Cards/PoisonedBeer.tres" id="38_k7g52"]
-[ext_resource type="Resource" uid="uid://bxven2cqp7wsn" path="res://Data/Resources/Cards/RaiseShields.tres" id="39_jx7kw"]
-[ext_resource type="Resource" uid="uid://bk8c5h6tmi05c" path="res://Data/Resources/Cards/Reinforcement.tres" id="40_ea224"]
-[ext_resource type="Resource" uid="uid://b6rqgvl3mmqeh" path="res://Data/Resources/Cards/SpeedUp.tres" id="41_ji5e1"]
+[ext_resource type="PackedScene" uid="uid://8t16gfkhb3xa" path="res://Data/Scenes/UI/CardHolder/CardHolder.tscn" id="20_io8rw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_thffw"]
 texture = ExtResource("1_f5wi8")
@@ -232,6 +212,7 @@ text = "ход: 100"
 metadata/_edit_use_anchors_ = true
 
 [node name="Vhs-shader" parent="Camera2D" instance=ExtResource("1_5seje")]
+visible = false
 position = Vector2(-245, -135)
 
 [node name="LevelInfo" type="Node2D" parent="."]
@@ -282,29 +263,15 @@ script = ExtResource("14_07t1w")
 [node name="LevelModifier" type="Node2D" parent="."]
 script = ExtResource("14_xe5ua")
 
+[node name="CardHolder" parent="." instance=ExtResource("20_io8rw")]
+visible = false
+position = Vector2(128, 256)
+
 [node name="TileStorage" type="Node2D" parent="."]
 script = ExtResource("16_si61r")
 
 [node name="CharacterStorage" type="Node2D" parent="."]
 script = ExtResource("17_qpsic")
-
-[node name="CardHolder" type="Node2D" parent="."]
-script = ExtResource("15_xnraa")
-cards = Array[Resource]([ExtResource("23_udo4e"), ExtResource("24_5qbgp"), ExtResource("25_4uh86"), ExtResource("26_n7833"), ExtResource("27_kiqwh"), ExtResource("28_4o4wy"), ExtResource("29_ld0a2"), ExtResource("30_5c8ho"), ExtResource("31_f0d5j"), ExtResource("32_wlq0u"), ExtResource("33_by7hf"), ExtResource("34_u0mmd"), ExtResource("35_3spjh"), ExtResource("36_5suig"), ExtResource("37_j4se0"), ExtResource("38_k7g52"), ExtResource("39_jx7kw"), ExtResource("40_ea224"), ExtResource("41_ji5e1")])
-
-[node name="Card2" parent="CardHolder" instance=ExtResource("13_l7glq")]
-visible = false
-offset_left = 192.0
-offset_top = 320.0
-offset_right = 352.0
-offset_bottom = 448.0
-
-[node name="Card1" parent="CardHolder" instance=ExtResource("13_l7glq")]
-visible = false
-offset_left = 416.0
-offset_top = 320.0
-offset_right = 576.0
-offset_bottom = 448.0
 
 [node name="PauseMenu" parent="." instance=ExtResource("1_b3wt7")]
 visible = false

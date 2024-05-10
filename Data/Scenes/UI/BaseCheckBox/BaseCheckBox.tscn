@@ -1,10 +1,10 @@
 [gd_scene load_steps=15 format=3 uid="uid://rjbd6q6xscmg"]
 
-[ext_resource type="Texture2D" uid="uid://7we2xgxs8g52" path="res://Data/Sprites/UI/Sprite-0007.png" id="1_guksm"]
-[ext_resource type="Texture2D" uid="uid://bfvmqydtrp0rw" path="res://Data/Sprites/UI/Sprite-0009.png" id="2_67ufe"]
-[ext_resource type="Texture2D" uid="uid://dnuwby2deuvd2" path="res://Data/Sprites/UI/Sprite-0005.png" id="3_2r1fh"]
-[ext_resource type="Texture2D" uid="uid://c34dnkrh6s22i" path="res://Data/Sprites/UI/Sprite-0006.png" id="4_d7wse"]
-[ext_resource type="Texture2D" uid="uid://cwknjhx2wg8om" path="res://Data/Sprites/UI/Sprite-0008.png" id="5_e36y6"]
+[ext_resource type="Texture2D" uid="uid://7we2xgxs8g52" path="res://Data/Sprites/UI/BaseCheckBox/Checked.png" id="1_kejbm"]
+[ext_resource type="Texture2D" uid="uid://bfvmqydtrp0rw" path="res://Data/Sprites/UI/BaseCheckBox/Unchecked.png" id="2_2dyqc"]
+[ext_resource type="Texture2D" uid="uid://dnuwby2deuvd2" path="res://Data/Sprites/UI/BaseCheckBox/Normal.png" id="3_td20c"]
+[ext_resource type="Texture2D" uid="uid://c34dnkrh6s22i" path="res://Data/Sprites/UI/BaseCheckBox/Hover.png" id="4_oec4f"]
+[ext_resource type="Texture2D" uid="uid://cwknjhx2wg8om" path="res://Data/Sprites/UI/BaseCheckBox/HoverChecked.png" id="5_xak42"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/BaseCheckBox/BaseCheckBox.cs" id="6_fit21"]
 [ext_resource type="Script" path="res://Data/Scripts/AudioScripts/ButtonAudioController.cs" id="6_gytbt"]
 [ext_resource type="AudioStream" uid="uid://bvwj1i75ge082" path="res://Data/Audio/Sound/ButtonSounds/Hover/Hover1.wav" id="7_hdji1"]
@@ -17,20 +17,20 @@ load_path = "res://.godot/imported/Sprite-0005.png-d1e2ed76a12e9c8b2d84a250536d4
 texture = SubResource("CompressedTexture2D_53vru")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4hf2p"]
-texture = ExtResource("3_2r1fh")
+texture = ExtResource("3_td20c")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_noypf"]
-texture = ExtResource("4_d7wse")
+texture = ExtResource("4_oec4f")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1pku"]
-texture = ExtResource("5_e36y6")
+texture = ExtResource("5_xak42")
 
 [node name="BaseCheckBox" type="CheckBox"]
 offset_right = 16.0
 offset_bottom = 16.0
 focus_mode = 0
-theme_override_icons/checked = ExtResource("1_guksm")
-theme_override_icons/unchecked = ExtResource("2_67ufe")
+theme_override_icons/checked = ExtResource("1_kejbm")
+theme_override_icons/unchecked = ExtResource("2_2dyqc")
 theme_override_styles/normal = SubResource("StyleBoxTexture_tdhqc")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_4hf2p")
 theme_override_styles/hover = SubResource("StyleBoxTexture_noypf")
