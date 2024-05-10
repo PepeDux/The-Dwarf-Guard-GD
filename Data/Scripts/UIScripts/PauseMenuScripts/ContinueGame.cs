@@ -5,12 +5,12 @@ public partial class ContinueGame : BaseButton
 {
     public override void _Ready()
     {
-        ButtonEventSubscribing();
+        
     }
 
-    public override void ButtonPressed()
+    public override void Pressed()
     {
-        base.ButtonPressed();
+        base.Pressed();
 
         GetParent<Node2D>().Visible = false;
         GetTree().Paused = false;

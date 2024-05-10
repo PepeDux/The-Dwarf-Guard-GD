@@ -5,12 +5,12 @@ public partial class StartGame : BaseButton
 {
 	public override void _Ready()
 	{
-		ButtonEventSubscribing();
+		
 	}
 
-	public override void ButtonPressed()
+	public override void Pressed()
 	{
-		base.ButtonPressed();
+		base.Pressed();
 
 		GetTree().ChangeSceneToFile("res://Data/Scenes/CoreScene/CoreScene.tscn");
 	}

@@ -7,8 +7,6 @@ public partial class TurnButton : BaseButton
 	{
 		base._Ready();
 
-		ButtonEventSubscribing();
-
 		Events.finishedAllTurn += Enable;
 		Events.playerTurnFinished += Disable;
 	}
@@ -21,9 +19,9 @@ public partial class TurnButton : BaseButton
 		Events.playerTurnFinished -= Disable;
 	}
 
-	public override void ButtonPressed()
+	public override void Pressed()
 	{
-		base.ButtonPressed();
+		base.Pressed();
 
 		Events.playerTurnFinished?.Invoke();
 	}

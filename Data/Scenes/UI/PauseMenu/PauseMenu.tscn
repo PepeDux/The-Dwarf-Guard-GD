@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/MainMenuScripts/ToSettings.cs" id="7_16vi4"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/PauseMenuScripts/ContinueGame.cs" id="10_w2kst"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="11_3arod"]
-[ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/Button/Button.tscn" id="12_no3vs"]
+[ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseButton/BaseButton.tscn" id="12_no3vs"]
 
 [node name="PauseMenu" type="Node2D"]
 process_mode = 3
@@ -26,15 +26,16 @@ offset_bottom = 328.0
 color = Color(0, 0, 0, 0.501961)
 
 [node name="ToMainMenu" parent="." instance=ExtResource("12_no3vs")]
-offset_left = 181.0
+offset_left = 201.0
 offset_top = 112.0
-offset_right = 213.0
+offset_right = 233.0
 offset_bottom = 144.0
 texture_normal = ExtResource("1_voa14")
 texture_hover = ExtResource("2_ev12p")
 script = ExtResource("4_p6vl5")
 
 [node name="ToSettings" parent="." instance=ExtResource("12_no3vs")]
+visible = false
 offset_left = 229.0
 offset_top = 112.0
 offset_right = 261.0
@@ -44,10 +45,10 @@ texture_hover = ExtResource("4_ik3o4")
 script = ExtResource("7_16vi4")
 
 [node name="ContinueGame" parent="." instance=ExtResource("12_no3vs")]
-offset_left = 277.0
-offset_top = 113.0
-offset_right = 309.0
-offset_bottom = 145.0
+offset_left = 257.0
+offset_top = 112.0
+offset_right = 289.0
+offset_bottom = 144.0
 texture_normal = ExtResource("1_ett25")
 texture_hover = ExtResource("2_n60cg")
 script = ExtResource("10_w2kst")
@@ -61,5 +62,5 @@ scale = Vector2(0.05, 0.05)
 theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
 theme_override_fonts/font = ExtResource("11_3arod")
 theme_override_font_sizes/font_size = 512
-text = "Pause
-"
+text = "Пауза"
+horizontal_alignment = 1

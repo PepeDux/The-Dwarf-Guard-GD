@@ -5,16 +5,17 @@ public partial class ToMainMenu : BaseButton
 {
 	public override void _Ready()
 	{
-		ButtonEventSubscribing();
+		
 	}
 
-	public override void ButtonPressed()
+	public override void Pressed()
 	{
-		base.ButtonPressed();
+		base.Pressed();
 
 		Events.levelEnded?.Invoke();
 
 		GetTree().Paused = false;
+
 		GetTree().ChangeSceneToFile("res://Data/Scenes/UI/MainMenu/MainMenu.tscn");
 	}
 }

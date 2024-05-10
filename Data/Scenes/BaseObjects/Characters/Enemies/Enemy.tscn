@@ -10,7 +10,6 @@ viewport_path = NodePath("SubViewport")
 
 [node name="Enemy" instance=ExtResource("1_tacpj")]
 script = ExtResource("2_s0bue")
-maxHP = 10
 
 [node name="MessageParticles" parent="." index="8"]
 texture = SubResource("ViewportTexture_jfbax")

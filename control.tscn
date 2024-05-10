@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://lr8mjtscy5iq"]
+
+[ext_resource type="Texture2D" uid="uid://b6wleiq831ntt" path="res://Data/Sprites/UI/PauseMenu/ContinueHover.png" id="2_ttjgo"]
+[ext_resource type="PackedScene" uid="uid://rjbd6q6xscmg" path="res://Data/Scenes/UI/BaseCheckBox/BaseCheckBox.tscn" id="3_tjxos"]
+[ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="4_w30o2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CheckButton" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_right = 76.0
+offset_bottom = 24.0
+
+[node name="ContinueHover" type="Sprite2D" parent="."]
+position = Vector2(200, 24)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ttjgo")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 56.0
+offset_right = 1936.0
+offset_bottom = 376.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("4_w30o2")
+theme_override_font_sizes/font_size = 256
+text = "VHS Фильтр:"
+
+[node name="HScrollBar" type="HScrollBar" parent="."]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 80.0
+offset_right = 328.0
+offset_bottom = 88.0
+step = 10.0
+
+[node name="BaseCheckBox" parent="." instance=ExtResource("3_tjxos")]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 56.0
+offset_right = 320.0
+offset_bottom = 72.0

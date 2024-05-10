@@ -38,8 +38,6 @@ public partial class Card : BaseButton
 		// Событие на окончанеи выбора карты
 		Events.endSelectCard += EndSelectCard;
 
-		ButtonEventSubscribing();
-
 		// Загружаем все карты
 		// cards.AddRange(CardLoader.Load("res://Data/Resources/Cards/"));
 		cards = GetParent<CardHolder>().cards;
@@ -104,9 +102,9 @@ public partial class Card : BaseButton
 		}
 	}
 
-	public override void ButtonPressed()
+	public override void Pressed()
 	{
-		base.ButtonPressed();
+		base.Pressed();
 
 		AddModifier();
 

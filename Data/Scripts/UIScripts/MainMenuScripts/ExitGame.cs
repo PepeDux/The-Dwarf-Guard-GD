@@ -5,12 +5,12 @@ public partial class ExitGame : BaseButton
 {
 	public override void _Ready()
 	{
-		ButtonEventSubscribing();
+		
 	}
 
-	public override void ButtonPressed()
+	public override void Pressed()
 	{
-		base.ButtonPressed();
+		base.Pressed();
 
 		GetTree().Quit();
 	}

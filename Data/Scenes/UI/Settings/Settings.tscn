@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://dk5oajn47og3q"]
+
+[ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="1_p8uvn"]
+[ext_resource type="PackedScene" uid="uid://rjbd6q6xscmg" path="res://Data/Scenes/UI/BaseCheckBox/BaseCheckBox.tscn" id="2_o2e4e"]
+[ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="3_1mcjg"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/Settings/VHSCheckBox.cs" id="3_umxfk"]
+[ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseButton/BaseButton.tscn" id="5_mwnbi"]
+[ext_resource type="Texture2D" uid="uid://or87o5xy26ju" path="res://Data/Sprites/UI/Settings/SaveNormal.png" id="6_qe36h"]
+[ext_resource type="Texture2D" uid="uid://yg2ywsvrgf3p" path="res://Data/Sprites/UI/Settings/SaveHover.png" id="7_0xalm"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/Settings/SaveSettingsButton.cs" id="8_o0247"]
+
+[node name="Settings" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 490.0
+offset_bottom = 270.0
+color = Color(0.109804, 0.101961, 0.101961, 1)
+
+[node name="Vhs-shader" parent="." instance=ExtResource("1_p8uvn")]
+visible = false
+
+[node name="VHSCheckBox" parent="." instance=ExtResource("2_o2e4e")]
+offset_left = 168.0
+offset_top = 64.0
+offset_right = 184.0
+offset_bottom = 80.0
+script = ExtResource("3_umxfk")
+
+[node name="VHSLabel" type="Label" parent="."]
+z_index = 5
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 1984.0
+offset_bottom = 384.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
+theme_override_fonts/font = ExtResource("3_1mcjg")
+theme_override_font_sizes/font_size = 256
+text = "VHS-Шейдер"
+
+[node name="BaseButton" parent="." instance=ExtResource("5_mwnbi")]
+offset_left = 200.0
+offset_top = 208.0
+offset_right = 298.0
+offset_bottom = 234.0
+texture_normal = ExtResource("6_qe36h")
+texture_hover = ExtResource("7_0xalm")
+script = ExtResource("8_o0247")

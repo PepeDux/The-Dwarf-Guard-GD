@@ -50,6 +50,6 @@ modifier = SubResource("Resource_7pe4s")
 texture = ExtResource("3_4x3lu")
 name = "Отравленное пиво"
 cardDescription = "Все противники получют -1 ков всем характеристикам. А это точно безопасно?"
-cardStrength = 4
+cardStrength = 5
 type = 0
 accessory = 1

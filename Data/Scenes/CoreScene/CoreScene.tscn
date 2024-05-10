@@ -1,6 +1,6 @@
 [gd_scene load_steps=49 format=3 uid="uid://uixniamcrmq2"]
 
-[ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS-Shader/VHS-Shader.tscn" id="1_5seje"]
+[ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="1_5seje"]
 [ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/CoreScene/Holders.tscn" id="1_78hkp"]
 [ext_resource type="PackedScene" uid="uid://hegp6rbt487a" path="res://Data/Scenes/UI/PauseMenu/PauseMenu.tscn" id="1_b3wt7"]
 [ext_resource type="Texture2D" uid="uid://csw0qwm2nm2r7" path="res://Data/Sprites/Tilemaps/TileMap.png" id="1_f5wi8"]
@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnButton.cs" id="9_f7nk1"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelInfo.cs" id="9_lclkq"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="10_3v6ox"]
-[ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/Button/Button.tscn" id="10_7hchu"]
+[ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseButton/BaseButton.tscn" id="10_7hchu"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/UIManager.cs" id="10_bwtok"]
 [ext_resource type="Texture2D" uid="uid://ct0xsiy6ay6x8" path="res://Data/Sprites/UI/TurnButton/NextTurn.png" id="11_3vad7"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/Fader.cs" id="11_lk4uu"]
@@ -240,7 +240,8 @@ captainCount = 1
 infantryCount = 1
 trapCount = 2
 foodCount = 2
-tileCount = 20
+runeCount = 1
+tileCount = 30
 
 [node name="SpawnModifierCalculation" type="Node2D" parent="LevelInfo"]
 script = ExtResource("7_2krpp")

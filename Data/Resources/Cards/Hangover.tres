@@ -50,6 +50,6 @@ modifier = SubResource("Resource_ult1p")
 texture = ExtResource("3_cakp6")
 name = "Похмелье"
 cardDescription = "-2 к КД и -2 к очкам передвижения игрока. Ик"
-cardStrength = 4
+cardStrength = 5
 type = 1
 accessory = 0

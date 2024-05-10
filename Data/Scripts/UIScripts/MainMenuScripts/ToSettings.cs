@@ -5,13 +5,15 @@ public partial class ToSettings : BaseButton
 {
     public override void _Ready()
     {
-        ButtonEventSubscribing();
+        
     }
 
-    public override void ButtonPressed()
+    public override void Pressed()
     {
-        base.ButtonPressed();
+        base.Pressed();
 
         GetTree().Paused = false;
+
+        GetTree().ChangeSceneToFile("res://Data/Scenes/UI/Settings/Settings.tscn");
     }
 }

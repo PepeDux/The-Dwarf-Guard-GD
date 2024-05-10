@@ -22,7 +22,7 @@ public partial class Trap : FunctionalObject
 	{
 		if (this.coordinate == character.coordinate)
 		{
-			character.GetNode<TakeDamage>("TakeDamage").Take(physicalDamage: DiceRoll.Roll(6));
+			character.GetNode<TakeDamage>("TakeDamage").Take(physicalDamage: DiceRoll.Roll(4) + 2);
 
 			// Проигрываем анимацию
 			GetNode<AnimationController>("AnimationController").PlayAnimation("Activation");

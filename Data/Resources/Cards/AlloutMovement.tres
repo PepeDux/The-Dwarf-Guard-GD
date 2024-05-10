@@ -1,12 +1,52 @@
-[gd_resource type="Resource" load_steps=4 format=3 uid="uid://cdsl1thfxwjwl"]
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://cdsl1thfxwjwl"]
 
-[ext_resource type="Resource" uid="uid://c4csjm5g77rer" path="res://Data/Resources/CharacteristicModifier/CharacteristicModifier.tres" id="1_8xnll"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/CharacteristicModifierData.cs" id="1_6u6fd"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_q7yws"]
 [ext_resource type="Texture2D" uid="uid://da0j6hpfucqfo" path="res://Data/Sprites/Cards/Card_35.png" id="3_bmlid"]
 
+[sub_resource type="Resource" id="Resource_rfr6i"]
+resource_local_to_scene = true
+script = ExtResource("1_6u6fd")
+permanent = true
+maxHP = 0
+HP = 0
+physicalDamage = 0
+poisonDamage = 0
+fireDamage = 0
+frostDamage = 0
+maxMovePoints = 0
+movePoints = 0
+maxActionPoints = 0
+actionPoints = 0
+maxBeerPoints = 0
+beerPoints = 0
+moveCost = 0
+meleeAttackCost = 0
+rangeAttackCost = 0
+horizontalMove = 1
+diagonalMove = 1
+horizontalAttack = 0
+diagonalAttack = 0
+meleeAttack = 0
+rangeAttack = 0
+rangeAttackDistance = 0
+meleeAttackDistance = 0
+AC = 0
+money = 0
+strength = 0
+dexterity = 0
+inteligence = 0
+constitution = 0
+wisdom = 0
+drunkenness = 0
+physicalResist = 0
+poisonResist = 0
+fireResist = 0
+frostResist = 0
+
 [resource]
 script = ExtResource("2_q7yws")
-modifier = ExtResource("1_8xnll")
+modifier = SubResource("Resource_rfr6i")
 texture = ExtResource("3_bmlid")
 name = "Любое направленеи передвижения"
 cardDescription = "Теперь вы можете передвигаться в любом направлении. Бежим остюда!"
