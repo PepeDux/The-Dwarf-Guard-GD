@@ -1,0 +1,23 @@
+[gd_scene load_steps=7 format=3 uid="uid://32kva0djp61d"]
+
+[ext_resource type="Texture2D" uid="uid://cyow177jcnjro" path="res://Data/Sprites/UI/BaseUIElements/BaseButton/ButtonNormal.png" id="1_1v587"]
+[ext_resource type="Texture2D" uid="uid://whnsmb3oiayl" path="res://Data/Sprites/UI/BaseUIElements/BaseButton/ButtonHover.png" id="2_j8lem"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/BaseUIElements/BaseButton/BaseButton.cs" id="3_1lypv"]
+[ext_resource type="Script" path="res://Data/Scripts/AudioScripts/ButtonAudioController.cs" id="4_jq5iy"]
+[ext_resource type="AudioStream" uid="uid://bvwj1i75ge082" path="res://Data/Audio/Sound/ButtonSounds/Hover/Hover1.wav" id="5_y0n2m"]
+[ext_resource type="AudioStream" uid="uid://bwq0gac35vvu2" path="res://Data/Audio/Sound/ButtonSounds/Click/Click1.wav" id="6_1na8r"]
+
+[node name="BaseButton" type="TextureButton"]
+texture_normal = ExtResource("1_1v587")
+texture_hover = ExtResource("2_j8lem")
+script = ExtResource("3_1lypv")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"Sounds"
+script = ExtResource("4_jq5iy")
+hoverSounds = Array[AudioStreamWAV]([ExtResource("5_y0n2m")])
+clickSounds = Array[AudioStreamWAV]([ExtResource("6_1na8r")])
+
+[connection signal="mouse_entered" from="." to="." method="MouseEntered"]
+[connection signal="mouse_exited" from="." to="." method="MouseExited"]
+[connection signal="pressed" from="." to="." method="Pressed"]

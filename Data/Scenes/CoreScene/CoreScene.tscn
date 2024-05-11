@@ -4,19 +4,19 @@
 [ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/CoreScene/Holders.tscn" id="1_78hkp"]
 [ext_resource type="PackedScene" uid="uid://hegp6rbt487a" path="res://Data/Scenes/UI/PauseMenu/PauseMenu.tscn" id="1_b3wt7"]
 [ext_resource type="Texture2D" uid="uid://csw0qwm2nm2r7" path="res://Data/Sprites/Tilemaps/TileMap.png" id="1_f5wi8"]
-[ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/UI/Markers/Markers.png" id="2_outi2"]
+[ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/UI/GameScene/Markers/Markers.png" id="2_outi2"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Spawn/SpawnModifierCalculation.cs" id="7_2krpp"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnButton.cs" id="9_f7nk1"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelInfo.cs" id="9_lclkq"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="10_3v6ox"]
-[ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseButton/BaseButton.tscn" id="10_7hchu"]
+[ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="10_7hchu"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/UIManager.cs" id="10_bwtok"]
-[ext_resource type="Texture2D" uid="uid://ct0xsiy6ay6x8" path="res://Data/Sprites/UI/MainMenu/TurnButton/NextTurn.png" id="11_3vad7"]
+[ext_resource type="Texture2D" uid="uid://ct0xsiy6ay6x8" path="res://Data/Sprites/UI/GameScene/TurnButton/NextTurnNormal.png" id="11_3vad7"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/Fader.cs" id="11_lk4uu"]
 [ext_resource type="Script" path="res://Data/Scripts/CameraScripts/CameraShake.cs" id="11_qh8oq"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelGenerator.cs" id="12_13kvq"]
-[ext_resource type="Texture2D" uid="uid://k2i6a78b782p" path="res://Data/Sprites/UI/MainMenu/TurnButton/NextTurnHower.png" id="12_ilwqk"]
-[ext_resource type="Texture2D" uid="uid://bvarsh4qj0s4" path="res://Data/Sprites/UI/MainMenu/TurnButton/Wait.png" id="13_mmukt"]
+[ext_resource type="Texture2D" uid="uid://k2i6a78b782p" path="res://Data/Sprites/UI/GameScene/TurnButton/NextTurnHower.png" id="12_ilwqk"]
+[ext_resource type="Texture2D" uid="uid://bvarsh4qj0s4" path="res://Data/Sprites/UI/GameScene/TurnButton/Wait.png" id="13_mmukt"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnController.cs" id="14_07t1w"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelModifier.cs" id="14_xe5ua"]
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/TileStorage.cs" id="16_si61r"]
@@ -260,12 +260,12 @@ script = ExtResource("18_m7nb1")
 [node name="TurnController" type="Node2D" parent="."]
 script = ExtResource("14_07t1w")
 
-[node name="LevelModifier" type="Node2D" parent="."]
-script = ExtResource("14_xe5ua")
-
 [node name="CardHolder" parent="." instance=ExtResource("20_io8rw")]
 visible = false
 position = Vector2(128, 256)
+
+[node name="LevelModifier" type="Node2D" parent="."]
+script = ExtResource("14_xe5ua")
 
 [node name="TileStorage" type="Node2D" parent="."]
 script = ExtResource("16_si61r")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://8t16gfkhb3xa"]
+[gd_scene load_steps=28 format=3 uid="uid://8t16gfkhb3xa"]
 
 [ext_resource type="Script" path="res://Data/Scripts/CardsScripts/CardHolder.cs" id="1_a7k87"]
 [ext_resource type="Resource" uid="uid://5hyiplhhml1i" path="res://Data/Resources/Cards/AlloutAttack.tres" id="2_yhavf"]
@@ -21,22 +21,46 @@
 [ext_resource type="Resource" uid="uid://bk8c5h6tmi05c" path="res://Data/Resources/Cards/Reinforcement.tres" id="19_gl1bg"]
 [ext_resource type="Resource" uid="uid://b6rqgvl3mmqeh" path="res://Data/Resources/Cards/SpeedUp.tres" id="20_ys4je"]
 [ext_resource type="PackedScene" uid="uid://cgyw5qsp8s6b7" path="res://Data/Scenes/UI/Cards/Card.tscn" id="21_fmrue"]
-[ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseButton/BaseButton.tscn" id="22_1r35e"]
+[ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="22_1r35e"]
+[ext_resource type="Texture2D" uid="uid://8ym0uxmh0h44" path="res://Data/Sprites/UI/GameScene/Cards/RerollCardsButton/RerollCardsNormal.png" id="23_6il5p"]
+[ext_resource type="Texture2D" uid="uid://5cumx7p84y5k" path="res://Data/Sprites/UI/GameScene/Cards/RerollCardsButton/RerollCardsHower.png" id="24_8tssj"]
+[ext_resource type="Script" path="res://Data/Scripts/CardsScripts/RerollCardsButton.cs" id="24_h4wjs"]
+[ext_resource type="Texture2D" uid="uid://dp3oyyrbnjjmc" path="res://Data/Sprites/UI/GameScene/Cards/DropCardsButton/DropCardsNormal.png" id="25_e2tg0"]
+[ext_resource type="Texture2D" uid="uid://n5rn1x4vr7j0" path="res://Data/Sprites/UI/GameScene/Cards/DropCardsButton/DropCardsHower.png" id="26_iotvg"]
 
 [node name="CardHolder" type="Node2D"]
 script = ExtResource("1_a7k87")
 cards = Array[Resource]([ExtResource("2_yhavf"), ExtResource("3_ber0g"), ExtResource("4_s27uw"), ExtResource("5_rnkn0"), ExtResource("6_itv0b"), ExtResource("7_j51p4"), ExtResource("8_ev1ei"), ExtResource("9_ve3pj"), ExtResource("10_3y1wd"), ExtResource("11_fpfaq"), ExtResource("12_18658"), ExtResource("13_urdeu"), ExtResource("14_8h00x"), ExtResource("15_wlnix"), ExtResource("16_12a7r"), ExtResource("17_2ocs2"), ExtResource("18_k8p5m"), ExtResource("19_gl1bg"), ExtResource("20_ys4je")])
 
-[node name="Card" parent="." instance=ExtResource("21_fmrue")]
+[node name="RerollCardsButton" parent="." instance=ExtResource("22_1r35e")]
+z_index = 1
+offset_left = 240.0
+offset_top = 80.0
+offset_right = 272.0
+offset_bottom = 112.0
+texture_normal = ExtResource("23_6il5p")
+texture_hover = ExtResource("24_8tssj")
+script = ExtResource("24_h4wjs")
+
+[node name="DropCardsButton" parent="." instance=ExtResource("22_1r35e")]
+z_index = 1
+offset_left = 240.0
+offset_top = 144.0
+offset_right = 272.0
+offset_bottom = 176.0
+texture_normal = ExtResource("25_e2tg0")
+texture_hover = ExtResource("26_iotvg")
+
+[node name="Card1" parent="." instance=ExtResource("21_fmrue")]
 offset_left = 64.0
 offset_top = 64.0
 offset_right = 224.0
 offset_bottom = 192.0
+texture_hover = null
 
 [node name="Card2" parent="." instance=ExtResource("21_fmrue")]
 offset_left = 288.0
 offset_top = 64.0
 offset_right = 448.0
 offset_bottom = 192.0
-
-[node name="BaseButton" parent="." instance=ExtResource("22_1r35e")]
+texture_hover = null

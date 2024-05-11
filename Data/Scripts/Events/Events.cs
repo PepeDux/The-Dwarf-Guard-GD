@@ -57,4 +57,14 @@ public partial class Events : Node
     /// Событие на передвиженеи пересонажа
     /// </summary>
     public static Action<Character> characterMoved;
+
+    /// <summary>
+    /// Событие на реролл карт
+    /// </summary>
+    public static Action rerolledCards;
+
+    /// <summary>
+    /// Событие на дроп карт
+    /// </summary>
+    public static Action dropedCards;
 }

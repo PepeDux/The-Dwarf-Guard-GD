@@ -13,6 +13,7 @@ public partial class CardHolder : Node2D
 	public override void _Ready()
 	{
 		Events.levelEnded += ShowCard;
+		Events.endSelectCard += HideCard;
 
 		// Добавляем все карты в лист
 		cardFaces.AddRange(GetChildren().OfType<TextureButton>());
@@ -21,11 +22,17 @@ public partial class CardHolder : Node2D
 	public override void _ExitTree()
 	{
 		Events.levelEnded -= ShowCard;
+		Events.endSelectCard -= HideCard;
 	}
 
 
 	private void ShowCard()
 	{
 		this.Visible = true;
+	}
+
+	private void HideCard()
+	{
+		this.Visible = false;
 	}
 }

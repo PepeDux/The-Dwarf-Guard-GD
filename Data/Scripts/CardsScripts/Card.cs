@@ -35,8 +35,8 @@ public partial class Card : BaseButton
 
 	public override void _Ready()
 	{
-		// Событие на окончанеи выбора карты
-		Events.endSelectCard += EndSelectCard;
+		Events.endSelectCard += MakeCard;
+		Events.rerolledCards += MakeCard;
 
 		// Загружаем все карты
 		// cards.AddRange(CardLoader.Load("res://Data/Resources/Cards/"));
@@ -62,7 +62,8 @@ public partial class Card : BaseButton
 
 	public override void _ExitTree()
 	{
-		Events.endSelectCard -= EndSelectCard;
+		Events.endSelectCard -= MakeCard;
+		Events.rerolledCards -= MakeCard;
 	}
 
 
@@ -145,12 +146,5 @@ public partial class Card : BaseButton
 		{
 			GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").GetNode<SpawnModifierCalculation>("SpawnModifierCalculation").AddSpawn(cardNegative.modifier as SpawnModifierData);
 		}
-	}
-
-	private void EndSelectCard()
-	{
-		// После выбора карты создается следующие карты на следующий уровень
-		MakeCard();
-		Visible = false;
 	}
 }

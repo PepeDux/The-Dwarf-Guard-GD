@@ -1,50 +1,43 @@
-[gd_scene load_steps=6 format=3 uid="uid://bthuydw3peyqe"]
+[gd_scene load_steps=12 format=3 uid="uid://bthuydw3peyqe"]
 
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameOver/GameOver.cs" id="1_s2ub0"]
 [ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="1_vnuuv"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="2_j64m8"]
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameOver/PressEscBlink.cs" id="3_xof6s"]
 [ext_resource type="AudioStream" uid="uid://b4cysnvj7mibm" path="res://Data/Audio/Music/GameOver/GameOver1.wav" id="4_cide8"]
+[ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="6_blpn5"]
+[ext_resource type="Texture2D" uid="uid://d4hpa58kitphe" path="res://Data/Sprites/UI/GameScene/PauseMenu/ToMainMenuNormal.png" id="7_micqq"]
+[ext_resource type="Texture2D" uid="uid://b4ouqcvolxfn1" path="res://Data/Sprites/UI/GameScene/PauseMenu/ToMainMenuHover.png" id="8_5gucn"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/PauseMenuScripts/ToMainMenu.cs" id="9_ib1mu"]
+[ext_resource type="Texture2D" uid="uid://j68fsb8a42r1" path="res://Data/Sprites/UI/GameOver/RetryButton/RetryNormal.png" id="10_7x3gb"]
+[ext_resource type="Texture2D" uid="uid://b6q5spb8xojyu" path="res://Data/Sprites/UI/GameOver/RetryButton/RetryHower.png" id="11_1hebt"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameOver/RetryLevelButton.cs" id="12_2sy0y"]
 
 [node name="GameOver" type="Node2D"]
 script = ExtResource("1_s2ub0")
 
 [node name="GameOver" type="Label" parent="."]
 z_index = 5
-offset_left = 93.0
 offset_top = 55.0
-offset_right = 5901.0
+offset_right = 9800.0
 offset_bottom = 1098.0
 scale = Vector2(0.05, 0.05)
 theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
 theme_override_fonts/font = ExtResource("2_j64m8")
 theme_override_font_sizes/font_size = 1000
 text = "Game OVer"
+horizontal_alignment = 1
 
 [node name="BeerSpiled" type="Label" parent="."]
 z_index = 5
-offset_left = 189.0
 offset_top = 120.0
-offset_right = 2140.0
+offset_right = 9800.0
 offset_bottom = 388.0
 scale = Vector2(0.05, 0.05)
 theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
 theme_override_fonts/font = ExtResource("2_j64m8")
 theme_override_font_sizes/font_size = 256
 text = "beer spilled"
-
-[node name="PressEsc" type="Label" parent="."]
-z_index = 5
-offset_left = 218.0
-offset_top = 232.0
-offset_right = 1009.0
-offset_bottom = 367.0
-scale = Vector2(0.05, 0.05)
-theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
-theme_override_fonts/font = ExtResource("2_j64m8")
-theme_override_font_sizes/font_size = 128
-text = "Press esc"
-script = ExtResource("3_xof6s")
+horizontal_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 490.0
@@ -52,8 +45,27 @@ offset_bottom = 270.0
 color = Color(0.109804, 0.101961, 0.101961, 1)
 
 [node name="Vhs-shader" parent="." instance=ExtResource("1_vnuuv")]
+visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_cide8")
 autoplay = true
 bus = &"GameOverMusic"
+
+[node name="ToMainMenuButton" parent="." instance=ExtResource("6_blpn5")]
+offset_left = 201.0
+offset_top = 176.0
+offset_right = 233.0
+offset_bottom = 208.0
+texture_normal = ExtResource("7_micqq")
+texture_hover = ExtResource("8_5gucn")
+script = ExtResource("9_ib1mu")
+
+[node name="RetryButton" parent="." instance=ExtResource("6_blpn5")]
+offset_left = 257.0
+offset_top = 176.0
+offset_right = 289.0
+offset_bottom = 208.0
+texture_normal = ExtResource("10_7x3gb")
+texture_hover = ExtResource("11_1hebt")
+script = ExtResource("12_2sy0y")
