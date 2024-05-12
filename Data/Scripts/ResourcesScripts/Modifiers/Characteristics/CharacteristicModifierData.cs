@@ -8,24 +8,11 @@ public partial class CharacteristicModifierData : ModifierData
 	// же будет распространяться только на 1 этаж (ПОКА ЧТО АКТАЛЬНО ТОЛЬКО ДЛЯ ПОДИБРАЕМЫХ ОБЪЕКТОВ ПОДОБРАННЫХ ИГРОКОМ)
 	[Export] public bool permanent { get; set; }
 
+
+
 	[ExportGroup("Здоровье")]
 	[Export] public int maxHP { get; set; }
 	[Export] public int HP { get; set; }
-
-
-
-	[ExportGroup("Урон наносимый объекту")]
-	// Физический урон
-	[Export] public int physicalDamage { get; set; }
-
-	// Ядовитый урон
-	[Export] public int poisonDamage { get; set; }
-
-	// Огненный урон
-	[Export] public int fireDamage { get; set; }
-
-	// Морозный урон
-	[Export] public int frostDamage { get; set; }
 
 
 
@@ -49,8 +36,6 @@ public partial class CharacteristicModifierData : ModifierData
 
 	[ExportGroup("Цена действий")]
 	[Export] public int moveCost { get; set; }
-	[Export] public int meleeAttackCost { get; set; }
-	[Export] public int rangeAttackCost { get; set; }
 
 
 	public enum BoolStatus 
@@ -68,25 +53,13 @@ public partial class CharacteristicModifierData : ModifierData
 
 
 
-	[ExportGroup("Тип атаки")]
-	[Export] public BoolStatus meleeAttack { get; set; }
-	[Export] public BoolStatus rangeAttack { get; set; }
-
-
-
-	[ExportGroup("Дальность атаки")]
-	[Export] public int rangeAttackDistance { get; set; }
-	[Export] public int meleeAttackDistance { get; set; }
-
-
-
 	[ExportGroup("Броня")]
 	[Export] public int AC { get; set; }
 
 
 
 	[ExportGroup("Монетки")]
-	[Export] public int money { get; set; }
+	[Export] public int coins { get; set; }
 
 
 
@@ -109,17 +82,8 @@ public partial class CharacteristicModifierData : ModifierData
 
 
 	[ExportGroup("Сопротивления к урону")]
-	// Сопротивление колющему📌
+	// Сопротивление физическому урону
 	[Export] public int physicalResist { get; set; }
-
-	// Сопротивление ядам🍄
-	[Export] public int poisonResist { get; set; }
-
-	// Сопротивление огню🔥
-	[Export] public int fireResist { get; set; }
-
-	// Сопростивление морозу❄ 
-	[Export] public int frostResist { get; set; }
 }
 
 

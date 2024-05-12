@@ -14,7 +14,7 @@ public partial class EnemySpawner : Spawner
 	{
 		Events.levelGenerated += SpawnEnemy;
 
-        levelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
+        levelSpawnInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelSpawnInfo>("LevelSpawnInfo");
 	}
 
     public override void _ExitTree()
@@ -24,22 +24,22 @@ public partial class EnemySpawner : Spawner
 
     public void SpawnEnemy()
 	{
-        for (int i = 0; i < levelInfo.CaptainCount; i++)
+        for (int i = 0; i < levelSpawnInfo.CaptainCount; i++)
         {
             Spawn(captain, Vector2I.Zero);
         }
 
-        for (int i = 0; i < levelInfo.InfantryCount; i++)
+        for (int i = 0; i < levelSpawnInfo.InfantryCount; i++)
 		{
 			Spawn(infantry, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < levelInfo.RiflemanCount; i++)
+		for (int i = 0; i < levelSpawnInfo.RiflemanCount; i++)
 		{
 			Spawn(rifleman, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < levelInfo.SpellcasterCount; i++)
+		for (int i = 0; i < levelSpawnInfo.SpellcasterCount; i++)
 		{
 			Spawn(spellcaster, Vector2I.Zero);
 		}

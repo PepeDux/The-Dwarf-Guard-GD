@@ -178,16 +178,21 @@ public partial class Character : BaseObject
 
 	[ExportGroup("Монетки")]
 	// Монетки
-	[Export] private int money = 0;
-	public int Money
+	[Export] private int coins = 0;
+	public int Coins
 	{
 		get
 		{
-			return money;
+			return coins;
 		}
 		set
 		{
-			money = Math.Clamp(value, 0, 10000);
+			coins = Math.Clamp(value, 0, 10000);
+
+			if (this is Player) 
+			{
+				GetTree().Root.GetNode("GameScene").GetNode<PlayerCoinCollection>("PlayerCoinCollection").coins += value;
+			}
 		}
 	}
 

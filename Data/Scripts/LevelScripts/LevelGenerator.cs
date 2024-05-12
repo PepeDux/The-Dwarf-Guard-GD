@@ -44,10 +44,10 @@ public partial class LevelGenerator : Node2D
 		GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").CurrentTurn = 0;
 
 		// Лимит тайлов
-		countTile = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").TileCount;
+		countTile = GetTree().Root.GetNode("GameScene").GetNode<LevelSpawnInfo>("LevelSpawnInfo").TileCount;
 
 		// Увеличивает колличество тайлов после генерации уровня для следующей генерации
-		GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").TileCount += 2;
+		GetTree().Root.GetNode("GameScene").GetNode<LevelSpawnInfo>("LevelSpawnInfo").TileCount += 2;
 
 		//Старотовый тайл
 		Tile tile = new Tile(startTile, tileMap);

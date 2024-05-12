@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://uixniamcrmq2"]
+[gd_scene load_steps=30 format=3 uid="uid://uixniamcrmq2"]
 
 [ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="1_5seje"]
 [ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/CoreScene/Holders.tscn" id="1_78hkp"]
@@ -19,11 +19,12 @@
 [ext_resource type="Texture2D" uid="uid://bvarsh4qj0s4" path="res://Data/Sprites/UI/GameScene/TurnButton/Wait.png" id="13_mmukt"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnController.cs" id="14_07t1w"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelModifier.cs" id="14_xe5ua"]
-[ext_resource type="Script" path="res://Data/Scripts/TileScripts/TileStorage.cs" id="16_si61r"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/CharacterStorage.cs" id="17_qpsic"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/ClearHolder.cs" id="18_m7nb1"]
 [ext_resource type="Script" path="res://Data/Scripts/test.cs" id="20_3r02s"]
 [ext_resource type="PackedScene" uid="uid://8t16gfkhb3xa" path="res://Data/Scenes/UI/CardHolder/CardHolder.tscn" id="20_io8rw"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Player/PlayerCoinCollection.cs" id="24_3k7fv"]
+[ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelSpawnInfo.cs" id="24_06p1m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_thffw"]
 texture = ExtResource("1_f5wi8")
@@ -215,40 +216,47 @@ metadata/_edit_use_anchors_ = true
 visible = false
 position = Vector2(-245, -135)
 
-[node name="LevelInfo" type="Node2D" parent="."]
-script = ExtResource("9_lclkq")
-captainCount = 1
-infantryCount = 1
-trapCount = 2
-foodCount = 2
-runeCount = 1
-tileCount = 30
+[node name="CameraShake" type="Node2D" parent="Camera2D"]
+position = Vector2(-384, -384)
+script = ExtResource("11_qh8oq")
 
-[node name="SpawnModifierCalculation" type="Node2D" parent="LevelInfo"]
-script = ExtResource("7_2krpp")
-
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -2792.0
-offset_top = -2936.0
-offset_right = 3608.0
-offset_bottom = 3464.0
+[node name="ColorRect" type="ColorRect" parent="Camera2D"]
+z_index = -1
+offset_left = -256.0
+offset_top = -144.0
+offset_right = 256.0
+offset_bottom = 144.0
 color = Color(0.109804, 0.101961, 0.101961, 1)
 script = ExtResource("11_lk4uu")
-metadata/_edit_use_anchors_ = true
 
-[node name="TurnButton" parent="." instance=ExtResource("10_7hchu")]
-offset_left = 368.0
-offset_top = 464.0
-offset_right = 400.0
-offset_bottom = 496.0
+[node name="TurnButton" parent="Camera2D" instance=ExtResource("10_7hchu")]
+offset_left = -16.0
+offset_top = 80.0
+offset_right = 16.0
+offset_bottom = 112.0
 texture_normal = ExtResource("11_3vad7")
 texture_hover = ExtResource("12_ilwqk")
 texture_disabled = ExtResource("13_mmukt")
 script = ExtResource("9_f7nk1")
 
-[node name="CameraShake" type="Node2D" parent="." node_paths=PackedStringArray("camera")]
-script = ExtResource("11_qh8oq")
-camera = NodePath("../Camera2D")
+[node name="CardHolder" parent="Camera2D" instance=ExtResource("20_io8rw")]
+visible = false
+z_index = 2
+position = Vector2(-256, -128)
+
+[node name="LevelInfo" type="Node2D" parent="."]
+script = ExtResource("9_lclkq")
+
+[node name="LevelSpawnInfo" type="Node2D" parent="."]
+script = ExtResource("24_06p1m")
+captainCount = 1
+infantryCount = 1
+trapCount = 2
+foodCount = 2
+tileCount = 30
+
+[node name="SpawnModifierCalculation" type="Node2D" parent="LevelSpawnInfo"]
+script = ExtResource("7_2krpp")
 
 [node name="LevelGenerator" type="Node2D" parent="." node_paths=PackedStringArray("tileMap")]
 script = ExtResource("12_13kvq")
@@ -257,21 +265,14 @@ tileMap = NodePath("../TileMap")
 [node name="HolderCleaner" type="Node2D" parent="LevelGenerator"]
 script = ExtResource("18_m7nb1")
 
-[node name="TurnController" type="Node2D" parent="."]
-script = ExtResource("14_07t1w")
-
-[node name="CardHolder" parent="." instance=ExtResource("20_io8rw")]
-visible = false
-position = Vector2(128, 256)
-
 [node name="LevelModifier" type="Node2D" parent="."]
 script = ExtResource("14_xe5ua")
 
-[node name="TileStorage" type="Node2D" parent="."]
-script = ExtResource("16_si61r")
-
 [node name="CharacterStorage" type="Node2D" parent="."]
 script = ExtResource("17_qpsic")
+
+[node name="TurnContoller" type="Node2D" parent="."]
+script = ExtResource("14_07t1w")
 
 [node name="PauseMenu" parent="." instance=ExtResource("1_b3wt7")]
 visible = false
@@ -279,3 +280,6 @@ position = Vector2(144, 256)
 
 [node name="TEST" type="Node2D" parent="."]
 script = ExtResource("20_3r02s")
+
+[node name="PlayerCoinCollection" type="Node2D" parent="."]
+script = ExtResource("24_3k7fv")

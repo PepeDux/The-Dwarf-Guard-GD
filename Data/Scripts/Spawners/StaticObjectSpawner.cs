@@ -12,7 +12,7 @@ public partial class StaticObjectSpawner : Spawner
 	{
         //Events.levelStarted += SpawnStaticTileObject;
 
-        levelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
+        levelSpawnInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelSpawnInfo>("LevelSpawnInfo");
 		//SpawnStaticTileObject();
 	}
 
@@ -23,12 +23,12 @@ public partial class StaticObjectSpawner : Spawner
 
     public void SpawnStaticTileObject()
 	{
-		for (int i = 0; i < levelInfo.WallCount; i++)
+		for (int i = 0; i < levelSpawnInfo.WallCount; i++)
 		{
 			Spawn(wall, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < levelInfo.PitCount; i++)
+		for (int i = 0; i < levelSpawnInfo.PitCount; i++)
 		{
 			Spawn(pit, Vector2I.Zero);
 		}

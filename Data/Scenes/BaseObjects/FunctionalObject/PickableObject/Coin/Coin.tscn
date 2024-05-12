@@ -10,13 +10,9 @@
 [sub_resource type="Resource" id="Resource_2o050"]
 resource_local_to_scene = true
 script = ExtResource("2_hgpnx")
-permanent = true
+permanent = false
 maxHP = 0
 HP = 0
-physicalDamage = 0
-poisonDamage = 0
-fireDamage = 0
-frostDamage = 0
 maxMovePoints = 0
 movePoints = 0
 maxActionPoints = 0
@@ -24,18 +20,10 @@ actionPoints = 0
 maxBeerPoints = 0
 beerPoints = 0
 moveCost = 0
-meleeAttackCost = 0
-rangeAttackCost = 0
 horizontalMove = 0
 diagonalMove = 0
-horizontalAttack = 0
-diagonalAttack = 0
-meleeAttack = 0
-rangeAttack = 0
-rangeAttackDistance = 0
-meleeAttackDistance = 0
 AC = 0
-money = 1
+coins = 1
 strength = 0
 dexterity = 0
 inteligence = 0
@@ -43,9 +31,6 @@ constitution = 0
 wisdom = 0
 drunkenness = 0
 physicalResist = 0
-poisonResist = 0
-fireResist = 0
-frostResist = 0
 
 [sub_resource type="Animation" id="Animation_oe5da"]
 resource_name = "Idle"

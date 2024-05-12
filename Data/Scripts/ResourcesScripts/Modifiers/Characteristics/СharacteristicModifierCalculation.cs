@@ -90,7 +90,8 @@ public partial class СharacteristicModifierCalculation : Node
 		GetParent<Character>().diagonalMove = BoolCalculation(mod, GetParent<Character>().diagonalMove, modifier.diagonalMove);
 
 		GetParent<Character>().AC += NumericCalculation(mod, modifier.AC);
-		GetParent<Character>().Money += NumericCalculation(mod, modifier.money);
+
+		GetParent<Character>().Coins += NumericCalculation(mod, modifier.coins);
 
 		GetParent<Character>().Strength += NumericCalculation(mod, modifier.strength);
 		GetParent<Character>().Dexterity += NumericCalculation(mod, modifier.dexterity);

@@ -134,11 +134,11 @@ public partial class Card : BaseButton
 		// Спавн
 		if (cardPositive.modifier is SpawnModifierData && cardPositive.accessory == CardData.Accessory.spawn)
 		{
-			GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").GetNode<SpawnModifierCalculation>("SpawnModifierCalculation").AddSpawn(cardPositive.modifier as SpawnModifierData);
+			GetTree().Root.GetNode("GameScene").GetNode<LevelSpawnInfo>("LevelSpawnInfo").GetNode<SpawnModifierCalculation>("SpawnModifierCalculation").AddSpawn(cardPositive.modifier as SpawnModifierData);
 		}
 		if (cardNegative.modifier is SpawnModifierData && cardNegative.accessory == CardData.Accessory.spawn)
 		{
-			GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").GetNode<SpawnModifierCalculation>("SpawnModifierCalculation").AddSpawn(cardNegative.modifier as SpawnModifierData);
+			GetTree().Root.GetNode("GameScene").GetNode<LevelSpawnInfo>("LevelSpawnInfo").GetNode<SpawnModifierCalculation>("SpawnModifierCalculation").AddSpawn(cardNegative.modifier as SpawnModifierData);
 		}
 	}
 }

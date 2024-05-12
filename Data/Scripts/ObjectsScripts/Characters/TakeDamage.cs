@@ -60,14 +60,14 @@ public partial class TakeDamage : Node
 			// Перекрашиваем label в красный цвет
 			GetParent().GetNode<SubViewport>("SubViewport").GetNode<Label>("Label").Modulate = new Color(1, 0, 0);
 			// Дрожание экрана при получении критического урона
-			GetTree().Root.GetNode("GameScene").GetNode<CameraShake>("CameraShake").ShakeAsync(3, 1, 20, 10);
+			GetTree().Root.GetNode("GameScene").GetNode<Camera2D>("Camera2D").GetNode<CameraShake>("CameraShake").ShakeAsync(3, 1, 20, 10);
 			// Проигрываем звук получения урона при крите
 			GetParent().GetNode<AudioController>("AudioStreamPlayer").PlaySound("Hurt", 0.4f, 0.6f);
 		}
 		else
 		{
 			// Дрожание экрана при получении обычного урона
-			GetTree().Root.GetNode("GameScene").GetNode<CameraShake>("CameraShake").ShakeAsync(1, 1, 15, 10);
+			GetTree().Root.GetNode("GameScene").GetNode<Camera2D>("Camera2D").GetNode<CameraShake>("CameraShake").ShakeAsync(1, 1, 15, 10);
 			// Проигрываем звук получения урона 
 			GetParent().GetNode<AudioController>("AudioStreamPlayer").PlaySound("Hurt", 0.9f, 1.3f);
 		}

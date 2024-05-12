@@ -32,13 +32,13 @@ public partial class Player : Character
 		Events.playerDied -= PlayerDied;
 	}
 
-
-
 	public override void _Process(double delta)
 	{
 		base._Process(delta);
 
 		MoveOrientation();
+
+		GD.Print(GetTree().Root.GetNode("GameScene").GetNode<PlayerCoinCollection>("PlayerCoinCollection").coins);
 	}
 
 	// Метод который разворачивает персонажа в соответсвии с положением курсора

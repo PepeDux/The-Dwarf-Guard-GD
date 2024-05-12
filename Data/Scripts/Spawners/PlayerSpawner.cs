@@ -11,7 +11,7 @@ public partial class PlayerSpawner : Spawner
 	{
 		Events.levelGenerated += SpawnPlayer;
 
-		levelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
+		levelSpawnInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelSpawnInfo>("LevelSpawnInfo");
 	}
 
     public override void _ExitTree()

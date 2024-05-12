@@ -10,13 +10,13 @@ public partial class Spawner : Node2D
 	private Vector2I spawnCoordinate;
 
 	// Информация о уровне
-	public LevelInfo levelInfo;
+	public LevelSpawnInfo levelSpawnInfo;
 
 	// Вызывается при готовности узла
 	public override void _Ready()
 	{
 		// Получаем информацию об уровне при готовности
-		levelInfo = GetLevelInfo();
+		levelSpawnInfo = GetLevelInfo();
 	}
 
 	// Метод для спауна объектов
@@ -93,9 +93,9 @@ public partial class Spawner : Node2D
 	}
 
 	// Получение информации об уровне
-	private LevelInfo GetLevelInfo()
+	private LevelSpawnInfo GetLevelInfo()
 	{
 		// Получаем информацию об уровне из корневого узла сцены
-		return GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
+		return GetTree().Root.GetNode("GameScene").GetNode<LevelSpawnInfo>("LevelSpawnInfo");
 	}
 }

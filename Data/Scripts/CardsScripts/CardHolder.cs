@@ -21,6 +21,7 @@ public partial class CardHolder : Node2D
 	{
 		Events.levelEnded -= ShowCard;
 		Events.endSelectCard -= HideCard;
+		Events.dropedCards -= HideCard;
 	}
 
 

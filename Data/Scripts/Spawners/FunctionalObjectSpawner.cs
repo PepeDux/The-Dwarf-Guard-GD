@@ -15,7 +15,7 @@ public partial class FunctionalObjectSpawner : Spawner
 	{
 		Events.levelGenerated += SpawnFunctionalObject;
 
-		levelInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo");
+		levelSpawnInfo = GetTree().Root.GetNode("GameScene").GetNode<LevelSpawnInfo>("LevelSpawnInfo");
 	}
 
 	public override void _ExitTree()
@@ -25,27 +25,27 @@ public partial class FunctionalObjectSpawner : Spawner
 
 	public void SpawnFunctionalObject()
 	{
-		for (int i = 0; i < levelInfo.TrapCount; i++)
+		for (int i = 0; i < levelSpawnInfo.TrapCount; i++)
 		{
 			Spawn(traps, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < levelInfo.FoodCount; i++)
+		for (int i = 0; i < levelSpawnInfo.FoodCount; i++)
 		{
 			Spawn(foods, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < levelInfo.MoneyCount; i++)
+		for (int i = 0; i < levelSpawnInfo.MoneyCount; i++)
 		{
 			Spawn(moneys, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < levelInfo.CrystalCount; i++)
+		for (int i = 0; i < levelSpawnInfo.CrystalCount; i++)
 		{
 			Spawn(crystals, Vector2I.Zero);
 		}
 
-		for (int i = 0; i < levelInfo.RuneCount; i++)
+		for (int i = 0; i < levelSpawnInfo.RuneCount; i++)
 		{
 			Spawn(runes, Vector2I.Zero);
 		}
