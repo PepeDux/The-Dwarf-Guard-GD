@@ -17,6 +17,7 @@ script = ExtResource("2_el8n6")
 maxMovePoints = 6
 maxActionPoints = 2
 physicalDamage = 3
+strength = 20
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("3_3dqnq")

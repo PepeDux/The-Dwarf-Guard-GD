@@ -1,0 +1,94 @@
+[gd_scene load_steps=21 format=3 uid="uid://cgyw5qsp8s6b7"]
+
+[ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="1_x6ub3"]
+[ext_resource type="Texture2D" uid="uid://cjubqb7dam4ib" path="res://Data/Sprites/UI/GameScene/Cards/CardMaket.png" id="2_7yxam"]
+[ext_resource type="Script" path="res://Data/Scripts/CardsScripts/Card.cs" id="3_ctxh2"]
+[ext_resource type="Resource" uid="uid://cdsl1thfxwjwl" path="res://Data/Resources/Cards/AlloutMovement.tres" id="4_v3rqc"]
+[ext_resource type="Resource" uid="uid://bi4ykp67xfdj8" path="res://Data/Resources/Cards/DiagonalMovement.tres" id="5_hynl7"]
+[ext_resource type="Resource" uid="uid://citix5pk8ikf2" path="res://Data/Resources/Cards/DirectMovement.tres" id="6_ppm8e"]
+[ext_resource type="Resource" uid="uid://dppnmbma0avcl" path="res://Data/Resources/Cards/ElfSwill.tres" id="7_oy81m"]
+[ext_resource type="Resource" uid="uid://eo3g5o530v3g" path="res://Data/Resources/Cards/ForgingRune.tres" id="8_om71m"]
+[ext_resource type="Resource" uid="uid://bey0as78a23va" path="res://Data/Resources/Cards/ForYourHealth.tres" id="9_med7c"]
+[ext_resource type="Resource" uid="uid://b5arv83v6cfck" path="res://Data/Resources/Cards/Hangover.tres" id="10_knto7"]
+[ext_resource type="Resource" uid="uid://djaoklswprgaf" path="res://Data/Resources/Cards/HeartySnack.tres" id="11_j1kuo"]
+[ext_resource type="Resource" uid="uid://dycg00nvrib4t" path="res://Data/Resources/Cards/HeavyHit.tres" id="12_sg27w"]
+[ext_resource type="Resource" uid="uid://dfb4qql0u0vr0" path="res://Data/Resources/Cards/Hunger.tres" id="13_8q7ty"]
+[ext_resource type="Resource" uid="uid://bt581tn5bf7ce" path="res://Data/Resources/Cards/MoreTraps.tres" id="14_245b7"]
+[ext_resource type="Resource" uid="uid://8l2elxgd0dhf" path="res://Data/Resources/Cards/PhilosophicalTreatise.tres" id="15_ka753"]
+[ext_resource type="Resource" uid="uid://cdavrpy0hes3e" path="res://Data/Resources/Cards/PoisonedBeer.tres" id="16_8wow0"]
+[ext_resource type="Resource" uid="uid://bxven2cqp7wsn" path="res://Data/Resources/Cards/RaiseShields.tres" id="17_ktil5"]
+[ext_resource type="Resource" uid="uid://bk8c5h6tmi05c" path="res://Data/Resources/Cards/Reinforcement.tres" id="18_kxjof"]
+[ext_resource type="Resource" uid="uid://b6rqgvl3mmqeh" path="res://Data/Resources/Cards/SpeedUp.tres" id="19_oeu23"]
+[ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="20_oifd1"]
+
+[node name="Card" instance=ExtResource("1_x6ub3")]
+z_index = 1
+texture_normal = ExtResource("2_7yxam")
+script = ExtResource("3_ctxh2")
+cards = Array[Resource]([ExtResource("4_v3rqc"), ExtResource("5_hynl7"), ExtResource("6_ppm8e"), ExtResource("7_oy81m"), ExtResource("8_om71m"), ExtResource("9_med7c"), ExtResource("10_knto7"), ExtResource("11_j1kuo"), ExtResource("12_sg27w"), ExtResource("13_8q7ty"), ExtResource("14_245b7"), ExtResource("15_ka753"), ExtResource("16_8wow0"), ExtResource("17_ktil5"), ExtResource("18_kxjof"), ExtResource("19_oeu23")])
+
+[node name="CardNamePositive" type="Label" parent="." index="1"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 16.0
+offset_right = 1833.0
+offset_bottom = 176.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
+theme_override_fonts/font = ExtResource("20_oifd1")
+theme_override_font_sizes/font_size = 100
+text = "Имя позитивное"
+
+[node name="CardDescriptionPositive" type="Label" parent="." index="2"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 26.0
+offset_right = 1833.0
+offset_bottom = 626.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
+theme_override_fonts/font = ExtResource("20_oifd1")
+theme_override_font_sizes/font_size = 100
+text = "Описание 
+позитивное :)"
+autowrap_mode = 2
+
+[node name="CardNameNegative" type="Label" parent="." index="3"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 80.0
+offset_right = 1833.0
+offset_bottom = 240.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
+theme_override_fonts/font = ExtResource("20_oifd1")
+theme_override_font_sizes/font_size = 100
+text = "Имя негативное"
+
+[node name="CardDescriptionNegative" type="Label" parent="." index="4"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 90.0
+offset_right = 1833.0
+offset_bottom = 690.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
+theme_override_fonts/font = ExtResource("20_oifd1")
+theme_override_font_sizes/font_size = 100
+text = "Описание 
+негативное :("
+autowrap_mode = 2
+
+[node name="CardImagePositive" type="TextureRect" parent="." index="5"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 49.0
+offset_bottom = 49.0
+
+[node name="CardImageNegative" type="TextureRect" parent="." index="6"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 79.0
+offset_right = 49.0
+offset_bottom = 113.0

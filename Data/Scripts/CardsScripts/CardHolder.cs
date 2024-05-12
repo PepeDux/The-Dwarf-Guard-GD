@@ -7,9 +7,6 @@ public partial class CardHolder : Node2D
 {
 	private List<TextureButton> cardFaces = new List<TextureButton>();
 
-	// Массив модификаторов
-	[Export] public CardData[] cards;
-
 	public override void _Ready()
 	{
 		Events.levelEnded += ShowCard;

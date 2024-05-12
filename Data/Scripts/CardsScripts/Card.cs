@@ -18,7 +18,7 @@ public partial class Card : BaseButton
 	public LevelModifier levelModifier;
 
 	// Массив модификаторов
-	private CardData[] cards;
+	[Export] public CardData[] cards;
 
 	// Имя карты
 	private Label cardNamePositive;
@@ -37,12 +37,6 @@ public partial class Card : BaseButton
 	{
 		Events.endSelectCard += MakeCard;
 		Events.rerolledCards += MakeCard;
-
-		// Загружаем все карты
-		// cards.AddRange(CardLoader.Load("res://Data/Resources/Cards/"));
-		cards = GetParent<CardHolder>().cards;
-
-		GD.Print(cards.Count());
 
 		// Получаем LevelModifier
 		levelModifier = GetTree().Root.GetNode("GameScene").GetNode<LevelModifier>("LevelModifier");

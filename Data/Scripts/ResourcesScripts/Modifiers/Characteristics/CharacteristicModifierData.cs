@@ -68,12 +68,6 @@ public partial class CharacteristicModifierData : ModifierData
 
 
 
-	[ExportGroup("Напрвление атаки")]
-	[Export] public BoolStatus horizontalAttack { get; set; }
-	[Export] public BoolStatus diagonalAttack { get; set; }
-
-
-
 	[ExportGroup("Тип атаки")]
 	[Export] public BoolStatus meleeAttack { get; set; }
 	[Export] public BoolStatus rangeAttack { get; set; }

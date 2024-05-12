@@ -85,20 +85,9 @@ public partial class СharacteristicModifierCalculation : Node
 		GetParent<Character>().BeerPoints += NumericCalculation(mod, modifier.beerPoints);
 
 		GetParent<Character>().MoveCost += NumericCalculation(mod, modifier.moveCost);
-		GetParent<Character>().MeleeAttackCost += NumericCalculation(mod, modifier.meleeAttackCost);
-		GetParent<Character>().RangeAttackCost += NumericCalculation(mod, modifier.rangeAttackCost);
 
-		GetParent<Character>().horizontalMove = BoolCalculation(mod, GetParent<Character>().horizontalMove, modifier.horizontalMove);
+		GetParent<Character>().directMove = BoolCalculation(mod, GetParent<Character>().directMove, modifier.horizontalMove);
 		GetParent<Character>().diagonalMove = BoolCalculation(mod, GetParent<Character>().diagonalMove, modifier.diagonalMove);
-
-		GetParent<Character>().horizontalAttack = BoolCalculation(mod, GetParent<Character>().horizontalAttack, modifier.horizontalAttack);
-		GetParent<Character>().diagonalAttack = BoolCalculation(mod, GetParent<Character>().diagonalAttack, modifier.diagonalAttack);
-
-		GetParent<Character>().meleeAttack = BoolCalculation(mod, GetParent<Character>().meleeAttack, modifier.meleeAttack);
-		GetParent<Character>().rangeAttack = BoolCalculation(mod, GetParent<Character>().rangeAttack, modifier.rangeAttack);
-
-		GetParent<Character>().rangeAttackDistance += NumericCalculation(mod, modifier.rangeAttackDistance);
-		GetParent<Character>().meleeAttackDistance += NumericCalculation(mod, modifier.meleeAttackDistance);
 
 		GetParent<Character>().AC += NumericCalculation(mod, modifier.AC);
 		GetParent<Character>().Money += NumericCalculation(mod, modifier.money);
@@ -112,9 +101,6 @@ public partial class СharacteristicModifierCalculation : Node
 		GetParent<Character>().Drunkenness += NumericCalculation(mod, modifier.drunkenness);
 
 		GetParent<Character>().PhysicalResist += NumericCalculation(mod, modifier.physicalResist);
-		GetParent<Character>().PoisonResist += NumericCalculation(mod, modifier.poisonResist);
-		GetParent<Character>().FireResist += NumericCalculation(mod, modifier.fireResist);
-		GetParent<Character>().FrostResist += NumericCalculation(mod, modifier.frostResist);
 	}
 
 	public bool BoolCalculation(int mod, bool characteristic, CharacteristicModifierData.BoolStatus boolStatus)

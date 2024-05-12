@@ -36,7 +36,7 @@ public partial class TileMarker : Node2D
 
 		if (GetParent<Player>().canPerformAction == true) 
 		{
-			if (player.horizontalMove == true)
+			if (player.directMove == true)
 			{
 				SelectMoveCell(new Vector2I(0, -1));	//Вверх
 				SelectMoveCell(new Vector2I(0, 1));		//Вниз
@@ -52,7 +52,7 @@ public partial class TileMarker : Node2D
 				SelectMoveCell(new Vector2I(-1, -1));	//Влево вверх
 			}
 
-			if (player.horizontalAttack == true)
+			if (player.weapon.directAttack == true)
 			{
 				SelectEnemyCell(new Vector2I(0, -1));	//Вверх
 				SelectEnemyCell(new Vector2I(0, 1));	//Вниз
@@ -60,7 +60,7 @@ public partial class TileMarker : Node2D
 				SelectEnemyCell(new Vector2I(1, 0));	//Вправо
 			}
 
-			if (player.diagonalAttack == true)
+			if (player.weapon.diagonalAttack == true)
 			{
 				SelectEnemyCell(new Vector2I(1, -1));   //Вправо вверх
 				SelectEnemyCell(new Vector2I(1, 1));	//Вправо вниз

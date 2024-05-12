@@ -140,7 +140,7 @@ public partial class Pathfinding : Node2D
 		Neighbours.Clear();
 
 		//Линейное перевдвижение
-		if (GetParent<Enemy>().horizontalMove == true)
+		if (GetParent<Enemy>().directMove == true)
 		{
 			//Напрво
 			Neighbours.Add(new Cell(node.G + 1, new Vector2I(

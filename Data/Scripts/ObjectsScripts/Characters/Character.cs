@@ -10,6 +10,11 @@ public partial class Character : BaseObject
 	[ExportGroup ("Лут после смерти")]
 	[Export] public PackedScene[] loot;
 
+	[ExportGroup("Оружие")]
+	[Export] public Weapon weapon;
+
+	#region Points
+
 	[ExportGroup ("Очки перемещения")]
 	// Очки перемещения
 	[Export] private int maxMovePoints = 6;
@@ -37,7 +42,7 @@ public partial class Character : BaseObject
 			movePoints = Math.Clamp(value, 0, maxMovePoints);
 		}
 	}
-	
+
 	
 
 	[ExportGroup("Очки действия")]
@@ -67,6 +72,7 @@ public partial class Character : BaseObject
 			actionPoints = Math.Clamp(value, 0, maxActionPoints);
 		}
 	}
+
 
 
 	[ExportGroup("Очки пива")]
@@ -114,58 +120,15 @@ public partial class Character : BaseObject
 		}
 	}
 
-	// Цена ближней атаки
-	[Export] private int meleeAttackCost = 1;
-	public int MeleeAttackCost
-	{
-		get
-		{
-			return meleeAttackCost;
-		}
-		set
-		{
-			meleeAttackCost = Math.Clamp(value, 1, 20);
-		}
-	}
 
-	// Цена дальней атаки
-	[Export] private int rangeAttackCost = 1;
-	public int RangeAttackCost
-	{
-		get
-		{
-			return rangeAttackCost;
-		}
-		set
-		{
-			rangeAttackCost = Math.Clamp(value, 1, 20);
-		}
-	}
+	#endregion
 
 
 
 	[ExportGroup("Тип передвиженя")]
-	[Export] public bool horizontalMove = true;
+	[Export] public bool directMove = true;
 	[Export] public bool diagonalMove = false;
 
-
-
-	[ExportGroup("Напрвление атаки")]
-	[Export] public bool horizontalAttack = true;
-	[Export] public bool diagonalAttack = false;
-
-
-
-	[ExportGroup("Тип атаки")]
-	[Export] public bool meleeAttack = true; //Ближняя атака
-	[Export] public bool rangeAttack = false; //Дальняя атака
-
-
-
-	[ExportGroup("Дальность атаки")]
-	public int meleeAttackDistance = 1;
-	public int rangeAttackDistance; //Дальность дальней атаки
-	
 
 
 	#region Characteristic
@@ -247,48 +210,6 @@ public partial class Character : BaseObject
 		set
 		{
 			physicalDamage = Math.Clamp(value, 0, 50);
-		}
-	}
-
-	// Ядовитый урон
-	[Export] private int poisonDamage = 0;
-	public int PoisonDamage
-	{
-		get
-		{
-			return poisonDamage;
-		}
-		set
-		{
-			poisonDamage = Math.Clamp(value, 0, 50);
-		}
-	}
-
-	// Огненный урон
-	[Export] private int fireDamage = 0;
-	public int FireDamage
-	{
-		get
-		{
-			return fireDamage;
-		}
-		set
-		{
-			fireDamage = Math.Clamp(value, 0, 50);
-		}
-	}
-
-	// Морозный урон
-	[Export] private int frostDamage = 0;
-	public int FrostDamage
-	{
-		get
-		{
-			return frostDamage;
-		}
-		set
-		{
-			frostDamage = Math.Clamp(value, 0, 50);
 		}
 	}
 
@@ -399,7 +320,6 @@ public partial class Character : BaseObject
 
 
 
-
 	[ExportGroup("Вторичные характеристики")]
 	// 1 переменная - итоговове значение характеристики
 	// 2 переменная - бонус к значению характеристики
@@ -433,62 +353,6 @@ public partial class Character : BaseObject
 		set
 		{
 			physicalResist = Math.Clamp(value, -100, 100);
-		}
-	}
-
-	// Сопротивление ядам
-	private int poisonResist = 0;
-	public int PoisonResist
-	{
-		get
-		{
-			return poisonResist;
-		}
-		set
-		{
-			poisonResist = Math.Clamp(value, -100, 100);
-		}
-	}
-
-	// Сопротивление огню
-	private int fireResist = 0;
-	public int FireResist
-	{
-		get
-		{
-			return fireResist;
-		}
-		set
-		{
-			fireResist = Math.Clamp(value, -100, 100);
-		}
-	}
-
-	// Сопростивление морозу
-	private int frostResist = 0;
-	public int FrostResist
-	{
-		get
-		{
-			return frostResist;
-		}
-		set
-		{
-			frostResist = Math.Clamp(value, -100, 100);
-		}
-	}
-
-	// Сопротивление АлКоГоЛю
-	private int drunkennessResist = 0;
-	public int DrunkennessResist
-	{
-		get
-		{
-			return drunkennessResist;
-		}
-		set
-		{
-			drunkennessResist = Math.Clamp(value, -100, 100);
 		}
 	}
 
@@ -526,10 +390,12 @@ public partial class Character : BaseObject
 		base._Process(delta);
 
 		UpdateCharacteristicModifier();
+		UpdateWeaponAttackCharacteristicModifier();
+
 	}
 
 
-
+	// Обновляет очки персонажа
 	public void UpdatePoints()
 	{
 		movePoints = MaxMovePoints;
@@ -537,17 +403,20 @@ public partial class Character : BaseObject
 		beerPoints = MaxBeerPoints;
 	}
 
+	// Обновляет здоровье персонажа
 	private void UpdateHP()
 	{
 		MaxHP += constitutionModifier * 3;
 		HP = MaxHP;
 	}
 
+	// Обновляет КД персонажа
 	private void UpdateAC()
 	{
 		AC += dexterityModifier;
 	}
 
+	// Обновляет модификаторы характеристик
 	private void UpdateCharacteristicModifier()
 	{
 		strengthModifier = (Strength - 10) / 2;
@@ -557,6 +426,32 @@ public partial class Character : BaseObject
 		wisdomModifier = (Wisdom - 10) / 2;
 	}
 
+	// Обновляет значения модификатора характеристики оружия
+	private void UpdateWeaponAttackCharacteristicModifier()
+	{
+		if (weapon.attackCharacteristic == Weapon.AttackCharacteristic.STR)
+		{
+			weapon.attackCharacteristicModifier = strengthModifier;
+		}
+		else if (weapon.attackCharacteristic == Weapon.AttackCharacteristic.DEX)
+		{
+			weapon.attackCharacteristicModifier = dexterityModifier;
+		}
+		else if (weapon.attackCharacteristic == Weapon.AttackCharacteristic.CON)
+		{
+			weapon.attackCharacteristicModifier = constitutionModifier;
+		}
+		else if (weapon.attackCharacteristic == Weapon.AttackCharacteristic.INT)
+		{
+			weapon.attackCharacteristicModifier = inteligenceModifier;
+		}
+		else if (weapon.attackCharacteristic == Weapon.AttackCharacteristic.WIS)
+		{
+			weapon.attackCharacteristicModifier = wisdomModifier;
+		}
+	}
+
+	// Добавляем персонажа в список персонажей
 	private void AddCharacterToCharacterStorage()
 	{
 		CharacterStorage.characters.Add(this);

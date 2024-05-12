@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://8yfjju4n8frt"]
+
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Spawn/SpawnModifierData.cs" id="1_sllg4"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_sllg4")
+meleeCount = 0
+rangeCount = 0
+captainCount = 0
+wizardCount = 0
+wallCount = 0
+pitCount = 0
+trapCount = 0
+foodCount = -2
+moneyCount = 0
+crystalCount = 0
+runeCount = 0

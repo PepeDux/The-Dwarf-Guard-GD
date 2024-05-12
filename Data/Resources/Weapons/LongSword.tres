@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://d0c1xa0n37q7i"]
+
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Weapon/Weapon.cs" id="1_l4ssm"]
+
+[resource]
+script = ExtResource("1_l4ssm")
+weaponName = ""
+diceEdges = 8
+diceRolls = 1
+attackModifier = 1
+damageModifier = 1
+attackCharacteristic = 0
+directAttack = true
+diagonalAttack = false
+attackDistance = 1
+attackCost = 1

@@ -1,8 +1,9 @@
-[gd_scene load_steps=43 format=3 uid="uid://b2xh8cto5uvph"]
+[gd_scene load_steps=44 format=3 uid="uid://b2xh8cto5uvph"]
 
 [ext_resource type="PackedScene" uid="uid://dx6sxyfguth4d" path="res://Data/Scenes/BaseObjects/BaseObject.tscn" id="1_leavt"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Character.cs" id="2_8vwku"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/СharacteristicModifierCalculation.cs" id="3_442ou"]
+[ext_resource type="Resource" uid="uid://d0c1xa0n37q7i" path="res://Data/Resources/Weapons/LongSword.tres" id="3_l2c31"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/TakeDamage.cs" id="4_akvk5"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="5_28we2"]
 
@@ -285,6 +286,7 @@ viewport_path = NodePath("SubViewport")
 [node name="Character" instance=ExtResource("1_leavt")]
 script = ExtResource("2_8vwku")
 loot = null
+weapon = ExtResource("3_l2c31")
 maxMovePoints = 3
 movePoints = 0
 maxActionPoints = 1
@@ -292,22 +294,13 @@ actionPoints = 0
 maxBeerPoints = 0
 beerPoints = 0
 moveCost = 1
-meleeAttackCost = 1
-rangeAttackCost = 1
-horizontalMove = true
+directMove = true
 diagonalMove = false
-horizontalAttack = true
-diagonalAttack = false
-meleeAttack = true
-rangeAttack = false
 maxHP = 10
 hP = 0
 ac = 5
 money = 0
 physicalDamage = 0
-poisonDamage = 0
-fireDamage = 0
-frostDamage = 0
 strength = 10
 constitution = 10
 dexterity = 10

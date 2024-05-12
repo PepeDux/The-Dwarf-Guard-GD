@@ -120,7 +120,7 @@ public partial class Enemy : Character
 			}
 		}
 
-		while (ActionPoints >= MeleeAttackCost || ActionPoints >= RangeAttackCost && player != null)
+		while (ActionPoints >= weapon.attackCost && player != null)
 		{
 			await Task.Delay(turnSpeed);
 

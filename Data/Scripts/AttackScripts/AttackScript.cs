@@ -20,14 +20,9 @@ public partial class AttackScript : Node
 	{
 		this.target = target;
 
-		if (attacker.meleeAttack == true)
+		if (attacker.weapon != null)
 		{
-			FindTarget(attacker.meleeAttackDistance, target, attacker.MeleeAttackCost);
-		}
-
-		if (attacker.rangeAttack == true)
-		{
-			FindTarget(FieldCoordinate.xFieldSize, target, attacker.RangeAttackCost);
+			FindTarget(attacker.weapon.attackDistance, target, attacker.weapon.attackCost);
 		}
 	}
 
@@ -35,7 +30,7 @@ public partial class AttackScript : Node
 	{
 		Vector2I attackCell = new Vector2I();
 
-		if (attacker.horizontalAttack == true)
+		if (attacker.weapon.directAttack == true)
 		{
 			//Напрво от атакующего
 			for (int i = 0; i <= distanceAttack; i++)
@@ -70,7 +65,7 @@ public partial class AttackScript : Node
 			}
 		}
 
-		if (attacker.diagonalAttack == true)
+		if (attacker.weapon.diagonalAttack == true)
 		{
 			//Вверх-налево
 			for (int i = 0; i <= distanceAttack; i++)
@@ -111,7 +106,7 @@ public partial class AttackScript : Node
 		// Переменная отвечает за то, является ли атака критической
 		bool isCriticalDamage = false;
 
-		if (attackCell == target.coordinate && target != null && attacker.ActionPoints > 0)
+		if (attackCell == target.coordinate && target != null && attacker.ActionPoints >= attacker.weapon.attackCost)
 		{
 			if (sideAttack == "HorizontalAttack")
 			{
@@ -145,7 +140,7 @@ public partial class AttackScript : Node
 				isCriticalDamage = true;
 				GiveDamage(isCriticalDamage);
 			}
-			else if (D20AttackDiceRoll + attacker.strengthModifier >= target.AC) 
+			else if (D20AttackDiceRoll + attacker.weapon.attackModifier + attacker.weapon.attackCharacteristicModifier >= target.AC) 
 			{
 				GiveDamage(isCriticalDamage);
 			}
@@ -172,10 +167,7 @@ public partial class AttackScript : Node
 	{
 		target.GetNode<TakeDamage>("TakeDamage").Take(
 		isCriticalDamage: isCriticalDamage,
-		physicalDamage: DiceRoll.Roll(4, 1) + attacker.PhysicalDamage + attacker.strengthModifier,
-		poisonDamage: attacker.PoisonDamage,
-		fireDamage: attacker.FireDamage,
-		frostDamage: attacker.FrostDamage
+		physicalDamage: DiceRoll.Roll(attacker.weapon.diceEdges, attacker.weapon.diceRolls) + attacker.weapon.damageModifier + attacker.weapon.attackCharacteristicModifier
 		);
 	}
 }
