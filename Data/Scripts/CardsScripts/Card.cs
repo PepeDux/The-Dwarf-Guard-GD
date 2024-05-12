@@ -35,7 +35,7 @@ public partial class Card : BaseButton
 
 	public override void _Ready()
 	{
-		Events.endSelectCard += MakeCard;
+		Events.levelEnded += MakeCard;
 		Events.rerolledCards += MakeCard;
 
 		// Получаем LevelModifier
@@ -56,7 +56,7 @@ public partial class Card : BaseButton
 
 	public override void _ExitTree()
 	{
-		Events.endSelectCard -= MakeCard;
+		Events.levelEnded -= MakeCard;
 		Events.rerolledCards -= MakeCard;
 	}
 
