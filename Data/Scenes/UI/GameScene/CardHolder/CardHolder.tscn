@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://8t16gfkhb3xa"]
+[gd_scene load_steps=10 format=3 uid="uid://8t16gfkhb3xa"]
 
 [ext_resource type="Script" path="res://Data/Scripts/CardsScripts/CardHolder.cs" id="1_a7k87"]
-[ext_resource type="Texture2D" uid="uid://jqqjhdmecaq" path="res://Data/Sprites/UI/GameScene/Cards/RerollCardsButton/RerollCardsDisabled.png" id="5_s0csm"]
 [ext_resource type="Script" path="res://Data/Scripts/CardsScripts/DropCardsButton.cs" id="9_tlr8m"]
-[ext_resource type="PackedScene" uid="uid://cgyw5qsp8s6b7" path="res://Data/Scenes/UI/Card/Card.tscn" id="21_fmrue"]
+[ext_resource type="PackedScene" uid="uid://cgyw5qsp8s6b7" path="res://Data/Scenes/UI/GameScene/Card/Card.tscn" id="21_fmrue"]
 [ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="22_1r35e"]
 [ext_resource type="Texture2D" uid="uid://8ym0uxmh0h44" path="res://Data/Sprites/UI/GameScene/Cards/RerollCardsButton/RerollCardsNormal.png" id="23_6il5p"]
 [ext_resource type="Texture2D" uid="uid://5cumx7p84y5k" path="res://Data/Sprites/UI/GameScene/Cards/RerollCardsButton/RerollCardsHower.png" id="24_8tssj"]
@@ -22,7 +21,6 @@ offset_right = 272.0
 offset_bottom = 112.0
 texture_normal = ExtResource("23_6il5p")
 texture_hover = ExtResource("24_8tssj")
-texture_disabled = ExtResource("5_s0csm")
 script = ExtResource("24_h4wjs")
 
 [node name="DropCardsButton" parent="." instance=ExtResource("22_1r35e")]
@@ -41,6 +39,7 @@ offset_top = 64.0
 offset_right = 224.0
 offset_bottom = 192.0
 texture_hover = null
+texture_disabled = null
 
 [node name="Card2" parent="." instance=ExtResource("21_fmrue")]
 offset_left = 288.0
@@ -48,3 +47,4 @@ offset_top = 64.0
 offset_right = 448.0
 offset_bottom = 192.0
 texture_hover = null
+texture_disabled = null

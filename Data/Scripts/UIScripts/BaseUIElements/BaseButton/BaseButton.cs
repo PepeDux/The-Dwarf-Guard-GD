@@ -8,8 +8,6 @@ public partial class BaseButton : TextureButton
 	public override void _Ready()
 	{
 		base._Ready();
-
-		
 	}
 
 	public virtual void Pressed()

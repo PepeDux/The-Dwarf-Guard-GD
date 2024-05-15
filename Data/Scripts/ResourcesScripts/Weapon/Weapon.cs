@@ -7,6 +7,10 @@ public partial class Weapon : Resource
     // Название оружия
     [Export] public string weaponName { get; set; }
 
+    [ExportGroup("Изображение оружия")]
+    // Изображение оружия
+    [Export] public Texture2D weaponImage { get; set; }
+
     [ExportGroup("Грань куба")]
     // Колличество граней у куба, например D20, D12...
     [Export] public int diceEdges { get; set; }
@@ -34,8 +38,6 @@ public partial class Weapon : Resource
         INT,
         WIS
     };
-
-    public int attackCharacteristicModifier { get; set; }
 
     [ExportGroup("Напрвление атаки")]
     [Export] public bool directAttack { get; set; }

@@ -10,6 +10,7 @@ diceRolls = 1
 attackModifier = 1
 damageModifier = 1
 attackCharacteristic = 0
+attackCharacteristicModifier = 4
 directAttack = true
 diagonalAttack = false
 attackDistance = 1

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jqqjhdmecaq"
-path="res://.godot/imported/RerollCardsDisabled.png-e8b810697c77436a2e08e13746650ec6.ctex"
+uid="uid://d3heebs264flp"
+path="res://.godot/imported/ProgressBarOver.png-0af841be60307b6677018257c9f5176d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Data/Sprites/UI/GameScene/Cards/RerollCardsButton/RerollCardsDisabled.png"
-dest_files=["res://.godot/imported/RerollCardsDisabled.png-e8b810697c77436a2e08e13746650ec6.ctex"]
+source_file="res://Data/Sprites/UI/BaseUIElements/BaseProgressBar/ProgressBarOver.png"
+dest_files=["res://.godot/imported/ProgressBarOver.png-0af841be60307b6677018257c9f5176d.ctex"]
 
 [params]
 

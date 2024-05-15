@@ -140,7 +140,7 @@ public partial class AttackScript : Node
 				isCriticalDamage = true;
 				GiveDamage(isCriticalDamage);
 			}
-			else if (D20AttackDiceRoll + attacker.weapon.attackModifier + attacker.weapon.attackCharacteristicModifier >= target.AC) 
+			else if (D20AttackDiceRoll + attacker.weapon.attackModifier + attacker.attackCharacteristicModifier >= target.AC) 
 			{
 				GiveDamage(isCriticalDamage);
 			}
@@ -167,7 +167,7 @@ public partial class AttackScript : Node
 	{
 		target.GetNode<TakeDamage>("TakeDamage").Take(
 		isCriticalDamage: isCriticalDamage,
-		physicalDamage: DiceRoll.Roll(attacker.weapon.diceEdges, attacker.weapon.diceRolls) + attacker.weapon.damageModifier + attacker.weapon.attackCharacteristicModifier
+		physicalDamage: DiceRoll.Roll(attacker.weapon.diceEdges, attacker.weapon.diceRolls) + attacker.weapon.damageModifier + attacker.attackCharacteristicModifier
 		);
 	}
 }

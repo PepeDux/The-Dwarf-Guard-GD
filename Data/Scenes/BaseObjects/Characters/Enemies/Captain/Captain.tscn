@@ -11,9 +11,8 @@ viewport_path = NodePath("SubViewport")
 script = ExtResource("2_6no2r")
 maxMovePoints = 2
 diagonalMove = true
-diagonalAttack = true
 maxHP = 15
-physicalDamage = 2
+strength = 15
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_0sd4g")

@@ -1,0 +1,556 @@
+[gd_scene load_steps=14 format=3 uid="uid://deq1stiekglgs"]
+
+[ext_resource type="Texture2D" uid="uid://5t03g43fic3o" path="res://Data/Sprites/UI/GameScene/SideMenu/SideMenu.png" id="1_njmsi"]
+[ext_resource type="Texture2D" uid="uid://bu5nb6vi11tw" path="res://Data/Sprites/UI/GameScene/SideMenu/Frames/Frame.png" id="2_nik3w"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/UIGameScene/SideMenu.cs" id="2_s2koe"]
+[ext_resource type="Texture2D" uid="uid://boo7sf433u0pm" path="res://Data/Sprites/UI/GameScene/SideMenu/Frames/StatistickFrame.png" id="3_pjhug"]
+[ext_resource type="PackedScene" uid="uid://wbjpmbh170cn" path="res://Data/Scenes/UI/GameScene/UIGameScene/TurnButton/TurnButton.tscn" id="4_qiqf4"]
+[ext_resource type="PackedScene" uid="uid://na2ubd875nll" path="res://Data/Scenes/UI/BaseUIElements/BaseProgressBar/BaseProgressBar.tscn" id="5_mcd6g"]
+[ext_resource type="Texture2D" uid="uid://ixwymtnc2dls" path="res://Data/Sprites/UI/GameScene/SideMenu/Icons/ActionPointsIcon.png" id="6_wmvtv"]
+[ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="7_pyokt"]
+[ext_resource type="Texture2D" uid="uid://ddfjdn0q3rij0" path="res://Data/Sprites/UI/GameScene/SideMenu/Icons/BeerPointsIcon.png" id="8_svk8b"]
+[ext_resource type="Texture2D" uid="uid://blx4wo0oi7jys" path="res://Data/Sprites/UI/GameScene/SideMenu/Icons/HPIcon.png" id="9_ngdie"]
+[ext_resource type="Texture2D" uid="uid://blee5esbfftgj" path="res://Data/Sprites/UI/GameScene/SideMenu/Icons/MovePointsIcon.png" id="10_5ladh"]
+[ext_resource type="Texture2D" uid="uid://oaibj8m032f7" path="res://Data/Sprites/UI/GameScene/SideMenu/Icons/CoinsIcon.png" id="11_8q3kw"]
+[ext_resource type="Texture2D" uid="uid://bc002arhhg70t" path="res://Data/Sprites/UI/GameScene/SideMenu/Icons/ACIcon.png" id="12_7sy2f"]
+
+[node name="UIGameScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SideMenu" type="Sprite2D" parent="." node_paths=PackedStringArray("HPProgressBar", "MovePointsProgressBar", "ActionPointsProgressBar", "BeerPointsProgressBar", "ACLabel", "CoinsLabel", "strengthLabel", "constitutionLabel", "dexterityLabel", "intelligenceLabel", "wisdomLabel", "charismaLabel", "WeaponFrame", "damageLabel", "attackLabel", "attackCostLabel", "AttackFrame", "MoveFrame")]
+position = Vector2(435, 135)
+texture = ExtResource("1_njmsi")
+script = ExtResource("2_s2koe")
+HPProgressBar = NodePath("PointsPanel/HPProgressBar")
+MovePointsProgressBar = NodePath("PointsPanel/MovePointsProgressBar")
+ActionPointsProgressBar = NodePath("PointsPanel/ActionPointsProgressBar")
+BeerPointsProgressBar = NodePath("PointsPanel/BeerPointsProgressBar")
+ACLabel = NodePath("SubPointsPanel/AС/Value")
+CoinsLabel = NodePath("SubPointsPanel/Coins/Value")
+strengthLabel = NodePath("StatistickPanel/Strength/ValueLabel")
+constitutionLabel = NodePath("StatistickPanel/Constitution/ValueLabel")
+dexterityLabel = NodePath("StatistickPanel/Dexterity/ValueLabel")
+intelligenceLabel = NodePath("StatistickPanel/Inteligence/ValueLabel")
+wisdomLabel = NodePath("StatistickPanel/Wisdom/ValueLabel")
+charismaLabel = NodePath("StatistickPanel/Charisma/ValueLabel")
+WeaponFrame = NodePath("WeaponPanel/WeaponFrame")
+damageLabel = NodePath("WeaponPanel/DamageLabel")
+attackLabel = NodePath("WeaponPanel/AttackLabel")
+attackCostLabel = NodePath("WeaponPanel/AttackCostLabel")
+AttackFrame = NodePath("AttackFrame")
+MoveFrame = NodePath("MoveFrame")
+
+[node name="AttackFrame" type="Sprite2D" parent="SideMenu"]
+position = Vector2(-24, 62)
+texture = ExtResource("2_nik3w")
+
+[node name="MoveFrame" type="Sprite2D" parent="SideMenu"]
+position = Vector2(24, 62)
+texture = ExtResource("2_nik3w")
+
+[node name="StatistickPanel" type="Control" parent="SideMenu"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -53.0
+offset_top = -62.0
+offset_right = 53.0
+offset_bottom = -11.0
+
+[node name="Wisdom" type="Sprite2D" parent="SideMenu/StatistickPanel"]
+position = Vector2(53, 35.5)
+rotation = 3.14159
+texture = ExtResource("3_pjhug")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Wisdom"]
+anchors_preset = -1
+anchor_left = 0.962
+anchor_top = 0.5
+anchor_right = 0.962
+anchor_bottom = 0.5
+offset_left = -13.012
+offset_top = -8.5
+offset_right = 466.988
+offset_bottom = 126.5
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NameLabel" type="Label" parent="SideMenu/StatistickPanel/Wisdom"]
+anchors_preset = -1
+anchor_left = 0.846
+anchor_top = 0.971
+anchor_right = 0.846
+anchor_bottom = 0.971
+offset_left = -12.996
+offset_top = -8.507
+offset_right = 347.004
+offset_bottom = 141.493
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "Муд"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Inteligence" type="Sprite2D" parent="SideMenu/StatistickPanel"]
+position = Vector2(20, 35.5)
+rotation = 3.14159
+texture = ExtResource("3_pjhug")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Inteligence"]
+anchors_preset = -1
+anchor_left = 0.962
+anchor_top = 0.5
+anchor_right = 0.962
+anchor_bottom = 0.5
+offset_left = -13.012
+offset_top = -8.5
+offset_right = 466.988
+offset_bottom = 126.5
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NameLabel" type="Label" parent="SideMenu/StatistickPanel/Inteligence"]
+anchors_preset = -1
+anchor_left = 0.846
+anchor_top = 0.971
+anchor_right = 0.846
+anchor_bottom = 0.971
+offset_left = -12.996
+offset_top = -8.507
+offset_right = 347.004
+offset_bottom = 141.493
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "Инт"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Charisma" type="Sprite2D" parent="SideMenu/StatistickPanel"]
+position = Vector2(86, 35.5)
+rotation = 3.14159
+texture = ExtResource("3_pjhug")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Charisma"]
+anchors_preset = -1
+anchor_left = 0.962
+anchor_top = 0.5
+anchor_right = 0.962
+anchor_bottom = 0.5
+offset_left = -13.012
+offset_top = -8.5
+offset_right = 466.988
+offset_bottom = 126.5
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NameLabel" type="Label" parent="SideMenu/StatistickPanel/Charisma"]
+anchors_preset = -1
+anchor_left = 0.846
+anchor_top = 0.971
+anchor_right = 0.846
+anchor_bottom = 0.971
+offset_left = -12.996
+offset_top = -8.507
+offset_right = 347.004
+offset_bottom = 141.493
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "Хар"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Constitution" type="Sprite2D" parent="SideMenu/StatistickPanel"]
+position = Vector2(53, 15.5)
+rotation = 3.14159
+texture = ExtResource("3_pjhug")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Constitution"]
+anchors_preset = -1
+anchor_left = 0.962
+anchor_top = 0.5
+anchor_right = 0.962
+anchor_bottom = 0.5
+offset_left = -13.012
+offset_top = -8.5
+offset_right = 466.988
+offset_bottom = 126.5
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NameLabel" type="Label" parent="SideMenu/StatistickPanel/Constitution"]
+anchors_preset = -1
+anchor_left = 0.846
+anchor_top = 0.971
+anchor_right = 0.846
+anchor_bottom = 0.971
+offset_left = -12.996
+offset_top = -8.507
+offset_right = 347.004
+offset_bottom = 141.493
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "Тел"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Strength" type="Sprite2D" parent="SideMenu/StatistickPanel"]
+position = Vector2(20, 15.5)
+rotation = 3.14159
+texture = ExtResource("3_pjhug")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Strength"]
+anchors_preset = -1
+anchor_left = 0.962
+anchor_top = 0.5
+anchor_right = 0.962
+anchor_bottom = 0.5
+offset_left = -13.012
+offset_top = -8.5
+offset_right = 466.988
+offset_bottom = 126.5
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NameLabel" type="Label" parent="SideMenu/StatistickPanel/Strength"]
+anchors_preset = -1
+anchor_left = 0.846
+anchor_top = 0.971
+anchor_right = 0.846
+anchor_bottom = 0.971
+offset_left = -12.996
+offset_top = -8.507
+offset_right = 347.004
+offset_bottom = 141.493
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "Сил"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Dexterity" type="Sprite2D" parent="SideMenu/StatistickPanel"]
+position = Vector2(86, 15.5)
+rotation = 3.14159
+texture = ExtResource("3_pjhug")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Dexterity"]
+anchors_preset = -1
+anchor_left = 0.962
+anchor_top = 0.5
+anchor_right = 0.962
+anchor_bottom = 0.5
+offset_left = -13.012
+offset_top = -8.5
+offset_right = 466.988
+offset_bottom = 126.5
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NameLabel" type="Label" parent="SideMenu/StatistickPanel/Dexterity"]
+anchors_preset = -1
+anchor_left = 0.846
+anchor_top = 0.971
+anchor_right = 0.846
+anchor_bottom = 0.971
+offset_left = -12.996
+offset_top = -8.507
+offset_right = 347.004
+offset_bottom = 141.493
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "Лов"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="WeaponPanel" type="Control" parent="SideMenu"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -53.0
+offset_top = -9.0
+offset_right = 53.0
+offset_bottom = 37.0
+
+[node name="WeaponFrame" type="Sprite2D" parent="SideMenu/WeaponPanel"]
+position = Vector2(29, 23)
+texture = ExtResource("2_nik3w")
+
+[node name="DamageLabel" type="Label" parent="SideMenu/WeaponPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.443151
+anchor_top = 0.196
+anchor_right = 0.443151
+anchor_bottom = 0.196
+offset_left = 0.026001
+offset_top = -0.0160007
+offset_right = 374.026
+offset_bottom = 199.984
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "УРОН:"
+metadata/_edit_use_anchors_ = true
+
+[node name="AttackLabel" type="Label" parent="SideMenu/WeaponPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.443151
+anchor_top = 0.412826
+anchor_right = 0.443151
+anchor_bottom = 0.412826
+offset_left = 0.026001
+offset_top = 0.00999832
+offset_right = 276.026
+offset_bottom = 200.01
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "Поп:"
+metadata/_edit_use_anchors_ = true
+
+[node name="AttackCostLabel" type="Label" parent="SideMenu/WeaponPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.443151
+anchor_top = 0.630217
+anchor_right = 0.443151
+anchor_bottom = 0.630217
+offset_left = 0.026001
+offset_top = 0.00999832
+offset_right = 238.026
+offset_bottom = 160.01
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "ОД:"
+metadata/_edit_use_anchors_ = true
+
+[node name="TurnPanel" type="Control" parent="SideMenu"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -53.0
+offset_top = 87.0
+offset_right = 53.0
+offset_bottom = 133.0
+
+[node name="TurnButton" parent="SideMenu/TurnPanel" instance=ExtResource("4_qiqf4")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 7.0
+offset_right = 93.0
+offset_bottom = 39.0
+
+[node name="PointsPanel" type="Control" parent="SideMenu"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -53.0
+offset_top = -133.0
+offset_right = 53.0
+offset_bottom = -84.0
+
+[node name="ActionPointsProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 35.0
+offset_right = 99.0
+offset_bottom = 42.0
+
+[node name="ActionPointsIcon" type="Sprite2D" parent="SideMenu/PointsPanel/ActionPointsProgressBar"]
+position = Vector2(4.5, -3.5)
+texture = ExtResource("6_wmvtv")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/ActionPointsProgressBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = -1.14286
+anchor_right = 0.2
+anchor_bottom = -1.14286
+offset_right = 620.0
+offset_bottom = 140.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "2/2"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="BeerPointsProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 35.0
+offset_right = 47.0
+offset_bottom = 42.0
+
+[node name="BeerPointsIcon" type="Sprite2D" parent="SideMenu/PointsPanel/BeerPointsProgressBar"]
+position = Vector2(5, -3.5)
+texture = ExtResource("8_svk8b")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/BeerPointsProgressBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.225
+anchor_top = -1.14286
+anchor_right = 0.225
+anchor_bottom = -1.14286
+offset_right = 620.0
+offset_bottom = 140.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "2/2"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HPProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 13.0
+offset_right = 47.0
+offset_bottom = 20.0
+
+[node name="HpIcon" type="Sprite2D" parent="SideMenu/PointsPanel/HPProgressBar"]
+position = Vector2(4.5, -3.5)
+texture = ExtResource("9_ngdie")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/HPProgressBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = -1.14286
+anchor_right = 0.2
+anchor_bottom = -1.14286
+offset_right = 620.0
+offset_bottom = 140.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "2/2"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MovePointsProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 13.0
+offset_right = 99.0
+offset_bottom = 20.0
+
+[node name="MovePointsIcon" type="Sprite2D" parent="SideMenu/PointsPanel/MovePointsProgressBar"]
+position = Vector2(4.5, -3.5)
+texture = ExtResource("10_5ladh")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/MovePointsProgressBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = -1.14286
+anchor_right = 0.2
+anchor_bottom = -1.14286
+offset_right = 620.0
+offset_bottom = 140.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "2/2"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SubPointsPanel" type="Control" parent="SideMenu"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -53.0
+offset_top = -82.0
+offset_right = 53.0
+offset_bottom = -64.0
+
+[node name="Coins" type="Sprite2D" parent="SideMenu/SubPointsPanel"]
+position = Vector2(61.5, 9)
+texture = ExtResource("11_8q3kw")
+
+[node name="Value" type="Label" parent="SideMenu/SubPointsPanel/Coins"]
+anchors_preset = -1
+anchor_left = 1.1
+anchor_top = -0.167
+anchor_right = 1.1
+anchor_bottom = -0.167
+offset_left = -1.5
+offset_top = -2.998
+offset_right = 548.5
+offset_bottom = 147.002
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "10"
+metadata/_edit_use_anchors_ = true
+
+[node name="AС" type="Sprite2D" parent="SideMenu/SubPointsPanel"]
+position = Vector2(9.5, 8.5)
+texture = ExtResource("12_7sy2f")
+
+[node name="Value" type="Label" parent="SideMenu/SubPointsPanel/AС"]
+anchors_preset = -1
+anchor_left = 1.1
+anchor_top = 0.0714286
+anchor_right = 1.1
+anchor_bottom = 0.0714286
+offset_left = -1.5
+offset_top = -3.5
+offset_right = 438.5
+offset_bottom = 131.5
+grow_horizontal = 0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+metadata/_edit_use_anchors_ = true

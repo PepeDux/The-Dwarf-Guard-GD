@@ -48,6 +48,7 @@ script = ExtResource("3_x41vy")
 
 [node name="ValueLabel" type="Label" parent="."]
 z_index = 5
+layout_mode = 0
 offset_left = 72.0
 offset_top = -4.0
 offset_right = 712.0

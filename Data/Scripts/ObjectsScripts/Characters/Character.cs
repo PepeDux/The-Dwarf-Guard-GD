@@ -198,28 +198,6 @@ public partial class Character : BaseObject
 
 
 
-	[ExportGroup("Уроны")]
-	// Урон наносимый объектом
-	// 1 переменная - итоговый урон
-	// 2 переменная - урон от оружия
-	// 3 переменная - бонусный урон, отрицательный или положительный
-
-	// Физический урон
-	[Export] private int physicalDamage = 0;
-	public int PhysicalDamage
-	{
-		get
-		{
-			return physicalDamage;
-		}
-		set
-		{
-			physicalDamage = Math.Clamp(value, 0, 50);
-		}
-	}
-
-
-
 	[ExportGroup("Уровень и опыт")]
 	// Опыт
 	public int XP = 0;
@@ -330,7 +308,7 @@ public partial class Character : BaseObject
 	// 2 переменная - бонус к значению характеристики
 	// 3 переменная - максимальное допустимое значение характеристики
 
-	//Опьянение
+	// Опьянение
 	private int drunkenness = 0;
 	public int Drunkenness
 	{
@@ -344,6 +322,8 @@ public partial class Character : BaseObject
 		}
 	}
 
+	// Модификатор добавляемый урону и попаданию при атаке
+	public int attackCharacteristicModifier;
 
 
 	[ExportGroup("Сопротивления к урону")]
@@ -375,6 +355,7 @@ public partial class Character : BaseObject
 		UpdateCoordinate();
 		UpdatePoints();
 		UpdateCharacteristicModifier();
+		UpdateWeaponAttackCharacteristicModifier();
 		UpdateAC();
 		AddCharacterToCharacterStorage();
 		UpdateHP();
@@ -436,23 +417,23 @@ public partial class Character : BaseObject
 	{
 		if (weapon.attackCharacteristic == Weapon.AttackCharacteristic.STR)
 		{
-			weapon.attackCharacteristicModifier = strengthModifier;
+			attackCharacteristicModifier = strengthModifier;
 		}
 		else if (weapon.attackCharacteristic == Weapon.AttackCharacteristic.DEX)
 		{
-			weapon.attackCharacteristicModifier = dexterityModifier;
+			attackCharacteristicModifier = dexterityModifier;
 		}
 		else if (weapon.attackCharacteristic == Weapon.AttackCharacteristic.CON)
 		{
-			weapon.attackCharacteristicModifier = constitutionModifier;
+			attackCharacteristicModifier = constitutionModifier;
 		}
 		else if (weapon.attackCharacteristic == Weapon.AttackCharacteristic.INT)
 		{
-			weapon.attackCharacteristicModifier = inteligenceModifier;
+			attackCharacteristicModifier = inteligenceModifier;
 		}
 		else if (weapon.attackCharacteristic == Weapon.AttackCharacteristic.WIS)
 		{
-			weapon.attackCharacteristicModifier = wisdomModifier;
+			attackCharacteristicModifier = wisdomModifier;
 		}
 	}
 

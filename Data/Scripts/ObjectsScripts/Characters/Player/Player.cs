@@ -37,8 +37,6 @@ public partial class Player : Character
 		base._Process(delta);
 
 		MoveOrientation();
-
-		GD.Print(GetTree().Root.GetNode("GameScene").GetNode<PlayerCoinCollection>("PlayerCoinCollection").coins);
 	}
 
 	// Метод который разворачивает персонажа в соответсвии с положением курсора

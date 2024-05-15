@@ -8,13 +8,17 @@ public partial class DropCardsButton : BaseButton
 		base._Ready();
 
 		Events.endSelectCard += Enable;
+		Events.rerolledCards += Disable;
 	}
+
 	public override void _ExitTree()
 	{
 		base._ExitTree();
 
 		Events.endSelectCard -= Enable;
+		Events.rerolledCards -= Disable;
 	}
+
 	public override void Pressed()
 	{
 		base.Pressed();

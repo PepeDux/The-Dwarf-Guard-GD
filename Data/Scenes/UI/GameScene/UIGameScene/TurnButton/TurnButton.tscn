@@ -1,0 +1,27 @@
+[gd_scene load_steps=8 format=3 uid="uid://wbjpmbh170cn"]
+
+[ext_resource type="Texture2D" uid="uid://j45vr2rnkfnr" path="res://Data/Sprites/UI/GameScene/TurnButton/NextTurnNormal.png" id="1_f82j6"]
+[ext_resource type="Texture2D" uid="uid://c6blpq81ckdir" path="res://Data/Sprites/UI/GameScene/TurnButton/NextTurnHower.png" id="2_lxd68"]
+[ext_resource type="Texture2D" uid="uid://xc5jp8wgsqkc" path="res://Data/Sprites/UI/GameScene/TurnButton/NextTurnDisabled.png" id="3_633s8"]
+[ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnButton.cs" id="4_hcbtu"]
+[ext_resource type="Script" path="res://Data/Scripts/AudioScripts/ButtonAudioController.cs" id="5_dhq2n"]
+[ext_resource type="AudioStream" uid="uid://bvwj1i75ge082" path="res://Data/Audio/Sound/ButtonSounds/Hover/Hover1.wav" id="6_1ntn2"]
+[ext_resource type="AudioStream" uid="uid://bwq0gac35vvu2" path="res://Data/Audio/Sound/ButtonSounds/Click/Click1.wav" id="7_0mcdk"]
+
+[node name="TurnButton" type="TextureButton"]
+offset_right = 80.0
+offset_bottom = 32.0
+texture_normal = ExtResource("1_f82j6")
+texture_hover = ExtResource("2_lxd68")
+texture_disabled = ExtResource("3_633s8")
+script = ExtResource("4_hcbtu")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"Sounds"
+script = ExtResource("5_dhq2n")
+hoverSounds = Array[AudioStreamWAV]([ExtResource("6_1ntn2")])
+clickSounds = Array[AudioStreamWAV]([ExtResource("7_0mcdk")])
+
+[connection signal="mouse_entered" from="." to="." method="MouseEntered"]
+[connection signal="mouse_exited" from="." to="." method="MouseExited"]
+[connection signal="pressed" from="." to="." method="Pressed"]

@@ -20,7 +20,6 @@ offset_bottom = 270.0
 color = Color(0.109804, 0.101961, 0.101961, 1)
 
 [node name="Vhs-shader" parent="." instance=ExtResource("1_p8uvn")]
-visible = false
 
 [node name="VHSCheckBox" parent="." instance=ExtResource("2_o2e4e")]
 offset_left = 168.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvarsh4qj0s4"
-path="res://.godot/imported/Wait.png-7c9e4e18f2915214c98c8fe3399cfe0d.ctex"
+uid="uid://btt1btxeoweqk"
+path="res://.godot/imported/DiagonalAttackFrame.png-3531d89b213094b035be8634a6ca5603.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Data/Sprites/UI/GameScene/TurnButton/Wait.png"
-dest_files=["res://.godot/imported/Wait.png-7c9e4e18f2915214c98c8fe3399cfe0d.ctex"]
+source_file="res://Data/Sprites/UI/GameScene/SideMenu/Frames/AttackFrames/DiagonalAttackFrame.png"
+dest_files=["res://.godot/imported/DiagonalAttackFrame.png-3531d89b213094b035be8634a6ca5603.ctex"]
 
 [params]
 

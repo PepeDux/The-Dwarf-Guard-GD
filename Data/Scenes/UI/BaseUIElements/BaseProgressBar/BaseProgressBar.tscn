@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://na2ubd875nll"]
+
+[ext_resource type="Texture2D" uid="uid://d3heebs264flp" path="res://Data/Sprites/UI/BaseUIElements/BaseProgressBar/ProgressBarOver.png" id="1_k2lbx"]
+[ext_resource type="Texture2D" uid="uid://6ulwfdg2divo" path="res://Data/Sprites/UI/BaseUIElements/BaseProgressBar/ProgressBarProgress.png" id="2_pan3c"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/BaseUIElements/BaseProgressBar/BaseProgressBar.cs" id="3_a63h7"]
+
+[node name="BaseProgressBar" type="TextureProgressBar"]
+offset_right = 40.0
+offset_bottom = 7.0
+max_value = 20.0
+value = 9.0
+texture_over = ExtResource("1_k2lbx")
+texture_progress = ExtResource("2_pan3c")
+texture_progress_offset = Vector2(2, 2)
+script = ExtResource("3_a63h7")
+
+[connection signal="changed" from="." to="." method="Changed"]
