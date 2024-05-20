@@ -20,6 +20,11 @@ script = ExtResource("4_jq5iy")
 hoverSounds = Array[AudioStreamWAV]([ExtResource("5_y0n2m")])
 clickSounds = Array[AudioStreamWAV]([ExtResource("6_1na8r")])
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+
 [connection signal="mouse_entered" from="." to="." method="MouseEntered"]
 [connection signal="mouse_exited" from="." to="." method="MouseExited"]
 [connection signal="pressed" from="." to="." method="Pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://uixniamcrmq2"]
+[gd_scene load_steps=23 format=3 uid="uid://uixniamcrmq2"]
 
 [ext_resource type="Texture2D" uid="uid://csw0qwm2nm2r7" path="res://Data/Sprites/Tilemaps/TileMap.png" id="1_frbbj"]
 [ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/UI/GameScene/Markers/Markers.png" id="2_8abb6"]
@@ -16,7 +16,6 @@
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/CharacterStorage.cs" id="21_e2keu"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnController.cs" id="22_ugcec"]
 [ext_resource type="PackedScene" uid="uid://hegp6rbt487a" path="res://Data/Scenes/UI/GameScene/PauseMenu/PauseMenu.tscn" id="23_d6hba"]
-[ext_resource type="Script" path="res://Data/Scripts/test.cs" id="24_gfl5l"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Player/PlayerCoinCollection.cs" id="25_tpk34"]
 [ext_resource type="PackedScene" uid="uid://deq1stiekglgs" path="res://Data/Scenes/UI/GameScene/UIGameScene/UIGameScene.tscn" id="26_64d7w"]
 
@@ -130,9 +129,6 @@ script = ExtResource("22_ugcec")
 [node name="PauseMenu" parent="." instance=ExtResource("23_d6hba")]
 visible = false
 position = Vector2(144, 256)
-
-[node name="TEST" type="Node2D" parent="."]
-script = ExtResource("24_gfl5l")
 
 [node name="PlayerCoinCollection" type="Node2D" parent="."]
 script = ExtResource("25_tpk34")

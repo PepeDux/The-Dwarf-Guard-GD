@@ -1,10 +1,11 @@
-[gd_scene load_steps=44 format=3 uid="uid://b2xh8cto5uvph"]
+[gd_scene load_steps=45 format=3 uid="uid://b2xh8cto5uvph"]
 
 [ext_resource type="PackedScene" uid="uid://dx6sxyfguth4d" path="res://Data/Scenes/BaseObjects/BaseObject.tscn" id="1_leavt"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Character.cs" id="2_8vwku"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/СharacteristicModifierCalculation.cs" id="3_442ou"]
 [ext_resource type="Resource" uid="uid://d0c1xa0n37q7i" path="res://Data/Resources/Weapons/LongSword.tres" id="3_l2c31"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/TakeDamage.cs" id="4_akvk5"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Ability/CharacterAbilitiesStorage.cs" id="4_rtvkd"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="5_28we2"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x78dq"]
@@ -291,7 +292,7 @@ maxMovePoints = 3
 movePoints = 0
 maxActionPoints = 1
 actionPoints = 0
-maxBeerPoints = 0
+maxBeerPoints = 1
 beerPoints = 0
 moveCost = 1
 directMove = true
@@ -300,7 +301,6 @@ maxHP = 10
 hP = 0
 ac = 5
 coins = 0
-physicalDamage = 0
 strength = 10
 constitution = 10
 dexterity = 10
@@ -328,10 +328,13 @@ libraries = {
 "": SubResource("AnimationLibrary_xy7h0")
 }
 
-[node name="СharacteristicModifierCalculation" type="Node2D" parent="." index="4"]
+[node name="CharacterAbilitiesStorage" type="Node2D" parent="." index="4"]
+script = ExtResource("4_rtvkd")
+
+[node name="СharacteristicModifierCalculation" type="Node2D" parent="." index="5"]
 script = ExtResource("3_442ou")
 
-[node name="BloodParticles" type="CPUParticles2D" parent="." index="5"]
+[node name="BloodParticles" type="CPUParticles2D" parent="." index="6"]
 position = Vector2(0, -4)
 emitting = false
 amount = 20
@@ -351,10 +354,10 @@ scale_amount_max = 2.0
 scale_amount_curve = SubResource("Curve_rl7n5")
 color = Color(0.509804, 0.129412, 0.113725, 1)
 
-[node name="TakeDamage" type="Node2D" parent="." index="6"]
+[node name="TakeDamage" type="Node2D" parent="." index="7"]
 script = ExtResource("4_akvk5")
 
-[node name="SubViewport" type="SubViewport" parent="." index="7"]
+[node name="SubViewport" type="SubViewport" parent="." index="8"]
 transparent_bg = true
 mesh_lod_threshold = 0.0
 sdf_oversize = 3
@@ -377,7 +380,7 @@ text = "miss
 "
 horizontal_alignment = 1
 
-[node name="MessageParticles" type="CPUParticles2D" parent="." index="8"]
+[node name="MessageParticles" type="CPUParticles2D" parent="." index="9"]
 light_mask = 1048575
 visibility_layer = 1048575
 position = Vector2(0, -11)

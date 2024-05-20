@@ -1,22 +1,22 @@
 [gd_scene load_steps=13 format=3 uid="uid://hegp6rbt487a"]
 
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/PauseMenuScripts/PauseMenu.cs" id="1_2r56a"]
 [ext_resource type="Texture2D" uid="uid://cn1ctchx8r8wv" path="res://Data/Sprites/UI/GameScene/PauseMenu/ContinueNormal.png" id="1_ett25"]
 [ext_resource type="Texture2D" uid="uid://d4hpa58kitphe" path="res://Data/Sprites/UI/GameScene/PauseMenu/ToMainMenuNormal.png" id="1_voa14"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameScene/PauseMenuScripts/PauseMenu.cs" id="1_xmatm"]
 [ext_resource type="Texture2D" uid="uid://b4ouqcvolxfn1" path="res://Data/Sprites/UI/GameScene/PauseMenu/ToMainMenuHover.png" id="2_ev12p"]
 [ext_resource type="Texture2D" uid="uid://b6wleiq831ntt" path="res://Data/Sprites/UI/GameScene/PauseMenu/ContinueHover.png" id="2_n60cg"]
 [ext_resource type="Texture2D" uid="uid://b27jxx33hh8yy" path="res://Data/Sprites/UI/GameScene/PauseMenu/SettingsNormal.png" id="3_1lbfh"]
 [ext_resource type="Texture2D" uid="uid://ds7dc2tw514mm" path="res://Data/Sprites/UI/GameScene/PauseMenu/SettingsHover.png" id="4_ik3o4"]
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/PauseMenuScripts/ToMainMenu.cs" id="4_p6vl5"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameScene/PauseMenuScripts/ToMainMenu.cs" id="5_3hivh"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/MainMenuScripts/ToSettings.cs" id="7_16vi4"]
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/PauseMenuScripts/ContinueGame.cs" id="10_w2kst"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="11_3arod"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameScene/PauseMenuScripts/ContinueGame.cs" id="11_dudhj"]
 [ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="12_no3vs"]
 
 [node name="PauseMenu" type="Node2D"]
 process_mode = 3
 z_index = 10
-script = ExtResource("1_2r56a")
+script = ExtResource("1_xmatm")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -40.0
@@ -32,7 +32,7 @@ offset_right = 233.0
 offset_bottom = 144.0
 texture_normal = ExtResource("1_voa14")
 texture_hover = ExtResource("2_ev12p")
-script = ExtResource("4_p6vl5")
+script = ExtResource("5_3hivh")
 
 [node name="ToSettings" parent="." instance=ExtResource("12_no3vs")]
 visible = false
@@ -51,7 +51,7 @@ offset_right = 289.0
 offset_bottom = 144.0
 texture_normal = ExtResource("1_ett25")
 texture_hover = ExtResource("2_n60cg")
-script = ExtResource("10_w2kst")
+script = ExtResource("11_dudhj")
 
 [node name="CardNamePositive" type="Label" parent="."]
 offset_left = 199.0

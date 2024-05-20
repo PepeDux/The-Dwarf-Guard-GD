@@ -1,18 +1,22 @@
-[gd_scene load_steps=14 format=3 uid="uid://deq1stiekglgs"]
+[gd_scene load_steps=18 format=3 uid="uid://deq1stiekglgs"]
 
-[ext_resource type="Texture2D" uid="uid://5t03g43fic3o" path="res://Data/Sprites/UI/GameScene/SideMenu/SideMenu.png" id="1_njmsi"]
-[ext_resource type="Texture2D" uid="uid://bu5nb6vi11tw" path="res://Data/Sprites/UI/GameScene/SideMenu/Frames/Frame.png" id="2_nik3w"]
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/UIGameScene/SideMenu.cs" id="2_s2koe"]
-[ext_resource type="Texture2D" uid="uid://boo7sf433u0pm" path="res://Data/Sprites/UI/GameScene/SideMenu/Frames/StatistickFrame.png" id="3_pjhug"]
+[ext_resource type="Texture2D" uid="uid://5t03g43fic3o" path="res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/SideMenu.png" id="1_5qk4l"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameScene/UIGameScene/SideMenu.cs" id="2_a71b1"]
+[ext_resource type="Texture2D" uid="uid://bu5nb6vi11tw" path="res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/Frames/Frame.png" id="3_viq5h"]
+[ext_resource type="Texture2D" uid="uid://boo7sf433u0pm" path="res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/Frames/StatistickFrame.png" id="4_4fcmw"]
 [ext_resource type="PackedScene" uid="uid://wbjpmbh170cn" path="res://Data/Scenes/UI/GameScene/UIGameScene/TurnButton/TurnButton.tscn" id="4_qiqf4"]
 [ext_resource type="PackedScene" uid="uid://na2ubd875nll" path="res://Data/Scenes/UI/BaseUIElements/BaseProgressBar/BaseProgressBar.tscn" id="5_mcd6g"]
-[ext_resource type="Texture2D" uid="uid://ixwymtnc2dls" path="res://Data/Sprites/UI/GameScene/SideMenu/Icons/ActionPointsIcon.png" id="6_wmvtv"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="7_pyokt"]
-[ext_resource type="Texture2D" uid="uid://ddfjdn0q3rij0" path="res://Data/Sprites/UI/GameScene/SideMenu/Icons/BeerPointsIcon.png" id="8_svk8b"]
-[ext_resource type="Texture2D" uid="uid://blx4wo0oi7jys" path="res://Data/Sprites/UI/GameScene/SideMenu/Icons/HPIcon.png" id="9_ngdie"]
-[ext_resource type="Texture2D" uid="uid://blee5esbfftgj" path="res://Data/Sprites/UI/GameScene/SideMenu/Icons/MovePointsIcon.png" id="10_5ladh"]
-[ext_resource type="Texture2D" uid="uid://oaibj8m032f7" path="res://Data/Sprites/UI/GameScene/SideMenu/Icons/CoinsIcon.png" id="11_8q3kw"]
-[ext_resource type="Texture2D" uid="uid://bc002arhhg70t" path="res://Data/Sprites/UI/GameScene/SideMenu/Icons/ACIcon.png" id="12_7sy2f"]
+[ext_resource type="Texture2D" uid="uid://ixwymtnc2dls" path="res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/Icons/ActionPointsIcon.png" id="8_w3krr"]
+[ext_resource type="Texture2D" uid="uid://ddfjdn0q3rij0" path="res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/Icons/BeerPointsIcon.png" id="9_qnphc"]
+[ext_resource type="Texture2D" uid="uid://blx4wo0oi7jys" path="res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/Icons/HPIcon.png" id="10_igymi"]
+[ext_resource type="Texture2D" uid="uid://blee5esbfftgj" path="res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/Icons/MovePointsIcon.png" id="11_0g311"]
+[ext_resource type="Texture2D" uid="uid://oaibj8m032f7" path="res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/Icons/CoinsIcon.png" id="12_sm7on"]
+[ext_resource type="Texture2D" uid="uid://bc002arhhg70t" path="res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/Icons/ACIcon.png" id="13_p0ws3"]
+[ext_resource type="Texture2D" uid="uid://b7fu2yjikkyhr" path="res://Data/Sprites/UI/GameScene/UIGameScene/AbilityPanel/AbilityPanel.png" id="14_2ju6c"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameScene/UIGameScene/AbilityPanel.cs" id="15_4idtq"]
+[ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="15_e58g1"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Ability/AbilityButton.cs" id="16_ol63s"]
 
 [node name="UIGameScene" type="Control"]
 layout_mode = 3
@@ -23,9 +27,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="SideMenu" type="Sprite2D" parent="." node_paths=PackedStringArray("HPProgressBar", "MovePointsProgressBar", "ActionPointsProgressBar", "BeerPointsProgressBar", "ACLabel", "CoinsLabel", "strengthLabel", "constitutionLabel", "dexterityLabel", "intelligenceLabel", "wisdomLabel", "charismaLabel", "WeaponFrame", "damageLabel", "attackLabel", "attackCostLabel", "AttackFrame", "MoveFrame")]
-position = Vector2(435, 135)
-texture = ExtResource("1_njmsi")
-script = ExtResource("2_s2koe")
+position = Vector2(55, 135)
+texture = ExtResource("1_5qk4l")
+script = ExtResource("2_a71b1")
 HPProgressBar = NodePath("PointsPanel/HPProgressBar")
 MovePointsProgressBar = NodePath("PointsPanel/MovePointsProgressBar")
 ActionPointsProgressBar = NodePath("PointsPanel/ActionPointsProgressBar")
@@ -47,11 +51,11 @@ MoveFrame = NodePath("MoveFrame")
 
 [node name="AttackFrame" type="Sprite2D" parent="SideMenu"]
 position = Vector2(-24, 62)
-texture = ExtResource("2_nik3w")
+texture = ExtResource("3_viq5h")
 
 [node name="MoveFrame" type="Sprite2D" parent="SideMenu"]
 position = Vector2(24, 62)
-texture = ExtResource("2_nik3w")
+texture = ExtResource("3_viq5h")
 
 [node name="StatistickPanel" type="Control" parent="SideMenu"]
 layout_mode = 3
@@ -64,7 +68,7 @@ offset_bottom = -11.0
 [node name="Wisdom" type="Sprite2D" parent="SideMenu/StatistickPanel"]
 position = Vector2(53, 35.5)
 rotation = 3.14159
-texture = ExtResource("3_pjhug")
+texture = ExtResource("4_4fcmw")
 
 [node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Wisdom"]
 anchors_preset = -1
@@ -106,7 +110,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Inteligence" type="Sprite2D" parent="SideMenu/StatistickPanel"]
 position = Vector2(20, 35.5)
 rotation = 3.14159
-texture = ExtResource("3_pjhug")
+texture = ExtResource("4_4fcmw")
 
 [node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Inteligence"]
 anchors_preset = -1
@@ -148,7 +152,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Charisma" type="Sprite2D" parent="SideMenu/StatistickPanel"]
 position = Vector2(86, 35.5)
 rotation = 3.14159
-texture = ExtResource("3_pjhug")
+texture = ExtResource("4_4fcmw")
 
 [node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Charisma"]
 anchors_preset = -1
@@ -190,7 +194,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Constitution" type="Sprite2D" parent="SideMenu/StatistickPanel"]
 position = Vector2(53, 15.5)
 rotation = 3.14159
-texture = ExtResource("3_pjhug")
+texture = ExtResource("4_4fcmw")
 
 [node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Constitution"]
 anchors_preset = -1
@@ -232,7 +236,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Strength" type="Sprite2D" parent="SideMenu/StatistickPanel"]
 position = Vector2(20, 15.5)
 rotation = 3.14159
-texture = ExtResource("3_pjhug")
+texture = ExtResource("4_4fcmw")
 
 [node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Strength"]
 anchors_preset = -1
@@ -274,7 +278,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Dexterity" type="Sprite2D" parent="SideMenu/StatistickPanel"]
 position = Vector2(86, 15.5)
 rotation = 3.14159
-texture = ExtResource("3_pjhug")
+texture = ExtResource("4_4fcmw")
 
 [node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Dexterity"]
 anchors_preset = -1
@@ -323,7 +327,7 @@ offset_bottom = 37.0
 
 [node name="WeaponFrame" type="Sprite2D" parent="SideMenu/WeaponPanel"]
 position = Vector2(29, 23)
-texture = ExtResource("2_nik3w")
+texture = ExtResource("3_viq5h")
 
 [node name="DamageLabel" type="Label" parent="SideMenu/WeaponPanel"]
 layout_mode = 1
@@ -408,7 +412,7 @@ offset_bottom = 42.0
 
 [node name="ActionPointsIcon" type="Sprite2D" parent="SideMenu/PointsPanel/ActionPointsProgressBar"]
 position = Vector2(4.5, -3.5)
-texture = ExtResource("6_wmvtv")
+texture = ExtResource("8_w3krr")
 
 [node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/ActionPointsProgressBar"]
 layout_mode = 1
@@ -435,7 +439,7 @@ offset_bottom = 42.0
 
 [node name="BeerPointsIcon" type="Sprite2D" parent="SideMenu/PointsPanel/BeerPointsProgressBar"]
 position = Vector2(5, -3.5)
-texture = ExtResource("8_svk8b")
+texture = ExtResource("9_qnphc")
 
 [node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/BeerPointsProgressBar"]
 layout_mode = 1
@@ -462,7 +466,7 @@ offset_bottom = 20.0
 
 [node name="HpIcon" type="Sprite2D" parent="SideMenu/PointsPanel/HPProgressBar"]
 position = Vector2(4.5, -3.5)
-texture = ExtResource("9_ngdie")
+texture = ExtResource("10_igymi")
 
 [node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/HPProgressBar"]
 layout_mode = 1
@@ -489,7 +493,7 @@ offset_bottom = 20.0
 
 [node name="MovePointsIcon" type="Sprite2D" parent="SideMenu/PointsPanel/MovePointsProgressBar"]
 position = Vector2(4.5, -3.5)
-texture = ExtResource("10_5ladh")
+texture = ExtResource("11_0g311")
 
 [node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/MovePointsProgressBar"]
 layout_mode = 1
@@ -517,7 +521,7 @@ offset_bottom = -64.0
 
 [node name="Coins" type="Sprite2D" parent="SideMenu/SubPointsPanel"]
 position = Vector2(61.5, 9)
-texture = ExtResource("11_8q3kw")
+texture = ExtResource("12_sm7on")
 
 [node name="Value" type="Label" parent="SideMenu/SubPointsPanel/Coins"]
 anchors_preset = -1
@@ -537,7 +541,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AС" type="Sprite2D" parent="SideMenu/SubPointsPanel"]
 position = Vector2(9.5, 8.5)
-texture = ExtResource("12_7sy2f")
+texture = ExtResource("13_p0ws3")
 
 [node name="Value" type="Label" parent="SideMenu/SubPointsPanel/AС"]
 anchors_preset = -1
@@ -554,3 +558,88 @@ scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("7_pyokt")
 theme_override_font_sizes/font_size = 128
 metadata/_edit_use_anchors_ = true
+
+[node name="AbilityPanel" type="Sprite2D" parent="."]
+position = Vector2(435, 135)
+texture = ExtResource("14_2ju6c")
+
+[node name="AbilityButtons" type="Control" parent="AbilityPanel"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -53.0
+offset_top = -133.0
+offset_right = 53.0
+offset_bottom = 85.0
+script = ExtResource("15_4idtq")
+
+[node name="AbilityButton1" parent="AbilityPanel/AbilityButtons" instance=ExtResource("15_e58g1")]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 21.0
+offset_right = 48.0
+offset_bottom = 53.0
+script = ExtResource("16_ol63s")
+ability = null
+
+[node name="AbilityButton2" parent="AbilityPanel/AbilityButtons" instance=ExtResource("15_e58g1")]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 21.0
+offset_right = 90.0
+offset_bottom = 53.0
+script = ExtResource("16_ol63s")
+ability = null
+
+[node name="AbilityButton3" parent="AbilityPanel/AbilityButtons" instance=ExtResource("15_e58g1")]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 69.0
+offset_right = 48.0
+offset_bottom = 101.0
+script = ExtResource("16_ol63s")
+ability = null
+
+[node name="AbilityButton4" parent="AbilityPanel/AbilityButtons" instance=ExtResource("15_e58g1")]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 69.0
+offset_right = 90.0
+offset_bottom = 101.0
+script = ExtResource("16_ol63s")
+ability = null
+
+[node name="AbilityButton5" parent="AbilityPanel/AbilityButtons" instance=ExtResource("15_e58g1")]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 117.0
+offset_right = 48.0
+offset_bottom = 149.0
+script = ExtResource("16_ol63s")
+ability = null
+
+[node name="AbilityButton6" parent="AbilityPanel/AbilityButtons" instance=ExtResource("15_e58g1")]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 117.0
+offset_right = 90.0
+offset_bottom = 149.0
+script = ExtResource("16_ol63s")
+ability = null
+
+[node name="AbilityButton7" parent="AbilityPanel/AbilityButtons" instance=ExtResource("15_e58g1")]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 165.0
+offset_right = 48.0
+offset_bottom = 197.0
+script = ExtResource("16_ol63s")
+ability = null
+
+[node name="AbilityButton8" parent="AbilityPanel/AbilityButtons" instance=ExtResource("15_e58g1")]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 165.0
+offset_right = 90.0
+offset_bottom = 197.0
+script = ExtResource("16_ol63s")
+ability = null

@@ -4,8 +4,8 @@ using System;
 public partial class CardData : Resource
 {
 	[ExportGroup("Модификатор")]
-	// Изображение карты
-	[Export] public Resource modifier { get; set; }
+	// Модификатор карты
+	[Export] public ModifierData modifier { get; set; }
 
 	[ExportGroup("Изображение")]
 	// Изображение карты

@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://wbjpmbh170cn"]
 
-[ext_resource type="Texture2D" uid="uid://j45vr2rnkfnr" path="res://Data/Sprites/UI/GameScene/TurnButton/NextTurnNormal.png" id="1_f82j6"]
-[ext_resource type="Texture2D" uid="uid://c6blpq81ckdir" path="res://Data/Sprites/UI/GameScene/TurnButton/NextTurnHower.png" id="2_lxd68"]
-[ext_resource type="Texture2D" uid="uid://xc5jp8wgsqkc" path="res://Data/Sprites/UI/GameScene/TurnButton/NextTurnDisabled.png" id="3_633s8"]
+[ext_resource type="Texture2D" uid="uid://j45vr2rnkfnr" path="res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/TurnButton/NextTurnNormal.png" id="1_f82j6"]
+[ext_resource type="Texture2D" uid="uid://c6blpq81ckdir" path="res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/TurnButton/NextTurnHower.png" id="2_lxd68"]
+[ext_resource type="Texture2D" uid="uid://xc5jp8wgsqkc" path="res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/TurnButton/NextTurnDisabled.png" id="3_633s8"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnButton.cs" id="4_hcbtu"]
 [ext_resource type="Script" path="res://Data/Scripts/AudioScripts/ButtonAudioController.cs" id="5_dhq2n"]
 [ext_resource type="AudioStream" uid="uid://bvwj1i75ge082" path="res://Data/Audio/Sound/ButtonSounds/Hover/Hover1.wav" id="6_1ntn2"]

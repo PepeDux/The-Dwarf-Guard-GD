@@ -267,5 +267,6 @@ z_index = 100
 material = SubResource("ShaderMaterial_t1tra")
 clip_contents = true
 custom_minimum_size = Vector2(100, 100)
+offset_top = -1.0
 offset_right = 490.0
-offset_bottom = 270.0
+offset_bottom = 271.0
