@@ -74,6 +74,8 @@ public partial class CharacteristicModifierData : ModifierData
 
 	[Export] public int wisdom { get; set; }
 
+	[Export] public int charisma { get; set; }
+
 
 
 	[ExportGroup("Вторичные характеристики")]

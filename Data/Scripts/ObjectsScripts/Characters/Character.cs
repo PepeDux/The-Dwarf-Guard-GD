@@ -300,6 +300,22 @@ public partial class Character : BaseObject
 	// Модификатор мудрости
 	public int wisdomModifier = 0;
 
+	// Харизма
+	[Export] private int charisma = 0;
+	public int Charisma
+	{
+		get
+		{
+			return charisma;
+		}
+		set
+		{
+			charisma = Math.Clamp(value, 0, 20);
+		}
+	}
+	// Модификатор харизмы
+	public int charismaModifier = 0;
+
 
 
 	[ExportGroup("Вторичные характеристики")]
@@ -408,6 +424,7 @@ public partial class Character : BaseObject
 		constitutionModifier = (Constitution - 10) / 2;
 		inteligenceModifier = (Inteligence - 10) / 2;
 		wisdomModifier = (Wisdom - 10) / 2;
+		charismaModifier = (Charisma - 10) / 2;
 	}
 
 	// Обновляет значения модификатора характеристики оружия

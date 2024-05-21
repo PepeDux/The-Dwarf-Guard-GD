@@ -213,7 +213,7 @@ public partial class SideMenu : Node
 			// Харизма
 			if (target == player || (target != player && player.wisdomModifier >= 2))
 			{
-				charismaLabel.Text = $"0 (-5)";
+				charismaLabel.Text = $"{target.Charisma}({target.charismaModifier})";
 			}
 			else
 			{

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/UI/GameScene/Holders.tscn" id="3_36s72"]
 [ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="6_r16vw"]
 [ext_resource type="Script" path="res://Data/Scripts/CameraScripts/CameraShake.cs" id="7_45pxw"]
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/Fader.cs" id="8_w5rp6"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameScene/Fader.cs" id="8_w5rp6"]
 [ext_resource type="PackedScene" uid="uid://8t16gfkhb3xa" path="res://Data/Scenes/UI/GameScene/CardHolder/CardHolder.tscn" id="14_oqbqr"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelInfo.cs" id="15_8tdvf"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelSpawnInfo.cs" id="16_vu12s"]

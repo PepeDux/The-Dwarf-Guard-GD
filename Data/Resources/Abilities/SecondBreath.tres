@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://jmis7td1kcvx"]
+
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Ability/Abilities/SecondBreath.cs" id="1_gm384"]
+
+[resource]
+script = ExtResource("1_gm384")
+actionPointsCost = 0
+movePointsCost = 0
+beerPointsCost = 1

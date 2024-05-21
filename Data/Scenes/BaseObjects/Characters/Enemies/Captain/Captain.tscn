@@ -18,6 +18,5 @@ strength = 15
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_0sd4g")
 
-[node name="MessageParticles" parent="." index="8"]
-scale = Vector2(1, 1)
+[node name="MessageParticles" parent="." index="9"]
 texture = SubResource("ViewportTexture_hfkfo")

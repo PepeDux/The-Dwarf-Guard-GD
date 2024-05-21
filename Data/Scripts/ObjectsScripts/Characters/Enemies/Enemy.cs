@@ -75,7 +75,7 @@ public partial class Enemy : Character
 	{
 		List<Vector2I> pathToTarget = GetNode<Pathfinding>("Pathfinding").pathToTarget;
 
-		if (MovePoints >= MoveCost && player != null)
+		if (((MovePoints >= MoveCost) || (ActionPoints >= MoveCost)) && player != null)
 		{
 			pathToTarget.Clear();
 			pathToTarget = GetNode<Pathfinding>("Pathfinding").GetPath(player.coordinate);
@@ -90,11 +90,18 @@ public partial class Enemy : Character
 				UpdateCoordinate();
 				// Проигрываем звук ходьбы
 				GetNode<AudioController>("AudioStreamPlayer").PlaySound("Move", 0.8f, 1f);
-				// Отнимаем стоимость шага
-				MovePoints -= MoveCost;
-				//
-				Events.characterMoved?.Invoke(this);
 
+				// Отнимаем у противника очки движения или очки действия если нет очков движения
+				if (MovePoints >= MoveCost)
+				{
+					MovePoints -= MoveCost;
+				}
+				else if (MovePoints <= MoveCost)
+				{
+					ActionPoints -= MoveCost;
+				}
+
+				Events.characterMoved?.Invoke(this);
 
 				TileStorage.AddCell(this);
 			}
@@ -106,7 +113,7 @@ public partial class Enemy : Character
 		config.Load("user://Settings.cfg");
 		int turnSpeed = (int)config.GetValue("TurnSpeed", "TurnSpeed");
 
-		while (MovePoints >= MoveCost)
+		while ((MovePoints >= MoveCost) || (ActionPoints >= MoveCost))
 		{
 			await Task.Delay(turnSpeed);
 

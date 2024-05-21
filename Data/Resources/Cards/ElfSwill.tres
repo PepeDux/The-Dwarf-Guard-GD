@@ -26,6 +26,7 @@ dexterity = -1
 inteligence = -1
 constitution = -1
 wisdom = -1
+charisma = 0
 drunkenness = 0
 physicalResist = 0
 

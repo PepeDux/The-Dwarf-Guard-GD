@@ -8,6 +8,8 @@ public partial class BaseButton : TextureButton
 	public override void _Ready()
 	{
 		base._Ready();
+
+		basePosition = new Vector2(Position.X, Position.Y);
 	}
 
 	public virtual void Pressed()

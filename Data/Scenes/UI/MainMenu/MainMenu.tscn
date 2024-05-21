@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://clt58eakiro5h"]
 
 [ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="1_kdeov"]
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/Fader.cs" id="2_hungq"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameScene/Fader.cs" id="2_hungq"]
 [ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="3_70clf"]
 [ext_resource type="Texture2D" uid="uid://chu2iy1nkrufm" path="res://Data/Sprites/UI/MainMenu/StartNormal.png" id="3_jnh7o"]
 [ext_resource type="Texture2D" uid="uid://c4dngyxbn1apl" path="res://Data/Sprites/UI/MainMenu/StartHover.png" id="4_afojs"]

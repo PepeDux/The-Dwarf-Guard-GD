@@ -5,47 +5,44 @@ using System.Linq;
 public partial class AbilityPanel : Node
 {
 	Player player;
-	Character target;
-
-	CharacterAbilitiesStorage characterAbilitiesStorage;
 
 	public override void _Ready()
 	{
 		Events.playerSpawned += GetPlayer;
+		Events.playerSpawned += SetButtonAbility;
 	}
 
 	public override void _ExitTree()
 	{
 		Events.playerSpawned -= GetPlayer;
+		Events.playerSpawned -= SetButtonAbility;
 	}
 
-	public override void _Process(double delta)
+	private void SetButtonAbility()
 	{
-		if (DataBank.currentMouseTarget == null)
+		if (player != null)
 		{
-			target = player;
-		}
-		else
-		{
-			//target = DataBank.currentMouseTarget;
-		}
+			// Нода хранящая абилки персонажа
+			CharacterAbilitiesStorage characterAbilitiesStorage = player.GetNode<CharacterAbilitiesStorage>("CharacterAbilitiesStorage");
 
-		if (target != null)
-		{
-			characterAbilitiesStorage = target.GetNode<CharacterAbilitiesStorage>("CharacterAbilitiesStorage");
-
+			// Перебираем все кнопки и добавляем к каждой кнопке абилку от персонажа
 			for (int i = 1; i <= GetChildCount(); i++)
 			{
+				// Текущая кнопка в цикле
 				AbilityButton abilityButton = GetNode<AbilityButton>($"AbilityButton{i}");
 
-				if (characterAbilitiesStorage.abilities[i - 1] != null) 
+				if (i - 1 < characterAbilitiesStorage.abilities.Length && characterAbilitiesStorage.abilities[i - 1] != null)
 				{
+					// 
 					abilityButton.ability = characterAbilitiesStorage.abilities[i - 1];
-
+					// Задаем кнопке картинку абилки
 					abilityButton.GetNode<TextureRect>("TextureRect").Texture = characterAbilitiesStorage.abilities[i - 1].abilityImage;
 				}
-
-				break;
+				else
+				{
+					// Делаем кнопку невидимой если у игрока нет абилки под текущую кнопку в цикле
+					abilityButton.Visible = false;
+				}
 			}
 		}
 	}
