@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/CharacteristicModifierData.cs" id="1_etuoj"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_12igt"]
-[ext_resource type="Texture2D" uid="uid://dc503yjtm10r4" path="res://Data/Sprites/Cards/Card_20.png" id="3_448o4"]
+[ext_resource type="Texture2D" uid="uid://dc503yjtm10r4" path="res://Data/Sprites/UI/GameScene/Cards/Cards/Card_20.png" id="3_d4w3u"]
 
 [sub_resource type="Resource" id="Resource_kx86k"]
 resource_local_to_scene = true
@@ -33,7 +33,7 @@ physicalResist = 0
 [resource]
 script = ExtResource("2_12igt")
 modifier = SubResource("Resource_kx86k")
-texture = ExtResource("3_448o4")
+texture = ExtResource("3_d4w3u")
 name = "За здоровье!"
 cardDescription = "Увеличивает телосложенье на 1. Дзынь-нь"
 cardStrength = 1

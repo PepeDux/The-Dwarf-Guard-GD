@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Spawn/SpawnModifierData.cs" id="1_x5lol"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_m6kla"]
-[ext_resource type="Texture2D" uid="uid://cekdmjyrutre6" path="res://Data/Sprites/Cards/Card_23.png" id="3_veitu"]
+[ext_resource type="Texture2D" uid="uid://cekdmjyrutre6" path="res://Data/Sprites/UI/GameScene/Cards/Cards/Card_23.png" id="3_jndyy"]
 
 [sub_resource type="Resource" id="Resource_v00c2"]
 resource_local_to_scene = true
@@ -23,7 +23,7 @@ runeCount = 0
 resource_local_to_scene = true
 script = ExtResource("2_m6kla")
 modifier = SubResource("Resource_v00c2")
-texture = ExtResource("3_veitu")
+texture = ExtResource("3_jndyy")
 name = "Подкрепление"
 cardDescription = "Добавляет +1 юнита ближнего боя на поле. Тревога!"
 cardStrength = 3

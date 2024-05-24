@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://deq1stiekglgs"]
+[gd_scene load_steps=20 format=3 uid="uid://deq1stiekglgs"]
 
 [ext_resource type="Texture2D" uid="uid://5t03g43fic3o" path="res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/SideMenu.png" id="1_5qk4l"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameScene/UIGameScene/SideMenu.cs" id="2_a71b1"]
@@ -17,6 +17,8 @@
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameScene/UIGameScene/AbilityPanel.cs" id="15_4idtq"]
 [ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="15_e58g1"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Ability/AbilityButton.cs" id="16_ol63s"]
+[ext_resource type="Texture2D" uid="uid://cfbq1j0yiume3" path="res://Data/Sprites/UI/Mouses/LeftMouseClick1.png" id="18_yyjmi"]
+[ext_resource type="Texture2D" uid="uid://d1qwl8x10s1ld" path="res://Data/Sprites/UI/Mouses/RightMouseClick1.png" id="19_mpb33"]
 
 [node name="UIGameScene" type="Control"]
 layout_mode = 3
@@ -652,3 +654,52 @@ offset_right = 90.0
 offset_bottom = 197.0
 script = ExtResource("16_ol63s")
 ability = null
+
+[node name="HelpPanel" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 110.0
+offset_top = 222.0
+offset_right = 380.0
+offset_bottom = 270.0
+
+[node name="LeftMouseClick1" type="Sprite2D" parent="HelpPanel"]
+position = Vector2(12, 14)
+texture = ExtResource("18_yyjmi")
+
+[node name="Label" type="Label" parent="HelpPanel/LeftMouseClick1"]
+anchors_preset = -1
+anchor_left = 0.199997
+anchor_top = -1.41559
+anchor_right = 0.199997
+anchor_bottom = 7.67532
+offset_left = 3.39999
+offset_top = 9.57146
+offset_right = 623.4
+offset_bottom = 149.571
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = " двж"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RightMouseClick1" type="Sprite2D" parent="HelpPanel"]
+position = Vector2(12, 33)
+texture = ExtResource("19_mpb33")
+
+[node name="Label" type="Label" parent="HelpPanel/RightMouseClick1"]
+anchors_preset = -1
+anchor_left = 0.199997
+anchor_top = -1.41559
+anchor_right = 0.199997
+anchor_bottom = 7.67532
+offset_left = 3.39999
+offset_top = 9.57146
+offset_right = 623.4
+offset_bottom = 149.571
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = " атк"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
