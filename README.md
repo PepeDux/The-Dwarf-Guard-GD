@@ -1,7 +1,8 @@
 # The-Dwarf-Guard-GD
-
-
 ![Static Badge](https://img.shields.io/badge/C%23-purple) ![Static Badge](https://img.shields.io/badge/Godot-white) ![Static Badge](https://img.shields.io/badge/PixelArt-green)
+
+![logo_large_color_dark](https://github.com/PepeDux/CameraShakeGodot/assets/108129196/95af0dd8-c6d7-47ce-934c-eb34fd2e9122)
+
 
 
 
