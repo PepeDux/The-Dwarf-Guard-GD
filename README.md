@@ -3,10 +3,6 @@
 
 ![Static Badge](https://img.shields.io/badge/C%23-purple) ![Static Badge](https://img.shields.io/badge/Godot-white) ![Static Badge](https://img.shields.io/badge/PixelArt-green)
 
-# The-Dwarf-Guard
-
-![Static Badge](https://img.shields.io/badge/C%23-purple) ![Static Badge](https://img.shields.io/badge/Unity-white) ![Static Badge](https://img.shields.io/badge/LINQ-orange) ![Static Badge](https://img.shields.io/badge/PixelArt-green)
-
 
 
 
