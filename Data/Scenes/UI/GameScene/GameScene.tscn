@@ -105,7 +105,7 @@ captainCount = 1
 infantryCount = 1
 trapCount = 2
 foodCount = 2
-tileCount = 1000
+tileCount = 30
 
 [node name="SpawnModifierCalculation" type="Node2D" parent="LevelSpawnInfo"]
 script = ExtResource("17_jrke8")

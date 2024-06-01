@@ -116,9 +116,10 @@ public partial class SideMenu : Node
 			}
 
 			// Монетки
-			if (target == player || (target != player && player.wisdomModifier >= 2))
+			if (target == player)
 			{
-				CoinsLabel.Text = target.Coins.ToString();
+				CoinsLabel.Text = GetTree().Root.GetNode("GameScene").GetNode<PlayerCoinCollection>("PlayerCoinCollection").coins.ToString();
+
 			}
 			else
 			{
