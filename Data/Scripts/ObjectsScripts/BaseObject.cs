@@ -5,6 +5,7 @@ public partial class BaseObject : Node2D
 {
 	public Vector2I coordinate;
 
+
 	private TileMap tileMap;
 
 	public override void _Ready()

@@ -12,6 +12,14 @@ public partial class AbilityData : Resource
 	[Export] public int movePointsCost { get; set; }
 	[Export] public int beerPointsCost { get; set; }
 
+	[ExportGroup("Требования к характеристикам")]
+	[Export] public int strengthRequirement { get; set; }
+	[Export] public int constitutionRequirement { get; set; }
+	[Export] public int dexterityRequirement { get; set; }
+	[Export] public int inteligenceRequirement { get; set; }
+	[Export] public int wisdomRequirement { get; set; }
+	[Export] public int charismaRequirement { get; set; }
+
 
 
 	protected void PayForUse(Player player, int modifier = 1)
@@ -28,9 +36,21 @@ public partial class AbilityData : Resource
 
 	protected bool CanUse(Player player)
 	{
-		if (player.BeerPoints >= beerPointsCost && player.ActionPoints >= actionPointsCost && player.MovePoints >= movePointsCost)
+		if (player.Strength >= strengthRequirement &&
+			player.Constitution >= constitutionRequirement &&
+			player.Dexterity >= dexterityRequirement &&
+			player.Inteligence >= inteligenceRequirement &&
+			player.Wisdom >= wisdomRequirement &&
+			player.Charisma >= charismaRequirement)
 		{
-			return true;
+			if (player.BeerPoints >= beerPointsCost && player.ActionPoints >= actionPointsCost && player.MovePoints >= movePointsCost)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 		else
 		{
