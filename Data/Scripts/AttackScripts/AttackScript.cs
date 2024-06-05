@@ -35,7 +35,7 @@ public partial class AttackScript : Node
 			//Напрво от атакующего
 			for (int i = 0; i <= distanceAttack; i++)
 			{
-				attackCell = new Vector2I(attacker.coordinate.X + i, attacker.coordinate.Y);
+				attackCell = new Vector2I(attacker.Coordinate.X + i, attacker.Coordinate.Y);
 
 				Attack(attackCell, target, "HorizontalAttack", attackCost);
 			}
@@ -43,7 +43,7 @@ public partial class AttackScript : Node
 			//Налево от атакующего
 			for (int i = 0; i <= distanceAttack; i++)
 			{
-				attackCell = new Vector2I(attacker.coordinate.X - i, attacker.coordinate.Y);
+				attackCell = new Vector2I(attacker.Coordinate.X - i, attacker.Coordinate.Y);
 
 				Attack(attackCell, target, "HorizontalAttack", attackCost);
 			}
@@ -51,7 +51,7 @@ public partial class AttackScript : Node
 			//Вниз от атакующего
 			for (int i = 0; i <= distanceAttack; i++)
 			{
-				attackCell = new Vector2I(attacker.coordinate.X, attacker.coordinate.Y + i);
+				attackCell = new Vector2I(attacker.Coordinate.X, attacker.Coordinate.Y + i);
 
 				Attack(attackCell, target, "DownAttack", attackCost);
 			}
@@ -59,7 +59,7 @@ public partial class AttackScript : Node
 			//Вверх от атакующего
 			for (int i = 0; i <= distanceAttack; i++)
 			{
-				attackCell = new Vector2I(attacker.coordinate.X, attacker.coordinate.Y - i);
+				attackCell = new Vector2I(attacker.Coordinate.X, attacker.Coordinate.Y - i);
 
 				Attack(attackCell, target, "UpAttack", attackCost);
 			}
@@ -70,7 +70,7 @@ public partial class AttackScript : Node
 			//Вверх-налево
 			for (int i = 0; i <= distanceAttack; i++)
 			{
-				attackCell = new Vector2I(attacker.coordinate.X - i, attacker.coordinate.Y + i);
+				attackCell = new Vector2I(attacker.Coordinate.X - i, attacker.Coordinate.Y + i);
 
 				Attack(attackCell, target, "DownDiagonalAttack", attackCost);
 			}
@@ -78,7 +78,7 @@ public partial class AttackScript : Node
 			//Вверх-направо
 			for (int i = 0; i <= distanceAttack; i++)
 			{
-				attackCell = new Vector2I(attacker.coordinate.X + i, attacker.coordinate.Y + i);
+				attackCell = new Vector2I(attacker.Coordinate.X + i, attacker.Coordinate.Y + i);
 
 				Attack(attackCell, target, "DownDiagonalAttack", attackCost);
 			}
@@ -86,7 +86,7 @@ public partial class AttackScript : Node
 			//Вниз-налево
 			for (int i = 0; i <= distanceAttack; i++)
 			{
-				attackCell = new Vector2I(attacker.coordinate.X - i, attacker.coordinate.Y - i);
+				attackCell = new Vector2I(attacker.Coordinate.X - i, attacker.Coordinate.Y - i);
 
 				Attack(attackCell, target, "UpDiagonalAttack", attackCost);
 			}
@@ -94,7 +94,7 @@ public partial class AttackScript : Node
 			//Вниз-направо
 			for (int i = 0; i <= distanceAttack; i++)
 			{
-				attackCell = new Vector2I(attacker.coordinate.X + i, attacker.coordinate.Y - i);
+				attackCell = new Vector2I(attacker.Coordinate.X + i, attacker.Coordinate.Y - i);
 
 				Attack(attackCell, target, "UpDiagonalAttack", attackCost);
 			}
@@ -106,7 +106,7 @@ public partial class AttackScript : Node
 		// Переменная отвечает за то, является ли атака критической
 		bool isCriticalDamage = false;
 
-		if (attackCell == target.coordinate && target != null && attacker.ActionPoints >= attacker.weapon.attackCost)
+		if (attackCell == target.Coordinate && target != null && attacker.ActionPoints >= attacker.weapon.attackCost)
 		{
 			if (sideAttack == "HorizontalAttack")
 			{

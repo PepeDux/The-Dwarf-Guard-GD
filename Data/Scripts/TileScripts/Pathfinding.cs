@@ -52,7 +52,7 @@ public partial class Pathfinding : Node2D
 		freeNodes.Clear(); //Свободные ноды
 		waitingNodes.Clear(); //Ожидающие ноды
 
-		Vector2I startPosition = GetParent<Enemy>().coordinate; //Стартовая координата врага
+		Vector2I startPosition = GetParent<Enemy>().Coordinate; //Стартовая координата врага
 		Vector2I targetPosition = target; //Координата цели(Игрока)
 
 		if (startPosition == targetPosition)

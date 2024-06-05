@@ -3,8 +3,19 @@ using System;
 
 public partial class BaseObject : Node2D
 {
-	public Vector2I coordinate;
+	private Vector2I coordinate;
+	public Vector2I Coordinate
+	{
+		get
+		{
+			return coordinate;
+		}
+		set
+		{
+			coordinate = value;
 
+		}
+	}
 
 	private TileMap tileMap;
 
@@ -30,7 +41,7 @@ public partial class BaseObject : Node2D
 	public void UpdateCoordinate()
 	{
 		// Привязываем координаты объекта на поле к мировым координатам
-		Position = tileMap.MapToLocal(coordinate); 
+		Position = tileMap.MapToLocal(Coordinate); 
 	}
 
 	public void FindTileMap()

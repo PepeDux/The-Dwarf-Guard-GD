@@ -13,7 +13,7 @@ public partial class FunctionalObject : BaseObject
 		// Подписываемся на событие
 		Events.characterMoved += CheckWalkerCellAsync;
 
-		TileStorage.occupiedCells.Add(this.coordinate);
+		TileStorage.occupiedCells.Add(this.Coordinate);
 
 		UpdateCoordinate();
 	}
@@ -27,7 +27,7 @@ public partial class FunctionalObject : BaseObject
 
 	public virtual async void CheckWalkerCellAsync(Character character)
 	{
-		if (this.coordinate == character.coordinate)
+		if (this.Coordinate == character.Coordinate)
 		{
 			this.character = character;
 		}

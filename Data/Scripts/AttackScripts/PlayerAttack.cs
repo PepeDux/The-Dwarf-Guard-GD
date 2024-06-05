@@ -10,7 +10,7 @@ public partial class PlayerAttack : AttackScript
 		{
 			foreach (var target in CharacterStorage.characters)
 			{
-				if (MouseSelectTile.MouseCellPosition == target.coordinate && target is Enemy)
+				if (MouseSelectTile.MouseCellPosition == target.Coordinate && target is Enemy)
 				{
 					CalculationAttack(target);
 				}

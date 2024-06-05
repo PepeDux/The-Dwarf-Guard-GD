@@ -88,7 +88,7 @@ public partial class Spawner : Node2D
 	{
 		// Инстанциируем сцену и добавляем объект на сцену
 		BaseObject node = (BaseObject)scene.Instantiate();
-		node.coordinate = spawnCoordinate;
+		node.Coordinate = spawnCoordinate;
 		AddChild(node);
 	}
 

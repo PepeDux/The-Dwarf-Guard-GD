@@ -130,7 +130,7 @@ public partial class AbilityData : Resource
 	{
 		foreach (var target in CharacterStorage.characters)
 		{
-			if (MouseSelectTile.MouseCellPosition == target.coordinate && target is Enemy)
+			if (MouseSelectTile.MouseCellPosition == target.Coordinate && target is Enemy)
 			{
 				return true;
 			}

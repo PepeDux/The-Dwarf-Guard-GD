@@ -26,7 +26,7 @@ public partial class PlayerTileManager : Node2D
 			TileStorage.RemoveCell(player);
 
 			cellPosition = MouseSelectTile.MouseCellPosition;
-			playerPosition = player.coordinate;
+			playerPosition = player.Coordinate;
 
 			CheckCells();
 
@@ -55,7 +55,7 @@ public partial class PlayerTileManager : Node2D
 		if (cellPosition == playerPosition + move && CheckCells() == true)
 		{
 			// Перемещаем игрока на место кликнутого тайла   
-			GetParent<Player>().coordinate = cellPosition;         			
+			GetParent<Player>().Coordinate = cellPosition;         			
 
 			GetParent().GetNode<AudioController>("AudioStreamPlayer").PlaySound("Move", 0.8f, 1f);
 

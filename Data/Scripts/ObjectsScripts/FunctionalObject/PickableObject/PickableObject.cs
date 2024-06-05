@@ -16,7 +16,7 @@ public partial class PickableObject : FunctionalObject
 
 	public override async void CheckWalkerCellAsync(Character character)
 	{
-		if (this.coordinate == character.coordinate) 
+		if (this.Coordinate == character.Coordinate) 
 		{
 			// Проигрываем звук
 			GetNode<AudioController>("AudioStreamPlayer").PlaySound("Pick", 0.9f, 1.3f);

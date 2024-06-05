@@ -9,7 +9,7 @@ public partial class Trap : FunctionalObject
 		base._Ready();
 		//Events.finishedAllTurn += Activation;
 
-		TileStorage.trapCells.Add(this.coordinate);
+		TileStorage.trapCells.Add(this.Coordinate);
 	}
 
 	public override void _ExitTree()
@@ -20,7 +20,7 @@ public partial class Trap : FunctionalObject
 
 	public override async void CheckWalkerCellAsync(Character character)
 	{
-		if (this.coordinate == character.coordinate)
+		if (this.Coordinate == character.Coordinate)
 		{
 			character.GetNode<TakeDamage>("TakeDamage").Take(physicalDamage: DiceRoll.Roll(4) + 2);
 

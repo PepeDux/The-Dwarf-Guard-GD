@@ -107,7 +107,7 @@ public partial class TakeDamage : Node
 		{
 			try
 			{
-				GetTree().Root.GetNode("GameScene").GetNode("Holders").GetNode<FunctionalObjectSpawner>("FunctioanalObjectsHolder").Spawn(loot, GetParent<Character>().coordinate);
+				GetTree().Root.GetNode("GameScene").GetNode("Holders").GetNode<FunctionalObjectSpawner>("FunctioanalObjectsHolder").Spawn(loot, GetParent<Character>().Coordinate);
 			}
 			catch
 			{

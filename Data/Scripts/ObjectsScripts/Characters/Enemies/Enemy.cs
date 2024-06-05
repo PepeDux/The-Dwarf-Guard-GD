@@ -78,14 +78,14 @@ public partial class Enemy : Character
 		if (((MovePoints >= MoveCost) || (ActionPoints >= MoveCost)) && player != null)
 		{
 			pathToTarget.Clear();
-			pathToTarget = GetNode<Pathfinding>("Pathfinding").GetPath(player.coordinate);
+			pathToTarget = GetNode<Pathfinding>("Pathfinding").GetPath(player.Coordinate);
 
 			if (pathToTarget.Count > 1)
 			{
 				TileStorage.RemoveCell(this);
 
 				pathToTarget.RemoveAt(0);
-				coordinate = pathToTarget[pathToTarget.Count - 1];
+				Coordinate = pathToTarget[pathToTarget.Count - 1];
 				// Обновляем Position исходя из координат объекта
 				UpdateCoordinate();
 				// Проигрываем звук ходьбы

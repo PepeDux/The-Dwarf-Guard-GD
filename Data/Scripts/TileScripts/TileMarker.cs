@@ -35,7 +35,7 @@ public partial class TileMarker : Node2D
 		if (player != null) 
 		{
 			mouseCellPosition = MouseSelectTile.MouseCellPosition;
-			playerPosition = player.coordinate;
+			playerPosition = player.Coordinate;
 
 			markerTileMap.Clear(); //Очищаем тайлмап от предыдущих тайлов-маркеров
 
@@ -136,7 +136,7 @@ public partial class TileMarker : Node2D
 	{
 		foreach (Character character in CharacterStorage.characters)
 		{
-			if (mouseCellPosition == character.coordinate && character is Enemy)
+			if (mouseCellPosition == character.Coordinate && character is Enemy)
 			{
 				return true;
 			}

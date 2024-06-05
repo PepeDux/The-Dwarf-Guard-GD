@@ -24,7 +24,7 @@ public partial class SecondBreath : AbilityData
 
 		TileStorage.RemoveCell(player);
 
-		player.coordinate = mouseCellPosition;
+		player.Coordinate = mouseCellPosition;
 
 		TileStorage.AddCell(player);
 	}
