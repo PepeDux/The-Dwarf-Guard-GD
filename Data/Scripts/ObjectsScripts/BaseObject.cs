@@ -3,8 +3,8 @@ using System;
 
 public partial class BaseObject : Node2D
 {
-	//[Header("Тайлмап и прочее")]
-	[Export] public Vector2I coordinate;
+	public Vector2I coordinate;
+
 	private TileMap tileMap;
 
 	public override void _Ready()
@@ -28,7 +28,8 @@ public partial class BaseObject : Node2D
 
 	public void UpdateCoordinate()
 	{
-		Position = tileMap.MapToLocal(coordinate); //Привязываем координаты объекта на поле к мировым координатам
+		// Привязываем координаты объекта на поле к мировым координатам
+		Position = tileMap.MapToLocal(coordinate); 
 	}
 
 	public void FindTileMap()

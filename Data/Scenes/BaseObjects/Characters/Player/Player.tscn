@@ -1,13 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://blf6xj5s7jbr8"]
+[gd_scene load_steps=10 format=3 uid="uid://blf6xj5s7jbr8"]
 
 [ext_resource type="PackedScene" uid="uid://b2xh8cto5uvph" path="res://Data/Scenes/BaseObjects/Characters/Character.tscn" id="1_lghd7"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Player/Player.cs" id="2_el8n6"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/PlayerTurn.cs" id="3_1lsjb"]
 [ext_resource type="Texture2D" uid="uid://beykux031yyxv" path="res://Data/Sprites/Characters/DwarfGuard/DwarfGuard-Sheet.png" id="3_3dqnq"]
 [ext_resource type="Resource" uid="uid://bhfymnwdmsnhj" path="res://Data/Resources/Abilities/BurstOfAction.tres" id="4_obl7k"]
-[ext_resource type="Script" path="res://Data/Scripts/TileScripts/TileMarker.cs" id="4_vxp6a"]
 [ext_resource type="Resource" uid="uid://jmis7td1kcvx" path="res://Data/Resources/Abilities/SecondBreath.tres" id="5_opyg0"]
-[ext_resource type="Script" path="res://Data/Scripts/TileScripts/PlayerSelectTile.cs" id="5_r4enq"]
 [ext_resource type="Script" path="res://Data/Scripts/AttackScripts/PlayerAttack.cs" id="6_4opki"]
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/PlayerTileManager.cs" id="7_j8mox"]
 
@@ -34,19 +32,13 @@ texture = SubResource("ViewportTexture_axnta")
 [node name="PlayerTurn" type="Node2D" parent="." index="10"]
 script = ExtResource("3_1lsjb")
 
-[node name="TileMarker" type="Node2D" parent="." index="11"]
-script = ExtResource("4_vxp6a")
-
-[node name="PlayerSelectTile" type="Node2D" parent="." index="12"]
-script = ExtResource("5_r4enq")
-
-[node name="PlayerAttack" type="Node2D" parent="." index="13"]
+[node name="PlayerAttack" type="Node2D" parent="." index="11"]
 script = ExtResource("6_4opki")
 
-[node name="PlayerTileManager" type="Node2D" parent="." index="14"]
+[node name="PlayerTileManager" type="Node2D" parent="." index="12"]
 script = ExtResource("7_j8mox")
 
-[node name="Timer" type="Timer" parent="." index="15"]
+[node name="Timer" type="Timer" parent="." index="13"]
 process_callback = 0
 wait_time = 0.7
 one_shot = true

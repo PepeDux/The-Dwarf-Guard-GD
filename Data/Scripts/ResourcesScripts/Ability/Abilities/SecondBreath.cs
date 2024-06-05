@@ -1,17 +1,27 @@
 using Godot;
 using System;
+using System.Threading.Tasks;
 
 public partial class SecondBreath : AbilityData
 {
-    public override void Use(Character user)
-    {
-        if (CanUse(user))
-        {
-            user.BeerPoints -= beerPointsCost;
-            user.ActionPoints -= actionPointsCost;
-            user.MovePoints -= movePointsCost;
+	public override async void Use(Player player)
+	{
+		if (CanUse(player))
+		{
+			base.Use(player);
 
-            user.HP += DiceRoll.Roll(8, 1);
-        }
-    }
+			await Task.Run(() => WaitClick(player, checkFreeCell: true));
+
+			await Task.Delay(50);
+			
+			Events.characterMoved?.Invoke(player);
+		}
+	}
+
+	protected override void ActionClick(Player player, Vector2I mouseCellPosition)
+	{
+		base.ActionClick(player, mouseCellPosition);
+
+		player.coordinate = mouseCellPosition;
+	}
 }

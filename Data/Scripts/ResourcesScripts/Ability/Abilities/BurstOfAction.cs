@@ -3,15 +3,13 @@ using System;
 
 public partial class BurstOfAction : AbilityData
 {
-	public override void Use(Character user)
+	public override void Use(Player player)
 	{
-		if (CanUse(user)) 
+		if (CanUse(player)) 
 		{
-			user.BeerPoints -= beerPointsCost;
-			user.ActionPoints -= actionPointsCost;
-			user.MovePoints -= movePointsCost;
+			base.Use(player);
 
-			user.ActionPoints += 2;			
+			player.ActionPoints += 2;			
 		}
 	}
 }

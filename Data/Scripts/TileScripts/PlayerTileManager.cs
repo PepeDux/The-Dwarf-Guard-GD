@@ -25,7 +25,7 @@ public partial class PlayerTileManager : Node2D
 		{
 			TileStorage.RemoveCell(player);
 
-			cellPosition = GetParent().GetNode<PlayerSelectTile>("PlayerSelectTile").cellPosition;
+			cellPosition = MouseSelectTile.MouseCellPosition;
 			playerPosition = player.coordinate;
 
 			CheckCells();

@@ -59,6 +59,179 @@ texture = ExtResource("3_viq5h")
 position = Vector2(24, 62)
 texture = ExtResource("3_viq5h")
 
+[node name="PointsPanel" type="Control" parent="SideMenu"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -53.0
+offset_top = -133.0
+offset_right = 53.0
+offset_bottom = -84.0
+
+[node name="ActionPointsProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 35.0
+offset_right = 99.0
+offset_bottom = 42.0
+max_value = 1.0
+value = 1.0
+
+[node name="ActionPointsIcon" type="Sprite2D" parent="SideMenu/PointsPanel/ActionPointsProgressBar"]
+position = Vector2(4.5, -3.5)
+texture = ExtResource("8_w3krr")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/ActionPointsProgressBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = -1.14286
+anchor_right = 0.2
+anchor_bottom = -1.14286
+offset_right = 620.0
+offset_bottom = 140.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0/0"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="BeerPointsProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 35.0
+offset_right = 47.0
+offset_bottom = 42.0
+max_value = 1.0
+value = 1.0
+
+[node name="BeerPointsIcon" type="Sprite2D" parent="SideMenu/PointsPanel/BeerPointsProgressBar"]
+position = Vector2(5, -3.5)
+texture = ExtResource("9_qnphc")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/BeerPointsProgressBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.225
+anchor_top = -1.14286
+anchor_right = 0.225
+anchor_bottom = -1.14286
+offset_right = 620.0
+offset_bottom = 140.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0/0"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HPProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 13.0
+offset_right = 47.0
+offset_bottom = 20.0
+max_value = 1.0
+value = 1.0
+
+[node name="HpIcon" type="Sprite2D" parent="SideMenu/PointsPanel/HPProgressBar"]
+position = Vector2(4.5, -3.5)
+texture = ExtResource("10_igymi")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/HPProgressBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = -1.14286
+anchor_right = 0.2
+anchor_bottom = -1.14286
+offset_right = 620.0
+offset_bottom = 140.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0/0"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MovePointsProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 13.0
+offset_right = 99.0
+offset_bottom = 20.0
+max_value = 1.0
+value = 1.0
+
+[node name="MovePointsIcon" type="Sprite2D" parent="SideMenu/PointsPanel/MovePointsProgressBar"]
+position = Vector2(4.5, -3.5)
+texture = ExtResource("11_0g311")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/MovePointsProgressBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = -1.14286
+anchor_right = 0.2
+anchor_bottom = -1.14286
+offset_right = 620.0
+offset_bottom = 140.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0/0"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SubPointsPanel" type="Control" parent="SideMenu"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -53.0
+offset_top = -82.0
+offset_right = 53.0
+offset_bottom = -64.0
+
+[node name="Coins" type="Sprite2D" parent="SideMenu/SubPointsPanel"]
+position = Vector2(61.5, 9)
+texture = ExtResource("12_sm7on")
+
+[node name="Value" type="Label" parent="SideMenu/SubPointsPanel/Coins"]
+anchors_preset = -1
+anchor_left = 1.1
+anchor_top = -0.167
+anchor_right = 1.1
+anchor_bottom = -0.167
+offset_left = -1.5
+offset_top = -2.998
+offset_right = 548.5
+offset_bottom = 147.002
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="AС" type="Sprite2D" parent="SideMenu/SubPointsPanel"]
+position = Vector2(9.5, 8.5)
+texture = ExtResource("13_p0ws3")
+
+[node name="Value" type="Label" parent="SideMenu/SubPointsPanel/AС"]
+anchors_preset = -1
+anchor_left = 1.1
+anchor_top = 0.0714286
+anchor_right = 1.1
+anchor_bottom = 0.0714286
+offset_left = -1.5
+offset_top = -3.5
+offset_right = 438.5
+offset_bottom = 131.5
+grow_horizontal = 0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0"
+metadata/_edit_use_anchors_ = true
+
 [node name="StatistickPanel" type="Control" parent="SideMenu"]
 layout_mode = 3
 anchors_preset = 0
@@ -396,179 +569,6 @@ offset_left = 13.0
 offset_top = 7.0
 offset_right = 93.0
 offset_bottom = 39.0
-
-[node name="PointsPanel" type="Control" parent="SideMenu"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -53.0
-offset_top = -133.0
-offset_right = 53.0
-offset_bottom = -84.0
-
-[node name="ActionPointsProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
-layout_mode = 0
-offset_left = 59.0
-offset_top = 35.0
-offset_right = 99.0
-offset_bottom = 42.0
-max_value = 1.0
-value = 1.0
-
-[node name="ActionPointsIcon" type="Sprite2D" parent="SideMenu/PointsPanel/ActionPointsProgressBar"]
-position = Vector2(4.5, -3.5)
-texture = ExtResource("8_w3krr")
-
-[node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/ActionPointsProgressBar"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.2
-anchor_top = -1.14286
-anchor_right = 0.2
-anchor_bottom = -1.14286
-offset_right = 620.0
-offset_bottom = 140.0
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("7_pyokt")
-theme_override_font_sizes/font_size = 128
-text = "0/0"
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="BeerPointsProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
-layout_mode = 0
-offset_left = 7.0
-offset_top = 35.0
-offset_right = 47.0
-offset_bottom = 42.0
-max_value = 1.0
-value = 1.0
-
-[node name="BeerPointsIcon" type="Sprite2D" parent="SideMenu/PointsPanel/BeerPointsProgressBar"]
-position = Vector2(5, -3.5)
-texture = ExtResource("9_qnphc")
-
-[node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/BeerPointsProgressBar"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.225
-anchor_top = -1.14286
-anchor_right = 0.225
-anchor_bottom = -1.14286
-offset_right = 620.0
-offset_bottom = 140.0
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("7_pyokt")
-theme_override_font_sizes/font_size = 128
-text = "0/0"
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="HPProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
-layout_mode = 0
-offset_left = 7.0
-offset_top = 13.0
-offset_right = 47.0
-offset_bottom = 20.0
-max_value = 1.0
-value = 1.0
-
-[node name="HpIcon" type="Sprite2D" parent="SideMenu/PointsPanel/HPProgressBar"]
-position = Vector2(4.5, -3.5)
-texture = ExtResource("10_igymi")
-
-[node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/HPProgressBar"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.2
-anchor_top = -1.14286
-anchor_right = 0.2
-anchor_bottom = -1.14286
-offset_right = 620.0
-offset_bottom = 140.0
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("7_pyokt")
-theme_override_font_sizes/font_size = 128
-text = "0/0"
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="MovePointsProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
-layout_mode = 0
-offset_left = 59.0
-offset_top = 13.0
-offset_right = 99.0
-offset_bottom = 20.0
-max_value = 1.0
-value = 1.0
-
-[node name="MovePointsIcon" type="Sprite2D" parent="SideMenu/PointsPanel/MovePointsProgressBar"]
-position = Vector2(4.5, -3.5)
-texture = ExtResource("11_0g311")
-
-[node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/MovePointsProgressBar"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.2
-anchor_top = -1.14286
-anchor_right = 0.2
-anchor_bottom = -1.14286
-offset_right = 620.0
-offset_bottom = 140.0
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("7_pyokt")
-theme_override_font_sizes/font_size = 128
-text = "0/0"
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="SubPointsPanel" type="Control" parent="SideMenu"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -53.0
-offset_top = -82.0
-offset_right = 53.0
-offset_bottom = -64.0
-
-[node name="Coins" type="Sprite2D" parent="SideMenu/SubPointsPanel"]
-position = Vector2(61.5, 9)
-texture = ExtResource("12_sm7on")
-
-[node name="Value" type="Label" parent="SideMenu/SubPointsPanel/Coins"]
-anchors_preset = -1
-anchor_left = 1.1
-anchor_top = -0.167
-anchor_right = 1.1
-anchor_bottom = -0.167
-offset_left = -1.5
-offset_top = -2.998
-offset_right = 548.5
-offset_bottom = 147.002
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("7_pyokt")
-theme_override_font_sizes/font_size = 128
-text = "0"
-metadata/_edit_use_anchors_ = true
-
-[node name="AС" type="Sprite2D" parent="SideMenu/SubPointsPanel"]
-position = Vector2(9.5, 8.5)
-texture = ExtResource("13_p0ws3")
-
-[node name="Value" type="Label" parent="SideMenu/SubPointsPanel/AС"]
-anchors_preset = -1
-anchor_left = 1.1
-anchor_top = 0.0714286
-anchor_right = 1.1
-anchor_bottom = 0.0714286
-offset_left = -1.5
-offset_top = -3.5
-offset_right = 438.5
-offset_bottom = 131.5
-grow_horizontal = 0
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("7_pyokt")
-theme_override_font_sizes/font_size = 128
-text = "0"
-metadata/_edit_use_anchors_ = true
 
 [node name="AbilityPanel" type="Sprite2D" parent="."]
 position = Vector2(435, 135)
