@@ -14,7 +14,7 @@ public partial class SecondBreath : AbilityData
 
 			await Task.Delay(50);
 			
-			Events.characterMoved?.Invoke(player);
+			//Events.characterMoved?.Invoke(player);
 		}
 	}
 
@@ -22,10 +22,6 @@ public partial class SecondBreath : AbilityData
 	{
 		base.ActionClick(player, mouseCellPosition);
 
-		TileStorage.RemoveCell(player);
-
 		player.Coordinate = mouseCellPosition;
-
-		TileStorage.AddCell(player);
 	}
 }

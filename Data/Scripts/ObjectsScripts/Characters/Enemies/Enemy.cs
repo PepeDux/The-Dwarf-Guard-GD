@@ -10,6 +10,7 @@ public partial class Enemy : Character
 
 	public bool isFacingRight = true;
 
+	// Файл с настройками
 	ConfigFile config = new ConfigFile();
 
 	public override void _Ready()
@@ -82,14 +83,10 @@ public partial class Enemy : Character
 
 			if (pathToTarget.Count > 1)
 			{
-				TileStorage.RemoveCell(this);
-
 				pathToTarget.RemoveAt(0);
 				Coordinate = pathToTarget[pathToTarget.Count - 1];
 				// Обновляем Position исходя из координат объекта
 				UpdateCoordinate();
-				// Проигрываем звук ходьбы
-				GetNode<AudioController>("AudioStreamPlayer").PlaySound("Move", 0.8f, 1f);
 
 				// Отнимаем у противника очки движения или очки действия если нет очков движения
 				if (MovePoints >= MoveCost)
@@ -100,10 +97,6 @@ public partial class Enemy : Character
 				{
 					ActionPoints -= MoveCost;
 				}
-
-				Events.characterMoved?.Invoke(this);
-
-				TileStorage.AddCell(this);
 			}
 		}
 	}

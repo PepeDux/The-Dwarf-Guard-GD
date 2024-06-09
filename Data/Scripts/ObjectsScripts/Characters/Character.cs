@@ -4,7 +4,29 @@ using System.Collections.Generic;
 
 public partial class Character : BaseObject
 {
-	public AnimationPlayer anim;
+	public override Vector2I Coordinate
+	{
+		get
+		{
+			return coordinate;
+		}
+		set
+		{
+			// Обновляем данные в тайловом хранилище
+			TileStorage.RemoveCell(coordinate);
+			TileStorage.AddCell(value);
+
+			coordinate = value;
+
+			if (GetNode<AudioController>("AudioStreamPlayer").IsInsideTree()) 
+			{
+				// Проигрываем звук перемещения
+				GetNode<AudioController>("AudioStreamPlayer").PlaySound("Move", 0.8f, 1f);
+			}
+
+			Events.characterMoved?.Invoke(this);
+		}
+	}
 
 	[ExportGroup ("Лут после смерти")]
 	[Export] public PackedScene[] loot;
@@ -371,11 +393,8 @@ public partial class Character : BaseObject
 		UpdateCharacteristicModifier();
 		UpdateWeaponAttackCharacteristicModifier();
 		UpdateAC();
-		AddCharacterToCharacterStorage();
 		UpdateHP();
-
-		//Добавляем персонажа в хранилище тайлов
-		TileStorage.AddCell(this);
+		AddCharacterToCharacterStorage();
 	}
 
 	public override void _ExitTree()

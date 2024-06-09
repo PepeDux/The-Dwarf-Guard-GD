@@ -84,7 +84,6 @@ public partial class AbilityData : Resource
 						canAction = false;
 					}
 				}
-
 				if (checkEnemyCell)
 				{
 					if (CheckEnemyCell())

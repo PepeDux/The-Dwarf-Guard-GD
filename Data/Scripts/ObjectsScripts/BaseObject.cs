@@ -3,8 +3,8 @@ using System;
 
 public partial class BaseObject : Node2D
 {
-	private Vector2I coordinate;
-	public Vector2I Coordinate
+	protected Vector2I coordinate;
+	public virtual Vector2I Coordinate
 	{
 		get
 		{
@@ -13,7 +13,6 @@ public partial class BaseObject : Node2D
 		set
 		{
 			coordinate = value;
-
 		}
 	}
 

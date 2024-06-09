@@ -1,4 +1,4 @@
-﻿using Godot;
+using Godot;
 using System;
 using System.Collections.Generic;
 
@@ -12,10 +12,10 @@ public partial class AudioController : AudioStreamPlayer
 	[Export] AudioStreamWav[] moveSounds;
 	// Звуки промаха
 	[Export] AudioStreamWav[] missSound;
-    // Звуки подбирания предмета
-    [Export] AudioStreamWav[] pickSound;
+	// Звуки подбирания предмета
+	[Export] AudioStreamWav[] pickSound;
 
-    public bool PlaySound(string typeSound, float pitchScaleMin, float pitchScaleMax)
+	public bool PlaySound(string typeSound, float pitchScaleMin, float pitchScaleMax)
 	{
 		switch(typeSound)
 		{
@@ -28,10 +28,10 @@ public partial class AudioController : AudioStreamPlayer
 			case "Miss":
 				this.Stream = missSound[random.Next(0, missSound.Length)];
 				break;
-            case "Pick":
-                this.Stream = pickSound[random.Next(0, pickSound.Length)];
-                break;
-            default:
+			case "Pick":
+				this.Stream = pickSound[random.Next(0, pickSound.Length)];
+				break;
+			default:
 				break;
 		}
 

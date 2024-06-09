@@ -23,8 +23,6 @@ public partial class PlayerTileManager : Node2D
 			(GetParent<Player>().MovePoints >= GetParent<Player>().MoveCost || GetParent<Player>().ActionPoints >= GetParent<Player>().MoveCost) &&
 			GetParent<Player>().canPerformAction == true)
 		{
-			TileStorage.RemoveCell(player);
-
 			cellPosition = MouseSelectTile.MouseCellPosition;
 			playerPosition = player.Coordinate;
 
@@ -45,8 +43,6 @@ public partial class PlayerTileManager : Node2D
 				Move(new Vector2I(-1, 1)); // Влево вниз
 				Move(new Vector2I(-1, -1));  // Влево вверх
 			}
-
-			TileStorage.AddCell(player);
 		}
 	}
 
@@ -57,10 +53,6 @@ public partial class PlayerTileManager : Node2D
 			// Перемещаем игрока на место кликнутого тайла   
 			GetParent<Player>().Coordinate = cellPosition;         			
 
-			GetParent().GetNode<AudioController>("AudioStreamPlayer").PlaySound("Move", 0.8f, 1f);
-
-			Events.characterMoved?.Invoke(GetParent<Player>());
-
 			// Отнимаем у игрока очки движения или очки действия если нет очков движения
 			if (GetParent<Player>().MovePoints >= GetParent<Player>().MoveCost) 
 			{
@@ -70,8 +62,8 @@ public partial class PlayerTileManager : Node2D
 			{
 				GetParent<Player>().ActionPoints -= GetParent<Player>().MoveCost;
 			}
-		}
-	}
+        }
+    }
 
 	private bool CheckCells()
 	{

@@ -25,7 +25,7 @@ public partial class TakeDamage : Node
 		target = GetParent<Character>();
 	}
 
-	public void Take
+	public async void Take
 		(
 		bool isCriticalDamage = false,
 		int physicalDamage = 0,
@@ -71,8 +71,6 @@ public partial class TakeDamage : Node
 			// Проигрываем звук получения урона 
 			GetParent().GetNode<AudioController>("AudioStreamPlayer").PlaySound("Hurt", 0.9f, 1.3f);
 		}
-
-		
 		
 		// Вызываем партиклы крови при получении урона
 		GetParent().GetNode<CpuParticles2D>("BloodParticles").Emitting = true;
@@ -120,7 +118,7 @@ public partial class TakeDamage : Node
 		GetParent().GetNode<AnimationController>("AnimationController").PlayAnimation("Die");
 
 		// Очищаем координаты персонажа из хранилища координат 
-		TileStorage.RemoveCell(GetParent<Character>());
+		TileStorage.RemoveCell(GetParent<Character>().Coordinate);
 		CharacterStorage.characters.Remove(GetParent<Character>());
 
 		
