@@ -45,7 +45,6 @@ folder_colors={
 "res://Data/Scripts/CardsScripts/": "blue",
 "res://Data/Scripts/DiceScripts/": "gray",
 "res://Data/Scripts/Events/": "gray",
-"res://Data/Scripts/GlobalScripts/": "gray",
 "res://Data/Scripts/LevelScripts/": "yellow",
 "res://Data/Scripts/ObjectsScripts/": "red",
 "res://Data/Scripts/ResourcesScripts/": "purple",

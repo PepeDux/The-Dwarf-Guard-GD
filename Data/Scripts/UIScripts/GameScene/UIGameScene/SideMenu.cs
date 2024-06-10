@@ -32,7 +32,6 @@ public partial class SideMenu : Node
 	[Export] Label currentLevelLabel;
 	[Export] Label currentTurnLabel;
 
-
 	Player player;
 	Character target;
 
@@ -48,13 +47,13 @@ public partial class SideMenu : Node
 
 	public override void _Process(double delta)
 	{
-		if (DataBank.currentMouseTarget == null)
+		// target = CharacterStorage.characters.Where(c => c.Coordinate == MouseSelectTile.MouseCellPosition).FirstOrDefault();
+
+		target = null;
+
+		if (target == null)
 		{
 			target = player;
-		}
-		else
-		{
-			//target = DataBank.currentMouseTarget;
 		}
 
 		if (target != null) 

@@ -64,6 +64,7 @@ script = ExtResource("10_f1r3c")
 
 [node name="VHSLabel" type="Label" parent="TurnSpeedHScrollBar"]
 z_index = 5
+layout_mode = 0
 offset_left = -1.14441e-05
 offset_top = -16.0
 offset_right = 1120.0
@@ -84,6 +85,7 @@ script = ExtResource("11_nu5tb")
 
 [node name="VHSLabel" type="Label" parent="MasterVolumeHScrollBar"]
 z_index = 5
+layout_mode = 0
 offset_top = -16.0
 offset_right = 1320.0
 offset_bottom = 144.0
