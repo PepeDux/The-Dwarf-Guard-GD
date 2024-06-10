@@ -44,8 +44,6 @@ public partial class LevelInfo : Node
     }
 
 
-    
-
 
     private void AddLevel()
     {

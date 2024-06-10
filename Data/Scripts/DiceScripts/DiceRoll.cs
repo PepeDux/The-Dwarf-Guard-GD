@@ -6,6 +6,7 @@ public partial class DiceRoll
 {
     static Random random = new Random();
 
+    // Бросок куба
     public static int Roll(int diceEdges, int diceRolls = 1)
     {     
         // Сумма всех выпавших значений
@@ -19,5 +20,17 @@ public partial class DiceRoll
         }
 
         return total;
+    }
+
+    // Бросок куба с преимуществом (бросается 2 куба, выбирается наивысшее значение)
+    public static int RollAdvantage(int diceEdges, int diceRolls = 1)
+    {
+        return Math.Max(Roll(diceEdges, diceRolls), Roll(diceEdges, diceRolls));
+    }
+
+    // Бросок куба с помехой (бросается 2 куба, выбирается наименьшее значение)
+    public static int RollDisadvantage(int diceEdges, int diceRolls = 1)
+    {
+        return Math.Min(Roll(diceEdges, diceRolls), Roll(diceEdges, diceRolls));
     }
 }
