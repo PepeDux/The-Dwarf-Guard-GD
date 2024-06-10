@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bgy3e78repcrt"]
+
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Ability/Abilities/InflictWounds.cs" id="1_umhrp"]
+
+[resource]
+script = ExtResource("1_umhrp")
+actionPointsCost = 1
+movePointsCost = 0
+beerPointsCost = 1
+strengthRequirement = 0
+constitutionRequirement = 0
+dexterityRequirement = 0
+inteligenceRequirement = 0
+wisdomRequirement = 0
+charismaRequirement = 0

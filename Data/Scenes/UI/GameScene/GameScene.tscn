@@ -140,3 +140,5 @@ position = Vector2(144, 256)
 
 [node name="PlayerCoinCollection" type="Node2D" parent="."]
 script = ExtResource("25_tpk34")
+
+[node name="Node2D" type="Node2D" parent="."]

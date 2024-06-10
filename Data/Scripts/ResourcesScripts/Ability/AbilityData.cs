@@ -75,7 +75,7 @@ public partial class AbilityData : Resource
 
 				if (checkFreeCell)
 				{
-					if (CheckFreeCell())
+					if (TileMarker.CheckFreeCell())
 					{
 						canAction = true;
 					}
@@ -86,7 +86,7 @@ public partial class AbilityData : Resource
 				}
 				if (checkEnemyCell)
 				{
-					if (CheckEnemyCell())
+					if (TileMarker.CheckEnemyCell())
 					{
 						canAction = true;
 					}
@@ -94,7 +94,7 @@ public partial class AbilityData : Resource
 					{
 						canAction = false;
 					}
-				}
+				}				
 
 				if (canAction)
 				{
@@ -123,31 +123,5 @@ public partial class AbilityData : Resource
 	protected virtual void ActionClick(Player player, Vector2I mouseCellPosition)
 	{
 		GD.PrintT("Action Complete");
-	}
-
-	protected bool CheckEnemyCell()
-	{
-		foreach (var target in CharacterStorage.characters)
-		{
-			if (MouseSelectTile.MouseCellPosition == target.Coordinate && target is Enemy)
-			{
-				return true;
-			}
-		}
-
-		return false;
-	}
-
-	protected bool CheckFreeCell()
-	{
-		foreach (var cell in TileStorage.impassableCells)
-		{
-			if (MouseSelectTile.MouseCellPosition == cell)
-			{
-				return false;
-			}
-		}
-
-		return true;
 	}
 }

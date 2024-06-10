@@ -28,10 +28,7 @@ public partial class TakeDamage : Node
 	public async void Take
 		(
 		bool isCriticalDamage = false,
-		int physicalDamage = 0,
-		int poisonDamage = 0,
-		int fireDamage = 0,
-		int frostDamage = 0
+		int physicalDamage = 0
 		)
 	{
 		Random random = new Random();

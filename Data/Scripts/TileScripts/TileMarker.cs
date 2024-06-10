@@ -84,7 +84,7 @@ public partial class TileMarker : Node2D
 
 	public void SelectMoveCell(Vector2I select)
 	{
-		if (mouseCellPosition == playerPosition + select && CheckMoveCell())
+		if (mouseCellPosition == playerPosition + select && CheckFreeCell())
 		{
 			if (player.MovePoints >= player.MoveCost)
 			{
@@ -107,19 +107,17 @@ public partial class TileMarker : Node2D
 
 	public static void SelectCell()
 	{
-		if (CheckMoveCell()) 
+		if (CheckFreeCell()) 
 		{
 			markerTileMap.SetCell(0, mouseCellPosition, 0, new Vector2I(1, 1));
 		}
-		else if(CheckEnemyCell())
+		if (CheckEnemyCell())
 		{
 			markerTileMap.SetCell(0, mouseCellPosition, 0, new Vector2I(2, 1));
 		}
 	}
 
-
-
-	private static bool CheckMoveCell()
+	public static bool CheckFreeCell()
 	{
 		foreach (var cell in TileStorage.impassableCells)
 		{
@@ -132,7 +130,7 @@ public partial class TileMarker : Node2D
 		return true;
 	}
 
-	private static bool CheckEnemyCell()
+    public static bool CheckEnemyCell()
 	{
 		foreach (Character character in CharacterStorage.characters)
 		{

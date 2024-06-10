@@ -571,6 +571,7 @@ offset_right = 93.0
 offset_bottom = 39.0
 
 [node name="AbilityPanel" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(435, 135)
 texture = ExtResource("14_2ju6c")
 

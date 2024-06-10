@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://blf6xj5s7jbr8"]
+[gd_scene load_steps=11 format=3 uid="uid://blf6xj5s7jbr8"]
 
 [ext_resource type="PackedScene" uid="uid://b2xh8cto5uvph" path="res://Data/Scenes/BaseObjects/Characters/Character.tscn" id="1_lghd7"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Player/Player.cs" id="2_el8n6"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://bhfymnwdmsnhj" path="res://Data/Resources/Abilities/BurstOfAction.tres" id="4_obl7k"]
 [ext_resource type="Resource" uid="uid://jmis7td1kcvx" path="res://Data/Resources/Abilities/SecondBreath.tres" id="5_opyg0"]
 [ext_resource type="Script" path="res://Data/Scripts/AttackScripts/PlayerAttack.cs" id="6_4opki"]
+[ext_resource type="Resource" uid="uid://bgy3e78repcrt" path="res://Data/Resources/Abilities/InflictWounds.tres" id="6_ma6ar"]
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/PlayerTileManager.cs" id="7_j8mox"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_axnta"]
@@ -24,7 +25,7 @@ wisdom = 16
 texture = ExtResource("3_3dqnq")
 
 [node name="CharacterAbilitiesStorage" parent="." index="4"]
-abilities = Array[Resource]([ExtResource("4_obl7k"), ExtResource("5_opyg0")])
+abilities = Array[Resource]([ExtResource("4_obl7k"), ExtResource("5_opyg0"), ExtResource("6_ma6ar")])
 
 [node name="MessageParticles" parent="." index="9"]
 texture = SubResource("ViewportTexture_axnta")

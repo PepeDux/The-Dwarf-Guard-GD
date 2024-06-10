@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://clt58eakiro5h"]
+[gd_scene load_steps=15 format=3 uid="uid://clt58eakiro5h"]
 
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/MainMenuScripts/MainMenu.cs" id="1_0ikuk"]
 [ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="1_kdeov"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameScene/Fader.cs" id="2_hungq"]
 [ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="3_70clf"]
@@ -15,6 +16,7 @@
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="13_qo8qe"]
 
 [node name="MainMenu" type="Node2D"]
+script = ExtResource("1_0ikuk")
 
 [node name="Vhs-shader" parent="." instance=ExtResource("1_kdeov")]
 
