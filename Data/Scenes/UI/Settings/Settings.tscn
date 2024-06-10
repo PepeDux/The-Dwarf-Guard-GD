@@ -20,24 +20,26 @@ offset_bottom = 270.0
 color = Color(0.109804, 0.101961, 0.101961, 1)
 
 [node name="Vhs-shader" parent="." instance=ExtResource("1_p8uvn")]
+visible = false
 
 [node name="VHSCheckBox" parent="." instance=ExtResource("2_o2e4e")]
-offset_left = 168.0
-offset_top = 64.0
-offset_right = 184.0
-offset_bottom = 80.0
+offset_left = 88.0
+offset_top = 52.0
+offset_right = 104.0
+offset_bottom = 68.0
 script = ExtResource("3_umxfk")
 
 [node name="VHSLabel" type="Label" parent="VHSCheckBox"]
 z_index = 5
 layout_mode = 0
-offset_left = -104.0
-offset_right = 1816.0
-offset_bottom = 320.0
+offset_left = 24.0
+offset_top = 4.0
+offset_right = 915.0
+offset_bottom = 164.0
 scale = Vector2(0.05, 0.05)
 theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
 theme_override_fonts/font = ExtResource("3_1mcjg")
-theme_override_font_sizes/font_size = 256
+theme_override_font_sizes/font_size = 128
 text = "VHS-Шейдер"
 
 [node name="BaseButton" parent="." instance=ExtResource("5_mwnbi")]
@@ -51,19 +53,42 @@ script = ExtResource("8_o0247")
 
 [node name="TurnSpeedHScrollBar" parent="." instance=ExtResource("9_lt6av")]
 offset_left = 320.0
-offset_top = 68.0
+offset_top = 72.0
 offset_right = 384.0
-offset_bottom = 76.0
+offset_bottom = 80.0
 min_value = 100.0
 max_value = 1000.0
 step = 100.0
 value = 100.0
 script = ExtResource("10_f1r3c")
 
+[node name="VHSLabel" type="Label" parent="TurnSpeedHScrollBar"]
+z_index = 5
+offset_left = -1.14441e-05
+offset_top = -16.0
+offset_right = 1120.0
+offset_bottom = 144.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
+theme_override_fonts/font = ExtResource("3_1mcjg")
+theme_override_font_sizes/font_size = 128
+text = "Скорость хода"
+
 [node name="MasterVolumeHScrollBar" parent="." instance=ExtResource("9_lt6av")]
 offset_left = 320.0
-offset_top = 108.0
+offset_top = 112.0
 offset_right = 384.0
-offset_bottom = 116.0
+offset_bottom = 120.0
 step = 1.0
 script = ExtResource("11_nu5tb")
+
+[node name="VHSLabel" type="Label" parent="MasterVolumeHScrollBar"]
+z_index = 5
+offset_top = -16.0
+offset_right = 1320.0
+offset_bottom = 144.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
+theme_override_fonts/font = ExtResource("3_1mcjg")
+theme_override_font_sizes/font_size = 128
+text = "Общая громкость"
