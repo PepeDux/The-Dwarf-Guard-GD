@@ -28,7 +28,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="SideMenu" type="Sprite2D" parent="." node_paths=PackedStringArray("HPProgressBar", "MovePointsProgressBar", "ActionPointsProgressBar", "BeerPointsProgressBar", "ACLabel", "CoinsLabel", "strengthLabel", "constitutionLabel", "dexterityLabel", "intelligenceLabel", "wisdomLabel", "charismaLabel", "WeaponFrame", "damageLabel", "attackLabel", "attackCostLabel", "AttackFrame", "MoveFrame")]
+[node name="SideMenu" type="Sprite2D" parent="." node_paths=PackedStringArray("HPProgressBar", "MovePointsProgressBar", "ActionPointsProgressBar", "BeerPointsProgressBar", "ACLabel", "CoinsLabel", "strengthLabel", "constitutionLabel", "dexterityLabel", "intelligenceLabel", "wisdomLabel", "charismaLabel", "WeaponImage", "damageLabel", "attackLabel", "attackCostLabel", "AttackFrame", "MoveFrame")]
 position = Vector2(55, 135)
 texture = ExtResource("1_5qk4l")
 script = ExtResource("2_a71b1")
@@ -44,7 +44,7 @@ dexterityLabel = NodePath("StatistickPanel/Dexterity/ValueLabel")
 intelligenceLabel = NodePath("StatistickPanel/Inteligence/ValueLabel")
 wisdomLabel = NodePath("StatistickPanel/Wisdom/ValueLabel")
 charismaLabel = NodePath("StatistickPanel/Charisma/ValueLabel")
-WeaponFrame = NodePath("WeaponPanel/WeaponFrame")
+WeaponImage = NodePath("WeaponPanel/WeaponFrame/WeaponImage")
 damageLabel = NodePath("WeaponPanel/DamageLabel")
 attackLabel = NodePath("WeaponPanel/AttackLabel")
 attackCostLabel = NodePath("WeaponPanel/AttackCostLabel")
@@ -503,6 +503,8 @@ offset_bottom = 37.0
 [node name="WeaponFrame" type="Sprite2D" parent="SideMenu/WeaponPanel"]
 position = Vector2(29, 23)
 texture = ExtResource("3_viq5h")
+
+[node name="WeaponImage" type="Sprite2D" parent="SideMenu/WeaponPanel/WeaponFrame"]
 
 [node name="DamageLabel" type="Label" parent="SideMenu/WeaponPanel"]
 layout_mode = 1

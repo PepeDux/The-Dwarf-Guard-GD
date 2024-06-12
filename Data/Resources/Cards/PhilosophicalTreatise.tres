@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/CharacteristicModifierData.cs" id="1_nsp2a"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_svn1w"]
-[ext_resource type="Texture2D" uid="uid://dpdua05jt6hxk" path="res://Data/Sprites/UI/GameScene/Cards/Cards/Card_16.png" id="3_uqm31"]
+[ext_resource type="Texture2D" uid="uid://ith8l67ay6tf" path="res://Data/Sprites/UI/GameScene/Cards/Cards/sprite_20.png" id="3_4b5gn"]
 
 [sub_resource type="Resource" id="Resource_s2dki"]
 resource_local_to_scene = true
@@ -33,7 +33,7 @@ physicalResist = 0
 [resource]
 script = ExtResource("2_svn1w")
 modifier = SubResource("Resource_s2dki")
-texture = ExtResource("3_uqm31")
+texture = ExtResource("3_4b5gn")
 name = "Философский трактат"
 cardDescription = "Вы настолько преисполнились в своем познании, что получаете 1 мудрости"
 cardStrength = 2

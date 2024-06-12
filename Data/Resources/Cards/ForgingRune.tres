@@ -1,7 +1,8 @@
-[gd_resource type="Resource" load_steps=4 format=3 uid="uid://eo3g5o530v3g"]
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://eo3g5o530v3g"]
 
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Spawn/SpawnModifierData.cs" id="1_2xi0p"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_q76lo"]
+[ext_resource type="Texture2D" uid="uid://pxwokb2s2knb" path="res://Data/Sprites/UI/GameScene/Cards/Cards/sprite_09.png" id="3_o2ico"]
 
 [sub_resource type="Resource" id="Resource_o85ue"]
 resource_local_to_scene = true
@@ -22,6 +23,7 @@ runeCount = 1
 resource_local_to_scene = true
 script = ExtResource("2_q76lo")
 modifier = SubResource("Resource_o85ue")
+texture = ExtResource("3_o2ico")
 name = "Ковка рун"
 cardDescription = "Вы создаете на 1 руну больше на этаж. тук-тук-тук-тук-тук-дзинь"
 cardStrength = 5

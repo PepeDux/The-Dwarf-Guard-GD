@@ -1,10 +1,12 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://d0c1xa0n37q7i"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://d0c1xa0n37q7i"]
 
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Weapon/Weapon.cs" id="1_l4ssm"]
+[ext_resource type="Texture2D" uid="uid://r2ov4a8tqaoh" path="res://Data/Sprites/UI/GameScene/Cards/Cards/sprite_11.png" id="2_fpuay"]
 
 [resource]
 script = ExtResource("1_l4ssm")
 weaponName = ""
+weaponImage = ExtResource("2_fpuay")
 diceEdges = 8
 diceRolls = 1
 attackModifier = 1

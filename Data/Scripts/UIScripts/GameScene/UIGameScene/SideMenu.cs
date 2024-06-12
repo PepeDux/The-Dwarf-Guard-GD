@@ -20,8 +20,7 @@ public partial class SideMenu : Node
 	[Export] Label wisdomLabel;
 	[Export] Label charismaLabel;
 
-
-	[Export] Sprite2D WeaponFrame;
+	[Export] Sprite2D WeaponImage;
 	[Export] Label damageLabel;
 	[Export] Label attackLabel;
 	[Export] Label attackCostLabel;
@@ -134,7 +133,7 @@ public partial class SideMenu : Node
 				// Картинка оружия
 				if (target.weapon.weaponImage != null)
 				{
-					WeaponFrame.Texture = target.weapon.weaponImage;
+					WeaponImage.Texture = target.weapon.weaponImage;
 				}
 				else
 				{
@@ -148,7 +147,7 @@ public partial class SideMenu : Node
 			}
 			else
 			{
-				WeaponFrame.Texture = (Texture2D)GD.Load("res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/Frames/QuestionMarkFrame.png");
+				WeaponImage.Texture = (Texture2D)GD.Load("res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/Frames/QuestionMarkFrame.png");
 
 				// Статы оружия
 				damageLabel.Text = $"УРОН: ???";

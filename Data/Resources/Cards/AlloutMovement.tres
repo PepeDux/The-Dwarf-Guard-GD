@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/CharacteristicModifierData.cs" id="1_6u6fd"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_q7yws"]
-[ext_resource type="Texture2D" uid="uid://da0j6hpfucqfo" path="res://Data/Sprites/UI/GameScene/Cards/Cards/Card_35.png" id="3_pww17"]
+[ext_resource type="Texture2D" uid="uid://c1yqcexbfk4i8" path="res://Data/Sprites/UI/GameScene/Cards/Cards/sprite_40.png" id="3_fwwsc"]
 
 [sub_resource type="Resource" id="Resource_rfr6i"]
 resource_local_to_scene = true
@@ -33,7 +33,7 @@ physicalResist = 0
 [resource]
 script = ExtResource("2_q7yws")
 modifier = SubResource("Resource_rfr6i")
-texture = ExtResource("3_pww17")
+texture = ExtResource("3_fwwsc")
 name = "Любое направленеи передвижения"
 cardDescription = "Теперь вы можете передвигаться в любом направлении. Бежим остюда!"
 cardStrength = 4

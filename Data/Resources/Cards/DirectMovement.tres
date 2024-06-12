@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/CharacteristicModifierData.cs" id="1_md7ym"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_kbriw"]
-[ext_resource type="Texture2D" uid="uid://c1l56vwiv0ijh" path="res://Data/Sprites/UI/GameScene/Cards/Cards/Card_34.png" id="3_81uh3"]
+[ext_resource type="Texture2D" uid="uid://cean686hpswf3" path="res://Data/Sprites/UI/GameScene/Cards/Cards/sprite_39.png" id="3_cfyi1"]
 
 [sub_resource type="Resource" id="Resource_avs0x"]
 resource_local_to_scene = true
@@ -33,7 +33,7 @@ physicalResist = 0
 [resource]
 script = ExtResource("2_kbriw")
 modifier = SubResource("Resource_avs0x")
-texture = ExtResource("3_81uh3")
+texture = ExtResource("3_cfyi1")
 name = "Прямое передвижение"
 cardDescription = "Теперь вы можете передвигаться только по прямой"
 cardStrength = 2
