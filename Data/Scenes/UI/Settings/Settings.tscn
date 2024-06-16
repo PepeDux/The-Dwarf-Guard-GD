@@ -24,9 +24,9 @@ visible = false
 
 [node name="VHSCheckBox" parent="." instance=ExtResource("2_o2e4e")]
 offset_left = 88.0
-offset_top = 52.0
+offset_top = 96.0
 offset_right = 104.0
-offset_bottom = 68.0
+offset_bottom = 112.0
 script = ExtResource("3_umxfk")
 
 [node name="VHSLabel" type="Label" parent="VHSCheckBox"]
@@ -53,9 +53,9 @@ script = ExtResource("8_o0247")
 
 [node name="TurnSpeedHScrollBar" parent="." instance=ExtResource("9_lt6av")]
 offset_left = 320.0
-offset_top = 72.0
+offset_top = 116.0
 offset_right = 384.0
-offset_bottom = 80.0
+offset_bottom = 124.0
 min_value = 100.0
 max_value = 1000.0
 step = 100.0
@@ -77,9 +77,9 @@ text = "Скорость хода"
 
 [node name="MasterVolumeHScrollBar" parent="." instance=ExtResource("9_lt6av")]
 offset_left = 320.0
-offset_top = 112.0
+offset_top = 156.0
 offset_right = 384.0
-offset_bottom = 120.0
+offset_bottom = 164.0
 step = 1.0
 script = ExtResource("11_nu5tb")
 
@@ -94,3 +94,14 @@ theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
 theme_override_fonts/font = ExtResource("3_1mcjg")
 theme_override_font_sizes/font_size = 128
 text = "Общая громкость"
+
+[node name="NameLabel" type="Label" parent="."]
+offset_top = 40.0
+offset_right = 9800.0
+offset_bottom = 517.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
+theme_override_fonts/font = ExtResource("3_1mcjg")
+theme_override_font_sizes/font_size = 456
+text = "Настройки"
+horizontal_alignment = 1

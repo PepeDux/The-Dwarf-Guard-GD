@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://clt58eakiro5h"]
+[gd_scene load_steps=17 format=3 uid="uid://clt58eakiro5h"]
 
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/MainMenuScripts/MainMenu.cs" id="1_0ikuk"]
 [ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="1_kdeov"]
@@ -14,11 +14,14 @@
 [ext_resource type="Texture2D" uid="uid://boykkkjm8ccpm" path="res://Data/Sprites/UI/MainMenu/ExitHover.png" id="10_lrgf4"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/MainMenuScripts/ExitGame.cs" id="11_t0200"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="13_qo8qe"]
+[ext_resource type="Texture2D" uid="uid://57a3kiyk0wps" path="res://Data/Sprites/UI/MainMenu/Discord.png" id="15_l8c3i"]
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/MainMenuScripts/DiscordButton.cs" id="16_3uuij"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_0ikuk")
 
 [node name="Vhs-shader" parent="." instance=ExtResource("1_kdeov")]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_as_relative = false
@@ -57,16 +60,27 @@ texture_normal = ExtResource("9_jsoyx")
 texture_hover = ExtResource("10_lrgf4")
 script = ExtResource("11_t0200")
 
-[node name="CardNamePositive" type="Label" parent="."]
-offset_left = 136.0
+[node name="DiscordButton" parent="." instance=ExtResource("3_70clf")]
+offset_left = 440.0
+offset_top = 232.0
+offset_right = 462.0
+offset_bottom = 254.0
+texture_normal = ExtResource("15_l8c3i")
+texture_hover = ExtResource("15_l8c3i")
+texture_disabled = ExtResource("15_l8c3i")
+script = ExtResource("16_3uuij")
+
+[node name="NameLabel" type="Label" parent="."]
+offset_left = 1.52588e-05
 offset_top = 40.0
-offset_right = 4506.0
+offset_right = 9800.0
 offset_bottom = 517.0
 scale = Vector2(0.05, 0.05)
 theme_override_colors/font_color = Color(0.960784, 0.968627, 0.980392, 1)
 theme_override_fonts/font = ExtResource("13_qo8qe")
 theme_override_font_sizes/font_size = 456
 text = "the dwarf guard"
+horizontal_alignment = 1
 
 [node name="Version" type="Label" parent="."]
 offset_left = 24.0
