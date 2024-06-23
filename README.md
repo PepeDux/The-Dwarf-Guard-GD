@@ -12,7 +12,7 @@ The Dwarf Guard is an exciting journey through the world of pixel art, where eve
 
 ##TRIAL VERSION OF THE GAME
 
-[LINK]https://drive.google.com/drive/u/0/folders/12-7w81zRrBm_iRFDfaJJhpLC-H_cm6I_
+![LINK]https://drive.google.com/drive/u/0/folders/12-7w81zRrBm_iRFDfaJJhpLC-H_cm6I_
 
 ## SCREENSHOTS
 ![godot windows opt tools 64_xcm8d51Bsi](https://github.com/PepeDux/The-Dwarf-Guard-GD/assets/108129196/f1c60073-6754-4c66-a680-678da1bf5f2b)
