@@ -7,8 +7,6 @@ using System.Linq;
 
 public partial class Card : BaseButton
 {
-	Random random = new Random();
-
 	// Позитивная и негативная карта
 	public CardData cardPositive;
 	public CardData cardNegative;

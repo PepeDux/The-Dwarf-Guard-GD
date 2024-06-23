@@ -12,10 +12,15 @@ viewport_path = NodePath("SubViewport")
 script = ExtResource("2_q8xx7")
 loot = Array[PackedScene]([ExtResource("3_uumap")])
 maxMovePoints = 4
-physicalDamage = 3
+strength = 14
+constitution = 12
+dexterity = 8
+inteligence = 6
+wisdom = 8
+charisma = 8
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("4_2npra")
 
-[node name="MessageParticles" parent="." index="8"]
+[node name="MessageParticles" parent="." index="9"]
 texture = SubResource("ViewportTexture_vpv5h")

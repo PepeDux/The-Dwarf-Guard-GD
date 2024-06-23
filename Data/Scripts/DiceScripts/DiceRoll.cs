@@ -4,8 +4,6 @@ using System.Runtime.CompilerServices;
 
 public partial class DiceRoll
 {
-    static Random random = new Random();
-
     // Бросок куба
     public static int Roll(int diceEdges, int diceRolls = 1)
     {     
@@ -16,7 +14,7 @@ public partial class DiceRoll
         for (int i = 0; i < diceRolls; i++)
         {
             // Сумируем результаты
-            total += random.Next(1, diceEdges + 1);
+            total += new Random().Next(1, diceEdges + 1);
         }
 
         return total;

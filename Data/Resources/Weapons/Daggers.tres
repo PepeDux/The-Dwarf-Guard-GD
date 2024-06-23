@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://o5acuned1sug"]
+
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Weapon/Weapon.cs" id="1_tfq2l"]
+[ext_resource type="Texture2D" uid="uid://2i1prcnnacww" path="res://Data/Sprites/UI/GameScene/Cards/Cards/sprite_12.png" id="2_smdev"]
+
+[resource]
+script = ExtResource("1_tfq2l")
+weaponName = "Кинжалы"
+weaponImage = ExtResource("2_smdev")
+diceEdges = 4
+diceRolls = 2
+attackModifier = 2
+damageModifier = 2
+attackCharacteristic = 1
+directAttack = true
+diagonalAttack = true
+attackDistance = 1
+attackCost = 1

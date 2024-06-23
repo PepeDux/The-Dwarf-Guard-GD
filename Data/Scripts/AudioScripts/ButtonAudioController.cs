@@ -3,8 +3,6 @@ using System;
 
 public partial class ButtonAudioController : AudioStreamPlayer
 {
-	Random random = new Random();
-
 	// Звуки получекния урона
 	[Export] AudioStreamWav[] hoverSounds;
 	// Звуки ходьбы
@@ -15,17 +13,17 @@ public partial class ButtonAudioController : AudioStreamPlayer
 		switch (typeSound)
 		{
 			case "Hover":
-				this.Stream = hoverSounds[random.Next(0, hoverSounds.Length)];
+				this.Stream = hoverSounds[new Random().Next(0, hoverSounds.Length)];
 				break;
 			case "Click":
-				this.Stream = clickSounds[random.Next(0, clickSounds.Length)];
+				this.Stream = clickSounds[new Random().Next(0, clickSounds.Length)];
 				break;
 			default:
 				break;
 		}
 
 		// Питчим звук в диапазоне, чтобы звук звучал более по разному
-		this.PitchScale = (float)(pitchScaleMin + (random.NextDouble() * (pitchScaleMax - pitchScaleMin)));
+		this.PitchScale = (float)(pitchScaleMin + (new Random().NextDouble() * (pitchScaleMax - pitchScaleMin)));
 		// Проигрываем звук
 		this.Play();
 

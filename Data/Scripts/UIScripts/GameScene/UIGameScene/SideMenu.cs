@@ -46,9 +46,7 @@ public partial class SideMenu : Node
 
 	public override void _Process(double delta)
 	{
-		// target = CharacterStorage.characters.Where(c => c.Coordinate == MouseSelectTile.MouseCellPosition).FirstOrDefault();
-
-		target = null;
+		target = CharacterStorage.characters.Where(c => c.Coordinate == MouseSelectTile.MouseCellPosition).FirstOrDefault();
 
 		if (target == null)
 		{
@@ -104,7 +102,7 @@ public partial class SideMenu : Node
 			#region Суб характристики
 
 			// КД
-			if (target == player || (target != player && player.wisdomModifier >= 2))
+			if (target == player || (target != player && player.wisdomModifier >= 1))
 			{
 				ACLabel.Text = target.AC.ToString();
 			}
@@ -128,7 +126,7 @@ public partial class SideMenu : Node
 
 			#region Оружие
 
-			if (target == player || (target != player && player.wisdomModifier >= 2))
+			if (target == player || (target != player && player.wisdomModifier >= 0))
 			{
 				// Картинка оружия
 				if (target.weapon.weaponImage != null)
@@ -160,7 +158,7 @@ public partial class SideMenu : Node
 			#region Первичные характеристики
 
 			// Сила
-			if (target == player || (target != player && player.wisdomModifier >= 2))
+			if (target == player || (target != player && player.wisdomModifier >= 3))
 			{
 				strengthLabel.Text = $"{target.Strength}({target.strengthModifier})";
 			}
@@ -170,7 +168,7 @@ public partial class SideMenu : Node
 			}
 
 			// Телосложение
-			if (target == player || (target != player && player.wisdomModifier >= 2))
+			if (target == player || (target != player && player.wisdomModifier >= 3))
 			{
 				constitutionLabel.Text = $"{target.Constitution}({target.constitutionModifier})";
 			}
@@ -180,7 +178,7 @@ public partial class SideMenu : Node
 			}
 
 			// Ловкость
-			if (target == player || (target != player && player.wisdomModifier >= 2))
+			if (target == player || (target != player && player.wisdomModifier >= 3))
 			{
 				dexterityLabel.Text = $"{target.Dexterity}({target.dexterityModifier})";
 			}
@@ -190,7 +188,7 @@ public partial class SideMenu : Node
 			}
 
 			// Интелект
-			if (target == player || (target != player && player.wisdomModifier >= 2))
+			if (target == player || (target != player && player.wisdomModifier >= 3))
 			{
 				intelligenceLabel.Text = $"{target.Inteligence}({target.inteligenceModifier})";
 			}
@@ -200,7 +198,7 @@ public partial class SideMenu : Node
 			}
 
 			// Мудрость
-			if (target == player || (target != player && player.wisdomModifier >= 2))
+			if (target == player || (target != player && player.wisdomModifier >= 3))
 			{
 				wisdomLabel.Text = $"{target.Wisdom}({target.wisdomModifier})";
 			}
@@ -210,7 +208,7 @@ public partial class SideMenu : Node
 			}
 
 			// Харизма
-			if (target == player || (target != player && player.wisdomModifier >= 2))
+			if (target == player || (target != player && player.wisdomModifier >= 3))
 			{
 				charismaLabel.Text = $"{target.Charisma}({target.charismaModifier})";
 			}
@@ -223,7 +221,7 @@ public partial class SideMenu : Node
 
 			#region Картинка направления движения
 
-			if (target == player || (target != player && player.wisdomModifier >= 2))
+			if (target == player || (target != player && player.wisdomModifier >= -1))
 			{
 				// Картинка направления движения и направления атаки
 				if (target.directMove == true && target.diagonalMove == false)

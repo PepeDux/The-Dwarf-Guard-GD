@@ -15,11 +15,13 @@ viewport_path = NodePath("SubViewport")
 
 [node name="Player" instance=ExtResource("1_lghd7")]
 script = ExtResource("2_el8n6")
-maxMovePoints = 6
+maxMovePoints = 4
 maxActionPoints = 2
-maxHP = 100
-strength = 20
-wisdom = 16
+ac = 10
+strength = 12
+constitution = 12
+dexterity = 8
+wisdom = 12
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("3_3dqnq")

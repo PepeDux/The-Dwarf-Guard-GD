@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 public partial class CameraShake : Node
 {
 	Camera2D camera;
-	Random random = new Random();
 
     public override void _Ready()
     {
@@ -19,8 +18,8 @@ public partial class CameraShake : Node
 		{
 			await Task.Delay(shakeSpeed);
 			camera.Offset = new Vector2(
-				random.Next(-shakeIntensity, shakeIntensity) * shakeModifier,
-				random.Next(-shakeIntensity, shakeIntensity) * shakeModifier);
+                new Random().Next(-shakeIntensity, shakeIntensity) * shakeModifier,
+                new Random().Next(-shakeIntensity, shakeIntensity) * shakeModifier);
 		}
 
 		// Возвращаем камеру на исходную позицию

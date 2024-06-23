@@ -6,8 +6,6 @@ public partial class TakeDamage : Node
 {
 	public static Action playerDead;
 
-	private Random random = new Random();
-
 	private Character target;
 
 	//public GameObject corpse; //Труп или объект после смерти(не путать с лутом)
@@ -98,7 +96,7 @@ public partial class TakeDamage : Node
 		PackedScene[] loot = GetParent<Character>().loot;
 
 		// Спавнит случайны лут из списка с вероятностью 50 %
-		if (random.Next(0, 100) > 50 && loot.Length > 0)
+		if (new Random().Next(0, 100) > 50 && loot.Length > 0)
 		{
 			try
 			{

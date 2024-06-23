@@ -9,8 +9,6 @@ public partial class LevelGenerator : Node2D
 {
 	[Export] private TileMap tileMap;
 
-	Random random = new Random();
-
 	//Стартовый тайл от которого будут строиться последующие
 	Vector2I startTile = new Vector2I(23, 24);
 	int countTile;
@@ -54,7 +52,7 @@ public partial class LevelGenerator : Node2D
 
 		for (int i = 0; i < countTile; i++)
 		{
-			switch (random.Next(0, 4))
+			switch (new Random().Next(0, 4))
 			{
 				//Вверх
 				case 0:
@@ -99,7 +97,7 @@ public partial class LevelGenerator : Node2D
 	{
 		for (int i = 0; i < 100; i++)
 		{
-			Vector2I coordinate = TileStorage.freeCells.ElementAt(random.Next(0, TileStorage.freeCells.Count)) + route;
+			Vector2I coordinate = TileStorage.freeCells.ElementAt(new Random().Next(0, TileStorage.freeCells.Count)) + route;
 
 			if (coordinate.X > FieldCoordinate.xStartPoint &&
 				coordinate.X < FieldCoordinate.xFieldSize &&

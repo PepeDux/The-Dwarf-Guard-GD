@@ -3,9 +3,6 @@ using System;
 
 public partial class Spawner : Node2D
 {
-	// Random объект для генерации случайных чисел
-	private Random random = new Random();
-
 	// Координата спауна
 	private Vector2I spawnCoordinate;
 
@@ -44,7 +41,7 @@ public partial class Spawner : Node2D
 			if (TryGetRandomCoordinate())
 			{
 				// Если удалось получить координату, спауним объект на ней
-				SpawnObject(spawnableScenes[random.Next(0, spawnableScenes.Length)]);
+				SpawnObject(spawnableScenes[new Random().Next(0, spawnableScenes.Length)]);
 				break;
 			}
 		}
@@ -68,13 +65,13 @@ public partial class Spawner : Node2D
 	// Попытка спауна на указанной позиции
 	private void SpawnAtCoordinate(PackedScene[] spawnableScenes, Vector2I spawnCoordinate)
 	{
-		SpawnObject(spawnableScenes[random.Next(0, spawnableScenes.Length)]);
+		SpawnObject(spawnableScenes[new Random().Next(0, spawnableScenes.Length)]);
 	}
 
 	// Получение случайной свободной координаты
 	private Vector2I GetRandomFreeCoordinate()
 	{
-		return TileStorage.freeCells[random.Next(0, TileStorage.freeCells.Count)];
+		return TileStorage.freeCells[new Random().Next(0, TileStorage.freeCells.Count)];
 	}
 
 	// Проверка доступности координаты для спауна
