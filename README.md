@@ -10,7 +10,7 @@ The Dwarf Guard is an exciting journey through the world of pixel art, where eve
 
 ![BeerSpirit](https://github.com/PepeDux/The-Dwarf-Guard-Unity/assets/108129196/f6e55100-c08a-42b8-8edc-7c61600db34f)
 
-##TRIAL VERSION OF THE GAME
+## TRIAL VERSION OF THE GAME
 
 [LINK](https://drive.google.com/drive/u/0/folders/12-7w81zRrBm_iRFDfaJJhpLC-H_cm6I_)
 
