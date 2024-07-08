@@ -3,6 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://b7ix3rygpdvxs" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Crystal/Crystal.tscn" id="1_gn7ju"]
 
 [node name="GreenCrystal" instance=ExtResource("1_gn7ju")]
+modifier = null
 
 [node name="Sprite2D" parent="." index="0"]
 frame = 2
+
+[node name="ColorRect" parent="." index="5"]
+color = Color(0.12549, 0.12549, 0.12549, 0.501961)

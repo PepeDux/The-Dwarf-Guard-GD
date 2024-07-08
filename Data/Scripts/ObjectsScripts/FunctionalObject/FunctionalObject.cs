@@ -4,20 +4,20 @@ using System.Threading.Tasks;
 
 public partial class FunctionalObject : BaseObject
 {
-    public override Vector2I Coordinate
-    {
-        get
-        {
-            return coordinate;
-        }
-        set
-        {
-            coordinate = value;
-        }
-    }
+	public override Vector2I Coordinate
+	{
+		get
+		{
+			return coordinate;
+		}
+		set
+		{
+			coordinate = value;
+		}
+	}
 
 
-    public Character character;
+	public Character character;
 
 	public override void _Ready()
 	{

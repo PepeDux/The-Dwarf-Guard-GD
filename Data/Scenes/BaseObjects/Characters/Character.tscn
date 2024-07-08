@@ -336,6 +336,7 @@ script = ExtResource("4_rtvkd")
 script = ExtResource("3_442ou")
 
 [node name="BloodParticles" type="CPUParticles2D" parent="." index="6"]
+z_index = 2
 position = Vector2(0, -4)
 emitting = false
 amount = 20
