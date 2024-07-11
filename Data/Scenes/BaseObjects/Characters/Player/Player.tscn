@@ -29,7 +29,7 @@ texture = ExtResource("3_3dqnq")
 [node name="CharacterAbilitiesStorage" parent="." index="4"]
 abilities = Array[Resource]([ExtResource("4_obl7k"), ExtResource("5_opyg0"), ExtResource("6_ma6ar")])
 
-[node name="MessageParticles" parent="." index="9"]
+[node name="MessageParticles" parent="." index="8"]
 texture = SubResource("ViewportTexture_axnta")
 
 [node name="PlayerTurn" type="Node2D" parent="." index="10"]

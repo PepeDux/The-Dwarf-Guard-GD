@@ -165,7 +165,8 @@ public partial class AttackScript : Node
 
 	private void GiveDamage(bool isCriticalDamage)
 	{
-		target.GetNode<TakeDamage>("TakeDamage").Take(
+        ((ITakeDamage)target).TakeDamage(
+		character: target,
 		isCriticalDamage: isCriticalDamage,
 		physicalDamage: DiceRoll.Roll(attacker.weapon.diceEdges, attacker.weapon.diceRolls) + attacker.weapon.damageModifier + attacker.attackCharacteristicModifier
 		);

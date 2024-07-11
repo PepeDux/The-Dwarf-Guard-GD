@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 public partial class CameraShake : Node
 {
-	Camera2D camera;
+	static Camera2D camera;
 
     public override void _Ready()
     {
@@ -12,7 +12,7 @@ public partial class CameraShake : Node
 
 		camera = GetParent<Camera2D>();
     }
-    public async Task ShakeAsync(int shakeIntensity = 1, float shakeModifier = 1, int shakeIteration = 10, int shakeSpeed = 10)
+    public static async Task ShakeAsync(int shakeIntensity = 1, float shakeModifier = 1, int shakeIteration = 10, int shakeSpeed = 10)
 	{
 		for (int i = 0; i < shakeIteration; i++)
 		{

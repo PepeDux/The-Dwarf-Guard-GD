@@ -16,11 +16,11 @@ public partial class Trap : FunctionalObject
 		base._ExitTree();
 	}
 
-	public override async void CheckWalkerCellAsync(Character character)
+	public override async void CheckWalkerCellAsync(Character target)
 	{
-		if (this.Coordinate == character.Coordinate)
+		if (this.Coordinate == target.Coordinate)
 		{
-			character.GetNode<TakeDamage>("TakeDamage").Take(physicalDamage: DiceRoll.Roll(4) + 2);
+            ((ITakeDamage)target).TakeDamage(character: target, isCriticalDamage: false, physicalDamage: DiceRoll.Roll(4) + 2);
 
 			// Проигрываем анимацию
 			GetNode<AnimationController>("AnimationController").PlayAnimation("Activation");

@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
-public partial class Character : BaseObject
+public partial class Character : BaseObject, ITakeDamage
 {
 	public override Vector2I Coordinate
 	{
