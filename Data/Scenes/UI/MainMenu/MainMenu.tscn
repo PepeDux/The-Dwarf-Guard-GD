@@ -38,6 +38,9 @@ offset_left = 196.0
 offset_top = 88.0
 offset_right = 294.0
 offset_bottom = 114.0
+tooltip_text = "123
+123
+123"
 texture_normal = ExtResource("3_jnh7o")
 texture_hover = ExtResource("4_afojs")
 script = ExtResource("5_hk3uw")

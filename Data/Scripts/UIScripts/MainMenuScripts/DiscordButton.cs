@@ -8,6 +8,6 @@ public partial class DiscordButton : BaseButton
     {
         base.Pressed();
 
-        Process.Start(new ProcessStartInfo(@"https://discord.gg/WteRfDDE") { UseShellExecute = true });
+        Process.Start(new ProcessStartInfo(@"https://discord.gg/TCzxuvSrNf") { UseShellExecute = true });
     }
 }

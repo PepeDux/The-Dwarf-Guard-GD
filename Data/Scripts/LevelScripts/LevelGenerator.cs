@@ -9,8 +9,8 @@ public partial class LevelGenerator : Node2D
 {
 	[Export] private TileMap tileMap;
 
-	//Стартовый тайл от которого будут строиться последующие
-	Vector2I startTile = new Vector2I(23, 24);
+	// Стартовый тайл от которого будут строиться последующие
+	Vector2I startTile = new Vector2I(FieldCoordinate.xStratTile, FieldCoordinate.yStratTile);
 	int countTile;
 
 
@@ -89,7 +89,7 @@ public partial class LevelGenerator : Node2D
 
 
 
-		//Вызываем событие на окончание генерации тайлов
+		// Вызываем событие на окончание генерации тайлов
 		Events.levelGenerated?.Invoke();
 	}
 
@@ -118,8 +118,8 @@ public partial class LevelGenerator : Node2D
 
 	private class Tile
 	{
-		Vector2I coordinate; //Координата тайла на тайлмапе
-		Vector2I paletteCoordinate; //Координата тайла на тайловой палитре
+		Vector2I coordinate; // Координата тайла на тайлмапе
+		Vector2I paletteCoordinate; // Координата тайла на тайловой палитре
 
 		public Tile(Vector2I coordinate, TileMap tileMap)
 		{

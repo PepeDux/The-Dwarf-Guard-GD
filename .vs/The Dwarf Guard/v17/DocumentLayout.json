@@ -3,64 +3,84 @@
   "WorkspaceRootPath": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\objectsscripts\\characters\\itakedamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\objectsscripts\\characters\\itakedamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\uiscripts\\tooltip\\tooltip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\uiscripts\\tooltip\\tooltip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\objectsscripts\\characters\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\objectsscripts\\characters\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\tilescripts\\fieldcoordinate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\tilescripts\\fieldcoordinate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\objectsscripts\\characters\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\objectsscripts\\characters\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\levelscripts\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\levelscripts\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\attackscripts\\attackscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\attackscripts\\attackscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\spawners\\functionalobjectspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\spawners\\functionalobjectspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\objectsscripts\\functionalobject\\traps\\trap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\objectsscripts\\functionalobject\\traps\\trap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\spawners\\playerspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\spawners\\playerspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\levelscripts\\clearholder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\levelscripts\\clearholder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\spawners\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\spawners\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\tilescripts\\pathfinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\tilescripts\\pathfinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\objectsscripts\\baseobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\objectsscripts\\baseobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\objectsscripts\\characters\\characterstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\objectsscripts\\characters\\characterstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\uiscripts\\cursorstylecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\uiscripts\\cursorstylecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\new_script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\new_script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\tilescripts\\mouseselecttile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\tilescripts\\mouseselecttile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\levelscripts\\levelmodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\levelscripts\\levelmodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\levelscripts\\levelspawninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\levelscripts\\levelspawninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\levelscripts\\levelinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\levelscripts\\levelinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\camerascripts\\camerashake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\camerascripts\\camerashake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\uiscripts\\baseuielements\\baseprogressbar\\baseprogressbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\uiscripts\\baseuielements\\baseprogressbar\\baseprogressbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\objectsscripts\\functionalobject\\pickableobject\\pickableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\objectsscripts\\functionalobject\\pickableobject\\pickableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\animationscripts\\animationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\animationscripts\\animationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\objectsscripts\\functionalobject\\functionalobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\objectsscripts\\functionalobject\\functionalobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\resourcesscripts\\ability\\abilitydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\resourcesscripts\\ability\\abilitydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\objectsscripts\\characters\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\objectsscripts\\characters\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\resourcesscripts\\ability\\abilities\\secondbreath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\resourcesscripts\\ability\\abilities\\secondbreath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\resourcesscripts\\ability\\abilitybutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\resourcesscripts\\ability\\abilitybutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\uiscripts\\mainmenuscripts\\discordbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\uiscripts\\mainmenuscripts\\discordbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\attackscripts\\attackscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\attackscripts\\attackscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\resourcesscripts\\ability\\abilities\\inflictwounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,12 +91,48 @@
       "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\resourcesscripts\\ability\\abilities\\burstofaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\spawners\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\spawners\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\resourcesscripts\\ability\\characterabilitiesstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\resourcesscripts\\ability\\characterabilitiesstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\levelscripts\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\levelscripts\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\resourcesscripts\\ability\\abilitydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\resourcesscripts\\ability\\abilitydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\objectsscripts\\characters\\itakedamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\objectsscripts\\characters\\itakedamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\objectsscripts\\characters\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\objectsscripts\\characters\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\objectsscripts\\functionalobject\\traps\\trap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\objectsscripts\\functionalobject\\traps\\trap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\levelscripts\\clearholder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\levelscripts\\clearholder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\objectsscripts\\characters\\characterstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\objectsscripts\\characters\\characterstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\new_script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\new_script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\uiscripts\\baseuielements\\baseprogressbar\\baseprogressbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\uiscripts\\baseuielements\\baseprogressbar\\baseprogressbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\animationscripts\\animationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\animationscripts\\animationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\resourcesscripts\\ability\\abilitybutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\resourcesscripts\\ability\\abilitybutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\dicescripts\\diceroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -99,36 +155,12 @@
       "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\uiscripts\\gamescene\\uigamescene\\sidemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\uiscripts\\mainmenuscripts\\discordbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\uiscripts\\mainmenuscripts\\discordbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\uiscripts\\mainmenuscripts\\exitgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\uiscripts\\mainmenuscripts\\exitgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\objectsscripts\\functionalobject\\functionalobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\objectsscripts\\functionalobject\\functionalobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\events\\events.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\events\\events.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\levelscripts\\levelmodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\levelscripts\\levelmodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\levelscripts\\levelspawninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\levelscripts\\levelspawninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\levelscripts\\levelinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\levelscripts\\levelinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\tilescripts\\mouseselecttile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\tilescripts\\mouseselecttile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\camerascripts\\shaderscreensize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -167,10 +199,6 @@
       "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\tilescripts\\tilemarker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\resourcesscripts\\ability\\characterabilitiesstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\resourcesscripts\\ability\\characterabilitiesstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\objectsscripts\\characters\\enemies\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\objectsscripts\\characters\\enemies\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -195,10 +223,6 @@
       "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\attackscripts\\playerattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\tilescripts\\pathfinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\tilescripts\\pathfinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\spawners\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\spawners\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -209,10 +233,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\cardsscripts\\rerollcardsbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\cardsscripts\\rerollcardsbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\tilescripts\\fieldcoordinate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\tilescripts\\fieldcoordinate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\turnscripts\\turnbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -237,10 +257,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\resourcesscripts\\modifiers\\characteristics\\\u0441haracteristicmodifiercalculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\resourcesscripts\\modifiers\\characteristics\\\u0441haracteristicmodifiercalculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\uiscripts\\cursorstylecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\uiscripts\\cursorstylecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\resourcesscripts\\modifiers\\spawn\\spawnmodifierdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -287,24 +303,12 @@
       "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\spawners\\staticobjectspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\spawners\\playerspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\spawners\\playerspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\spawners\\functionalobjectspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\spawners\\functionalobjectspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\uiscripts\\mainmenuscripts\\tosettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\uiscripts\\mainmenuscripts\\tosettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\uiscripts\\vhs\\vhs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\uiscripts\\vhs\\vhs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\objectsscripts\\functionalobject\\pickableobject\\pickableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|solutionrelative:data\\scripts\\objectsscripts\\functionalobject\\pickableobject\\pickableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E257381-F4DE-4BB0-8179-2502FB48A56B}|The Dwarf Guard.csproj|c:\\users\\pepedux\\documents\\github\\the-dwarf-guard-gd\\data\\scripts\\objectsscripts\\characters\\enemies\\captain\\captain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -326,321 +330,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ITakeDamage.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\ITakeDamage.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\Characters\\ITakeDamage.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\ITakeDamage.cs",
-              "RelativeToolTip": "Data\\Scripts\\ObjectsScripts\\Characters\\ITakeDamage.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAiwF8AAAAfAAAA",
+              "Title": "ToolTip.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\ToolTip\\ToolTip.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\ToolTip\\ToolTip.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\ToolTip\\ToolTip.cs",
+              "RelativeToolTip": "Data\\Scripts\\UIScripts\\ToolTip\\ToolTip.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-11T09:18:36.107Z",
+              "WhenOpened": "2024-07-13T18:44:31.503Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CameraShake.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\CameraScripts\\CameraShake.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\CameraScripts\\CameraShake.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\CameraScripts\\CameraShake.cs",
-              "RelativeToolTip": "Data\\Scripts\\CameraScripts\\CameraShake.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "DocumentIndex": 12,
+              "Title": "LevelInfo.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\LevelScripts\\LevelInfo.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\LevelScripts\\LevelInfo.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\LevelScripts\\LevelInfo.cs",
+              "RelativeToolTip": "Data\\Scripts\\LevelScripts\\LevelInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T12:14:45.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SecondBreath.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\SecondBreath.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\SecondBreath.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\SecondBreath.cs",
-              "RelativeToolTip": "Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\SecondBreath.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAgAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T18:04:45.346Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AbilityButton.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\AbilityButton.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Ability\\AbilityButton.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\AbilityButton.cs",
-              "RelativeToolTip": "Data\\Scripts\\ResourcesScripts\\Ability\\AbilityButton.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T19:41:06.685Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AnimationController.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AnimationScripts\\AnimationController.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\AnimationScripts\\AnimationController.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AnimationScripts\\AnimationController.cs",
-              "RelativeToolTip": "Data\\Scripts\\AnimationScripts\\AnimationController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-10-25T08:56:01.375Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CharacterStorage.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\CharacterStorage.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\Characters\\CharacterStorage.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\CharacterStorage.cs",
-              "RelativeToolTip": "Data\\Scripts\\ObjectsScripts\\Characters\\CharacterStorage.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T06:49:46.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BaseProgressBar.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\BaseUIElements\\BaseProgressBar\\BaseProgressBar.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\BaseUIElements\\BaseProgressBar\\BaseProgressBar.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\BaseUIElements\\BaseProgressBar\\BaseProgressBar.cs",
-              "RelativeToolTip": "Data\\Scripts\\UIScripts\\BaseUIElements\\BaseProgressBar\\BaseProgressBar.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAmwCQAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T08:07:44.777Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Trap.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\FunctionalObject\\Traps\\Trap.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\FunctionalObject\\Traps\\Trap.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\FunctionalObject\\Traps\\Trap.cs",
-              "RelativeToolTip": "Data\\Scripts\\ObjectsScripts\\FunctionalObject\\Traps\\Trap.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAkwBgAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T07:45:24.964Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AttackScript.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AttackScripts\\AttackScript.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\AttackScripts\\AttackScript.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AttackScripts\\AttackScript.cs",
-              "RelativeToolTip": "Data\\Scripts\\AttackScripts\\AttackScript.cs",
-              "ViewState": "AQIAAJkAAAAAAAAAAAAqwK4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T16:58:05.801Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "new_script.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\new_script.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\new_script.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\new_script.cs",
-              "RelativeToolTip": "Data\\Scripts\\new_script.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T23:11:30.274Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Character.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\Character.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\Characters\\Character.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\Character.cs",
-              "RelativeToolTip": "Data\\Scripts\\ObjectsScripts\\Characters\\Character.cs",
-              "ViewState": "AQIAAJUAAAAAAAAAAAAYwAUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T08:01:54.232Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BaseObject.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\BaseObject.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\BaseObject.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\BaseObject.cs",
-              "RelativeToolTip": "Data\\Scripts\\ObjectsScripts\\BaseObject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-10-23T09:39:10.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ClearHolder.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\LevelScripts\\ClearHolder.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\LevelScripts\\ClearHolder.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\LevelScripts\\ClearHolder.cs",
-              "RelativeToolTip": "Data\\Scripts\\LevelScripts\\ClearHolder.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAwwCQAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-02T10:45:22.766Z",
+              "WhenOpened": "2023-11-06T18:28:34.436Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\Player\\Player.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\Characters\\Player\\Player.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\Player\\Player.cs",
-              "RelativeToolTip": "Data\\Scripts\\ObjectsScripts\\Characters\\Player\\Player.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T12:54:47.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "BurstOfAction.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\BurstOfAction.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\BurstOfAction.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\BurstOfAction.cs",
-              "RelativeToolTip": "Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\BurstOfAction.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T08:40:38.628Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "InflictWounds.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\InflictWounds.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\InflictWounds.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\InflictWounds.cs",
-              "RelativeToolTip": "Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\InflictWounds.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T20:04:34.313Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AbilityData.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\AbilityData.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Ability\\AbilityData.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\AbilityData.cs",
-              "RelativeToolTip": "Data\\Scripts\\ResourcesScripts\\Ability\\AbilityData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T12:15:51.883Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Spawner.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Spawners\\Spawner.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\Spawners\\Spawner.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Spawners\\Spawner.cs",
-              "RelativeToolTip": "Data\\Scripts\\Spawners\\Spawner.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAD4vzIAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-10-22T14:11:28.982Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "DiceRoll.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\DiceScripts\\DiceRoll.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\DiceScripts\\DiceRoll.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\DiceScripts\\DiceRoll.cs",
-              "RelativeToolTip": "Data\\Scripts\\DiceScripts\\DiceRoll.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T09:50:01.58Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Card.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\CardsScripts\\Card.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\CardsScripts\\Card.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\CardsScripts\\Card.cs",
-              "RelativeToolTip": "Data\\Scripts\\CardsScripts\\Card.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAIwAgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T09:07:33.602Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "LevelGenerator.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\LevelScripts\\LevelGenerator.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\LevelScripts\\LevelGenerator.cs",
               "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\LevelScripts\\LevelGenerator.cs",
               "RelativeToolTip": "Data\\Scripts\\LevelScripts\\LevelGenerator.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAIAywGMAAABFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-11-06T19:02:58.334Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2023-11-06T19:02:58.334Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ButtonAudioController.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AudioScripts\\ButtonAudioController.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\AudioScripts\\ButtonAudioController.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AudioScripts\\ButtonAudioController.cs",
-              "RelativeToolTip": "Data\\Scripts\\AudioScripts\\ButtonAudioController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAADAAAA",
+              "DocumentIndex": 11,
+              "Title": "LevelSpawnInfo.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\LevelScripts\\LevelSpawnInfo.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\LevelScripts\\LevelSpawnInfo.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\LevelScripts\\LevelSpawnInfo.cs",
+              "RelativeToolTip": "Data\\Scripts\\LevelScripts\\LevelSpawnInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T13:09:05.599Z"
+              "WhenOpened": "2024-05-12T17:21:55.458Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AudioController.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AudioScripts\\AudioController.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\AudioScripts\\AudioController.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AudioScripts\\AudioController.cs",
-              "RelativeToolTip": "Data\\Scripts\\AudioScripts\\AudioController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T13:48:28.538Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "SideMenu.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\GameScene\\UIGameScene\\SideMenu.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\GameScene\\UIGameScene\\SideMenu.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\GameScene\\UIGameScene\\SideMenu.cs",
-              "RelativeToolTip": "Data\\Scripts\\UIScripts\\GameScene\\UIGameScene\\SideMenu.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAwwC0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T11:51:56.857Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ExitGame.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\MainMenuScripts\\ExitGame.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\MainMenuScripts\\ExitGame.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\MainMenuScripts\\ExitGame.cs",
-              "RelativeToolTip": "Data\\Scripts\\UIScripts\\MainMenuScripts\\ExitGame.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T14:34:01.246Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 10,
               "Title": "LevelModifier.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\LevelScripts\\LevelModifier.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\LevelScripts\\LevelModifier.cs",
@@ -648,71 +389,141 @@
               "RelativeToolTip": "Data\\Scripts\\LevelScripts\\LevelModifier.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-11-17T14:07:16.782Z"
+              "WhenOpened": "2023-11-17T14:07:16.782Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "LevelSpawnInfo.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\LevelScripts\\LevelSpawnInfo.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\LevelScripts\\LevelSpawnInfo.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\LevelScripts\\LevelSpawnInfo.cs",
-              "RelativeToolTip": "Data\\Scripts\\LevelScripts\\LevelSpawnInfo.cs",
-              "ViewState": "AQIAAIMAAAAAAAAAAAAqwAgAAAAbAAAA",
+              "DocumentIndex": 1,
+              "Title": "FieldCoordinate.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TileScripts\\FieldCoordinate.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\TileScripts\\FieldCoordinate.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TileScripts\\FieldCoordinate.cs",
+              "RelativeToolTip": "Data\\Scripts\\TileScripts\\FieldCoordinate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T17:21:55.458Z"
+              "WhenOpened": "2023-10-22T14:05:38.218Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "LevelInfo.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\LevelScripts\\LevelInfo.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\LevelScripts\\LevelInfo.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\LevelScripts\\LevelInfo.cs",
-              "RelativeToolTip": "Data\\Scripts\\LevelScripts\\LevelInfo.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAIAwwC8AAAAbAAAA",
+              "DocumentIndex": 8,
+              "Title": "CursorStyleController.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\CursorStyleController.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\CursorStyleController.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\CursorStyleController.cs",
+              "RelativeToolTip": "Data\\Scripts\\UIScripts\\CursorStyleController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-11-06T18:28:34.436Z"
+              "WhenOpened": "2024-02-01T10:27:40.233Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "TurnSpeedHScrollBar.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\Settings\\TurnSpeedHScrollBar.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\Settings\\TurnSpeedHScrollBar.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\Settings\\TurnSpeedHScrollBar.cs",
-              "RelativeToolTip": "Data\\Scripts\\UIScripts\\Settings\\TurnSpeedHScrollBar.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAFAAAA",
+              "DocumentIndex": 7,
+              "Title": "BaseObject.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\BaseObject.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\BaseObject.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\BaseObject.cs",
+              "RelativeToolTip": "Data\\Scripts\\ObjectsScripts\\BaseObject.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAIwBoAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:32:02.525Z"
+              "WhenOpened": "2023-10-23T09:39:10.522Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 9,
               "Title": "MouseSelectTile.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TileScripts\\MouseSelectTile.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\TileScripts\\MouseSelectTile.cs",
               "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TileScripts\\MouseSelectTile.cs",
               "RelativeToolTip": "Data\\Scripts\\TileScripts\\MouseSelectTile.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAA2wB0AAABTAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAUwB0AAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T14:27:17.458Z"
+              "WhenOpened": "2024-06-03T14:27:17.458Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Events.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Events\\Events.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\Events\\Events.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Events\\Events.cs",
-              "RelativeToolTip": "Data\\Scripts\\Events\\Events.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAIwDoAAAAoAAAA",
+              "DocumentIndex": 6,
+              "Title": "Pathfinding.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TileScripts\\Pathfinding.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\TileScripts\\Pathfinding.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TileScripts\\Pathfinding.cs",
+              "RelativeToolTip": "Data\\Scripts\\TileScripts\\Pathfinding.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAK8AAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T08:04:43.396Z"
+              "WhenOpened": "2024-03-27T11:12:35.988Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 5,
+              "Title": "Spawner.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Spawners\\Spawner.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\Spawners\\Spawner.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Spawners\\Spawner.cs",
+              "RelativeToolTip": "Data\\Scripts\\Spawners\\Spawner.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-10-22T14:11:28.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlayerSpawner.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Spawners\\PlayerSpawner.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\Spawners\\PlayerSpawner.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Spawners\\PlayerSpawner.cs",
+              "RelativeToolTip": "Data\\Scripts\\Spawners\\PlayerSpawner.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-10-18T06:58:12.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FunctionalObjectSpawner.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Spawners\\FunctionalObjectSpawner.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\Spawners\\FunctionalObjectSpawner.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Spawners\\FunctionalObjectSpawner.cs",
+              "RelativeToolTip": "Data\\Scripts\\Spawners\\FunctionalObjectSpawner.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-10-18T06:58:09.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CameraShake.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\CameraScripts\\CameraShake.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\CameraScripts\\CameraShake.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\CameraScripts\\CameraShake.cs",
+              "RelativeToolTip": "Data\\Scripts\\CameraScripts\\CameraShake.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T12:14:45.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FunctionalObject.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\FunctionalObject\\FunctionalObject.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\FunctionalObject\\FunctionalObject.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\FunctionalObject\\FunctionalObject.cs",
+              "RelativeToolTip": "Data\\Scripts\\ObjectsScripts\\FunctionalObject\\FunctionalObject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T14:28:27.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "DiscordButton.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\MainMenuScripts\\DiscordButton.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\MainMenuScripts\\DiscordButton.cs",
@@ -724,115 +535,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "FunctionalObject.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\FunctionalObject\\FunctionalObject.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\FunctionalObject\\FunctionalObject.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\FunctionalObject\\FunctionalObject.cs",
-              "RelativeToolTip": "Data\\Scripts\\ObjectsScripts\\FunctionalObject\\FunctionalObject.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAvwBoAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-29T14:28:27.372Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 32,
-              "Title": "ShaderScreenSize.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\CameraScripts\\ShaderScreenSize.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\CameraScripts\\ShaderScreenSize.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\CameraScripts\\ShaderScreenSize.cs",
-              "RelativeToolTip": "Data\\Scripts\\CameraScripts\\ShaderScreenSize.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAiAAAA",
+              "Title": "AbilityButton.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\AbilityButton.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Ability\\AbilityButton.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\AbilityButton.cs",
+              "RelativeToolTip": "Data\\Scripts\\ResourcesScripts\\Ability\\AbilityButton.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T13:37:45.277Z"
+              "WhenOpened": "2024-05-19T19:41:06.685Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "GameOver.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\GameOver\\GameOver.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\GameOver\\GameOver.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\GameOver\\GameOver.cs",
-              "RelativeToolTip": "Data\\Scripts\\UIScripts\\GameOver\\GameOver.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAADAAAA",
+              "DocumentIndex": 31,
+              "Title": "AnimationController.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AnimationScripts\\AnimationController.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\AnimationScripts\\AnimationController.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AnimationScripts\\AnimationController.cs",
+              "RelativeToolTip": "Data\\Scripts\\AnimationScripts\\AnimationController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T13:06:25.997Z"
+              "WhenOpened": "2023-10-25T08:56:01.375Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "VHSCheckBox.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\Settings\\VHSCheckBox.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\Settings\\VHSCheckBox.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\Settings\\VHSCheckBox.cs",
-              "RelativeToolTip": "Data\\Scripts\\UIScripts\\Settings\\VHSCheckBox.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAYwCIAAAAAAAAA",
+              "DocumentIndex": 28,
+              "Title": "CharacterStorage.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\CharacterStorage.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\Characters\\CharacterStorage.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\CharacterStorage.cs",
+              "RelativeToolTip": "Data\\Scripts\\ObjectsScripts\\Characters\\CharacterStorage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-09T19:15:39.08Z"
+              "WhenOpened": "2024-03-26T06:49:46.829Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "MasterVolumeHScrollBar.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\Settings\\MasterVolumeHScrollBar.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\Settings\\MasterVolumeHScrollBar.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\Settings\\MasterVolumeHScrollBar.cs",
-              "RelativeToolTip": "Data\\Scripts\\UIScripts\\Settings\\MasterVolumeHScrollBar.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAABAAAA",
+              "DocumentIndex": 17,
+              "Title": "SecondBreath.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\SecondBreath.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\SecondBreath.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\SecondBreath.cs",
+              "RelativeToolTip": "Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\SecondBreath.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAABAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T14:42:50.849Z"
+              "WhenOpened": "2024-05-21T18:04:45.346Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "SaveSettingsButton.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\Settings\\SaveSettingsButton.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\Settings\\SaveSettingsButton.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\Settings\\SaveSettingsButton.cs",
-              "RelativeToolTip": "Data\\Scripts\\UIScripts\\Settings\\SaveSettingsButton.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABTAAAA",
+              "DocumentIndex": 20,
+              "Title": "InflictWounds.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\InflictWounds.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\InflictWounds.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\InflictWounds.cs",
+              "RelativeToolTip": "Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\InflictWounds.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-09T20:29:53.272Z"
+              "WhenOpened": "2024-06-09T20:04:34.313Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "TileMarker.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TileScripts\\TileMarker.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\TileScripts\\TileMarker.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TileScripts\\TileMarker.cs",
-              "RelativeToolTip": "Data\\Scripts\\TileScripts\\TileMarker.cs",
-              "ViewState": "AQIAAIIAAAAAAAAAAAAmwJcAAAABAAAA",
+              "DocumentIndex": 21,
+              "Title": "BurstOfAction.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\BurstOfAction.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\BurstOfAction.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\BurstOfAction.cs",
+              "RelativeToolTip": "Data\\Scripts\\ResourcesScripts\\Ability\\Abilities\\BurstOfAction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-03T08:47:04.737Z"
+              "WhenOpened": "2024-05-19T08:40:38.628Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "MainMenu.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\MainMenuScripts\\MainMenu.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\MainMenuScripts\\MainMenu.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\MainMenuScripts\\MainMenu.cs",
-              "RelativeToolTip": "Data\\Scripts\\UIScripts\\MainMenuScripts\\MainMenu.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T23:44:31.808Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "BusVolumeController.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AudioScripts\\BusVolumeController.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\AudioScripts\\BusVolumeController.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AudioScripts\\BusVolumeController.cs",
-              "RelativeToolTip": "Data\\Scripts\\AudioScripts\\BusVolumeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T23:50:43.42Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 22,
               "Title": "CharacterAbilitiesStorage.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\CharacterAbilitiesStorage.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Ability\\CharacterAbilitiesStorage.cs",
@@ -844,7 +619,324 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AbilityData.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\AbilityData.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Ability\\AbilityData.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Ability\\AbilityData.cs",
+              "RelativeToolTip": "Data\\Scripts\\ResourcesScripts\\Ability\\AbilityData.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAgwBsAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T12:15:51.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Character.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\Character.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\Characters\\Character.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\Character.cs",
+              "RelativeToolTip": "Data\\Scripts\\ObjectsScripts\\Characters\\Character.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T08:01:54.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PickableObject.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\FunctionalObject\\PickableObject\\PickableObject.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\FunctionalObject\\PickableObject\\PickableObject.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\FunctionalObject\\PickableObject\\PickableObject.cs",
+              "RelativeToolTip": "Data\\Scripts\\ObjectsScripts\\FunctionalObject\\PickableObject\\PickableObject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T14:29:35.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\Player\\Player.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\Characters\\Player\\Player.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\Player\\Player.cs",
+              "RelativeToolTip": "Data\\Scripts\\ObjectsScripts\\Characters\\Player\\Player.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T12:54:47.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ClearHolder.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\LevelScripts\\ClearHolder.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\LevelScripts\\ClearHolder.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\LevelScripts\\ClearHolder.cs",
+              "RelativeToolTip": "Data\\Scripts\\LevelScripts\\ClearHolder.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAwwCQAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-02T10:45:22.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "new_script.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\new_script.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\new_script.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\new_script.cs",
+              "RelativeToolTip": "Data\\Scripts\\new_script.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T23:11:30.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AttackScript.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AttackScripts\\AttackScript.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\AttackScripts\\AttackScript.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AttackScripts\\AttackScript.cs",
+              "RelativeToolTip": "Data\\Scripts\\AttackScripts\\AttackScript.cs",
+              "ViewState": "AQIAAJkAAAAAAAAAAAAqwK4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T16:58:05.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Trap.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\FunctionalObject\\Traps\\Trap.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\FunctionalObject\\Traps\\Trap.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\FunctionalObject\\Traps\\Trap.cs",
+              "RelativeToolTip": "Data\\Scripts\\ObjectsScripts\\FunctionalObject\\Traps\\Trap.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAkwBgAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T07:45:24.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "BaseProgressBar.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\BaseUIElements\\BaseProgressBar\\BaseProgressBar.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\BaseUIElements\\BaseProgressBar\\BaseProgressBar.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\BaseUIElements\\BaseProgressBar\\BaseProgressBar.cs",
+              "RelativeToolTip": "Data\\Scripts\\UIScripts\\BaseUIElements\\BaseProgressBar\\BaseProgressBar.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAmwCQAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T08:07:44.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ITakeDamage.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\ITakeDamage.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\Characters\\ITakeDamage.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\ITakeDamage.cs",
+              "RelativeToolTip": "Data\\Scripts\\ObjectsScripts\\Characters\\ITakeDamage.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAiwGgAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T09:18:36.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "DiceRoll.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\DiceScripts\\DiceRoll.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\DiceScripts\\DiceRoll.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\DiceScripts\\DiceRoll.cs",
+              "RelativeToolTip": "Data\\Scripts\\DiceScripts\\DiceRoll.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T09:50:01.58Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\CardsScripts\\Card.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\CardsScripts\\Card.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\CardsScripts\\Card.cs",
+              "RelativeToolTip": "Data\\Scripts\\CardsScripts\\Card.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAIwAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T09:07:33.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ButtonAudioController.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AudioScripts\\ButtonAudioController.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\AudioScripts\\ButtonAudioController.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AudioScripts\\ButtonAudioController.cs",
+              "RelativeToolTip": "Data\\Scripts\\AudioScripts\\ButtonAudioController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T13:09:05.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AudioController.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AudioScripts\\AudioController.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\AudioScripts\\AudioController.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AudioScripts\\AudioController.cs",
+              "RelativeToolTip": "Data\\Scripts\\AudioScripts\\AudioController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:48:28.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "SideMenu.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\GameScene\\UIGameScene\\SideMenu.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\GameScene\\UIGameScene\\SideMenu.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\GameScene\\UIGameScene\\SideMenu.cs",
+              "RelativeToolTip": "Data\\Scripts\\UIScripts\\GameScene\\UIGameScene\\SideMenu.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAwwC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T11:51:56.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ExitGame.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\MainMenuScripts\\ExitGame.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\MainMenuScripts\\ExitGame.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\MainMenuScripts\\ExitGame.cs",
+              "RelativeToolTip": "Data\\Scripts\\UIScripts\\MainMenuScripts\\ExitGame.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T14:34:01.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "TurnSpeedHScrollBar.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\Settings\\TurnSpeedHScrollBar.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\Settings\\TurnSpeedHScrollBar.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\Settings\\TurnSpeedHScrollBar.cs",
+              "RelativeToolTip": "Data\\Scripts\\UIScripts\\Settings\\TurnSpeedHScrollBar.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T13:32:02.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Events.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Events\\Events.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\Events\\Events.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Events\\Events.cs",
+              "RelativeToolTip": "Data\\Scripts\\Events\\Events.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAIwDoAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T08:04:43.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ShaderScreenSize.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\CameraScripts\\ShaderScreenSize.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\CameraScripts\\ShaderScreenSize.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\CameraScripts\\ShaderScreenSize.cs",
+              "RelativeToolTip": "Data\\Scripts\\CameraScripts\\ShaderScreenSize.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T13:37:45.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "GameOver.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\GameOver\\GameOver.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\GameOver\\GameOver.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\GameOver\\GameOver.cs",
+              "RelativeToolTip": "Data\\Scripts\\UIScripts\\GameOver\\GameOver.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T13:06:25.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "VHSCheckBox.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\Settings\\VHSCheckBox.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\Settings\\VHSCheckBox.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\Settings\\VHSCheckBox.cs",
+              "RelativeToolTip": "Data\\Scripts\\UIScripts\\Settings\\VHSCheckBox.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAYwCIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T19:15:39.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "MasterVolumeHScrollBar.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\Settings\\MasterVolumeHScrollBar.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\Settings\\MasterVolumeHScrollBar.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\Settings\\MasterVolumeHScrollBar.cs",
+              "RelativeToolTip": "Data\\Scripts\\UIScripts\\Settings\\MasterVolumeHScrollBar.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T14:42:50.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "SaveSettingsButton.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\Settings\\SaveSettingsButton.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\Settings\\SaveSettingsButton.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\Settings\\SaveSettingsButton.cs",
+              "RelativeToolTip": "Data\\Scripts\\UIScripts\\Settings\\SaveSettingsButton.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T20:29:53.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "TileMarker.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TileScripts\\TileMarker.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\TileScripts\\TileMarker.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TileScripts\\TileMarker.cs",
+              "RelativeToolTip": "Data\\Scripts\\TileScripts\\TileMarker.cs",
+              "ViewState": "AQIAAIIAAAAAAAAAAAAmwJcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-03T08:47:04.737Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 42,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\MainMenuScripts\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\MainMenuScripts\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\MainMenuScripts\\MainMenu.cs",
+              "RelativeToolTip": "Data\\Scripts\\UIScripts\\MainMenuScripts\\MainMenu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T23:44:31.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "BusVolumeController.cs",
+              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AudioScripts\\BusVolumeController.cs",
+              "RelativeDocumentMoniker": "Data\\Scripts\\AudioScripts\\BusVolumeController.cs",
+              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AudioScripts\\BusVolumeController.cs",
+              "RelativeToolTip": "Data\\Scripts\\AudioScripts\\BusVolumeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T23:50:43.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\Enemies\\Enemy.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\Characters\\Enemies\\Enemy.cs",
@@ -856,7 +948,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 51,
               "Title": "TileStorage.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TileScripts\\TileStorage.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\TileScripts\\TileStorage.cs",
@@ -868,7 +960,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 52,
               "Title": "PlayerTileManager.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TileScripts\\PlayerTileManager.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\TileScripts\\PlayerTileManager.cs",
@@ -880,7 +972,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 50,
               "Title": "AbilityPanel.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\GameScene\\UIGameScene\\AbilityPanel.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\GameScene\\UIGameScene\\AbilityPanel.cs",
@@ -892,7 +984,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 53,
               "Title": "CharacteristicModifierData.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Modifiers\\Characteristics\\CharacteristicModifierData.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Modifiers\\Characteristics\\CharacteristicModifierData.cs",
@@ -904,7 +996,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 54,
               "Title": "PlayerAttack.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\AttackScripts\\PlayerAttack.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\AttackScripts\\PlayerAttack.cs",
@@ -916,7 +1008,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 55,
               "Title": "EnemySpawner.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Spawners\\EnemySpawner.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\Spawners\\EnemySpawner.cs",
@@ -928,19 +1020,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "Pathfinding.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TileScripts\\Pathfinding.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\TileScripts\\Pathfinding.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TileScripts\\Pathfinding.cs",
-              "RelativeToolTip": "Data\\Scripts\\TileScripts\\Pathfinding.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAK8AAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T11:12:35.988Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 56,
               "Title": "DropCardsButton.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\CardsScripts\\DropCardsButton.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\CardsScripts\\DropCardsButton.cs",
@@ -952,7 +1032,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 57,
               "Title": "RerollCardsButton.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\CardsScripts\\RerollCardsButton.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\CardsScripts\\RerollCardsButton.cs",
@@ -964,19 +1044,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "FieldCoordinate.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TileScripts\\FieldCoordinate.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\TileScripts\\FieldCoordinate.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TileScripts\\FieldCoordinate.cs",
-              "RelativeToolTip": "Data\\Scripts\\TileScripts\\FieldCoordinate.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-10-22T14:05:38.218Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 58,
               "Title": "TurnButton.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TurnScripts\\TurnButton.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\TurnScripts\\TurnButton.cs",
@@ -988,7 +1056,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 60,
               "Title": "PlayerTurn.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TurnScripts\\PlayerTurn.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\TurnScripts\\PlayerTurn.cs",
@@ -1000,7 +1068,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 61,
               "Title": "RetryLevelButton.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\GameOver\\RetryLevelButton.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\GameOver\\RetryLevelButton.cs",
@@ -1012,7 +1080,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 62,
               "Title": "PressEscBlink.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\GameOver\\PressEscBlink.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\GameOver\\PressEscBlink.cs",
@@ -1024,7 +1092,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 59,
               "Title": "BaseButton.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\BaseUIElements\\BaseButton\\BaseButton.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\BaseUIElements\\BaseButton\\BaseButton.cs",
@@ -1036,7 +1104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 63,
               "Title": "\u0421haracteristicModifierCalculation.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Modifiers\\Characteristics\\\u0421haracteristicModifierCalculation.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Modifiers\\Characteristics\\\u0421haracteristicModifierCalculation.cs",
@@ -1048,19 +1116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "CursorStyleController.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\CursorStyleController.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\CursorStyleController.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\CursorStyleController.cs",
-              "RelativeToolTip": "Data\\Scripts\\UIScripts\\CursorStyleController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-01T10:27:40.233Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 64,
               "Title": "SpawnModifierData.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Modifiers\\Spawn\\SpawnModifierData.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Modifiers\\Spawn\\SpawnModifierData.cs",
@@ -1072,7 +1128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 65,
               "Title": "CardData.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Cards\\CardData.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Cards\\CardData.cs",
@@ -1084,7 +1140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 66,
               "Title": "ModifierData.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Modifiers\\ModifierData.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Modifiers\\ModifierData.cs",
@@ -1096,7 +1152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 67,
               "Title": "Weapon.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Weapon\\Weapon.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Weapon\\Weapon.cs",
@@ -1108,7 +1164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 69,
               "Title": "StartGame.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\MainMenuScripts\\StartGame.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\MainMenuScripts\\StartGame.cs",
@@ -1120,7 +1176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 68,
               "Title": "BaseHScrollBar.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\BaseUIElements\\BaseHScrollBar\\BaseHScrollBar.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\BaseUIElements\\BaseHScrollBar\\BaseHScrollBar.cs",
@@ -1132,7 +1188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 71,
               "Title": "CardHolder.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\CardsScripts\\CardHolder.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\CardsScripts\\CardHolder.cs",
@@ -1144,7 +1200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 70,
               "Title": "PlayerCoinCollection.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\Player\\PlayerCoinCollection.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\Characters\\Player\\PlayerCoinCollection.cs",
@@ -1156,7 +1212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 72,
               "Title": "SpawnModifierCalculation.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ResourcesScripts\\Modifiers\\Spawn\\SpawnModifierCalculation.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\ResourcesScripts\\Modifiers\\Spawn\\SpawnModifierCalculation.cs",
@@ -1168,7 +1224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 73,
               "Title": "TurnController.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\TurnScripts\\TurnController.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\TurnScripts\\TurnController.cs",
@@ -1180,7 +1236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 74,
               "Title": "StaticObjectSpawner.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Spawners\\StaticObjectSpawner.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\Spawners\\StaticObjectSpawner.cs",
@@ -1192,31 +1248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
-              "Title": "PlayerSpawner.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Spawners\\PlayerSpawner.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\Spawners\\PlayerSpawner.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Spawners\\PlayerSpawner.cs",
-              "RelativeToolTip": "Data\\Scripts\\Spawners\\PlayerSpawner.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-10-18T06:58:12.935Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 72,
-              "Title": "FunctionalObjectSpawner.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Spawners\\FunctionalObjectSpawner.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\Spawners\\FunctionalObjectSpawner.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\Spawners\\FunctionalObjectSpawner.cs",
-              "RelativeToolTip": "Data\\Scripts\\Spawners\\FunctionalObjectSpawner.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-10-18T06:58:09.315Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 75,
               "Title": "ToSettings.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\MainMenuScripts\\ToSettings.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\MainMenuScripts\\ToSettings.cs",
@@ -1228,7 +1260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 76,
               "Title": "VHS.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\UIScripts\\VHS\\VHS.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\UIScripts\\VHS\\VHS.cs",
@@ -1240,19 +1272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
-              "Title": "PickableObject.cs",
-              "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\FunctionalObject\\PickableObject\\PickableObject.cs",
-              "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\FunctionalObject\\PickableObject\\PickableObject.cs",
-              "ToolTip": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\FunctionalObject\\PickableObject\\PickableObject.cs",
-              "RelativeToolTip": "Data\\Scripts\\ObjectsScripts\\FunctionalObject\\PickableObject\\PickableObject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-29T14:29:35.497Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "Captain.cs",
               "DocumentMoniker": "C:\\Users\\PepeDux\\Documents\\GitHub\\The-Dwarf-Guard-GD\\Data\\Scripts\\ObjectsScripts\\Characters\\Enemies\\Captain\\Captain.cs",
               "RelativeDocumentMoniker": "Data\\Scripts\\ObjectsScripts\\Characters\\Enemies\\Captain\\Captain.cs",
@@ -1264,7 +1284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 78,
               "Title": "\u0412\u0430\u0444\u0444\u0435\u043B\u044C \u2014 Long Story Short.json",
               "DocumentMoniker": "C:\\Users\\roman\\Downloads\\\u0412\u0430\u0444\u0444\u0435\u043B\u044C \u2014 Long Story Short.json",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\roman\\Downloads\\\u0412\u0430\u0444\u0444\u0435\u043B\u044C \u2014 Long Story Short.json",

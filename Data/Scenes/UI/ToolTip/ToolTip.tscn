@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0lbnbio7tob7"]
+
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/ToolTip/ToolTip.cs" id="1_01owb"]
+[ext_resource type="Texture2D" uid="uid://b2okoirvh4el6" path="res://Data/Sprites/UI/ToolTip/ToolTip.png" id="1_7hurt"]
+[ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="2_anwmc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vuib5"]
+font = ExtResource("2_anwmc")
+font_size = 8
+outline_size = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_fxc6k"]
+font = ExtResource("2_anwmc")
+font_size = 6
+
+[node name="ToolTip" type="MarginContainer"]
+offset_right = 154.0
+offset_bottom = 141.0
+script = ExtResource("1_01owb")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_7hurt")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VSplitContainer" type="VSplitContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VSplitContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = -5
+
+[node name="Tittle" type="Label" parent="MarginContainer/VSplitContainer/MarginContainer"]
+layout_mode = 2
+text = "Всплекс дейтсвий"
+label_settings = SubResource("LabelSettings_vuib5")
+horizontal_alignment = 1
+
+[node name="Text" type="Label" parent="MarginContainer/VSplitContainer"]
+layout_mode = 2
+text = " обычные возможности. В свойо обычного и бонусного действий. Использовав это умение, вы должны завершить короткий или продолжительный отдых, чтобы получить возможность использовать его снова. "
+label_settings = SubResource("LabelSettings_fxc6k")
+horizontal_alignment = 1
+autowrap_mode = 3

@@ -18,10 +18,18 @@ public partial class PickableObject : FunctionalObject
 	{
 		if (this.Coordinate == character.Coordinate) 
 		{
-			// Проигрываем звук
-			GetNode<AudioController>("AudioStreamPlayer").PlaySound("Pick", 0.9f, 1.3f);
-			// Немного ждем, для того чтобы звук точно проигрался
-			await Task.Delay(10);
+			try
+			{
+				// Проигрываем звук
+				GetNode<AudioController>("AudioStreamPlayer").PlaySound("Pick", 0.9f, 1.3f);
+				// Немного ждем, для того чтобы звук точно проигрался
+				await Task.Delay(10);
+			}
+			catch
+			{
+
+			}
+			
 
 			CharacteristicModifierData mod = modifier as CharacteristicModifierData;
 

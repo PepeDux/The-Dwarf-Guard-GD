@@ -18,13 +18,21 @@ public partial class Character : BaseObject, ITakeDamage
 
 			coordinate = value;
 
-			if (GetNode<AudioController>("AudioStreamPlayer").IsInsideTree()) 
+			try
 			{
-				// Проигрываем звук перемещения
-				GetNode<AudioController>("AudioStreamPlayer").PlaySound("Move", 0.8f, 1f);
+				if (GetNode<AudioController>("AudioStreamPlayer").IsInsideTree())
+				{
+					// Проигрываем звук перемещения
+					GetNode<AudioController>("AudioStreamPlayer").PlaySound("Move", 0.8f, 1f);
+				}
+			}
+			catch
+			{
+
 			}
 
 			Events.characterMoved?.Invoke(this);
+
 		}
 	}
 
@@ -33,6 +41,10 @@ public partial class Character : BaseObject, ITakeDamage
 
 	[ExportGroup("Оружие")]
 	[Export] public Weapon weapon;
+
+	[ExportGroup("Тип передвиженя")]
+	[Export] public bool directMove = true;
+	[Export] public bool diagonalMove = false;
 
 	#region Points
 
@@ -143,12 +155,6 @@ public partial class Character : BaseObject, ITakeDamage
 
 
 	#endregion
-
-
-
-	[ExportGroup("Тип передвиженя")]
-	[Export] public bool directMove = true;
-	[Export] public bool diagonalMove = false;
 
 
 
