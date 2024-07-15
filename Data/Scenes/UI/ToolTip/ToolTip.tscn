@@ -14,9 +14,28 @@ font = ExtResource("2_anwmc")
 font_size = 6
 
 [node name="ToolTip" type="MarginContainer"]
-offset_right = 154.0
-offset_bottom = 141.0
+light_mask = 1048575
+visibility_layer = 1048575
+offset_left = -110.0
+offset_top = -54.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 script = ExtResource("1_01owb")
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+light_mask = 1048575
+visibility_layer = 1048575
+layout_mode = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer2"]
+layout_mode = 2
+color = Color(0.027451, 0.0666667, 0.0235294, 0.980392)
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 2
@@ -43,15 +62,23 @@ theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 25
 theme_override_constants/margin_bottom = -5
 
-[node name="Tittle" type="Label" parent="MarginContainer/VSplitContainer/MarginContainer"]
+[node name="LabelTittle" type="Label" parent="MarginContainer/VSplitContainer/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
-text = "Всплекс дейтсвий"
+text = "Tittle"
 label_settings = SubResource("LabelSettings_vuib5")
 horizontal_alignment = 1
 
-[node name="Text" type="Label" parent="MarginContainer/VSplitContainer"]
+[node name="LabelText" type="Label" parent="MarginContainer/VSplitContainer"]
+unique_name_in_owner = true
 layout_mode = 2
-text = " обычные возможности. В свойо обычного и бонусного действий. Использовав это умение, вы должны завершить короткий или продолжительный отдых, чтобы получить возможность использовать его снова. "
+text = "Text"
 label_settings = SubResource("LabelSettings_fxc6k")
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -39,11 +39,6 @@ public partial class Events : Node
 	public static Action levelEnded;
 
 	/// <summary>
-	/// Событие на начало уровня
-	/// </summary>
-	public static Action levelStarted;
-
-	/// <summary>
 	/// Событие на окончание генерации тайлов
 	/// </summary>
 	public static Action levelGenerated;

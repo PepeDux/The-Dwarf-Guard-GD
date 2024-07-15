@@ -1,53 +1,99 @@
 using Godot;
 using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 public partial class ToolTip : Control
 {
-	public override void _Process(double delta)
+	// Путь к сцене тултипа
+	private const string scenePath = "res://Data/Scenes/UI/ToolTip/ToolTip.tscn";
+
+	// Экземпляр тултипа
+	private static ToolTip instance;
+
+	// Элементы интерфейса
+	private Label labelTittle;
+	private Label labelText;
+
+	// Таймер для задержки показа тултипа
+	private static Timer tooltipTimer;
+	private const float tooltipDelay = 3.0f; // Задержка в секундах
+
+	// Метод, вызываемый при готовности объекта
+	public override void _Ready()
 	{
-		ItemPopup();
+		// Инициализация экземпляра
+		instance = this;
+
+		// Получение ссылок на элементы интерфейса
+		labelTittle = GetNode<Label>("%LabelTittle");
+		labelText = GetNode<Label>("%LabelText");
 	}
 
-	public void ItemPopup()
+	// Метод для показа тултипа
+	public static void ShowToolTip(Node node, string tittle, string text)
 	{
-		//if (item != null)
-		//{
-		//    SetValue(item);
-		//    GetNode<Control>("%ItemPopup").RectSize = Vector2.Zero;
-		//}
-
-		Vector2 mousePos = GetGlobalMousePosition();
-		Position = mousePos;
-		Vector2I correction;
-
-
-		GD.Print(mousePos.X);
-
-		if (mousePos.X >= GetViewportRect().Size.X / 2)
+		// Если экземпляра тултипа нет, создаем его
+		if (instance == null)
 		{
-			Position = new Vector2((mousePos.X - Size.X), Position.Y);
+			// Загрузка сцены тултипа
+			PackedScene uiElementScene = (PackedScene)ResourceLoader.Load(scenePath);
+
+			// Инстанциируем сцену и создаем объект тултипа
+			instance = (ToolTip)uiElementScene.Instantiate();
+
+			// Добавляем тултип в дерево сцены
+			node.GetTree().Root.GetChildren().FirstOrDefault().AddChild(instance);
+
+			// Устанавливаем текст тултипа
+			instance.labelTittle.Text = tittle;
+			instance.labelText.Text = text;
+
+			// Запускаем таймер
+			instance.GetNode<Timer>("Timer").Start();
 		}
-
-		if (mousePos.Y >= GetViewportRect().Size.Y / 2)
-		{
-			Position = new Vector2(Position.X, (mousePos.Y - Size.Y));
-		}
-
-
-		//GetNode<Popup>("%ItemPopup").Popup_(new Rect2I(slot.Position + correction, new Vector2I(GetNode<Control>("%ItemPopup").RectSize)));
 	}
 
-	//public void HideItemPopup()
-	//{
-	//    GetNode<Control>("%ItemPopup").Hide();
-	//}
+	// Метод для скрытия тултипа
+	public static void HideToolTip()
+	{
+		// Если экземпляр тултипа существует
+		if (instance != null)
+		{
+			// Останавливаем таймер и скрываем тултип
+			instance.GetNode<Timer>("Timer").Stop();
+			instance.Visible = false;
 
-	//public void SetValue(Item item)
-	//{
-	//    GetNode<Label>("%Name").Text = item.name;
-	//    GetNode<Label>("%Level").Text = item.level.ToString();
-	//    GetNode<Label>("%Rarity").Text = SetTextEffect(item.rarity);
-	//    GetNode<Label>("%AttributeType").Text = item.attribute_type;
-	//    GetNode<Label>("%AttributeValue").Text = item.attribute_value.ToString();
-	//}
+			// Удаляем тултип и освобождаем память
+			instance.QueueFree();
+			instance = null;
+		}
+	}
+
+	// Метод для обновления позиции тултипа относительно мыши
+	private void UpdateToolTipPosition()
+	{
+		Vector2 mousePosition = GetGlobalMousePosition();
+		Position = mousePosition;
+
+		// Корректируем положение тултипа по горизонтали
+		if (mousePosition.X >= GetViewportRect().Size.X / 2)
+		{
+			Position = new Vector2((mousePosition.X - Size.X), Position.Y);
+		}
+
+		// Корректируем положение тултипа по вертикали
+		if (mousePosition.Y >= GetViewportRect().Size.Y / 2)
+		{
+			Position = new Vector2(Position.X, (mousePosition.Y - Size.Y));
+		}
+	}
+
+	// Метод, вызываемый по таймеру для показа тултипа
+	private void _on_timer_timeout()
+	{
+		// Обновляем позицию и делаем тултип видимым
+		instance.UpdateToolTipPosition();
+		instance.Visible = true;
+	}
 }

@@ -23,8 +23,6 @@ public partial class BaseObject : Node2D
 		Events.levelEnded += QueueFree;
 
 		FindTileMap();
-
-		GD.Print(coordinate);
 	}
 
 	public override void _ExitTree()

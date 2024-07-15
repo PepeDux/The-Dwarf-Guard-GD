@@ -1,9 +1,13 @@
 using Godot;
 using System;
 
-public partial class BaseHScrollBar : HScrollBar
+public partial class BaseHScrollBar : HScrollBar, IToolTip
 {
-	public override void _Ready()
+    [Export] public bool ToolTipIsActive { get; set; }
+    [Export] public string ToolTipTittle { get; set; }
+    [Export] public string ToolTipText { get; set; }
+
+    public override void _Ready()
 	{
 		GetNode<Label>("ValueLabel").Text = Value.ToString();
 	}
@@ -14,15 +18,19 @@ public partial class BaseHScrollBar : HScrollBar
 
 	private void MouseEntered()
 	{
-		// Задаем курсору вид "лапки"
-		CursorStyleController.SetBeam();
+        ((IToolTip)this).ShowToolTip(this);
+
+        // Задаем курсору вид "лапки"
+        CursorStyleController.SetBeam();
 
 		GetNode<ButtonAudioController>("AudioStreamPlayer").PlaySound("Hover", 1, 1);
 	}
 
 	private void MouseExited()
 	{
-		// Задаем курсору вид "стрелки"
-		CursorStyleController.SetArrow();
+        ((IToolTip)this).HideToolTip();
+
+        // Задаем курсору вид "стрелки"
+        CursorStyleController.SetArrow();
 	}
 }
