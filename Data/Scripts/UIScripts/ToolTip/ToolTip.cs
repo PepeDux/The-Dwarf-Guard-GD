@@ -12,12 +12,12 @@ public partial class ToolTip : Control
 	private static ToolTip instance;
 
 	// Элементы интерфейса
-	private Label labelTittle;
-	private Label labelText;
+	private RichTextLabel richLabelTittle;
+	private RichTextLabel richLabelText;
 
 	// Таймер для задержки показа тултипа
 	private static Timer tooltipTimer;
-	private const float tooltipDelay = 3.0f; // Задержка в секундах
+	private const float tooltipDelay = 2.0f; // Задержка в секундах
 
 	// Метод, вызываемый при готовности объекта
 	public override void _Ready()
@@ -26,8 +26,8 @@ public partial class ToolTip : Control
 		instance = this;
 
 		// Получение ссылок на элементы интерфейса
-		labelTittle = GetNode<Label>("%LabelTittle");
-		labelText = GetNode<Label>("%LabelText");
+		richLabelTittle = GetNode<RichTextLabel>("%LabelTittle");
+		richLabelText = GetNode<RichTextLabel>("%LabelText");
 	}
 
 	// Метод для показа тултипа
@@ -46,10 +46,11 @@ public partial class ToolTip : Control
 			node.GetTree().Root.GetChildren().FirstOrDefault().AddChild(instance);
 
 			// Устанавливаем текст тултипа
-			instance.labelTittle.Text = tittle;
-			instance.labelText.Text = text;
+			instance.richLabelTittle.Text = "[center]" + tittle;
+			instance.richLabelText.Text = "[center]" + text;
 
 			// Запускаем таймер
+			instance.GetNode<Timer>("Timer").Stop();
 			instance.GetNode<Timer>("Timer").Start();
 		}
 	}

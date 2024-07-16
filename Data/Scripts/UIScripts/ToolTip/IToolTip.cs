@@ -3,14 +3,15 @@ using System;
 
 public interface IToolTip 
 {
+	[ExportGroup("ToolTip")]
 	// Активен ли тултип
-	public bool ToolTipIsActive { get; set; }
+	[Export] public bool ToolTipIsActive { get; set; }
 
 	// Заголовок тултипа
-	public string ToolTipTittle {  get; set; }
+	[Export] public string ToolTipTittle {  get; set; }
 
 	// Текст тулптипа
-	public string ToolTipText { get; set; }
+	[Export(PropertyHint.MultilineText)] public string ToolTipText { get; set; }
 
 
 	public void ShowToolTip(Node node)

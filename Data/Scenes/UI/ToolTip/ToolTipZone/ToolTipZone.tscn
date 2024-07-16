@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cusjkeg03o8dn"]
+
+[ext_resource type="Script" path="res://Data/Scripts/UIScripts/ToolTip/ToolTipZone/ToolTipZone.cs" id="1_ukgb3"]
+
+[node name="ToolTipZone" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ukgb3")
+
+[connection signal="mouse_entered" from="." to="." method="MouseEntered"]
+[connection signal="mouse_exited" from="." to="." method="MouseExited"]

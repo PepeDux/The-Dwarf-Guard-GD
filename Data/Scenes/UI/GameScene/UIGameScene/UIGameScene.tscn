@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://deq1stiekglgs"]
+[gd_scene load_steps=21 format=3 uid="uid://deq1stiekglgs"]
 
 [ext_resource type="Texture2D" uid="uid://5t03g43fic3o" path="res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/SideMenu.png" id="1_5qk4l"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameScene/UIGameScene/SideMenu.cs" id="2_a71b1"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://blee5esbfftgj" path="res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/Icons/MovePointsIcon.png" id="11_0g311"]
 [ext_resource type="Texture2D" uid="uid://oaibj8m032f7" path="res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/Icons/CoinsIcon.png" id="12_sm7on"]
 [ext_resource type="Texture2D" uid="uid://bc002arhhg70t" path="res://Data/Sprites/UI/GameScene/UIGameScene/SideMenu/Icons/ACIcon.png" id="13_p0ws3"]
+[ext_resource type="PackedScene" uid="uid://cusjkeg03o8dn" path="res://Data/Scenes/UI/ToolTip/ToolTipZone/ToolTipZone.tscn" id="14_2b3j8"]
 [ext_resource type="Texture2D" uid="uid://b7fu2yjikkyhr" path="res://Data/Sprites/UI/GameScene/UIGameScene/AbilityPanel/AbilityPanel.png" id="14_2ju6c"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameScene/UIGameScene/AbilityPanel.cs" id="15_4idtq"]
 [ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="15_e58g1"]
@@ -45,9 +46,9 @@ intelligenceLabel = NodePath("StatistickPanel/Inteligence/ValueLabel")
 wisdomLabel = NodePath("StatistickPanel/Wisdom/ValueLabel")
 charismaLabel = NodePath("StatistickPanel/Charisma/ValueLabel")
 WeaponImage = NodePath("WeaponPanel/WeaponFrame/WeaponImage")
-damageLabel = NodePath("WeaponPanel/DamageLabel")
-attackLabel = NodePath("WeaponPanel/AttackLabel")
-attackCostLabel = NodePath("WeaponPanel/AttackCostLabel")
+damageLabel = NodePath("WeaponPanel/WeaponFrame/DamageLabel")
+attackLabel = NodePath("WeaponPanel/WeaponFrame/AttackLabel")
+attackCostLabel = NodePath("WeaponPanel/WeaponFrame/AttackCostLabel")
 AttackFrame = NodePath("AttackFrame")
 MoveFrame = NodePath("MoveFrame")
 
@@ -55,9 +56,27 @@ MoveFrame = NodePath("MoveFrame")
 position = Vector2(-24, 62)
 texture = ExtResource("3_viq5h")
 
+[node name="ToolTipZone" parent="SideMenu/AttackFrame" instance=ExtResource("14_2b3j8")]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+ToolTipIsActive = true
+ToolTipTittle = "Напраление атаки"
+ToolTipText = "Возможные направления [color=chocolate]атаки[/color] персонажа"
+
 [node name="MoveFrame" type="Sprite2D" parent="SideMenu"]
 position = Vector2(24, 62)
 texture = ExtResource("3_viq5h")
+
+[node name="ToolTipZone" parent="SideMenu/MoveFrame" instance=ExtResource("14_2b3j8")]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+ToolTipIsActive = true
+ToolTipTittle = "Направление движения"
+ToolTipText = "Возможные направления [color=chocolate]движения[/color] персонажа"
 
 [node name="PointsPanel" type="Control" parent="SideMenu"]
 layout_mode = 3
@@ -66,64 +85,6 @@ offset_left = -53.0
 offset_top = -133.0
 offset_right = 53.0
 offset_bottom = -84.0
-
-[node name="ActionPointsProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
-layout_mode = 0
-offset_left = 59.0
-offset_top = 35.0
-offset_right = 99.0
-offset_bottom = 42.0
-max_value = 1.0
-value = 1.0
-
-[node name="ActionPointsIcon" type="Sprite2D" parent="SideMenu/PointsPanel/ActionPointsProgressBar"]
-position = Vector2(4.5, -3.5)
-texture = ExtResource("8_w3krr")
-
-[node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/ActionPointsProgressBar"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.2
-anchor_top = -1.14286
-anchor_right = 0.2
-anchor_bottom = -1.14286
-offset_right = 620.0
-offset_bottom = 140.0
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("7_pyokt")
-theme_override_font_sizes/font_size = 128
-text = "0/0"
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="BeerPointsProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
-layout_mode = 0
-offset_left = 7.0
-offset_top = 35.0
-offset_right = 47.0
-offset_bottom = 42.0
-max_value = 1.0
-value = 1.0
-
-[node name="BeerPointsIcon" type="Sprite2D" parent="SideMenu/PointsPanel/BeerPointsProgressBar"]
-position = Vector2(5, -3.5)
-texture = ExtResource("9_qnphc")
-
-[node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/BeerPointsProgressBar"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.225
-anchor_top = -1.14286
-anchor_right = 0.225
-anchor_bottom = -1.14286
-offset_right = 620.0
-offset_bottom = 140.0
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("7_pyokt")
-theme_override_font_sizes/font_size = 128
-text = "0/0"
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="HPProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
 layout_mode = 0
@@ -154,6 +115,14 @@ text = "0/0"
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="ToolTipZone" parent="SideMenu/PointsPanel/HPProgressBar" instance=ExtResource("14_2b3j8")]
+offset_top = -9.0
+offset_right = 40.0
+offset_bottom = 7.0
+ToolTipIsActive = true
+ToolTipTittle = "ХП - хит поинты"
+ToolTipText = "[color=darkred]ХП[/color] - отображает состояние здоровья персонажа. На здоровье влияет [color=orange]телосложение[/color]. При опускании [color=darkred]ХП[/color] до 0 - персонаж умирает..."
+
 [node name="MovePointsProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
 layout_mode = 0
 offset_left = 59.0
@@ -183,6 +152,88 @@ text = "0/0"
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="ToolTipZone" parent="SideMenu/PointsPanel/MovePointsProgressBar" instance=ExtResource("14_2b3j8")]
+offset_top = -9.0
+offset_right = 40.0
+offset_bottom = 7.0
+ToolTipIsActive = true
+ToolTipTittle = "ОП - очки передвижения"
+ToolTipText = "ОП - ресурс за который персонаж может перемещаться"
+
+[node name="BeerPointsProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 35.0
+offset_right = 47.0
+offset_bottom = 42.0
+max_value = 1.0
+value = 1.0
+
+[node name="BeerPointsIcon" type="Sprite2D" parent="SideMenu/PointsPanel/BeerPointsProgressBar"]
+position = Vector2(5, -3.5)
+texture = ExtResource("9_qnphc")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/BeerPointsProgressBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.225
+anchor_top = -1.14286
+anchor_right = 0.225
+anchor_bottom = -1.14286
+offset_right = 620.0
+offset_bottom = 140.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0/0"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ToolTipZone" parent="SideMenu/PointsPanel/BeerPointsProgressBar" instance=ExtResource("14_2b3j8")]
+offset_top = -9.0
+offset_right = 40.0
+offset_bottom = 7.0
+ToolTipIsActive = true
+ToolTipTittle = "ОХ - очки хмеля"
+ToolTipText = "ОХ - ресурс за который персонаж может использовать различные способность"
+
+[node name="ActionPointsProgressBar" parent="SideMenu/PointsPanel" instance=ExtResource("5_mcd6g")]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 35.0
+offset_right = 99.0
+offset_bottom = 42.0
+max_value = 1.0
+value = 1.0
+
+[node name="ActionPointsIcon" type="Sprite2D" parent="SideMenu/PointsPanel/ActionPointsProgressBar"]
+position = Vector2(4.5, -3.5)
+texture = ExtResource("8_w3krr")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/PointsPanel/ActionPointsProgressBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = -1.14286
+anchor_right = 0.2
+anchor_bottom = -1.14286
+offset_right = 620.0
+offset_bottom = 140.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0/0"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ToolTipZone" parent="SideMenu/PointsPanel/ActionPointsProgressBar" instance=ExtResource("14_2b3j8")]
+offset_top = -9.0
+offset_right = 40.0
+offset_bottom = 7.0
+ToolTipIsActive = true
+ToolTipTittle = "ОД - очки действия"
+ToolTipText = "ОД - ресурс за который персонаж совершает различные действия"
+
 [node name="SubPointsPanel" type="Control" parent="SideMenu"]
 layout_mode = 3
 anchors_preset = 0
@@ -211,6 +262,15 @@ theme_override_font_sizes/font_size = 128
 text = "0"
 metadata/_edit_use_anchors_ = true
 
+[node name="ToolTipZone" parent="SideMenu/SubPointsPanel/Coins" instance=ExtResource("14_2b3j8")]
+offset_left = -2.5
+offset_top = -9.0
+offset_right = 37.5
+offset_bottom = 9.0
+ToolTipIsActive = true
+ToolTipTittle = "Монеты"
+ToolTipText = "[color=yellow] Монеты[/color] показатель вашего [color=yellow] богатства [/color](жадности). Можете купить за них предметы у торговцев"
+
 [node name="AС" type="Sprite2D" parent="SideMenu/SubPointsPanel"]
 position = Vector2(9.5, 8.5)
 texture = ExtResource("13_p0ws3")
@@ -232,6 +292,15 @@ theme_override_font_sizes/font_size = 128
 text = "0"
 metadata/_edit_use_anchors_ = true
 
+[node name="ToolTipZone" parent="SideMenu/SubPointsPanel/AС" instance=ExtResource("14_2b3j8")]
+offset_left = -2.5
+offset_top = -8.5
+offset_right = 37.5
+offset_bottom = 10.5
+ToolTipIsActive = true
+ToolTipTittle = "КД - класс доспеха"
+ToolTipText = "КД определяет, насколько хорошо ваш персонаж избегает ранений в бою. На КД влияет надетый доспех, удерживаемый щит и модификатор [color=green]Ловкости[/color]."
+
 [node name="StatistickPanel" type="Control" parent="SideMenu"]
 layout_mode = 3
 anchors_preset = 0
@@ -239,174 +308,6 @@ offset_left = -53.0
 offset_top = -62.0
 offset_right = 53.0
 offset_bottom = -11.0
-
-[node name="Wisdom" type="Sprite2D" parent="SideMenu/StatistickPanel"]
-position = Vector2(53, 35.5)
-rotation = 3.14159
-texture = ExtResource("4_4fcmw")
-
-[node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Wisdom"]
-anchors_preset = -1
-anchor_left = 0.962
-anchor_top = 0.5
-anchor_right = 0.962
-anchor_bottom = 0.5
-offset_left = -13.012
-offset_top = -8.5
-offset_right = 466.988
-offset_bottom = 126.5
-rotation = 3.14159
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("7_pyokt")
-theme_override_font_sizes/font_size = 128
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="NameLabel" type="Label" parent="SideMenu/StatistickPanel/Wisdom"]
-anchors_preset = -1
-anchor_left = 0.846
-anchor_top = 0.971
-anchor_right = 0.846
-anchor_bottom = 0.971
-offset_left = -12.996
-offset_top = -8.507
-offset_right = 347.004
-offset_bottom = 141.493
-rotation = 3.14159
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("7_pyokt")
-theme_override_font_sizes/font_size = 128
-text = "Муд"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Inteligence" type="Sprite2D" parent="SideMenu/StatistickPanel"]
-position = Vector2(20, 35.5)
-rotation = 3.14159
-texture = ExtResource("4_4fcmw")
-
-[node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Inteligence"]
-anchors_preset = -1
-anchor_left = 0.962
-anchor_top = 0.5
-anchor_right = 0.962
-anchor_bottom = 0.5
-offset_left = -13.012
-offset_top = -8.5
-offset_right = 466.988
-offset_bottom = 126.5
-rotation = 3.14159
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("7_pyokt")
-theme_override_font_sizes/font_size = 128
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="NameLabel" type="Label" parent="SideMenu/StatistickPanel/Inteligence"]
-anchors_preset = -1
-anchor_left = 0.846
-anchor_top = 0.971
-anchor_right = 0.846
-anchor_bottom = 0.971
-offset_left = -12.996
-offset_top = -8.507
-offset_right = 347.004
-offset_bottom = 141.493
-rotation = 3.14159
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("7_pyokt")
-theme_override_font_sizes/font_size = 128
-text = "Инт"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Charisma" type="Sprite2D" parent="SideMenu/StatistickPanel"]
-position = Vector2(86, 35.5)
-rotation = 3.14159
-texture = ExtResource("4_4fcmw")
-
-[node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Charisma"]
-anchors_preset = -1
-anchor_left = 0.962
-anchor_top = 0.5
-anchor_right = 0.962
-anchor_bottom = 0.5
-offset_left = -13.012
-offset_top = -8.5
-offset_right = 466.988
-offset_bottom = 126.5
-rotation = 3.14159
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("7_pyokt")
-theme_override_font_sizes/font_size = 128
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="NameLabel" type="Label" parent="SideMenu/StatistickPanel/Charisma"]
-anchors_preset = -1
-anchor_left = 0.846
-anchor_top = 0.971
-anchor_right = 0.846
-anchor_bottom = 0.971
-offset_left = -12.996
-offset_top = -8.507
-offset_right = 347.004
-offset_bottom = 141.493
-rotation = 3.14159
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("7_pyokt")
-theme_override_font_sizes/font_size = 128
-text = "Хар"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Constitution" type="Sprite2D" parent="SideMenu/StatistickPanel"]
-position = Vector2(53, 15.5)
-rotation = 3.14159
-texture = ExtResource("4_4fcmw")
-
-[node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Constitution"]
-anchors_preset = -1
-anchor_left = 0.962
-anchor_top = 0.5
-anchor_right = 0.962
-anchor_bottom = 0.5
-offset_left = -13.012
-offset_top = -8.5
-offset_right = 466.988
-offset_bottom = 126.5
-rotation = 3.14159
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("7_pyokt")
-theme_override_font_sizes/font_size = 128
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="NameLabel" type="Label" parent="SideMenu/StatistickPanel/Constitution"]
-anchors_preset = -1
-anchor_left = 0.846
-anchor_top = 0.971
-anchor_right = 0.846
-anchor_bottom = 0.971
-offset_left = -12.996
-offset_top = -8.507
-offset_right = 347.004
-offset_bottom = 141.493
-rotation = 3.14159
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/font = ExtResource("7_pyokt")
-theme_override_font_sizes/font_size = 128
-text = "Тел"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="Strength" type="Sprite2D" parent="SideMenu/StatistickPanel"]
 position = Vector2(20, 15.5)
@@ -450,6 +351,66 @@ text = "Сил"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="ToolTipZone" parent="SideMenu/StatistickPanel/Strength" instance=ExtResource("14_2b3j8")]
+offset_left = -13.0
+offset_top = -9.0
+offset_right = 13.0
+offset_bottom = 9.0
+ToolTipIsActive = true
+ToolTipTittle = "Сила"
+ToolTipText = "[color=red]Сила[/color] означает физическую силу и атлетические тренировки"
+
+[node name="Constitution" type="Sprite2D" parent="SideMenu/StatistickPanel"]
+position = Vector2(53, 15.5)
+rotation = 3.14159
+texture = ExtResource("4_4fcmw")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Constitution"]
+anchors_preset = -1
+anchor_left = 0.962
+anchor_top = 0.5
+anchor_right = 0.962
+anchor_bottom = 0.5
+offset_left = -13.012
+offset_top = -8.5
+offset_right = 466.988
+offset_bottom = 126.5
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NameLabel" type="Label" parent="SideMenu/StatistickPanel/Constitution"]
+anchors_preset = -1
+anchor_left = 0.846
+anchor_top = 0.971
+anchor_right = 0.846
+anchor_bottom = 0.971
+offset_left = -12.996
+offset_top = -8.507
+offset_right = 347.004
+offset_bottom = 141.493
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "Тел"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ToolTipZone" parent="SideMenu/StatistickPanel/Constitution" instance=ExtResource("14_2b3j8")]
+offset_left = -13.0
+offset_top = -9.0
+offset_right = 13.0
+offset_bottom = 9.0
+ToolTipIsActive = true
+ToolTipTittle = "Телосложение"
+ToolTipText = "[color=orange]Телосложение[/color] измеряет ваше здоровье, выносливость и жизненные силы"
+
 [node name="Dexterity" type="Sprite2D" parent="SideMenu/StatistickPanel"]
 position = Vector2(86, 15.5)
 rotation = 3.14159
@@ -492,6 +453,168 @@ text = "Лов"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="ToolTipZone" parent="SideMenu/StatistickPanel/Dexterity" instance=ExtResource("14_2b3j8")]
+offset_left = -13.0
+offset_top = -9.0
+offset_right = 13.0
+offset_bottom = 9.0
+ToolTipIsActive = true
+ToolTipTittle = "Ловкость"
+ToolTipText = "[color=green]Ловкость[/color] отвечает за проворство, реакцию и равновесие"
+
+[node name="Inteligence" type="Sprite2D" parent="SideMenu/StatistickPanel"]
+position = Vector2(20, 35.5)
+rotation = 3.14159
+texture = ExtResource("4_4fcmw")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Inteligence"]
+anchors_preset = -1
+anchor_left = 0.962
+anchor_top = 0.5
+anchor_right = 0.962
+anchor_bottom = 0.5
+offset_left = -13.012
+offset_top = -8.5
+offset_right = 466.988
+offset_bottom = 126.5
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NameLabel" type="Label" parent="SideMenu/StatistickPanel/Inteligence"]
+anchors_preset = -1
+anchor_left = 0.846
+anchor_top = 0.971
+anchor_right = 0.846
+anchor_bottom = 0.971
+offset_left = -12.996
+offset_top = -8.507
+offset_right = 347.004
+offset_bottom = 141.493
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "Инт"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ToolTipZone" parent="SideMenu/StatistickPanel/Inteligence" instance=ExtResource("14_2b3j8")]
+offset_left = -13.0
+offset_top = -9.0
+offset_right = 13.0
+offset_bottom = 9.0
+ToolTipIsActive = true
+ToolTipTittle = "Интеллект"
+ToolTipText = "[color=dodgerblue]Интеллект[/color] измеряет силу ума, точность воспоминаний и способность здраво рассуждать"
+
+[node name="Wisdom" type="Sprite2D" parent="SideMenu/StatistickPanel"]
+position = Vector2(53, 35.5)
+rotation = 3.14159
+texture = ExtResource("4_4fcmw")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Wisdom"]
+anchors_preset = -1
+anchor_left = 0.962
+anchor_top = 0.5
+anchor_right = 0.962
+anchor_bottom = 0.5
+offset_left = -13.012
+offset_top = -8.5
+offset_right = 466.988
+offset_bottom = 126.5
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NameLabel" type="Label" parent="SideMenu/StatistickPanel/Wisdom"]
+anchors_preset = -1
+anchor_left = 0.846
+anchor_top = 0.971
+anchor_right = 0.846
+anchor_bottom = 0.971
+offset_left = -12.996
+offset_top = -8.507
+offset_right = 347.004
+offset_bottom = 141.493
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "Муд"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ToolTipZone" parent="SideMenu/StatistickPanel/Wisdom" instance=ExtResource("14_2b3j8")]
+offset_left = -13.0
+offset_top = -9.0
+offset_right = 13.0
+offset_bottom = 9.0
+ToolTipIsActive = true
+ToolTipTittle = "Мудрость"
+ToolTipText = "[color=purple]Мудрость[/color] определяет, как хорошо вы настроены на окружающий мир и отражает восприимчивость и интуицию"
+
+[node name="Charisma" type="Sprite2D" parent="SideMenu/StatistickPanel"]
+position = Vector2(86, 35.5)
+rotation = 3.14159
+texture = ExtResource("4_4fcmw")
+
+[node name="ValueLabel" type="Label" parent="SideMenu/StatistickPanel/Charisma"]
+anchors_preset = -1
+anchor_left = 0.962
+anchor_top = 0.5
+anchor_right = 0.962
+anchor_bottom = 0.5
+offset_left = -13.012
+offset_top = -8.5
+offset_right = 466.988
+offset_bottom = 126.5
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NameLabel" type="Label" parent="SideMenu/StatistickPanel/Charisma"]
+anchors_preset = -1
+anchor_left = 0.846
+anchor_top = 0.971
+anchor_right = 0.846
+anchor_bottom = 0.971
+offset_left = -12.996
+offset_top = -8.507
+offset_right = 347.004
+offset_bottom = 141.493
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("7_pyokt")
+theme_override_font_sizes/font_size = 128
+text = "Хар"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ToolTipZone" parent="SideMenu/StatistickPanel/Charisma" instance=ExtResource("14_2b3j8")]
+offset_left = -13.0
+offset_top = -9.0
+offset_right = 13.0
+offset_bottom = 9.0
+ToolTipIsActive = true
+ToolTipTittle = "Харизма"
+ToolTipText = "[color=yellow]Харизма[/color] измеряет вашу способность эффективно взаимодействовать с другими. Она охватывает такие факторы как уверенность в себе и красноречие, и может отражать привлекательную или внушительную внешность"
+
 [node name="WeaponPanel" type="Control" parent="SideMenu"]
 layout_mode = 3
 anchors_preset = 0
@@ -506,56 +629,66 @@ texture = ExtResource("3_viq5h")
 
 [node name="WeaponImage" type="Sprite2D" parent="SideMenu/WeaponPanel/WeaponFrame"]
 
-[node name="DamageLabel" type="Label" parent="SideMenu/WeaponPanel"]
-layout_mode = 1
+[node name="DamageLabel" type="Label" parent="SideMenu/WeaponPanel/WeaponFrame"]
 anchors_preset = -1
 anchor_left = 0.443151
 anchor_top = 0.196
 anchor_right = 0.443151
 anchor_bottom = 0.196
-offset_left = 0.026001
-offset_top = -0.0160007
-offset_right = 374.026
-offset_bottom = 199.984
+offset_left = 3.81918
+offset_top = -20.272
+offset_right = 377.819
+offset_bottom = 179.728
 scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("7_pyokt")
 theme_override_font_sizes/font_size = 128
 text = "УРОН:"
 metadata/_edit_use_anchors_ = true
 
-[node name="AttackLabel" type="Label" parent="SideMenu/WeaponPanel"]
-layout_mode = 1
+[node name="AttackLabel" type="Label" parent="SideMenu/WeaponPanel/WeaponFrame"]
 anchors_preset = -1
 anchor_left = 0.443151
 anchor_top = 0.412826
 anchor_right = 0.443151
 anchor_bottom = 0.412826
-offset_left = 0.026001
-offset_top = 0.00999832
-offset_right = 276.026
-offset_bottom = 200.01
+offset_left = 3.81918
+offset_top = -17.2104
+offset_right = 279.819
+offset_bottom = 182.79
 scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("7_pyokt")
 theme_override_font_sizes/font_size = 128
 text = "Поп:"
 metadata/_edit_use_anchors_ = true
 
-[node name="AttackCostLabel" type="Label" parent="SideMenu/WeaponPanel"]
-layout_mode = 1
+[node name="AttackCostLabel" type="Label" parent="SideMenu/WeaponPanel/WeaponFrame"]
 anchors_preset = -1
 anchor_left = 0.443151
 anchor_top = 0.630217
 anchor_right = 0.443151
 anchor_bottom = 0.630217
-offset_left = 0.026001
-offset_top = 0.00999832
-offset_right = 238.026
-offset_bottom = 160.01
+offset_left = 3.81918
+offset_top = -14.167
+offset_right = 241.819
+offset_bottom = 145.833
 scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("7_pyokt")
 theme_override_font_sizes/font_size = 128
 text = "ОД:"
 metadata/_edit_use_anchors_ = true
+
+[node name="ToolTipZone" parent="SideMenu/WeaponPanel/WeaponFrame" instance=ExtResource("14_2b3j8")]
+offset_left = -25.0
+offset_top = -16.0
+offset_right = 74.0
+offset_bottom = 16.0
+ToolTipIsActive = true
+ToolTipTittle = "Оружие"
+ToolTipText = "[center] Текущее оружие персонажа
+
+[color=chocolate]Урон[/color] - кость урона + бонус который нанесет оружие при попадании
+[color=chocolate]Попадание[/color] - кость попадания + бонус
+[color=chocolate]ОД[/color] - сколько затрачивает очков действия при соврешении атаки"
 
 [node name="TurnPanel" type="Control" parent="SideMenu"]
 layout_mode = 3
@@ -571,9 +704,6 @@ offset_left = 13.0
 offset_top = 7.0
 offset_right = 93.0
 offset_bottom = 39.0
-ToolTipIsActive = true
-ToolTipTittle = "Конец хода"
-ToolTipText = "Заканчивает ход игрока"
 
 [node name="AbilityPanel" type="Sprite2D" parent="."]
 visible = false

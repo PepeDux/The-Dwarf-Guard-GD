@@ -22,6 +22,9 @@ offset_bottom = 112.0
 texture_normal = ExtResource("23_6il5p")
 texture_hover = ExtResource("24_8tssj")
 script = ExtResource("24_h4wjs")
+ToolTipIsActive = true
+ToolTipTittle = "Заменить карты"
+ToolTipText = "[center] Заменяет 1 раз карты"
 
 [node name="DropCardsButton" parent="." instance=ExtResource("22_1r35e")]
 z_index = 1
@@ -32,6 +35,9 @@ offset_bottom = 176.0
 texture_normal = ExtResource("25_e2tg0")
 texture_hover = ExtResource("26_iotvg")
 script = ExtResource("9_tlr8m")
+ToolTipIsActive = true
+ToolTipTittle = "Продать карты"
+ToolTipText = "[center] Вы продадите эти карты за [color=yellow]1 монетку[/color]"
 
 [node name="Card1" parent="." instance=ExtResource("21_fmrue")]
 offset_left = 64.0

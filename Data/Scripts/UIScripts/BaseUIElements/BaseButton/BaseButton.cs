@@ -6,7 +6,7 @@ public partial class BaseButton : TextureButton, IToolTip
 {
 	[Export] public bool ToolTipIsActive { get; set; }
 	[Export] public string ToolTipTittle {  get; set; }
-	[Export] public string ToolTipText { get; set; }
+	[Export(PropertyHint.MultilineText)] public string ToolTipText { get; set; }
 
 
 	private Vector2 basePosition;

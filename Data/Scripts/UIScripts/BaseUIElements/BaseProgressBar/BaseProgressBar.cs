@@ -1,13 +1,9 @@
 using Godot;
 using System;
 
-public partial class BaseProgressBar : TextureProgressBar, IToolTip
+public partial class BaseProgressBar : TextureProgressBar
 {
-    [Export] public bool ToolTipIsActive { get; set; }
-    [Export] public string ToolTipTittle { get; set; }
-    [Export] public string ToolTipText { get; set; }
-
-    public bool canChanged = true;
+	public bool canChanged = true;
 
 	public override void _Ready()
 	{
