@@ -5,18 +5,18 @@ public partial class RetryLevelButton : BaseButton
 {
 	public override void _Ready()
 	{
-        base._Ready();
+		base._Ready();
 	}
 
-    public override void _ExitTree()
-    {
-        base._ExitTree();
-    }
+	public override void _ExitTree()
+	{
+		base._ExitTree();
+	}
 
-    public override void _Pressed()
-    {
-        base._Pressed();
+	public override void _Pressed()
+	{
+		base._Pressed();
 
-        GetTree().ChangeSceneToFile("res://Data/Scenes/UI/GameScene/GameScene.tscn");
-    }
+		GetTree().ChangeSceneToFile("res://Data/Scenes/GameScene/GameScene.tscn");
+	}
 }

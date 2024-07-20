@@ -38,7 +38,7 @@ public partial class LevelGenerator : Node2D
 		// Очищаем хранилище координат тайлов
 		TileStorage.ClearAllCells();
 
-		// Обнуляем счеткич уровней
+		// Обнуляем счетчик ходов
 		GetTree().Root.GetNode("GameScene").GetNode<LevelInfo>("LevelInfo").CurrentTurn = 0;
 
 		// Лимит тайлов

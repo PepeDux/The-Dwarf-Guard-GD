@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://csw0qwm2nm2r7" path="res://Data/Sprites/Tilemaps/TileMap.png" id="1_frbbj"]
 [ext_resource type="Texture2D" uid="uid://jhiskuol86" path="res://Data/Sprites/UI/GameScene/Markers/Markers.png" id="2_8abb6"]
-[ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/UI/GameScene/Holders.tscn" id="3_36s72"]
+[ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/GameScene/Holders/Holders.tscn" id="3_36s72"]
 [ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="6_r16vw"]
 [ext_resource type="Script" path="res://Data/Scripts/CameraScripts/CameraShake.cs" id="7_45pxw"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameScene/Fader.cs" id="8_w5rp6"]
-[ext_resource type="PackedScene" uid="uid://8t16gfkhb3xa" path="res://Data/Scenes/UI/GameScene/CardHolder/CardHolder.tscn" id="14_oqbqr"]
+[ext_resource type="PackedScene" uid="uid://8t16gfkhb3xa" path="res://Data/Scenes/GameScene/CardHolder/CardHolder.tscn" id="14_oqbqr"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelInfo.cs" id="15_8tdvf"]
 [ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelSpawnInfo.cs" id="16_vu12s"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Spawn/SpawnModifierCalculation.cs" id="17_jrke8"]
@@ -17,9 +17,9 @@
 [ext_resource type="Script" path="res://Data/Scripts/TileScripts/TileMarker.cs" id="20_pktoe"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/CharacterStorage.cs" id="21_e2keu"]
 [ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnController.cs" id="22_ugcec"]
-[ext_resource type="PackedScene" uid="uid://hegp6rbt487a" path="res://Data/Scenes/UI/GameScene/PauseMenu/PauseMenu.tscn" id="23_d6hba"]
+[ext_resource type="PackedScene" uid="uid://hegp6rbt487a" path="res://Data/Scenes/GameScene/PauseMenu/PauseMenu.tscn" id="23_d6hba"]
 [ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Player/PlayerCoinCollection.cs" id="25_tpk34"]
-[ext_resource type="PackedScene" uid="uid://deq1stiekglgs" path="res://Data/Scenes/UI/GameScene/UIGameScene/UIGameScene.tscn" id="26_64d7w"]
+[ext_resource type="PackedScene" uid="uid://deq1stiekglgs" path="res://Data/Scenes/GameScene/UIGameScene/UIGameScene.tscn" id="26_64d7w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_thffw"]
 texture = ExtResource("1_frbbj")

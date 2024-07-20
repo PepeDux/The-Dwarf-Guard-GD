@@ -12,6 +12,6 @@ public partial class StartGame : BaseButton
 	{
 		base.Pressed();
 
-		GetTree().ChangeSceneToFile("res://Data/Scenes/UI/GameScene/GameScene.tscn");
+		GetTree().ChangeSceneToFile("res://Data/Scenes/GameScene/GameScene.tscn");
 	}
 }

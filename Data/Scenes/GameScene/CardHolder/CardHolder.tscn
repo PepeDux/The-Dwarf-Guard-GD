@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Data/Scripts/CardsScripts/CardHolder.cs" id="1_a7k87"]
 [ext_resource type="Script" path="res://Data/Scripts/CardsScripts/DropCardsButton.cs" id="9_tlr8m"]
-[ext_resource type="PackedScene" uid="uid://cgyw5qsp8s6b7" path="res://Data/Scenes/UI/GameScene/Card/Card.tscn" id="21_fmrue"]
+[ext_resource type="PackedScene" uid="uid://cgyw5qsp8s6b7" path="res://Data/Scenes/GameScene/Card/Card.tscn" id="21_fmrue"]
 [ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="22_1r35e"]
 [ext_resource type="Texture2D" uid="uid://8ym0uxmh0h44" path="res://Data/Sprites/UI/GameScene/Cards/RerollCardsButton/RerollCardsNormal.png" id="23_6il5p"]
 [ext_resource type="Texture2D" uid="uid://5cumx7p84y5k" path="res://Data/Sprites/UI/GameScene/Cards/RerollCardsButton/RerollCardsHower.png" id="24_8tssj"]

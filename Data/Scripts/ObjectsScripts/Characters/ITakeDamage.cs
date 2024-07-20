@@ -104,7 +104,7 @@ public interface ITakeDamage
 
 			await Task.Delay(1500);
 			// Вызывает экран GAME OVER
-			character.GetTree().ChangeSceneToFile("res://Data/Scenes/UI/GameOver/GameOver.tscn");
+			character.GetTree().ChangeSceneToFile("res://Data/Scenes/GameOver/GameOver.tscn");
 		}
 		else if (character is Captain)
 		{

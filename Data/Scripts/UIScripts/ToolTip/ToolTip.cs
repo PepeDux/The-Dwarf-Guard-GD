@@ -17,7 +17,6 @@ public partial class ToolTip : Control
 
 	// Таймер для задержки показа тултипа
 	private static Timer tooltipTimer;
-	private const float tooltipDelay = 2.0f; // Задержка в секундах
 
 	// Метод, вызываемый при готовности объекта
 	public override void _Ready()

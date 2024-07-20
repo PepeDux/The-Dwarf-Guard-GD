@@ -9,12 +9,10 @@ public partial class ToolTipZone : Node, IToolTip
 
 	private void MouseEntered()
 	{
-		GD.Print("Enter");
 		((IToolTip)this).ShowToolTip(this);
 	}
 	private void MouseExited()
 	{
-		GD.Print("Exit");
 		((IToolTip)this).HideToolTip();
 	}
 }

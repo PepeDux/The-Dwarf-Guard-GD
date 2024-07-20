@@ -3,11 +3,6 @@ using System;
 
 public partial class ToMainMenu : BaseButton
 {
-	public override void _Ready()
-	{
-		
-	}
-
 	public override void Pressed()
 	{
 		base.Pressed();
@@ -16,6 +11,6 @@ public partial class ToMainMenu : BaseButton
 
 		GetTree().Paused = false;
 
-		GetTree().ChangeSceneToFile("res://Data/Scenes/UI/MainMenu/MainMenu.tscn");
+		GetTree().ChangeSceneToFile("res://Data/Scenes/MainMenu/MainMenu.tscn");
 	}
 }

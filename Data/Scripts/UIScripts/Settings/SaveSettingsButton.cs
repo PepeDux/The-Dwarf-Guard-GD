@@ -3,17 +3,17 @@ using System;
 
 public partial class SaveSettingsButton : BaseButton
 {
-    public override void _Ready()
-    {
+	public override void _Ready()
+	{
 
-    }
+	}
 
-    public override void Pressed()
-    {
-        base.Pressed();
+	public override void Pressed()
+	{
+		base.Pressed();
 
-        GetTree().Paused = false;
+		GetTree().Paused = false;
 
-        GetTree().ChangeSceneToFile("res://Data/Scenes/UI/MainMenu/MainMenu.tscn");
-    }
+		GetTree().ChangeSceneToFile("res://Data/Scenes/MainMenu/MainMenu.tscn");
+	}
 }
