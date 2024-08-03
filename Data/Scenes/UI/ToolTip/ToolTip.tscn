@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d0lbnbio7tob7"]
 
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/ToolTip/ToolTip.cs" id="1_01owb"]
-[ext_resource type="Texture2D" uid="uid://b2okoirvh4el6" path="res://Data/Sprites/UI/ToolTip/ToolTipFrame.png" id="1_7hurt"]
+[ext_resource type="Texture2D" uid="uid://b2okoirvh4el6" path="res://Data/Scenes/UI/ToolTip/ToolTipFrame.png" id="1_7hurt"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="2_anwmc"]
 
 [node name="ToolTip" type="MarginContainer"]

@@ -49,12 +49,13 @@ folder_colors={
 "res://Data/Scripts/ObjectsScripts/": "red",
 "res://Data/Scripts/ResourcesScripts/": "purple",
 "res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/": "purple",
+"res://Data/Scripts/ScenesScripts/": "pink",
+"res://Data/Scripts/ScenesScripts/GameSceneScripts/PauseMenuScripts/": "pink",
+"res://Data/Scripts/ScenesScripts/MainMenuScripts/": "pink",
 "res://Data/Scripts/Spawners/": "yellow",
 "res://Data/Scripts/TileScripts/": "yellow",
 "res://Data/Scripts/TurnScripts/": "yellow",
-"res://Data/Scripts/UIScripts/": "orange",
-"res://Data/Scripts/UIScripts/GameScene/PauseMenuScripts/": "orange",
-"res://Data/Scripts/UIScripts/MainMenuScripts/": "orange"
+"res://Data/Scripts/UIScripts/": "orange"
 }
 
 [input]

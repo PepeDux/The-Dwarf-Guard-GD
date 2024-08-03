@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c57a0nip7ah3q"]
 
 [ext_resource type="PackedScene" uid="uid://djcta1m6ke4i5" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/PickableObject.tscn" id="1_lx3mu"]
-[ext_resource type="Texture2D" uid="uid://btdaoqflmgfbw" path="res://Data/Sprites/PickableObjects/Food/Food.png" id="2_qnyd1"]
+[ext_resource type="Texture2D" uid="uid://btdaoqflmgfbw" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Food/Food.png" id="2_qnyd1"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/CharacteristicModifierData.cs" id="2_rt4br"]
 
 [sub_resource type="Resource" id="Resource_2o050"]

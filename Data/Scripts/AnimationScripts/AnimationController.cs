@@ -1,25 +1,26 @@
 using Godot;
 using System;
-using System.Linq.Expressions;
 
 public partial class AnimationController : Node
 {
-	AnimationTree animationTree;
-	AnimationNodeStateMachinePlayback stateMachine;
+    // Метод для воспроизведения заданной анимации
+    public void PlayAnimation(string animation)
+    {
+        // Получаем узел AnimationTree от родительского узла
+        AnimationTree animationTree = GetParent().GetNode<AnimationTree>("AnimationTree");
 
-	public void PlayAnimation(string animation)
-	{
-		animationTree = GetParent().GetNode<AnimationTree>("AnimationTree");
-		stateMachine = (AnimationNodeStateMachinePlayback)animationTree.Get("parameters/playback");
+        // Получаем воспроизведение состояния машины из параметров AnimationTree
+        AnimationNodeStateMachinePlayback stateMachine = (AnimationNodeStateMachinePlayback)animationTree.Get("parameters/playback");
 
-		try
-		{
-			// Проигрываем анимацию
-			stateMachine.Travel(animation);
-		}       
-		catch
-		{
-			GD.PrintErr($"Анимация '{animation}' нет доступна или несуществует для объекта: '{GetParent().Name}'!");
-		}
-	}
+        try
+        {
+            // Пытаемся воспроизвести заданную анимацию
+            stateMachine.Travel(animation);
+        }
+        catch
+        {
+            // Если анимация недоступна или не существует, выводим сообщение об ошибке
+            GD.PrintErr($"Анимация '{animation}' недоступна или не существует для объекта: '{GetParent().Name}'!");
+        }
+    }
 }

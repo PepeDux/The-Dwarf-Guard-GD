@@ -28,7 +28,7 @@ public partial class DropCardsButton : BaseButton
 
 		Disable();
 
-		Events.dropedCards?.Invoke();
+		Events.droppedCards?.Invoke();
 		Events.endSelectCard?.Invoke();
 	}
 }

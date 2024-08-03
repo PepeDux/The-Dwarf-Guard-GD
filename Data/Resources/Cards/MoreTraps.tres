@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Spawn/SpawnModifierData.cs" id="1_iglm8"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Cards/CardData.cs" id="2_wbcvl"]
-[ext_resource type="Texture2D" uid="uid://dc1h1ic8on41o" path="res://Data/Sprites/UI/GameScene/Cards/Cards/sprite_28.png" id="3_ydvxd"]
+[ext_resource type="Texture2D" uid="uid://dc1h1ic8on41o" path="res://Data/Scenes/GameScene/Card/Cards/sprite_28.png" id="3_ydvxd"]
 
 [sub_resource type="Resource" id="Resource_umefy"]
 resource_local_to_scene = true

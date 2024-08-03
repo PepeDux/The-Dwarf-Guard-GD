@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://cgyw5qsp8s6b7"]
 
 [ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="1_x6ub3"]
-[ext_resource type="Texture2D" uid="uid://cjubqb7dam4ib" path="res://Data/Sprites/UI/GameScene/Cards/CardMaket.png" id="2_7yxam"]
+[ext_resource type="Texture2D" uid="uid://cjubqb7dam4ib" path="res://Data/Scenes/GameScene/Card/CardMaket/CardMaket.png" id="2_7yxam"]
 [ext_resource type="Script" path="res://Data/Scripts/CardsScripts/Card.cs" id="3_ctxh2"]
 [ext_resource type="Resource" uid="uid://cdsl1thfxwjwl" path="res://Data/Resources/Cards/AlloutMovement.tres" id="4_v3rqc"]
 [ext_resource type="Resource" uid="uid://bi4ykp67xfdj8" path="res://Data/Resources/Cards/DiagonalMovement.tres" id="5_hynl7"]

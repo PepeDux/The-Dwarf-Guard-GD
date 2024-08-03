@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cyqjf6wk41dwj"]
 
-[ext_resource type="Texture2D" uid="uid://c6ka7cdnobie0" path="res://Data/Sprites/UI/BaseUIElements/BaseHScrollBar/Scroll.png" id="1_jimoy"]
-[ext_resource type="Texture2D" uid="uid://4tfyofxx6mky" path="res://Data/Sprites/UI/BaseUIElements/BaseHScrollBar/Grabber.png" id="2_rpt4x"]
+[ext_resource type="Texture2D" uid="uid://c6ka7cdnobie0" path="res://Data/Scenes/UI/BaseUIElements/BaseHScrollBar/Scroll.png" id="1_jimoy"]
+[ext_resource type="Texture2D" uid="uid://4tfyofxx6mky" path="res://Data/Scenes/UI/BaseUIElements/BaseHScrollBar/Grabber.png" id="2_rpt4x"]
 [ext_resource type="Script" path="res://Data/Scripts/UIScripts/BaseUIElements/BaseHScrollBar/BaseHScrollBar.cs" id="3_x41vy"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="4_um5ax"]
 [ext_resource type="Script" path="res://Data/Scripts/AudioScripts/ButtonAudioController.cs" id="5_7746p"]

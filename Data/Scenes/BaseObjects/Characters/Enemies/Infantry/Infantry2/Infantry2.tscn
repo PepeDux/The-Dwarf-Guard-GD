@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://csixb0uw6gcol"]
+
+[ext_resource type="PackedScene" uid="uid://dic37rim4ufsk" path="res://Data/Scenes/BaseObjects/Characters/Enemies/Enemy.tscn" id="1_6vte5"]
+[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Enemies/Infantry/Infantry.cs" id="2_sis3m"]
+[ext_resource type="PackedScene" uid="uid://dejp63chsiv2j" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Coin/Coin.tscn" id="3_tw38m"]
+[ext_resource type="Texture2D" uid="uid://bvgi05chioayf" path="res://Data/Scenes/BaseObjects/Characters/Enemies/Infantry/Infantry2/Infantry2-Sheet.png" id="4_3gsic"]
+[ext_resource type="Resource" uid="uid://o5acuned1sug" path="res://Data/Resources/Weapons/Daggers.tres" id="4_4gkxt"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_d3xg7"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Infantry2" instance=ExtResource("1_6vte5")]
+script = ExtResource("2_sis3m")
+loot = Array[PackedScene]([ExtResource("3_tw38m")])
+weapon = ExtResource("4_4gkxt")
+maxMovePoints = 4
+directMove = false
+diagonalMove = true
+maxHP = 15
+ac = 7
+strength = 12
+constitution = 8
+dexterity = 16
+inteligence = 12
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("4_3gsic")
+
+[node name="MessageParticles" parent="." index="9"]
+texture = SubResource("ViewportTexture_d3xg7")

@@ -1,16 +1,16 @@
 [gd_scene load_steps=12 format=3 uid="uid://bthuydw3peyqe"]
 
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameOver/GameOver.cs" id="1_s2ub0"]
+[ext_resource type="Script" path="res://Data/Scripts/ScenesScripts/GameOverSceneScripts/GameOver.cs" id="1_s2ub0"]
 [ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="1_vnuuv"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="2_j64m8"]
 [ext_resource type="AudioStream" uid="uid://b4cysnvj7mibm" path="res://Data/Audio/Music/GameOver/GameOver1.wav" id="4_cide8"]
 [ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="6_blpn5"]
-[ext_resource type="Texture2D" uid="uid://d4hpa58kitphe" path="res://Data/Sprites/UI/GameScene/PauseMenu/ToMainMenuNormal.png" id="7_micqq"]
-[ext_resource type="Texture2D" uid="uid://b4ouqcvolxfn1" path="res://Data/Sprites/UI/GameScene/PauseMenu/ToMainMenuHover.png" id="8_5gucn"]
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameScene/PauseMenuScripts/ToMainMenu.cs" id="9_ib1mu"]
-[ext_resource type="Texture2D" uid="uid://j68fsb8a42r1" path="res://Data/Sprites/UI/GameOver/RetryButton/RetryNormal.png" id="10_7x3gb"]
-[ext_resource type="Texture2D" uid="uid://b6q5spb8xojyu" path="res://Data/Sprites/UI/GameOver/RetryButton/RetryHower.png" id="11_1hebt"]
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameOver/RetryLevelButton.cs" id="12_2sy0y"]
+[ext_resource type="Texture2D" uid="uid://d4hpa58kitphe" path="res://Data/Scenes/GameScene/PauseMenu/ToMainMenuButton/ToMainMenuNormal.png" id="7_micqq"]
+[ext_resource type="Texture2D" uid="uid://b4ouqcvolxfn1" path="res://Data/Scenes/GameScene/PauseMenu/ToMainMenuButton/ToMainMenuHover.png" id="8_5gucn"]
+[ext_resource type="Script" path="res://Data/Scripts/ScenesScripts/GameSceneScripts/PauseMenuScripts/ToMainMenu.cs" id="9_ib1mu"]
+[ext_resource type="Texture2D" uid="uid://j68fsb8a42r1" path="res://Data/Scenes/GameOver/RetryButton/RetryNormal.png" id="10_7x3gb"]
+[ext_resource type="Texture2D" uid="uid://b6q5spb8xojyu" path="res://Data/Scenes/GameOver/RetryButton/RetryHower.png" id="11_1hebt"]
+[ext_resource type="Script" path="res://Data/Scripts/ScenesScripts/GameOverSceneScripts/RetryLevelButton.cs" id="12_2sy0y"]
 
 [node name="GameOver" type="Node2D"]
 script = ExtResource("1_s2ub0")

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://djcta1m6ke4i5" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/PickableObject.tscn" id="1_nrndo"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/CharacteristicModifierData.cs" id="2_hgpnx"]
-[ext_resource type="Texture2D" uid="uid://b3ippq5fk4nkl" path="res://Data/Sprites/PickableObjects/Coins/Coin.png" id="2_vut13"]
+[ext_resource type="Texture2D" uid="uid://b3ippq5fk4nkl" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Coin/Coin.png" id="2_vut13"]
 [ext_resource type="AudioStream" uid="uid://dv424i1qoveao" path="res://Data/Audio/Sound/Miss/Miss1.wav" id="4_ang2n"]
 [ext_resource type="AudioStream" uid="uid://e5cck14xyj0h" path="res://Data/Audio/Sound/Miss/Miss2.wav" id="5_p6hco"]
 [ext_resource type="AudioStream" uid="uid://cbhjai3ibwdt" path="res://Data/Audio/Sound/Miss/Miss3.wav" id="6_3f28v"]

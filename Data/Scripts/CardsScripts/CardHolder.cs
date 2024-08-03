@@ -11,7 +11,7 @@ public partial class CardHolder : Node2D
 	{
 		Events.levelEnded += ShowCard;
 		Events.endSelectCard += HideCard;
-		Events.dropedCards += HideCard;
+		Events.droppedCards += HideCard;
 
 		// Добавляем все карты в лист
 		cardFaces.AddRange(GetChildren().OfType<TextureButton>());
@@ -21,7 +21,7 @@ public partial class CardHolder : Node2D
 	{
 		Events.levelEnded -= ShowCard;
 		Events.endSelectCard -= HideCard;
-		Events.dropedCards -= HideCard;
+		Events.droppedCards -= HideCard;
 	}
 
 

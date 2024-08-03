@@ -1,20 +1,20 @@
 [gd_scene load_steps=17 format=3 uid="uid://clt58eakiro5h"]
 
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/MainMenuScripts/MainMenu.cs" id="1_u1ld6"]
+[ext_resource type="Script" path="res://Data/Scripts/ScenesScripts/MainMenuScripts/MainMenu.cs" id="1_u1ld6"]
 [ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="2_8xj1e"]
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/GameScene/Fader.cs" id="3_teufm"]
+[ext_resource type="Script" path="res://Data/Scripts/ScenesScripts/GameSceneScripts/Fader.cs" id="3_teufm"]
 [ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="4_1iwjr"]
-[ext_resource type="Texture2D" uid="uid://chu2iy1nkrufm" path="res://Data/Sprites/UI/MainMenu/StartNormal.png" id="5_i5imi"]
-[ext_resource type="Texture2D" uid="uid://c4dngyxbn1apl" path="res://Data/Sprites/UI/MainMenu/StartHover.png" id="6_ln8ml"]
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/MainMenuScripts/StartGame.cs" id="7_0ucjb"]
-[ext_resource type="Texture2D" uid="uid://co6glrxeyg4wk" path="res://Data/Sprites/UI/MainMenu/SettingsNormal.png" id="8_gvw6n"]
-[ext_resource type="Texture2D" uid="uid://38s4wrd1l5yq" path="res://Data/Sprites/UI/MainMenu/SettingsHover.png" id="9_84ydu"]
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/MainMenuScripts/ToSettings.cs" id="10_1qrun"]
-[ext_resource type="Texture2D" uid="uid://bf16aeueubvux" path="res://Data/Sprites/UI/MainMenu/ExitNormal.png" id="11_djmt2"]
-[ext_resource type="Texture2D" uid="uid://boykkkjm8ccpm" path="res://Data/Sprites/UI/MainMenu/ExitHover.png" id="12_7jy0u"]
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/MainMenuScripts/ExitGame.cs" id="13_2en4m"]
-[ext_resource type="Texture2D" uid="uid://57a3kiyk0wps" path="res://Data/Sprites/UI/MainMenu/Discord.png" id="14_do1nf"]
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/MainMenuScripts/DiscordButton.cs" id="15_os6ca"]
+[ext_resource type="Texture2D" uid="uid://chu2iy1nkrufm" path="res://Data/Scenes/MainMenu/StartButton/StartNormal.png" id="5_i5imi"]
+[ext_resource type="Texture2D" uid="uid://c4dngyxbn1apl" path="res://Data/Scenes/MainMenu/StartButton/StartHover.png" id="6_ln8ml"]
+[ext_resource type="Script" path="res://Data/Scripts/ScenesScripts/MainMenuScripts/StartGame.cs" id="7_0ucjb"]
+[ext_resource type="Texture2D" uid="uid://co6glrxeyg4wk" path="res://Data/Scenes/MainMenu/SettingsButton/SettingsNormal.png" id="8_gvw6n"]
+[ext_resource type="Texture2D" uid="uid://38s4wrd1l5yq" path="res://Data/Scenes/MainMenu/SettingsButton/SettingsHover.png" id="9_84ydu"]
+[ext_resource type="Script" path="res://Data/Scripts/ScenesScripts/MainMenuScripts/ToSettings.cs" id="10_1qrun"]
+[ext_resource type="Texture2D" uid="uid://bf16aeueubvux" path="res://Data/Scenes/MainMenu/ExitButton/ExitNormal.png" id="11_djmt2"]
+[ext_resource type="Texture2D" uid="uid://boykkkjm8ccpm" path="res://Data/Scenes/MainMenu/ExitButton/ExitHover.png" id="12_7jy0u"]
+[ext_resource type="Script" path="res://Data/Scripts/ScenesScripts/MainMenuScripts/ExitGame.cs" id="13_2en4m"]
+[ext_resource type="Texture2D" uid="uid://57a3kiyk0wps" path="res://Data/Scenes/MainMenu/DiscordButton/Discord.png" id="14_do1nf"]
+[ext_resource type="Script" path="res://Data/Scripts/ScenesScripts/MainMenuScripts/DiscordButton.cs" id="15_os6ca"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="16_yapvh"]
 
 [node name="MainMenu" type="Node2D"]
@@ -33,7 +33,14 @@ color = Color(0.109804, 0.101961, 0.101961, 1)
 script = ExtResource("3_teufm")
 metadata/_edit_use_anchors_ = true
 
-[node name="StartButton" parent="." instance=ExtResource("4_1iwjr")]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StartButton" parent="Control" instance=ExtResource("4_1iwjr")]
+layout_mode = 0
 offset_left = 196.0
 offset_top = 88.0
 offset_right = 294.0
@@ -42,7 +49,8 @@ texture_normal = ExtResource("5_i5imi")
 texture_hover = ExtResource("6_ln8ml")
 script = ExtResource("7_0ucjb")
 
-[node name="SettingsButton" parent="." instance=ExtResource("4_1iwjr")]
+[node name="SettingsButton" parent="Control" instance=ExtResource("4_1iwjr")]
+layout_mode = 0
 offset_left = 196.0
 offset_top = 136.0
 offset_right = 294.0
@@ -51,7 +59,8 @@ texture_normal = ExtResource("8_gvw6n")
 texture_hover = ExtResource("9_84ydu")
 script = ExtResource("10_1qrun")
 
-[node name="ExitButton" parent="." instance=ExtResource("4_1iwjr")]
+[node name="ExitButton" parent="Control" instance=ExtResource("4_1iwjr")]
+layout_mode = 0
 offset_left = 196.0
 offset_top = 184.0
 offset_right = 294.0
@@ -60,17 +69,8 @@ texture_normal = ExtResource("11_djmt2")
 texture_hover = ExtResource("12_7jy0u")
 script = ExtResource("13_2en4m")
 
-[node name="DiscordButton" parent="." instance=ExtResource("4_1iwjr")]
-offset_left = 440.0
-offset_top = 232.0
-offset_right = 462.0
-offset_bottom = 254.0
-texture_normal = ExtResource("14_do1nf")
-texture_hover = ExtResource("14_do1nf")
-texture_disabled = ExtResource("14_do1nf")
-script = ExtResource("15_os6ca")
-
-[node name="NameLabel" type="Label" parent="."]
+[node name="NameLabel" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 1.52588e-05
 offset_top = 40.0
 offset_right = 9800.0
@@ -82,7 +82,17 @@ theme_override_font_sizes/font_size = 456
 text = "the dwarf guard"
 horizontal_alignment = 1
 
-[node name="Version" type="Label" parent="."]
+[node name="DiscordButton" parent="." instance=ExtResource("4_1iwjr")]
+offset_left = 440.0
+offset_top = 232.0
+offset_right = 462.0
+offset_bottom = 254.0
+texture_normal = ExtResource("14_do1nf")
+texture_hover = ExtResource("14_do1nf")
+texture_disabled = ExtResource("14_do1nf")
+script = ExtResource("15_os6ca")
+
+[node name="VersionLabel" type="Label" parent="."]
 offset_left = 24.0
 offset_top = 232.0
 offset_right = 1624.0

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://djgnkvm0p5mbk"]
 
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Weapon/Weapon.cs" id="1_7t2f6"]
-[ext_resource type="Texture2D" uid="uid://bcj0bnps0bi17" path="res://Data/Sprites/UI/GameScene/Cards/Cards/sprite_10.png" id="2_22jmp"]
+[ext_resource type="Texture2D" uid="uid://bcj0bnps0bi17" path="res://Data/Scenes/GameScene/Card/Cards/sprite_10.png" id="2_22jmp"]
 
 [resource]
 script = ExtResource("1_7t2f6")

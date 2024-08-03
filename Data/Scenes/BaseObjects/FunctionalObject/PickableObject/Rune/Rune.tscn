@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://djcta1m6ke4i5" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/PickableObject.tscn" id="1_opyv8"]
 [ext_resource type="Resource" uid="uid://c4csjm5g77rer" path="res://Data/Resources/Modifiers/CharacteristicModifier/CharacteristicModifier.tres" id="2_0ol86"]
-[ext_resource type="Texture2D" uid="uid://t7bfhv3uxed0" path="res://Data/Sprites/PickableObjects/Runes/Runes.png" id="2_ji21m"]
+[ext_resource type="Texture2D" uid="uid://t7bfhv3uxed0" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Rune/Runes.png" id="2_ji21m"]
 
 [node name="Rune" instance=ExtResource("1_opyv8")]
 modifier = ExtResource("2_0ol86")
