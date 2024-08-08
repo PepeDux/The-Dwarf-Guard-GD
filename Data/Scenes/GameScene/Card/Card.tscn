@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="1_x6ub3"]
 [ext_resource type="Texture2D" uid="uid://cjubqb7dam4ib" path="res://Data/Scenes/GameScene/Card/CardMaket/CardMaket.png" id="2_7yxam"]
-[ext_resource type="Script" path="res://Data/Scripts/CardsScripts/Card.cs" id="3_ctxh2"]
+[ext_resource type="Script" path="res://Data/Scenes/GameScene/Card/Card.cs" id="3_ctxh2"]
 [ext_resource type="Resource" uid="uid://cdsl1thfxwjwl" path="res://Data/Resources/Cards/AlloutMovement.tres" id="4_v3rqc"]
 [ext_resource type="Resource" uid="uid://bi4ykp67xfdj8" path="res://Data/Resources/Cards/DiagonalMovement.tres" id="5_hynl7"]
 [ext_resource type="Resource" uid="uid://citix5pk8ikf2" path="res://Data/Resources/Cards/DirectMovement.tres" id="6_ppm8e"]

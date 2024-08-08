@@ -1,7 +1,7 @@
 [gd_scene load_steps=44 format=3 uid="uid://b2xh8cto5uvph"]
 
 [ext_resource type="PackedScene" uid="uid://dx6sxyfguth4d" path="res://Data/Scenes/BaseObjects/BaseObject.tscn" id="1_leavt"]
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Character.cs" id="2_8vwku"]
+[ext_resource type="Script" path="res://Data/Scenes/BaseObjects/Characters/Character.cs" id="2_8vwku"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Characteristics/СharacteristicModifierCalculation.cs" id="3_442ou"]
 [ext_resource type="Resource" uid="uid://d0c1xa0n37q7i" path="res://Data/Resources/Weapons/LongSword.tres" id="3_l2c31"]
 [ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Ability/CharacterAbilitiesStorage.cs" id="4_rtvkd"]

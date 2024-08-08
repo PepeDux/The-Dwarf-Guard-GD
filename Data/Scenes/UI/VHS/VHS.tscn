@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bp7kuxw2qu1o2"]
 
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/VHS/VHS.cs" id="1_23fup"]
+[ext_resource type="Script" path="res://Data/Scenes/UI/VHS/VHS.cs" id="1_23fup"]
 
 [sub_resource type="Shader" id="Shader_xmaau"]
 code = "/*

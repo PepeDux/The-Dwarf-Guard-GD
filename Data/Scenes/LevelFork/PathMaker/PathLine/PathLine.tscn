@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnmbjdvat1xhe"]
+
+[ext_resource type="Texture2D" uid="uid://bph0c1opstra" path="res://Data/Scenes/LevelFork/PathMaker/PathLine/PathTexture/Path.png" id="1_wuife"]
+
+[node name="PathLine" type="Line2D"]
+width = 5.0
+texture = ExtResource("1_wuife")
+texture_mode = 1
+begin_cap_mode = 1
+end_cap_mode = 1

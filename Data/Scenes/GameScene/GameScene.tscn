@@ -1,25 +1,18 @@
-[gd_scene load_steps=25 format=3 uid="uid://uixniamcrmq2"]
+[gd_scene load_steps=18 format=3 uid="uid://uixniamcrmq2"]
 
-[ext_resource type="Texture2D" uid="uid://csw0qwm2nm2r7" path="res://Data/Scenes/GameScene/Tilemaps/TileMap.png" id="1_frbbj"]
+[ext_resource type="PackedScene" uid="uid://dcfps6l2uet6n" path="res://Data/Scenes/Camera/Camera.tscn" id="1_4ssnp"]
+[ext_resource type="Texture2D" uid="uid://csw0qwm2nm2r7" path="res://Data/Scenes/GameScene/Tiles/TileMap.png" id="1_frbbj"]
 [ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/GameScene/Holders/Holders.tscn" id="3_36s72"]
-[ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="6_r16vw"]
-[ext_resource type="Script" path="res://Data/Scripts/CameraScripts/CameraShake.cs" id="7_45pxw"]
-[ext_resource type="Texture2D" uid="uid://be20bn54bv1ug" path="res://Data/Scenes/GameScene/Tilemaps/Markers.png" id="8_d60ea"]
-[ext_resource type="Script" path="res://Data/Scripts/ScenesScripts/GameSceneScripts/Fader.cs" id="8_w5rp6"]
-[ext_resource type="PackedScene" uid="uid://8t16gfkhb3xa" path="res://Data/Scenes/GameScene/CardHolder/CardHolder.tscn" id="14_oqbqr"]
-[ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelInfo.cs" id="15_8tdvf"]
-[ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelSpawnInfo.cs" id="16_vu12s"]
-[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Spawn/SpawnModifierCalculation.cs" id="17_jrke8"]
-[ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelGenerator.cs" id="18_x2dtr"]
-[ext_resource type="Script" path="res://Data/Scripts/TileScripts/MouseSelectTile.cs" id="19_2ia88"]
-[ext_resource type="Script" path="res://Data/Scripts/LevelScripts/ClearHolder.cs" id="19_yy5v6"]
-[ext_resource type="Script" path="res://Data/Scripts/LevelScripts/LevelModifier.cs" id="20_mm7o2"]
-[ext_resource type="Script" path="res://Data/Scripts/TileScripts/TileMarker.cs" id="20_pktoe"]
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/CharacterStorage.cs" id="21_e2keu"]
-[ext_resource type="Script" path="res://Data/Scripts/TurnScripts/TurnController.cs" id="22_ugcec"]
-[ext_resource type="PackedScene" uid="uid://hegp6rbt487a" path="res://Data/Scenes/GameScene/PauseMenu/PauseMenu.tscn" id="23_d6hba"]
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Player/PlayerCoinCollection.cs" id="25_tpk34"]
-[ext_resource type="PackedScene" uid="uid://deq1stiekglgs" path="res://Data/Scenes/GameScene/UIGameScene/UIGameScene.tscn" id="26_64d7w"]
+[ext_resource type="PackedScene" uid="uid://f0d0mqyxem7j" path="res://Data/Scenes/GameScene/Tiles/TileMarker/TileMarker.tscn" id="4_ot2sa"]
+[ext_resource type="PackedScene" uid="uid://cyih0bm5j8wj4" path="res://Data/Scenes/GameScene/Tiles/MouseSelectTile/MouseSelectTile.tscn" id="5_2i750"]
+[ext_resource type="PackedScene" uid="uid://biuf1hsnv6ns7" path="res://Data/Scenes/GameScene/LevelScenes/LevelInfo/LevelInfo.tscn" id="7_7uktk"]
+[ext_resource type="Texture2D" uid="uid://be20bn54bv1ug" path="res://Data/Scenes/GameScene/Tiles/TileMarker/Markers.png" id="8_d60ea"]
+[ext_resource type="PackedScene" uid="uid://ehvnbe71vl8d" path="res://Data/Scenes/GameScene/LevelScenes/LevelSpawnInfo/LevelSpawnInfo.tscn" id="8_xsjos"]
+[ext_resource type="PackedScene" uid="uid://bcmifw38hmw0a" path="res://Data/Scenes/GameScene/LevelScenes/LevelGenerator/LevelGenerator.tscn" id="9_bmmya"]
+[ext_resource type="PackedScene" uid="uid://qifjviotw0eg" path="res://Data/Scenes/GameScene/LevelScenes/LevelModifier/LevelModifier.tscn" id="10_7826o"]
+[ext_resource type="PackedScene" uid="uid://do31sxkdsv1g4" path="res://Data/Scenes/GameScene/CharacterStorage.tscn" id="11_esl1d"]
+[ext_resource type="PackedScene" uid="uid://dunagsy7ae8j0" path="res://Data/Scenes/GameScene/TurnController/TurnContoller.tscn" id="12_0x2or"]
+[ext_resource type="Script" path="res://Data/Scenes/BaseObjects/Characters/Player/PlayerCoinCollection.cs" id="25_tpk34"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_thffw"]
 texture = ExtResource("1_frbbj")
@@ -54,41 +47,7 @@ sources/0 = SubResource("TileSetAtlasSource_mcski")
 [node name="GameScene" type="Node2D"]
 y_sort_enabled = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
-light_mask = 512
-visibility_layer = 512
-position = Vector2(245, 135)
-
-[node name="Vhs-shader" parent="Camera2D" instance=ExtResource("6_r16vw")]
-visible = false
-position = Vector2(-245, -135)
-
-[node name="CameraShake" type="Node2D" parent="Camera2D"]
-script = ExtResource("7_45pxw")
-
-[node name="ColorRect" type="ColorRect" parent="Camera2D"]
-z_index = -1
-offset_left = -264.0
-offset_top = -152.0
-offset_right = 264.0
-offset_bottom = 152.0
-color = Color(0.109804, 0.101961, 0.101961, 1)
-script = ExtResource("8_w5rp6")
-
-[node name="CardHolder" parent="Camera2D" instance=ExtResource("14_oqbqr")]
-visible = false
-z_index = 2
-position = Vector2(-245, -135)
-
-[node name="PauseMenu" parent="Camera2D" instance=ExtResource("23_d6hba")]
-visible = false
-position = Vector2(-245, -135)
-
-[node name="UIGameScene" parent="Camera2D" instance=ExtResource("26_64d7w")]
-offset_left = -245.0
-offset_top = -135.0
-offset_right = -245.0
-offset_bottom = -135.0
+[node name="Camera2D" parent="." instance=ExtResource("1_4ssnp")]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_yxedi")
@@ -99,43 +58,24 @@ tile_set = SubResource("TileSet_b4cq1")
 format = 2
 layer_0/z_index = 10
 
-[node name="TileMarker" type="Node2D" parent="."]
-script = ExtResource("20_pktoe")
+[node name="TileMarker" parent="." instance=ExtResource("4_ot2sa")]
 
-[node name="MouseSelectTile" type="Node2D" parent="."]
-script = ExtResource("19_2ia88")
+[node name="MouseSelectTile" parent="." instance=ExtResource("5_2i750")]
 
 [node name="Holders" parent="." instance=ExtResource("3_36s72")]
 
-[node name="LevelInfo" type="Node2D" parent="."]
-script = ExtResource("15_8tdvf")
+[node name="LevelInfo" parent="." instance=ExtResource("7_7uktk")]
 
-[node name="LevelSpawnInfo" type="Node2D" parent="."]
-script = ExtResource("16_vu12s")
-captainCount = 1
-infantryCount = 1
-trapCount = 2
-foodCount = 2
-tileCount = 30
+[node name="LevelSpawnInfo" parent="." instance=ExtResource("8_xsjos")]
 
-[node name="SpawnModifierCalculation" type="Node2D" parent="LevelSpawnInfo"]
-script = ExtResource("17_jrke8")
+[node name="LevelGenerator" parent="." instance=ExtResource("9_bmmya")]
+tileMap = null
 
-[node name="LevelGenerator" type="Node2D" parent="." node_paths=PackedStringArray("tileMap")]
-script = ExtResource("18_x2dtr")
-tileMap = NodePath("../TileMap")
+[node name="LevelModifier" parent="." instance=ExtResource("10_7826o")]
 
-[node name="HolderCleaner" type="Node2D" parent="LevelGenerator"]
-script = ExtResource("19_yy5v6")
+[node name="CharacterStorage" parent="." instance=ExtResource("11_esl1d")]
 
-[node name="LevelModifier" type="Node2D" parent="."]
-script = ExtResource("20_mm7o2")
-
-[node name="CharacterStorage" type="Node2D" parent="."]
-script = ExtResource("21_e2keu")
-
-[node name="TurnContoller" type="Node2D" parent="."]
-script = ExtResource("22_ugcec")
+[node name="TurnContoller" parent="." instance=ExtResource("12_0x2or")]
 
 [node name="PlayerCoinCollection" type="Node2D" parent="."]
 script = ExtResource("25_tpk34")

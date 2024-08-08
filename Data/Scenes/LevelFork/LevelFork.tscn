@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwsxx6hnc1t6a"]
+
+[ext_resource type="Texture2D" uid="uid://bph0c1opstra" path="res://Data/Scenes/LevelFork/PathMaker/PathLine/PathTexture/Path.png" id="1_aws2e"]
+[ext_resource type="Script" path="res://Data/Scenes/LevelFork/PathMaker/PathMaker.cs" id="2_4euiv"]
+[ext_resource type="PackedScene" uid="uid://cnmbjdvat1xhe" path="res://Data/Scenes/LevelFork/PathMaker/PathLine/PathLine.tscn" id="3_8ws1p"]
+
+[node name="LevelFork" type="Node2D"]
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 4.0
+texture = ExtResource("1_aws2e")
+texture_mode = 1
+joint_mode = 2
+begin_cap_mode = 1
+end_cap_mode = 1
+
+[node name="NextPoints" type="Node2D" parent="."]
+
+[node name="Button" type="Button" parent="NextPoints"]
+offset_left = 103.0
+offset_top = 112.0
+offset_right = 143.0
+offset_bottom = 151.0
+
+[node name="Button2" type="Button" parent="NextPoints"]
+offset_left = 374.0
+offset_top = 100.0
+offset_right = 414.0
+offset_bottom = 139.0
+
+[node name="Button3" type="Button" parent="NextPoints"]
+offset_left = 236.0
+offset_top = 72.0
+offset_right = 276.0
+offset_bottom = 111.0
+
+[node name="StartPoint" type="Node2D" parent="."]
+
+[node name="Button" type="Button" parent="StartPoint"]
+offset_left = 235.0
+offset_top = 212.0
+offset_right = 275.0
+offset_bottom = 251.0
+
+[node name="PathMaker" type="Node2D" parent="."]
+script = ExtResource("2_4euiv")
+scene = ExtResource("3_8ws1p")

@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://blf6xj5s7jbr8"]
 
 [ext_resource type="PackedScene" uid="uid://b2xh8cto5uvph" path="res://Data/Scenes/BaseObjects/Characters/Character.tscn" id="1_lghd7"]
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Player/Player.cs" id="2_el8n6"]
-[ext_resource type="Script" path="res://Data/Scripts/TurnScripts/PlayerTurn.cs" id="3_1lsjb"]
+[ext_resource type="Script" path="res://Data/Scenes/BaseObjects/Characters/Player/Player.cs" id="2_el8n6"]
+[ext_resource type="Script" path="res://Data/Scenes/BaseObjects/Characters/Player/PlayerTurn/PlayerTurn.cs" id="3_1lsjb"]
 [ext_resource type="Texture2D" uid="uid://beykux031yyxv" path="res://Data/Scenes/BaseObjects/Characters/Player/DwarfGuard-Sheet.png" id="3_3dqnq"]
 [ext_resource type="Resource" uid="uid://bhfymnwdmsnhj" path="res://Data/Resources/Abilities/BurstOfAction.tres" id="4_obl7k"]
 [ext_resource type="Resource" uid="uid://jmis7td1kcvx" path="res://Data/Resources/Abilities/SecondBreath.tres" id="5_opyg0"]
-[ext_resource type="Script" path="res://Data/Scripts/AttackScripts/PlayerAttack.cs" id="6_4opki"]
+[ext_resource type="Script" path="res://Data/Scenes/BaseObjects/Characters/Player/PlayerAttack/PlayerAttack.cs" id="6_4opki"]
 [ext_resource type="Resource" uid="uid://bgy3e78repcrt" path="res://Data/Resources/Abilities/InflictWounds.tres" id="6_ma6ar"]
-[ext_resource type="Script" path="res://Data/Scripts/TileScripts/PlayerTileManager.cs" id="7_j8mox"]
+[ext_resource type="Script" path="res://Data/Scenes/GameScene/Tiles/PlayerTileManager/PlayerTileManager.cs" id="7_j8mox"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_axnta"]
 viewport_path = NodePath("SubViewport")

@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://cyow177jcnjro" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/ButtonNormal.png" id="1_1v587"]
 [ext_resource type="Texture2D" uid="uid://whnsmb3oiayl" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/ButtonHover.png" id="2_j8lem"]
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/BaseUIElements/BaseButton/BaseButton.cs" id="3_1lypv"]
+[ext_resource type="Script" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.cs" id="3_1lypv"]
 [ext_resource type="Texture2D" uid="uid://p8pds5bdr71k" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/ButtonDisabled.png" id="3_jhl60"]
-[ext_resource type="Script" path="res://Data/Scripts/AudioScripts/ButtonAudioController.cs" id="4_jq5iy"]
+[ext_resource type="Script" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/ButtonAudioController/ButtonAudioController.cs" id="4_jq5iy"]
 [ext_resource type="AudioStream" uid="uid://bvwj1i75ge082" path="res://Data/Audio/Sound/ButtonSounds/Hover/Hover1.wav" id="5_y0n2m"]
 [ext_resource type="AudioStream" uid="uid://bwq0gac35vvu2" path="res://Data/Audio/Sound/ButtonSounds/Click/Click1.wav" id="6_1na8r"]
 

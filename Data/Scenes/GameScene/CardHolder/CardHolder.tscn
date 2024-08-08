@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://8t16gfkhb3xa"]
 
-[ext_resource type="Script" path="res://Data/Scripts/CardsScripts/CardHolder.cs" id="1_a7k87"]
-[ext_resource type="Script" path="res://Data/Scripts/CardsScripts/DropCardsButton.cs" id="9_tlr8m"]
+[ext_resource type="Script" path="res://Data/Scenes/GameScene/CardHolder/CardHolder.cs" id="1_a7k87"]
+[ext_resource type="Script" path="res://Data/Scenes/GameScene/Card/DropCardsButton/DropCardsButton.cs" id="9_tlr8m"]
 [ext_resource type="PackedScene" uid="uid://cgyw5qsp8s6b7" path="res://Data/Scenes/GameScene/Card/Card.tscn" id="21_fmrue"]
 [ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="22_1r35e"]
 [ext_resource type="Texture2D" uid="uid://8ym0uxmh0h44" path="res://Data/Scenes/GameScene/Card/RerollCardsButton/RerollCardsNormal.png" id="23_6il5p"]
 [ext_resource type="Texture2D" uid="uid://5cumx7p84y5k" path="res://Data/Scenes/GameScene/Card/RerollCardsButton/RerollCardsHower.png" id="24_8tssj"]
-[ext_resource type="Script" path="res://Data/Scripts/CardsScripts/RerollCardsButton.cs" id="24_h4wjs"]
+[ext_resource type="Script" path="res://Data/Scenes/GameScene/Card/RerollCardsButton/RerollCardsButton.cs" id="24_h4wjs"]
 [ext_resource type="Texture2D" uid="uid://dp3oyyrbnjjmc" path="res://Data/Scenes/GameScene/Card/DropCardsButton/DropCardsNormal.png" id="25_e2tg0"]
 [ext_resource type="Texture2D" uid="uid://n5rn1x4vr7j0" path="res://Data/Scenes/GameScene/Card/DropCardsButton/DropCardsHower.png" id="26_iotvg"]
 

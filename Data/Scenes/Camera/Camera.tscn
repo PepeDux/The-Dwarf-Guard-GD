@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://dcfps6l2uet6n"]
+
+[ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="1_3irbx"]
+[ext_resource type="Script" path="res://Data/Scenes/Camera/CameraShake/CameraShake.cs" id="2_ak5it"]
+[ext_resource type="PackedScene" uid="uid://cegnem3y3rt3j" path="res://Data/Scenes/UI/BCM/BCM.tscn" id="3_44wgo"]
+[ext_resource type="PackedScene" uid="uid://8t16gfkhb3xa" path="res://Data/Scenes/GameScene/CardHolder/CardHolder.tscn" id="4_ptbpi"]
+[ext_resource type="PackedScene" uid="uid://hegp6rbt487a" path="res://Data/Scenes/GameScene/PauseMenu/PauseMenu.tscn" id="5_dghak"]
+[ext_resource type="PackedScene" uid="uid://deq1stiekglgs" path="res://Data/Scenes/GameScene/UIGameScene/UIGameScene.tscn" id="6_nx7ef"]
+
+[node name="Camera2D" type="Camera2D"]
+light_mask = 512
+visibility_layer = 512
+position = Vector2(245, 135)
+
+[node name="Vhs-shader" parent="." instance=ExtResource("1_3irbx")]
+visible = false
+position = Vector2(-245, -135)
+
+[node name="CameraShake" type="Node2D" parent="."]
+script = ExtResource("2_ak5it")
+
+[node name="BCM" parent="." instance=ExtResource("3_44wgo")]
+offset_left = -245.0
+offset_top = -135.0
+offset_right = -245.0
+offset_bottom = -135.0
+
+[node name="CardHolder" parent="." instance=ExtResource("4_ptbpi")]
+visible = false
+z_index = 2
+position = Vector2(-245, -135)
+
+[node name="PauseMenu" parent="." instance=ExtResource("5_dghak")]
+visible = false
+position = Vector2(-245, -135)
+
+[node name="UIGameScene" parent="." instance=ExtResource("6_nx7ef")]
+offset_left = -245.0
+offset_top = -135.0
+offset_right = -245.0
+offset_bottom = -135.0

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcmifw38hmw0a"]
+
+[ext_resource type="Script" path="res://Data/Scenes/GameScene/LevelScenes/LevelGenerator/LevelGenerator.cs" id="1_olr1y"]
+[ext_resource type="Script" path="res://Data/Scenes/GameScene/Holders/ClearHolder.cs" id="2_x4f5y"]
+
+[node name="LevelGenerator" type="Node2D" node_paths=PackedStringArray("tileMap")]
+script = ExtResource("1_olr1y")
+tileMap = NodePath("")
+
+[node name="HolderCleaner" type="Node2D" parent="."]
+script = ExtResource("2_x4f5y")

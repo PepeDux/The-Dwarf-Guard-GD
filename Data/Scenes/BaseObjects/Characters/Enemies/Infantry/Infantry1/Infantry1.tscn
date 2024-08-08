@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cvpjexd3xcygf"]
 
 [ext_resource type="PackedScene" uid="uid://dic37rim4ufsk" path="res://Data/Scenes/BaseObjects/Characters/Enemies/Enemy.tscn" id="1_3cj7b"]
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Enemies/Infantry/Infantry.cs" id="2_q8xx7"]
+[ext_resource type="Script" path="res://Data/Scenes/BaseObjects/Characters/Enemies/Infantry/Infantry.cs" id="2_q8xx7"]
 [ext_resource type="PackedScene" uid="uid://dejp63chsiv2j" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/Coin/Coin.tscn" id="3_uumap"]
 [ext_resource type="Texture2D" uid="uid://b0mqimx70ycxr" path="res://Data/Scenes/BaseObjects/Characters/Enemies/Infantry/Infantry1/Infantry1-Sheet.png" id="4_2npra"]
 

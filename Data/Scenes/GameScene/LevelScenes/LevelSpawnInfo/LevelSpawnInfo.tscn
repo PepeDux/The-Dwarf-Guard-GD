@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ehvnbe71vl8d"]
+
+[ext_resource type="Script" path="res://Data/Scenes/GameScene/LevelScenes/LevelSpawnInfo/LevelSpawnInfo.cs" id="1_fkaj4"]
+[ext_resource type="Script" path="res://Data/Scripts/ResourcesScripts/Modifiers/Spawn/SpawnModifierCalculation.cs" id="2_u7kwl"]
+
+[node name="LevelSpawnInfo" type="Node2D"]
+script = ExtResource("1_fkaj4")
+captainCount = 1
+infantryCount = 1
+trapCount = 2
+foodCount = 2
+tileCount = 30
+
+[node name="SpawnModifierCalculation" type="Node2D" parent="."]
+script = ExtResource("2_u7kwl")

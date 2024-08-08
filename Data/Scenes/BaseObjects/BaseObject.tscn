@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://dx6sxyfguth4d"]
 
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/BaseObject.cs" id="1_r52nt"]
-[ext_resource type="Script" path="res://Data/Scripts/AnimationScripts/AnimationController.cs" id="2_4iw8x"]
-[ext_resource type="Script" path="res://Data/Scripts/AudioScripts/AudioController.cs" id="3_q2j1l"]
+[ext_resource type="Script" path="res://Data/Scenes/BaseObjects/BaseObject.cs" id="1_r52nt"]
+[ext_resource type="Script" path="res://Data/Scenes/BaseObjects/AnimationScripts/AnimationController.cs" id="2_4iw8x"]
+[ext_resource type="Script" path="res://Data/Scenes/BaseObjects/AudioScripts/AudioController.cs" id="3_q2j1l"]
 [ext_resource type="AudioStream" uid="uid://ceh7eimmrveyv" path="res://Data/Audio/Sound/Hurt/Hurt1.wav" id="4_irsqu"]
 [ext_resource type="AudioStream" uid="uid://b0mm71fqgrddn" path="res://Data/Audio/Sound/Hurt/Hurt2.wav" id="5_ea871"]
 [ext_resource type="AudioStream" uid="uid://qkbgenkh4fxk" path="res://Data/Audio/Sound/Hurt/Hurt3.wav" id="6_hl67k"]

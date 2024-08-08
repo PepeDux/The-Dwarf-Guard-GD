@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://7we2xgxs8g52" path="res://Data/Scenes/UI/BaseUIElements/BaseCheckBox/Checked.png" id="1_kejbm"]
 [ext_resource type="Texture2D" uid="uid://dnuwby2deuvd2" path="res://Data/Scenes/UI/BaseUIElements/BaseCheckBox/Normal.png" id="3_td20c"]
 [ext_resource type="Texture2D" uid="uid://c34dnkrh6s22i" path="res://Data/Scenes/UI/BaseUIElements/BaseCheckBox/Hover.png" id="4_oec4f"]
-[ext_resource type="Script" path="res://Data/Scripts/UIScripts/BaseUIElements/BaseCheckBox/BaseCheckBox.cs" id="6_fit21"]
-[ext_resource type="Script" path="res://Data/Scripts/AudioScripts/ButtonAudioController.cs" id="6_gytbt"]
+[ext_resource type="Script" path="res://Data/Scenes/UI/BaseUIElements/BaseCheckBox/BaseCheckBox.cs" id="6_fit21"]
+[ext_resource type="Script" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/ButtonAudioController/ButtonAudioController.cs" id="6_gytbt"]
 [ext_resource type="AudioStream" uid="uid://bvwj1i75ge082" path="res://Data/Audio/Sound/ButtonSounds/Hover/Hover1.wav" id="7_hdji1"]
 [ext_resource type="AudioStream" uid="uid://bwq0gac35vvu2" path="res://Data/Audio/Sound/ButtonSounds/Click/Click1.wav" id="8_uw0vg"]
 

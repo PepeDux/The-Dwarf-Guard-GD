@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://xbbme4tmtfb7"]
 
 [ext_resource type="PackedScene" uid="uid://dh70ptfl2c5th" path="res://Data/Scenes/BaseObjects/FunctionalObject/FunctionalObject.tscn" id="1_kllka"]
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/FunctionalObject/Traps/Trap.cs" id="2_ubkqr"]
+[ext_resource type="Script" path="res://Data/Scenes/BaseObjects/FunctionalObject/Traps/Trap.cs" id="2_ubkqr"]
 [ext_resource type="Texture2D" uid="uid://decqrmiiexoyy" path="res://Data/Scenes/BaseObjects/FunctionalObject/Traps/SpikeTrap/SpikeTrap-Sheet.png" id="3_sdaw3"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1u0vp"]

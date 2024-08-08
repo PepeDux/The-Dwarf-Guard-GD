@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://dic37rim4ufsk"]
 
 [ext_resource type="PackedScene" uid="uid://b2xh8cto5uvph" path="res://Data/Scenes/BaseObjects/Characters/Character.tscn" id="1_tacpj"]
-[ext_resource type="Script" path="res://Data/Scripts/TileScripts/Pathfinding.cs" id="2_fig15"]
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/Characters/Enemies/Enemy.cs" id="2_s0bue"]
-[ext_resource type="Script" path="res://Data/Scripts/AttackScripts/AttackScript.cs" id="3_0bk16"]
+[ext_resource type="Script" path="res://Data/Scenes/GameScene/Tiles/Pathfinding/Pathfinding.cs" id="2_fig15"]
+[ext_resource type="Script" path="res://Data/Scenes/BaseObjects/Characters/Enemies/Enemy.cs" id="2_s0bue"]
+[ext_resource type="Script" path="res://Data/Scenes/BaseObjects/Characters/AttackScript.cs" id="3_0bk16"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_jfbax"]
 viewport_path = NodePath("SubViewport")

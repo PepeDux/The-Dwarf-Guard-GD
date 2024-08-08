@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://djcta1m6ke4i5"]
 
 [ext_resource type="PackedScene" uid="uid://dh70ptfl2c5th" path="res://Data/Scenes/BaseObjects/FunctionalObject/FunctionalObject.tscn" id="1_7u8y2"]
-[ext_resource type="Script" path="res://Data/Scripts/ObjectsScripts/FunctionalObject/PickableObject/PickableObject.cs" id="2_n7btu"]
+[ext_resource type="Script" path="res://Data/Scenes/BaseObjects/FunctionalObject/PickableObject/PickableObject.cs" id="2_n7btu"]
 
 [node name="PickableObject" instance=ExtResource("1_7u8y2")]
 y_sort_enabled = false
