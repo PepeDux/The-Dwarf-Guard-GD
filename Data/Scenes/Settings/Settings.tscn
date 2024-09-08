@@ -23,8 +23,8 @@ visible = false
 [node name="VHSCheckBox" parent="." instance=ExtResource("2_o2e4e")]
 offset_left = 88.0
 offset_top = 96.0
-offset_right = 104.0
-offset_bottom = 112.0
+offset_right = 112.0
+offset_bottom = 120.0
 script = ExtResource("3_umxfk")
 
 [node name="VHSLabel" type="Label" parent="VHSCheckBox"]

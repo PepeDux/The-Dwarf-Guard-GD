@@ -12,10 +12,6 @@ public partial class VHSCheckBox : BaseCheckBox
         ButtonPressed = (bool)config.GetValue("VHS", "VHS");
     }
 
-	public override void _Process(double delta)
-	{
-	}
-
     public override void Pressed()
     {
         base.Pressed();

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bp7kuxw2qu1o2"]
 
-[ext_resource type="Script" path="res://Data/Scenes/UI/VHS/VHS.cs" id="1_23fup"]
+[ext_resource type="Script" path="res://Data/Scenes/UI/VHS/VHS.cs" id="1_7qiyu"]
 
 [sub_resource type="Shader" id="Shader_xmaau"]
 code = "/*
@@ -260,7 +260,7 @@ shader_parameter/vignette_intensity = 0.2
 shader_parameter/vignette_opacity = 1.0
 
 [node name="VHS" type="Node2D"]
-script = ExtResource("1_23fup")
+script = ExtResource("1_7qiyu")
 
 [node name="VHS" type="ColorRect" parent="."]
 z_index = 100

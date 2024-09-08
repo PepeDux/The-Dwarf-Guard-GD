@@ -1,24 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://rjbd6q6xscmg"]
+[gd_scene load_steps=7 format=3 uid="uid://rjbd6q6xscmg"]
 
 [ext_resource type="Texture2D" uid="uid://7we2xgxs8g52" path="res://Data/Scenes/UI/BaseUIElements/BaseCheckBox/Checked.png" id="1_kejbm"]
 [ext_resource type="Texture2D" uid="uid://dnuwby2deuvd2" path="res://Data/Scenes/UI/BaseUIElements/BaseCheckBox/Normal.png" id="3_td20c"]
-[ext_resource type="Texture2D" uid="uid://c34dnkrh6s22i" path="res://Data/Scenes/UI/BaseUIElements/BaseCheckBox/Hover.png" id="4_oec4f"]
 [ext_resource type="Script" path="res://Data/Scenes/UI/BaseUIElements/BaseCheckBox/BaseCheckBox.cs" id="6_fit21"]
 [ext_resource type="Script" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/ButtonAudioController/ButtonAudioController.cs" id="6_gytbt"]
 [ext_resource type="AudioStream" uid="uid://bvwj1i75ge082" path="res://Data/Audio/Sound/ButtonSounds/Hover/Hover1.wav" id="7_hdji1"]
 [ext_resource type="AudioStream" uid="uid://bwq0gac35vvu2" path="res://Data/Audio/Sound/ButtonSounds/Click/Click1.wav" id="8_uw0vg"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vksu5"]
-texture = ExtResource("3_td20c")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lhavj"]
-texture = ExtResource("3_td20c")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6bm2u"]
-texture = ExtResource("4_oec4f")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8to5i"]
-texture = ExtResource("4_oec4f")
 
 [node name="BaseCheckBox" type="CheckBox"]
 offset_right = 16.0
@@ -26,10 +13,6 @@ offset_bottom = 16.0
 focus_mode = 0
 theme_override_icons/checked = ExtResource("1_kejbm")
 theme_override_icons/unchecked = ExtResource("3_td20c")
-theme_override_styles/normal = SubResource("StyleBoxTexture_vksu5")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_lhavj")
-theme_override_styles/hover = SubResource("StyleBoxTexture_6bm2u")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_8to5i")
 alignment = 1
 icon_alignment = 1
 expand_icon = true

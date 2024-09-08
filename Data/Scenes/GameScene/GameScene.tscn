@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dunagsy7ae8j0" path="res://Data/Scenes/GameScene/TurnController/TurnContoller.tscn" id="12_0x2or"]
 [ext_resource type="Script" path="res://Data/Scenes/BaseObjects/Characters/Player/PlayerCoinCollection.cs" id="25_tpk34"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_thffw"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mhg6p"]
 texture = ExtResource("1_frbbj")
 1:1/0 = 0
 2:1/0 = 0
@@ -32,17 +32,17 @@ texture = ExtResource("1_frbbj")
 4:3/0 = 0
 5:3/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_yxedi"]
-sources/0 = SubResource("TileSetAtlasSource_thffw")
+[sub_resource type="TileSet" id="TileSet_ap8wn"]
+sources/0 = SubResource("TileSetAtlasSource_mhg6p")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mcski"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdg7t"]
 texture = ExtResource("8_d60ea")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_b4cq1"]
-sources/0 = SubResource("TileSetAtlasSource_mcski")
+[sub_resource type="TileSet" id="TileSet_2ao4k"]
+sources/0 = SubResource("TileSetAtlasSource_kdg7t")
 
 [node name="GameScene" type="Node2D"]
 y_sort_enabled = true
@@ -50,11 +50,11 @@ y_sort_enabled = true
 [node name="Camera2D" parent="." instance=ExtResource("1_4ssnp")]
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_yxedi")
+tile_set = SubResource("TileSet_ap8wn")
 format = 2
 
 [node name="MarkerTileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_b4cq1")
+tile_set = SubResource("TileSet_2ao4k")
 format = 2
 layer_0/z_index = 10
 
@@ -68,8 +68,8 @@ layer_0/z_index = 10
 
 [node name="LevelSpawnInfo" parent="." instance=ExtResource("8_xsjos")]
 
-[node name="LevelGenerator" parent="." instance=ExtResource("9_bmmya")]
-tileMap = null
+[node name="LevelGenerator" parent="." node_paths=PackedStringArray("tileMap") instance=ExtResource("9_bmmya")]
+tileMap = NodePath("../TileMap")
 
 [node name="LevelModifier" parent="." instance=ExtResource("10_7826o")]
 
