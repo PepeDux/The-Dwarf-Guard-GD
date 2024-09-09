@@ -1,7 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://clt58eakiro5h"]
+[gd_scene load_steps=16 format=3 uid="uid://clt58eakiro5h"]
 
 [ext_resource type="Script" path="res://Data/Scenes/MainMenu/MainMenu.cs" id="1_u1ld6"]
-[ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="2_8xj1e"]
+[ext_resource type="PackedScene" uid="uid://c666ihbk3isav" path="res://Data/Scenes/UI/Shaders/Shaders.tscn" id="2_0lb5x"]
 [ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="4_1iwjr"]
 [ext_resource type="Texture2D" uid="uid://chu2iy1nkrufm" path="res://Data/Scenes/MainMenu/StartButton/StartNormal.png" id="5_i5imi"]
 [ext_resource type="Texture2D" uid="uid://c4dngyxbn1apl" path="res://Data/Scenes/MainMenu/StartButton/StartHover.png" id="6_ln8ml"]
@@ -14,16 +14,12 @@
 [ext_resource type="Script" path="res://Data/Scenes/MainMenu/ExitButton/ExitGame.cs" id="13_2en4m"]
 [ext_resource type="Texture2D" uid="uid://57a3kiyk0wps" path="res://Data/Scenes/MainMenu/DiscordButton/Discord.png" id="14_do1nf"]
 [ext_resource type="Script" path="res://Data/Scenes/MainMenu/DiscordButton/DiscordButton.cs" id="15_os6ca"]
-[ext_resource type="PackedScene" uid="uid://cegnem3y3rt3j" path="res://Data/Scenes/UI/BCM/BCM.tscn" id="16_sm2of"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="16_yapvh"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_u1ld6")
 
-[node name="BCM" parent="." instance=ExtResource("16_sm2of")]
-
-[node name="Vhs-shader" parent="." instance=ExtResource("2_8xj1e")]
-visible = false
+[node name="Shaders" parent="." instance=ExtResource("2_0lb5x")]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

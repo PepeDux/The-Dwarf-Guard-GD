@@ -1,7 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://bthuydw3peyqe"]
+[gd_scene load_steps=12 format=3 uid="uid://bthuydw3peyqe"]
 
 [ext_resource type="Script" path="res://Data/Scenes/GameOver/GameOver.cs" id="1_s2ub0"]
-[ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="1_vnuuv"]
+[ext_resource type="PackedScene" uid="uid://c666ihbk3isav" path="res://Data/Scenes/UI/Shaders/Shaders.tscn" id="2_1c08f"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="2_j64m8"]
 [ext_resource type="AudioStream" uid="uid://b4cysnvj7mibm" path="res://Data/Audio/Music/GameOver/GameOver1.wav" id="4_cide8"]
 [ext_resource type="PackedScene" uid="uid://32kva0djp61d" path="res://Data/Scenes/UI/BaseUIElements/BaseButton/BaseButton.tscn" id="6_blpn5"]
@@ -11,12 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://j68fsb8a42r1" path="res://Data/Scenes/GameOver/RetryButton/RetryNormal.png" id="10_7x3gb"]
 [ext_resource type="Texture2D" uid="uid://b6q5spb8xojyu" path="res://Data/Scenes/GameOver/RetryButton/RetryHower.png" id="11_1hebt"]
 [ext_resource type="Script" path="res://Data/Scenes/GameOver/RetryLevelButton.cs" id="12_2sy0y"]
-[ext_resource type="PackedScene" uid="uid://cegnem3y3rt3j" path="res://Data/Scenes/UI/BCM/BCM.tscn" id="12_60mgk"]
 
 [node name="GameOver" type="Node2D"]
 script = ExtResource("1_s2ub0")
 
-[node name="BCM" parent="." instance=ExtResource("12_60mgk")]
+[node name="Shaders" parent="." instance=ExtResource("2_1c08f")]
 
 [node name="GameOver" type="Label" parent="."]
 z_index = 5
@@ -41,9 +40,6 @@ theme_override_fonts/font = ExtResource("2_j64m8")
 theme_override_font_sizes/font_size = 256
 text = "beer spilled"
 horizontal_alignment = 1
-
-[node name="Vhs-shader" parent="." instance=ExtResource("1_vnuuv")]
-visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_cide8")

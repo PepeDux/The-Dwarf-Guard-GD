@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c666ihbk3isav"]
+
+[ext_resource type="PackedScene" uid="uid://cegnem3y3rt3j" path="res://Data/Scenes/UI/Shaders/BCM/BCM.tscn" id="1_0fdk6"]
+[ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/Shaders/VHS/VHS.tscn" id="2_3lp76"]
+
+[node name="Shaders" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="BCM" parent="." instance=ExtResource("1_0fdk6")]
+layout_mode = 1
+
+[node name="VHS" parent="." instance=ExtResource("2_3lp76")]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://uixniamcrmq2"]
 
-[ext_resource type="PackedScene" uid="uid://dcfps6l2uet6n" path="res://Data/Scenes/Camera/Camera.tscn" id="1_4ssnp"]
+[ext_resource type="PackedScene" uid="uid://dcfps6l2uet6n" path="res://Data/Scenes/GameScene/Camera/Camera.tscn" id="1_4ssnp"]
 [ext_resource type="Texture2D" uid="uid://csw0qwm2nm2r7" path="res://Data/Scenes/GameScene/Tiles/TileMap.png" id="1_frbbj"]
 [ext_resource type="PackedScene" uid="uid://vcns8byu0kqa" path="res://Data/Scenes/GameScene/Holders/Holders.tscn" id="3_36s72"]
 [ext_resource type="PackedScene" uid="uid://f0d0mqyxem7j" path="res://Data/Scenes/GameScene/Tiles/TileMarker/TileMarker.tscn" id="4_ot2sa"]
@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ehvnbe71vl8d" path="res://Data/Scenes/GameScene/LevelScenes/LevelSpawnInfo/LevelSpawnInfo.tscn" id="8_xsjos"]
 [ext_resource type="PackedScene" uid="uid://bcmifw38hmw0a" path="res://Data/Scenes/GameScene/LevelScenes/LevelGenerator/LevelGenerator.tscn" id="9_bmmya"]
 [ext_resource type="PackedScene" uid="uid://qifjviotw0eg" path="res://Data/Scenes/GameScene/LevelScenes/LevelModifier/LevelModifier.tscn" id="10_7826o"]
-[ext_resource type="PackedScene" uid="uid://do31sxkdsv1g4" path="res://Data/Scenes/GameScene/CharacterStorage.tscn" id="11_esl1d"]
+[ext_resource type="PackedScene" uid="uid://do31sxkdsv1g4" path="res://Data/Scenes/GameScene/CharacterStorage/CharacterStorage.tscn" id="11_esl1d"]
 [ext_resource type="PackedScene" uid="uid://dunagsy7ae8j0" path="res://Data/Scenes/GameScene/TurnController/TurnContoller.tscn" id="12_0x2or"]
 [ext_resource type="Script" path="res://Data/Scenes/BaseObjects/Characters/Player/PlayerCoinCollection.cs" id="25_tpk34"]
 

@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://dk5oajn47og3q"]
+[gd_scene load_steps=12 format=3 uid="uid://dk5oajn47og3q"]
 
-[ext_resource type="PackedScene" uid="uid://bp7kuxw2qu1o2" path="res://Data/Scenes/UI/VHS/VHS.tscn" id="1_p8uvn"]
+[ext_resource type="PackedScene" uid="uid://c666ihbk3isav" path="res://Data/Scenes/UI/Shaders/Shaders.tscn" id="1_qyopt"]
 [ext_resource type="PackedScene" uid="uid://rjbd6q6xscmg" path="res://Data/Scenes/UI/BaseUIElements/BaseCheckBox/BaseCheckBox.tscn" id="2_o2e4e"]
 [ext_resource type="FontFile" uid="uid://cmhu7x37vwbkf" path="res://Data/UI/Fonts/7_dbl.ttf" id="3_1mcjg"]
 [ext_resource type="Script" path="res://Data/Scenes/Settings/VHSCheckBox/VHSCheckBox.cs" id="3_umxfk"]
@@ -11,14 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://cyqjf6wk41dwj" path="res://Data/Scenes/UI/BaseUIElements/BaseHScrollBar/BaseHScrollBar.tscn" id="9_lt6av"]
 [ext_resource type="Script" path="res://Data/Scenes/Settings/TurnSpeedHScrollBar/TurnSpeedHScrollBar.cs" id="10_f1r3c"]
 [ext_resource type="Script" path="res://Data/Scenes/Settings/MasterVolumeHScrollBar/MasterVolumeHScrollBar.cs" id="11_nu5tb"]
-[ext_resource type="PackedScene" uid="uid://cegnem3y3rt3j" path="res://Data/Scenes/UI/BCM/BCM.tscn" id="12_wobvm"]
 
 [node name="Settings" type="Node2D"]
 
-[node name="BCM" parent="." instance=ExtResource("12_wobvm")]
-
-[node name="Vhs-shader" parent="." instance=ExtResource("1_p8uvn")]
-visible = false
+[node name="Shaders" parent="." instance=ExtResource("1_qyopt")]
 
 [node name="VHSCheckBox" parent="." instance=ExtResource("2_o2e4e")]
 offset_left = 88.0

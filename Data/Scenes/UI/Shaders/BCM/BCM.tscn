@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cegnem3y3rt3j"]
 
-[ext_resource type="Shader" path="res://Data/Scenes/UI/BCM/BCM.gdshader" id="1_k1b8m"]
+[ext_resource type="Shader" path="res://Data/Scenes/UI/Shaders/BCM/BCM.gdshader" id="1_k1b8m"]
 [ext_resource type="Script" path="res://Data/Scenes/GameScene/Fader/Fader.cs" id="1_po3sf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c0efv"]
